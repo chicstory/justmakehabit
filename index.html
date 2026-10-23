@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <!-- 상단 글로벌 헤더 (초기 버전 로고 복원) -->
+  <!-- 상단 글로벌 헤더 -->
   <header class="site-header">
     <div class="header-container">
       <a href="index.html" class="logo-wrap">
@@ -24,27 +24,18 @@
         <a href="index.html" class="h-nav-link active">홈</a>
         <a href="assets/2026-10-24-zero-base-cashflow.html" class="h-nav-link">자산</a>
         <a href="tools/mid-hire-calculator.html" class="h-nav-link">도구</a>
+        <a href="about.html" class="h-nav-link">소개</a>
       </nav>
     </div>
   </header>
 
-  <!-- 표준 2단 레이아웃 (본문 800px + 우측 거시 배너 250px) -->
+  <!-- 표준 2단 레이아웃 (우측 거시 배너와 완벽한 수평 칼정렬) -->
   <div class="standard-layout">
     
-    <!-- 중앙 본문 (인덱스 규격 780~800px) -->
+    <!-- 중앙 본문 (인덱스 보드 2열 780px) -->
     <main class="main-content-area type-index">
       
-      <!-- 소개 선언문 -->
-      <section class="intro-box">
-        <div class="intro-badge">PHILOSOPHY</div>
-        <h1>1분 러닝의 법칙과 자산 아카이브</h1>
-        <p>
-          처음 달리기를 시작할 때, 1분을 뛰고 1분을 걸었습니다. 그 사소한 성공 경험과 도파민이 모여 마침내 2시간 동안 멈추지 않고 달리는 몸을 만들었습니다.<br>
-          삶과 자산도 똑같습니다. 화려한 요행을 좇기 전에, 1초와 1원의 규율을 다지는 가장 아랫단계에서부터 한 계단씩 벽돌을 쌓아 올립니다.
-        </p>
-      </section>
-
-      <!-- 카테고리 진입 덱 (2열) -->
+      <!-- 카테고리 진입 덱 (2열 칼정렬) -->
       <section class="index-boards-grid">
         
         <!-- 보드 1: 자산 (Assets) -->
@@ -111,6 +102,16 @@
 
       </section>
 
+      <!-- 소개 페이지(About) 배너 안내 -->
+      <section class="about-lead-deck">
+        <div class="ald-left">
+          <span class="ald-badge">PHILOSOPHY</span>
+          <h3 class="ald-title">1분 러닝의 법칙과 아카이브 운영 철학</h3>
+          <p class="ald-desc">작은 성취의 도파민이 2시간 달리기를 만들었듯, 1원과 1초의 규율을 세우는 justmakehabit의 이야기입니다.</p>
+        </div>
+        <a href="about.html" class="ald-btn">철학 읽기 →</a>
+      </section>
+
     </main>
 
     <!-- 우측: 실시간 거시 경제 배너 (영구 고정) -->
@@ -143,7 +144,14 @@
   </div>
 
   <footer class="site-footer">
-    <p>© 2026 justmakehabit. All rights reserved.</p>
+    <div class="footer-inner">
+      <p>© 2026 justmakehabit. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="about.html">소개 (About)</a>
+        <span>·</span>
+        <a href="index.html">홈</a>
+      </div>
+    </div>
   </footer>
 
   <script src="app.js"></script>
