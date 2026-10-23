@@ -115,6 +115,309 @@ body {
 }
 
 /* ===================================================
+   hsmp.tistory.com 스타일 포털 레이아웃
+   =================================================== */
+.portal-body {
+  background-color: #F8FAFC;
+  min-height: 100vh;
+}
+
+.portal-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border-color);
+  padding-top: 36px;
+}
+
+.header-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.brand-wrap {
+  margin-bottom: 28px;
+}
+
+.brand-wrap .brand-link {
+  text-decoration: none;
+}
+
+.brand-wrap .brand-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0F172A;
+  letter-spacing: -0.5px;
+}
+
+/* 수평 GNB 탭 (hsmp 스타일 블루 언더라인) */
+.portal-nav .nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.portal-nav .nav-menu li {
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.portal-nav .nav-menu li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  color: #475569;
+  transition: color 0.15s;
+}
+
+.portal-nav .nav-menu li:hover a {
+  color: #0F172A;
+}
+
+.portal-nav .nav-menu li.active a {
+  color: var(--accent-blue);
+  font-weight: 700;
+}
+
+.portal-nav .nav-menu li.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--accent-blue);
+  border-radius: 2px 2px 0 0;
+}
+
+/* 포털 본문 컨테이너 */
+.portal-main {
+  padding: 36px 0 60px;
+}
+
+.main-container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 철학 소개 카드 */
+.portal-intro-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-bottom: 32px;
+}
+
+.intro-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent-blue);
+  background: var(--accent-blue-bg);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.intro-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 10px;
+  line-height: 1.35;
+}
+
+.intro-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* 카테고리 카드 그리드 (2열) */
+.category-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.board-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #0F172A; /* hsmp 스타일 블랙 라인 */
+  margin-bottom: 16px;
+}
+
+.board-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+}
+
+.more-link {
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748B;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.more-link:hover {
+  color: var(--accent-blue);
+}
+
+.board-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.board-list li {
+  border-bottom: 1px dashed #E2E8F0;
+}
+
+.board-list li:last-child {
+  border-bottom: none;
+}
+
+.post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 0;
+  text-decoration: none;
+  gap: 16px;
+}
+
+.post-item:hover .post-title {
+  color: var(--accent-blue);
+}
+
+.post-title {
+  font-size: 14px;
+  color: #1E293B;
+  font-weight: 500;
+  line-height: 1.45;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: #94A3B8;
+  white-space: nowrap;
+}
+
+.board-list li.coming-soon {
+  opacity: 0.65;
+}
+
+.post-item.disabled {
+  cursor: default;
+}
+
+/* 거시 경제 배너 카드 */
+.macro-banner-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px 28px;
+}
+
+.macro-banner-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.mb-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.mb-date {
+  font-size: 11px;
+  color: #64748B;
+  background: #F1F5F9;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.macro-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.s-name {
+  font-size: 12px;
+  color: #64748B;
+}
+
+.s-val {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.portal-footer {
+  padding: 24px 0 40px;
+  text-align: center;
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+@media (max-width: 768px) {
+  .brand-wrap .brand-logo {
+    font-size: 26px;
+  }
+  .portal-nav .nav-menu {
+    gap: 20px;
+  }
+  .category-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .macro-stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===================================================
    레이아웃 그리드 (LNB 260px + 메인 본문 + 지표 250px)
    =================================================== */
 .app-container {
