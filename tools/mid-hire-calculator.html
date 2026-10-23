@@ -9,154 +9,189 @@
   <link rel="stylesheet" href="../style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body class="reader-body">
+<body>
 
-  <!-- 통합 GNB 헤더 -->
-  <header class="portal-header">
+  <!-- 상단 글로벌 헤더 (동일 쉘) -->
+  <header class="site-header">
     <div class="header-container">
-      <div class="brand-wrap">
-        <a href="../index.html" class="brand-link">
-          <span class="brand-logo">justmakehabit</span>
-        </a>
-      </div>
-      <nav class="portal-nav">
-        <ul class="nav-menu">
-          <li><a href="../index.html">홈</a></li>
-          <li><a href="../assets/2026-10-24-zero-base-cashflow.html">자산 (Assets)</a></li>
-          <li class="active"><a href="../tools/mid-hire-calculator.html">실전 도구 (Tools)</a></li>
-        </ul>
+      <a href="../index.html" class="logo-wrap">
+        <span class="logo-badge">JMH</span>
+        <span class="logo-text">justmakehabit</span>
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html" class="h-nav-link">홈</a>
+        <a href="../assets/2026-10-24-zero-base-cashflow.html" class="h-nav-link">자산</a>
+        <a href="../tools/mid-hire-calculator.html" class="h-nav-link active">도구</a>
       </nav>
     </div>
   </header>
 
-  <!-- 단독 1단 계산기 컨테이너 -->
-  <main class="reader-main">
-    <div class="tools-container">
+  <!-- 표준 2단 레이아웃 (계산기 760px + 우측 거시 배너 250px) -->
+  <div class="standard-layout">
+    
+    <!-- 중앙 계산기 영역 (이전 2열 컴팩트 버전 완벽 복원) -->
+    <main class="main-content-area type-tools">
       
-      <header class="post-header">
-        <div class="post-category-tag">
-          <span class="cat-badge">실전 도구 (Tools)</span>
-          <span class="cat-divider">/</span>
-          <span class="cat-sub">급여 & 4대보험</span>
-        </div>
-        <h1 class="post-main-title">🧮 중도입사 급여 & 세후 실수령액 계산기</h1>
-        <p class="tool-sub-desc">
-          월 도중에 입사했을 때, 입사일과 근무 요일에 따라 4대 보험과 세금을 공제한 뒤 실제로 통장에 꽂히는 금액을 정확하게 계산합니다.
-        </p>
-      </header>
+      <div class="calculator-box">
+        
+        <header class="art-header" style="margin-bottom: 20px;">
+          <div class="art-category">
+            <span class="art-badge">실전 도구 (Tools)</span>
+            <span class="art-sub">/ 중도입사 급여 계산기</span>
+          </div>
+          <h1 class="art-title" style="font-size: 22px; margin-bottom: 8px;">🧮 중도입사 급여 & 세후 실수령액 계산기</h1>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+            월 도중에 입사했을 때, 입사일과 근무 요일에 따라 4대 보험과 세금을 공제한 뒤 실제로 통장에 꽂히는 금액을 정확하게 계산합니다.
+          </p>
+        </header>
 
-      <div class="calculator-container">
-        <!-- 입력 폼 -->
-        <div class="calc-form-card">
-          <h3 class="form-title">입력 정보</h3>
+        <!-- 이전 버전의 알차고 직관적인 2열 그리드 -->
+        <div class="calc-grid-2col">
           
-          <div class="form-group">
-            <label for="joinDate">입사 일자</label>
-            <input type="date" id="joinDate" value="2026-10-12" class="form-input" onchange="calculateSalary()">
-          </div>
-
-          <div class="form-group">
-            <label for="monthlySalary">월 계약 총급여 (세전 총액)</label>
-            <div class="input-with-unit">
-              <input type="number" id="monthlySalary" value="2900000" step="50000" class="form-input" oninput="calculateSalary()">
-              <span class="unit">원</span>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="nonTaxFood">총급여 중 비과세 식대 포함액</label>
-            <div class="input-with-unit">
-              <input type="number" id="nonTaxFood" value="200000" step="10000" class="form-input" oninput="calculateSalary()">
-              <span class="unit">원</span>
-            </div>
-            <span class="form-hint">총급여에 식대 20만 원이 포함되어 있으면 해당 금액만큼 세금/보험이 면제됩니다.</span>
-          </div>
-
-          <div class="form-group">
-            <label for="workDaysScheme">일할 계산 기준</label>
-            <select id="workDaysScheme" class="form-select" onchange="calculateSalary()">
-              <option value="calendar" selected>역일 기준 (해당 월 총일수 대비 재직일수 - 일반 기업/노동부 권고)</option>
-              <option value="actualWorkDays">실제 소정근로일수 기준 (일~목 주 5일 물류 스케줄)</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- 산출 결과 카드 -->
-        <div class="calc-result-card">
-          <div class="result-badge">계산 결과</div>
-          <div class="net-pay-display">
-            <span class="net-label">예상 통장 입금액 (실수령액)</span>
-            <span class="net-value" id="resNetPay">계산 중...</span>
-          </div>
-
-          <div class="deduction-breakdown">
-            <div class="bd-row total-gross">
-              <span>중도입사 세전 총액</span>
-              <span id="resGrossPay">0원</span>
-            </div>
-            <div class="bd-row sub-info" id="resDaysInfo">
-              <span>반영 일수</span>
-              <span>-</span>
-            </div>
+          <!-- 입력 폼 패널 -->
+          <div class="calc-panel">
+            <h3 class="panel-title">입력 정보</h3>
             
-            <div class="bd-divider"></div>
-
-            <div class="bd-row">
-              <span>국민연금 (4.5%)</span>
-              <span id="resNps">0원</span>
-            </div>
-            <div class="bd-row">
-              <span>건강보험 (3.545%)</span>
-              <span id="resNhi">0원</span>
-            </div>
-            <div class="bd-row">
-              <span>장기요양보험 (건보의 12.95%)</span>
-              <span id="resLtc">0원</span>
-            </div>
-            <div class="bd-row">
-              <span>고용보험 (0.9%)</span>
-              <span id="resEi">0원</span>
-            </div>
-            <div class="bd-row">
-              <span>근로소득세 + 지방소득세 (추정)</span>
-              <span id="resTax">0원</span>
+            <div class="c-form-group">
+              <label for="joinDate">입사 일자</label>
+              <input type="date" id="joinDate" value="2026-10-12" class="c-field" onchange="calculateSalary()">
             </div>
 
-            <div class="bd-divider"></div>
+            <div class="c-form-group">
+              <label for="monthlySalary">월 계약 총급여 (세전 총액)</label>
+              <div class="c-input-box">
+                <input type="number" id="monthlySalary" value="2900000" step="50000" class="c-field" oninput="calculateSalary()">
+                <span class="c-unit">원</span>
+              </div>
+            </div>
 
-            <div class="bd-row total-deduction">
-              <span>총 공제 합계</span>
-              <span id="resTotalDeduction" class="text-danger">0원</span>
+            <div class="c-form-group">
+              <label for="nonTaxFood">총급여 중 비과세 식대 포함액</label>
+              <div class="c-input-box">
+                <input type="number" id="nonTaxFood" value="200000" step="10000" class="c-field" oninput="calculateSalary()">
+                <span class="c-unit">원</span>
+              </div>
+              <span class="c-hint">총급여에 식대 20만 원이 포함되어 있으면 해당 금액만큼 세금/보험이 면제됩니다.</span>
+            </div>
+
+            <div class="c-form-group" style="margin-bottom: 0;">
+              <label for="workDaysScheme">일할 계산 기준</label>
+              <select id="workDaysScheme" class="c-field" onchange="calculateSalary()">
+                <option value="calendar" selected>역일 기준 (해당 월 총일수 대비 재직일수 - 일반 기업/노동부 권고)</option>
+                <option value="actualWorkDays">실제 소정근로일수 기준 (일~목 주 5일 물류 스케줄)</option>
+              </select>
             </div>
           </div>
 
-          <div class="calc-note">
-            * 본 계산기는 현행 세법 및 4대보험 법정 요율을 기준으로 근로자 본인 부담분을 산출합니다.
+          <!-- 산출 결과 패널 -->
+          <div class="result-panel">
+            <div class="net-display">
+              <span class="net-label">예상 통장 입금액 (실수령액)</span>
+              <span class="net-val" id="resNetPay">계산 중...</span>
+            </div>
+
+            <div class="deduct-list">
+              <div class="d-row highlight">
+                <span>중도입사 세전 총액</span>
+                <span id="resGrossPay">0원</span>
+              </div>
+              <div class="d-row" id="resDaysInfo" style="font-size: 11px;">
+                <span>반영 일수</span>
+                <span>-</span>
+              </div>
+
+              <div class="d-row" style="margin-top: 4px;">
+                <span>국민연금 (4.5%)</span>
+                <span id="resNps">0원</span>
+              </div>
+              <div class="d-row">
+                <span>건강보험 (3.545%)</span>
+                <span id="resNhi">0원</span>
+              </div>
+              <div class="d-row">
+                <span>장기요양 (건보 12.95%)</span>
+                <span id="resLtc">0원</span>
+              </div>
+              <div class="d-row">
+                <span>고용보험 (0.9%)</span>
+                <span id="resEi">0원</span>
+              </div>
+              <div class="d-row">
+                <span>소득세 + 지방세 (추정)</span>
+                <span id="resTax">0원</span>
+              </div>
+
+              <div class="d-row total">
+                <span>총 공제 합계</span>
+                <span id="resTotalDeduction">0원</span>
+              </div>
+            </div>
+
+            <div class="calc-disclaimer">
+              * 본 계산기는 현행 세법 및 4대보험 법정 요율을 기준으로 근로자 본인 부담분을 산출합니다.
+            </div>
           </div>
+
         </div>
+
+        <!-- 하단 바로가기 덱 -->
+        <section class="category-nav-deck" style="margin-top: 36px;">
+          <div class="deck-section-title">관련 아티클 읽기</div>
+          <div class="deck-cards-row">
+            <a href="../assets/2026-10-24-zero-base-cashflow.html" class="deck-shortcut-card">
+              <div class="dsc-left">
+                <span class="dsc-icon">📖</span>
+                <span class="dsc-name">1원=1초의 관점과 Zero-Base 재정 원칙</span>
+              </div>
+              <span class="dsc-arrow">읽기 →</span>
+            </a>
+            <a href="../index.html" class="deck-shortcut-card">
+              <div class="dsc-left">
+                <span class="dsc-icon">🏠</span>
+                <span class="dsc-name">전체 아카이브 홈</span>
+              </div>
+              <span class="dsc-arrow">이동 →</span>
+            </a>
+          </div>
+        </section>
+
       </div>
 
-      <!-- 배경 아티클 바로가기 카드 -->
-      <div class="tool-banner-card" style="margin-top: 36px;">
-        <div class="tb-left">
-          <span class="tb-icon">📖</span>
-          <div class="tb-info">
-            <h4>이 도구가 탄생한 배경이 궁금하신가요?</h4>
-            <p>10월 12일 입사하며 겪은 고민과, 1원=1초의 관점에서 Zero-Base로 세운 재정 원칙을 읽어보세요.</p>
+    </main>
+
+    <!-- 우측: 실시간 거시 경제 배너 (영구 고정) -->
+    <aside class="sidebar-right">
+      <div class="macro-card">
+        <div class="macro-header">
+          <span class="macro-title">📊 거시 경제 지표</span>
+          <span class="macro-badge" id="macroDate">자동 갱신</span>
+        </div>
+        <div class="macro-list">
+          <div class="macro-item">
+            <span class="m-label">원/달러 환율</span>
+            <span class="m-val" id="macroUsdKrw">연동 중...</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">한국 기준금리</span>
+            <span class="m-val">3.25%</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">증권사 수시 RP</span>
+            <span class="m-val highlight">2.80%</span>
           </div>
         </div>
-        <a href="../assets/2026-10-24-zero-base-cashflow.html" class="tb-btn">아티클 읽기 →</a>
+        <div class="macro-footer">
+          * 환율은 실시간 마켓 API에서 0초 자동 동기화됩니다.
+        </div>
       </div>
+    </aside>
 
-    </div>
-  </main>
+  </div>
 
-  <footer class="portal-footer">
-    <div class="header-container">
-      <p>© 2026 justmakehabit. All rights reserved.</p>
-    </div>
+  <footer class="site-footer">
+    <p>© 2026 justmakehabit. All rights reserved.</p>
   </footer>
 
   <script src="../app.js"></script>
