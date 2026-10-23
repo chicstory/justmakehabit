@@ -13,42 +13,47 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ===================================================
-   0. 거시 경제 지표 실시간 자동 동기화
+   0. 거시 경제 지표 데일리 연동 (ThePathLab 아침 브리핑 동기화)
    =================================================== */
 function fetchMacroData() {
   const dateElem = document.getElementById('macroDate');
   const usdElem = document.getElementById('macroUsdKrw');
 
-  // 오늘 날짜 자동 표기
-  const now = new Date();
-  const days = ['일', '월', '화', '수', '목', '금', '토'];
-  const formattedDate = `${now.getMonth() + 1}월 ${now.getDate()}일 (${days[now.getDay()]})`;
-  if (dateElem) {
-    dateElem.textContent = formattedDate;
-  }
-
-  // 실시간 원/달러 환율 무료 API 호출 (CORS 지원)
-  fetch('https://open.er-api.com/v6/latest/USD')
+  // 1. ThePathLab 공식 latest.json 아침 브리핑 우선 연동
+  fetch('https://chicstory.github.io/metals/latest.json')
     .then(res => res.json())
     .then(data => {
-      if (data && data.rates && data.rates.KRW) {
-        const rate = Math.round(data.rates.KRW * 10) / 10;
-        if (usdElem) {
-          usdElem.textContent = `${rate.toLocaleString('ko-KR')}원`;
+      if (data) {
+        if (data.usd_rate && usdElem) {
+          const rateNum = Number(data.usd_rate);
+          usdElem.textContent = `${rateNum.toLocaleString('ko-KR')}원`;
+        }
+        if (dateElem && data.latest_date) {
+          const parts = data.latest_date.split('-');
+          if (parts.length === 3) {
+            dateElem.textContent = `${parseInt(parts[1], 10)}월 ${parseInt(parts[2], 10)}일 기준`;
+          } else {
+            dateElem.textContent = `${data.latest_date} 기준`;
+          }
         }
       }
     })
     .catch(() => {
-      // 오프라인이거나 API 오류 시 metals 백업 또는 기본값 유지
-      fetch('https://chicstory.github.io/metals/latest.json')
+      // 2. 오픈 마켓 환율 API 백업 (CORS 지원)
+      fetch('https://open.er-api.com/v6/latest/USD')
         .then(res => res.json())
-        .then(mdata => {
-          if (mdata && mdata.exchange_rate && usdElem) {
-            usdElem.textContent = `${mdata.exchange_rate.toLocaleString('ko-KR')}원`;
+        .then(data => {
+          if (data && data.rates && data.rates.KRW && usdElem) {
+            const rate = Math.round(data.rates.KRW * 10) / 10;
+            usdElem.textContent = `${rate.toLocaleString('ko-KR')}원`;
+          }
+          if (dateElem) {
+            const now = new Date();
+            dateElem.textContent = `${now.getMonth() + 1}월 ${now.getDate()}일 기준`;
           }
         })
         .catch(() => {
-          if (usdElem) usdElem.textContent = '1,385.0원';
+          // 실패 시 HTML 정적 기본값 유지 (10월 24일 기준 / 1,338.4원)
         });
     });
 }
