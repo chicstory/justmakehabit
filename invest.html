@@ -68,14 +68,42 @@
           </div>
         </div>
 
-        <div style="margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
-          <div style="font-size: 12px; color: var(--text-muted);" id="tabDescText">
-            🏛️ <strong>1부 리그: PLM100</strong> — 글로벌 과점·해자 챔피언 (포트폴리오 70% 배분 타깃)
+        <div style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 14px;" id="tabDescText">
+          🏛️ <strong>1부 리그: PLM100</strong> — 글로벌 과점·해자 챔피언 (포트폴리오 70% 배분 타깃)
+        </div>
+
+        <!-- 실시간 검색 및 스마트 필터 바 -->
+        <div class="invest-control-bar">
+          <div class="icb-top-row">
+            <div class="icb-search-wrap">
+              <i class="bi bi-search"></i>
+              <input type="text" id="investSearchInput" class="icb-search-input" placeholder="티커 또는 기업명 검색 (예: ROOT, FLNC, 하이닉스, 크라토스)..." oninput="handleInvestSearch(this.value)">
+            </div>
+            <select id="investSortSelect" class="icb-sort-select" onchange="handleInvestSort(this.value)">
+              <option value="default">기본 (내 보유 종목 최우선)</option>
+              <option value="rsi_asc">🌊 RSI 바닥순 (낮은 순)</option>
+              <option value="drop_asc">🔻 고점대비 낙폭순 (-70% ➔ -5%)</option>
+              <option value="price_desc">💵 현재가 높은순</option>
+              <option value="ticker_asc">🔤 티커명 (A-Z)</option>
+            </select>
           </div>
-          <div style="display: flex; gap: 6px;">
-            <button class="rb-badge" onclick="filterInvestList('all')" id="fltAll" style="cursor: pointer;">전체</button>
-            <button class="rb-badge qtr" onclick="filterInvestList('oversold')" id="fltOversold" style="cursor: pointer;">🌊 RSI &lt; 35 바닥</button>
-            <button class="rb-badge qtr" onclick="filterInvestList('drop30')" id="fltDrop" style="cursor: pointer;">🔻 -30%+ 낙폭</button>
+
+          <div class="icb-filter-chips">
+            <div class="icb-chip-group">
+              <button class="ic-chip active" id="chipAll" onclick="filterInvestList('all')">
+                전체 <span class="ic-chip-count" id="countAll">100</span>
+              </button>
+              <button class="ic-chip holding" id="chipHolding" onclick="filterInvestList('holding')">
+                ⭐ 내 보유 종목 <span class="ic-chip-count" id="countHolding">1</span>
+              </button>
+              <button class="ic-chip" id="chipOversold" onclick="filterInvestList('oversold')">
+                🌊 RSI &lt; 35 바닥 <span class="ic-chip-count" id="countOversold">31</span>
+              </button>
+              <button class="ic-chip" id="chipDrop" onclick="filterInvestList('drop30')">
+                🔻 -30%+ 낙폭 <span class="ic-chip-count" id="countDrop">30</span>
+              </button>
+            </div>
+            <div class="icb-count-text" id="resultCountText">조회 결과: 총 100개 종목</div>
           </div>
         </div>
 
@@ -239,16 +267,37 @@
     let investData = null;
     let currentTab = 'PLM';
     let currentFilter = 'all';
+    let currentSort = 'default';
+    let searchKeyword = '';
 
     async function loadInvestRadar() {
       try {
         const res = await fetch('radar/radar_data.json?v=' + Date.now());
         investData = await res.json();
+        updateFilterCounts();
         renderInvestTable();
       } catch (err) {
         document.getElementById('investTableBody').innerHTML = 
           '<tr><td colspan="6" style="text-align: center; color: #ef4444; padding: 20px;">데이터를 불러오지 못했습니다.</td></tr>';
       }
+    }
+
+    function updateFilterCounts() {
+      if (!investData) return;
+      const items = (currentTab === 'PLM') ? investData.plm100_items : investData.plv100_items;
+      const holdingCount = items.filter(i => (i.ticker === 'ROOT' || i.ticker === 'FLNC')).length;
+      const oversoldCount = items.filter(i => i.rsi < 35).length;
+      const dropCount = items.filter(i => i.from_high_pct <= -30).length;
+
+      const cAll = document.getElementById('countAll');
+      const cHld = document.getElementById('countHolding');
+      const cOvr = document.getElementById('countOversold');
+      const cDrp = document.getElementById('countDrop');
+
+      if (cAll) cAll.textContent = items.length;
+      if (cHld) cHld.textContent = holdingCount;
+      if (cOvr) cOvr.textContent = oversoldCount;
+      if (cDrp) cDrp.textContent = dropCount;
     }
 
     function switchInvestTab(tab) {
@@ -270,20 +319,43 @@
         plmBtn.style.color = '#64748b';
         desc.innerHTML = '🚀 <strong>2부 리그: PLV100</strong> — 텐배거 유망 벤처 육성 (포트폴리오 30% 배분 타깃)';
       }
+      updateFilterCounts();
+      renderInvestTable();
+    }
+
+    function handleInvestSearch(keyword) {
+      searchKeyword = keyword.trim().toLowerCase();
+      renderInvestTable();
+    }
+
+    function handleInvestSort(sortVal) {
+      currentSort = sortVal;
       renderInvestTable();
     }
 
     function filterInvestList(flt) {
       currentFilter = flt;
-      ['fltAll', 'fltOversold', 'fltDrop'].forEach(id => {
-        document.getElementById(id).classList.add('qtr');
-        document.getElementById(id).style.background = '#f1f5f9';
-        document.getElementById(id).style.color = '#64748b';
+      ['chipAll', 'chipHolding', 'chipOversold', 'chipDrop'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('active');
       });
-      const activeBtn = document.getElementById(flt === 'all' ? 'fltAll' : (flt === 'oversold' ? 'fltOversold' : 'fltDrop'));
-      activeBtn.classList.remove('qtr');
-      activeBtn.style.background = '#1e293b';
-      activeBtn.style.color = '#fff';
+      const activeId = (flt === 'all') ? 'chipAll' : (flt === 'holding') ? 'chipHolding' : (flt === 'oversold') ? 'chipOversold' : 'chipDrop';
+      const activeEl = document.getElementById(activeId);
+      if (activeEl) activeEl.classList.add('active');
+
+      // 필터 클릭 시 사용자가 직관적으로 체감할 수 있도록 자동 정렬 연동
+      const sortSelect = document.getElementById('investSortSelect');
+      if (flt === 'oversold') {
+        currentSort = 'rsi_asc';
+        if (sortSelect) sortSelect.value = 'rsi_asc';
+      } else if (flt === 'drop30') {
+        currentSort = 'drop_asc';
+        if (sortSelect) sortSelect.value = 'drop_asc';
+      } else if (flt === 'all' || flt === 'holding') {
+        currentSort = 'default';
+        if (sortSelect) sortSelect.value = 'default';
+      }
+
       renderInvestTable();
     }
 
@@ -297,20 +369,57 @@
     function renderInvestTable() {
       if (!investData) return;
       const tbody = document.getElementById('investTableBody');
+      const countEl = document.getElementById('resultCountText');
       const items = (currentTab === 'PLM') ? investData.plm100_items : investData.plv100_items;
 
+      // 1. 필터링
       let filtered = items.filter(item => {
-        if (currentFilter === 'oversold') return item.rsi < 35;
-        if (currentFilter === 'drop30') return item.from_high_pct <= -30;
+        // 검색어 매칭
+        if (searchKeyword) {
+          const mTicker = item.ticker.toLowerCase().includes(searchKeyword);
+          const mName = item.name.toLowerCase().includes(searchKeyword);
+          if (!mTicker && !mName) return false;
+        }
+        // 퀵 필터 매칭
+        if (currentFilter === 'holding') {
+          return (item.ticker === 'ROOT' || item.ticker === 'FLNC');
+        } else if (currentFilter === 'oversold') {
+          return item.rsi < 35;
+        } else if (currentFilter === 'drop30') {
+          return item.from_high_pct <= -30;
+        }
         return true;
       });
 
+      // 2. 정렬 (사용자가 클릭한 필터에 맞게 완벽 정렬)
+      filtered.sort((a, b) => {
+        if (currentSort === 'default') {
+          const aHold = (a.ticker === 'ROOT' || a.ticker === 'FLNC') ? 1 : 0;
+          const bHold = (b.ticker === 'ROOT' || b.ticker === 'FLNC') ? 1 : 0;
+          if (aHold !== bHold) return bHold - aHold; // 내 보유 종목 맨 위로
+          return a.from_high_pct - b.from_high_pct;
+        } else if (currentSort === 'rsi_asc') {
+          return a.rsi - b.rsi; // RSI 극저점 바닥순 (16 -> 20 -> 30)
+        } else if (currentSort === 'drop_asc') {
+          return a.from_high_pct - b.from_high_pct; // 고점 대비 낙폭 큰 순 (-74% -> -50%)
+        } else if (currentSort === 'price_desc') {
+          return (b.price || 0) - (a.price || 0); // 가격 높은 순
+        } else if (currentSort === 'ticker_asc') {
+          return a.ticker.localeCompare(b.ticker); // 티커 알파벳순
+        }
+        return 0;
+      });
+
+      if (countEl) {
+        countEl.textContent = `조회 결과: 총 ${filtered.length}개 종목`;
+      }
+
       if (!filtered.length) {
-        tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 25px; color: #64748b;">조건에 해당하는 종목이 없습니다.</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 35px; color: #64748b;">조건에 일치하는 종목이 없습니다.</td></tr>';
         return;
       }
 
-      tbody.innerHTML = filtered.slice(0, 30).map(item => {
+      tbody.innerHTML = filtered.map(item => {
         let rsiClass = 'mid';
         if (item.rsi < 35) rsiClass = 'low';
         else if (item.rsi > 65) rsiClass = 'high';
@@ -323,8 +432,8 @@
           <tr style="${isHolding ? (isHoldingRoot ? 'background: #eff6ff;' : 'background: #f5f3ff;') : ''}">
             <td>
               <a href="radar/index.html" class="ticker-link">${item.ticker}</a>
-              ${isHoldingRoot ? '<span style="display: block; font-size: 10px; color: #2563eb; font-weight: 700;">내 보유 (30주)</span>' : ''}
-              ${isHoldingFlnc ? '<span style="display: block; font-size: 10px; color: #7c3aed; font-weight: 700;">내 보유 (120주)</span>' : ''}
+              ${isHoldingRoot ? '<span style="display: block; font-size: 10px; color: #2563eb; font-weight: 700; margin-top: 2px;">내 보유 (30주)</span>' : ''}
+              ${isHoldingFlnc ? '<span style="display: block; font-size: 10px; color: #7c3aed; font-weight: 700; margin-top: 2px;">내 보유 (120주)</span>' : ''}
             </td>
             <td>
               <div style="font-weight: 600; color: #0f172a;">${item.name}</div>
