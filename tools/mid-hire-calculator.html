@@ -30,9 +30,51 @@
     </div>
   </header>
 
-  <!-- 표준 2단 레이아웃 (계산기 760px + 우측 거시 배너 250px) -->
-  <div class="standard-layout">
+  <!-- 실전 도구 3단 레이아웃 (좌측 도구 LNB 210px + 중앙 계산기 + 우측 거시 배너 250px) -->
+  <div class="tools-layout-3col">
     
+    <!-- 좌측: 실전 도구 내비게이션 LNB 배너 -->
+    <aside class="sidebar-left">
+      <div class="tool-nav-card">
+        <div class="tool-nav-header">
+          <span class="tn-title">🛠️ 실전 도구 모음</span>
+          <span class="tn-badge">2종 가동</span>
+        </div>
+        <ul class="tool-nav-list">
+          <li>
+            <a href="mid-hire-calculator.html" class="tool-nav-item active">
+              <span class="tni-icon">🧮</span>
+              <div class="tni-text">
+                <span class="tni-name">급여 / 세후 실수령액</span>
+                <span class="tni-desc">지속근무 & 중도입사 일할</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="rp-calculator.html" class="tool-nav-item">
+              <span class="tni-icon">📈</span>
+              <div class="tni-text">
+                <span class="tni-name">원화 RP 일일 복리 이자</span>
+                <span class="tni-desc">연 2.80% 세후 수익률</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <div class="tool-nav-item disabled">
+              <span class="tni-icon">☕</span>
+              <div class="tni-text">
+                <span class="tni-name">월 고정비 누수 감지</span>
+                <span class="tni-desc">기호식품 캡 절감 (예정)</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="tool-nav-footer">
+          * 1원=1초의 규율로 구축된 현실적 자산 시뮬레이터
+        </div>
+      </div>
+    </aside>
+
     <!-- 중앙 계산기 영역 (이전 2열 컴팩트 버전 완벽 복원) -->
     <main class="main-content-area type-tools">
       

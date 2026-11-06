@@ -1511,3 +1511,209 @@ body {
   color: #0284c7;
   background: #e0f2fe;
 }
+
+
+/* ==========================================================================
+   실전 도구(Tools) 전용 3단 레이아웃 & 좌측 도구 LNB 사이드바
+   ========================================================================== */
+
+/* 3단 도구 레이아웃 (좌측 도구 LNB + 중앙 계산기 + 우측 거시 배너) */
+.tools-layout-3col {
+  max-width: 1180px;
+  margin: 28px auto 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr) 250px;
+  gap: 20px;
+  align-items: start;
+}
+
+/* 좌측 도구 사이드바 */
+.sidebar-left {
+  width: 100%;
+}
+
+.tool-nav-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tool-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tn-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tn-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.tool-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tool-nav-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-secondary);
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.tool-nav-item:hover:not(.disabled) {
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+}
+
+.tool-nav-item.active {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.tool-nav-item.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.tni-icon {
+  font-size: 14px;
+  margin-top: 1px;
+}
+
+.tni-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tni-name {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.tool-nav-item.active .tni-name {
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.tni-desc {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.tool-nav-footer {
+  font-size: 10px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border-color);
+}
+
+/* RP 계산기 1초=1원 자본 소득 환산 카드 */
+.rp-capital-card {
+  background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  color: #ffffff;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rp-cap-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #34d399;
+  letter-spacing: 0.5px;
+}
+
+.rp-cap-main {
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #f0fdf4;
+}
+
+.rp-cap-main strong {
+  color: #6ee7b7;
+  font-size: 15px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.rp-cap-sub {
+  font-size: 11px;
+  color: #a7f3d0;
+}
+
+/* 퀵 머니/데이즈 버튼 그룹 */
+.c-btn-chips {
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.c-chip {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.c-chip:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+/* 반응형 조정 */
+@media (max-width: 1024px) {
+  .tools-layout-3col {
+    grid-template-columns: 190px minmax(0, 1fr) 230px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 860px) {
+  .tools-layout-3col {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-left {
+    order: -1;
+  }
+}

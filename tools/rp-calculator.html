@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>원화 RP 일일 복리 이자 계산기 - justmakehabit 실전 도구</title>
+  <meta name="description" content="증권사 수시 RP(연 2.80%)의 일일 복리 이자 및 세후 순수익, 1초=1원 자본 소득 환산 시뮬레이터.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 상단 글로벌 헤더 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="logo-wrap">
+        <span class="logo-badge">JMH</span>
+        <span class="logo-text">justmakehabit</span>
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html" class="h-nav-link">홈</a>
+        <a href="../assets/2026-10-24-zero-base-cashflow.html" class="h-nav-link">자산</a>
+        <a href="../invest.html" class="h-nav-link">개인투자</a>
+        <a href="mid-hire-calculator.html" class="h-nav-link active">도구</a>
+        <a href="../about.html" class="h-nav-link">소개</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 실전 도구 3단 레이아웃 -->
+  <div class="tools-layout-3col">
+    
+    <!-- 좌측: 실전 도구 내비게이션 LNB 배너 -->
+    <aside class="sidebar-left">
+      <div class="tool-nav-card">
+        <div class="tool-nav-header">
+          <span class="tn-title">🛠️ 실전 도구 모음</span>
+          <span class="tn-badge">2종 가동</span>
+        </div>
+        <ul class="tool-nav-list">
+          <li>
+            <a href="mid-hire-calculator.html" class="tool-nav-item">
+              <span class="tni-icon">🧮</span>
+              <div class="tni-text">
+                <span class="tni-name">급여 / 세후 실수령액</span>
+                <span class="tni-desc">지속근무 & 중도입사 일할</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="rp-calculator.html" class="tool-nav-item active">
+              <span class="tni-icon">📈</span>
+              <div class="tni-text">
+                <span class="tni-name">원화 RP 일일 복리 이자</span>
+                <span class="tni-desc">연 2.80% 세후 수익률</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <div class="tool-nav-item disabled">
+              <span class="tni-icon">☕</span>
+              <div class="tni-text">
+                <span class="tni-name">월 고정비 누수 감지</span>
+                <span class="tni-desc">기호식품 캡 절감 (예정)</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="tool-nav-footer">
+          * 1원=1초의 규율로 구축된 현실적 자산 시뮬레이터
+        </div>
+      </div>
+    </aside>
+
+    <!-- 중앙 계산기 영역 -->
+    <main class="main-content-area type-tools">
+      
+      <div class="calculator-box">
+        
+        <header class="art-header" style="margin-bottom: 20px;">
+          <div class="art-category">
+            <span class="art-badge">실전 도구 (Tools)</span>
+            <span class="art-sub">/ 원화 RP 일일 복리 시뮬레이터</span>
+          </div>
+          <h1 class="art-title" style="font-size: 22px; margin-bottom: 8px;">📈 원화 RP 일일 복리 이자 & 세후 수익률 시뮬레이터</h1>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
+            하루만 맡겨도 매일 이자가 붙는 증권사 수시 RP(연 2.80%)의 <strong>일일 복리 재투자 효과</strong>와 세후 실수익, 그리고 <strong>1초=1원의 관점</strong>에서 자본이 내 삶의 몇 초를 대신 일해주는지 정밀하게 계산합니다.
+          </p>
+        </header>
+
+        <!-- 2열 그리드: 입력 폼 & 산출 결과 -->
+        <div class="calc-grid-2col">
+          
+          <!-- 입력 폼 패널 -->
+          <div class="calc-panel">
+            <h3 class="panel-title">예치 및 약정 조건</h3>
+            
+            <!-- 1. 예치 원금 -->
+            <div class="c-form-group">
+              <label for="rpPrincipal">예치 원금</label>
+              <div class="c-input-box">
+                <input type="number" id="rpPrincipal" value="10000000" step="500000" class="c-field" oninput="calculateRp()">
+                <span class="c-unit">원</span>
+              </div>
+              <div class="c-btn-chips">
+                <button type="button" class="c-chip" onclick="addPrincipal(1000000)">+100만</button>
+                <button type="button" class="c-chip" onclick="addPrincipal(5000000)">+500만</button>
+                <button type="button" class="c-chip" onclick="addPrincipal(10000000)">+1,000만</button>
+                <button type="button" class="c-chip" onclick="setPrincipal(10000000)">1,000만 세팅</button>
+              </div>
+            </div>
+
+            <!-- 2. 약정 연이율 -->
+            <div class="c-form-group">
+              <label for="rpRate">약정 연이율 (연 %)</label>
+              <div class="c-input-box">
+                <input type="number" id="rpRate" value="2.80" step="0.05" class="c-field" oninput="calculateRp()">
+                <span class="c-unit">%</span>
+              </div>
+              <div class="c-btn-chips">
+                <button type="button" class="c-chip" onclick="setRpRate(2.60)">2.60%</button>
+                <button type="button" class="c-chip" onclick="setRpRate(2.80)">2.80% (현재 수시RP)</button>
+                <button type="button" class="c-chip" onclick="setRpRate(3.00)">3.00%</button>
+                <button type="button" class="c-chip" onclick="setRpRate(3.25)">3.25% (기준금리)</button>
+              </div>
+            </div>
+
+            <!-- 3. 예치 기간 -->
+            <div class="c-form-group">
+              <label for="rpDays">예치 기간 (일수)</label>
+              <div class="c-input-box">
+                <input type="number" id="rpDays" value="30" step="1" class="c-field" oninput="calculateRp()">
+                <span class="c-unit">일</span>
+              </div>
+              <div class="c-btn-chips">
+                <button type="button" class="c-chip" onclick="setRpDays(1)">1일 (파킹)</button>
+                <button type="button" class="c-chip" onclick="setRpDays(7)">7일 (1주일)</button>
+                <button type="button" class="c-chip" onclick="setRpDays(30)">30일 (1개월)</button>
+                <button type="button" class="c-chip" onclick="setRpDays(90)">90일 (3개월)</button>
+                <button type="button" class="c-chip" onclick="setRpDays(365)">365일 (1년)</button>
+              </div>
+            </div>
+
+            <!-- 4. 이자 운용 방식 -->
+            <div class="c-form-group">
+              <label for="rpCompoundMode">이자 운용 방식</label>
+              <select id="rpCompoundMode" class="c-field" onchange="calculateRp()">
+                <option value="daily_compound" selected>일일 복리 재투자 (매일 원리금에 이자 재예치 - RP 표준)</option>
+                <option value="simple">단리 계산 (만기 일시 원금 기준 지급)</option>
+              </select>
+            </div>
+
+            <!-- 5. 과세 구분 -->
+            <div class="c-form-group" style="margin-bottom: 0;">
+              <label for="rpTaxScheme">이자소득세 과세 구분</label>
+              <select id="rpTaxScheme" class="c-field" onchange="calculateRp()">
+                <option value="normal" selected>일반과세 15.4% (소득세 14% + 지방세 1.4%)</option>
+                <option value="tax_free">비과세 0.0% (ISA 계좌 / 비과세종합저축)</option>
+                <option value="tax_benefit">세금우대 9.5% (조합 등)</option>
+              </select>
+            </div>
+
+          </div>
+
+          <!-- 산출 결과 패널 -->
+          <div class="result-panel">
+            <div class="net-display">
+              <span class="net-label">최종 세후 총 수령액 (원금 + 순이자)</span>
+              <span class="net-val" id="resRpTotalPayout">10,019,252원</span>
+            </div>
+
+            <!-- 💡 1초=1원 자본 소득 시그니처 카드 -->
+            <div class="rp-capital-card">
+              <span class="rp-cap-tag">⚡ 1초 = 1원 CAPITAL HARVEST</span>
+              <div class="rp-cap-main" id="resRpDailyCap">
+                이 자본은 하루에 세후 <strong id="resRpDailyWon">641원</strong>을 벌어옵니다.
+              </div>
+              <div class="rp-cap-sub" id="resRpSecSub">
+                내 삶의 <strong>641초</strong>를 자본이 대신 살아주고 있습니다. (시간당 26.7원)
+              </div>
+            </div>
+
+            <div class="deduct-list" style="margin-top: 14px;">
+              <div class="d-row highlight">
+                <span>예치 원금</span>
+                <span id="resRpPrincipalText">10,000,000원</span>
+              </div>
+              <div class="d-row">
+                <span>세전 총이자 (<span id="resRpDaysLabel">30일간</span>)</span>
+                <span id="resRpGrossInterest" style="font-family: 'JetBrains Mono', monospace; font-weight: 600;">+23,013원</span>
+              </div>
+              <div class="d-row">
+                <span>이자소득세 + 지방세 (<span id="resRpTaxRateLabel">15.4%</span>)</span>
+                <span id="resRpTaxAmount" style="color: #ef4444; font-family: 'JetBrains Mono', monospace;">-3,543원</span>
+              </div>
+              <div class="d-row total">
+                <span style="color: #10b981;">세후 순이자 수익</span>
+                <div style="text-align: right;">
+                  <span id="resRpNetInterest" style="color: #10b981; font-size: 15px; font-weight: 700; font-family: 'JetBrains Mono', monospace;">+19,470원</span>
+                  <span class="d-share-badge" id="resRpEffRate" style="color: #059669; font-weight: 700;">세후 연 2.37%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-disclaimer" style="margin-top: 14px;">
+              * 원화 수시 RP는 증권사가 국공채·우량채를 담보로 제공하는 환매조건부채권 상품입니다.<br>
+              * 일일 복리 시 매일 자정 발생하는 세후 이자가 익일 원금에 가산되어 재투자됩니다. (원단위 미만 절사 반영)
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 하단 관련 아티클 바로가기 덱 -->
+        <section class="category-nav-deck" style="margin-top: 36px;">
+          <div class="deck-section-title">관련 아카이브 읽기</div>
+          <div class="deck-cards-row">
+            <a href="../assets/2026-10-24-zero-base-cashflow.html" class="deck-shortcut-card">
+              <div class="dsc-left">
+                <span class="dsc-icon">📖</span>
+                <span class="dsc-name">스스로 일하는 자본: 원화 RP(연 2.8%) 일일 복리 배분 실험</span>
+              </div>
+              <span class="dsc-arrow">읽기 →</span>
+            </a>
+            <a href="mid-hire-calculator.html" class="deck-shortcut-card">
+              <div class="dsc-left">
+                <span class="dsc-icon">🧮</span>
+                <span class="dsc-name">급여 / 세후 실수령액 계산기 (지속근무 & 중도입사)</span>
+              </div>
+              <span class="dsc-arrow">이동 →</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+    <!-- 우측: 실시간 거시 경제 배너 & 실전 자산 매매 현황 -->
+    <aside class="sidebar-right">
+      <div class="macro-card">
+        <div class="macro-header">
+          <span class="macro-title">📊 거시 경제 지표</span>
+          <span class="macro-badge" id="macroDate">10월 24일 기준</span>
+        </div>
+        <div class="macro-list">
+          <div class="macro-item">
+            <span class="m-label">원/달러 환율</span>
+            <span class="m-val" id="macroUsdKrw">1,338.4원</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">한국 기준금리</span>
+            <span class="m-val">3.25%</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">증권사 수시 RP</span>
+            <span class="m-val highlight">2.80%</span>
+          </div>
+        </div>
+        <div class="macro-footer">
+          * ThePathLab 데일리 매크로 브리핑 연동
+        </div>
+      </div>
+
+      <!-- 실전 자산 매매 현황 카드 -->
+      <div class="holding-card">
+        <div class="holding-header">
+          <span class="holding-title">💼 실전 자산 매매 현황</span>
+          <span class="holding-badge">실시간 연동</span>
+        </div>
+        
+        <div class="holding-stock-box">
+          <div class="h-stock-top">
+            <span class="h-ticker">FLNC (플루언스)</span>
+            <span class="h-qty">117주</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$5.9685</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="flncCurPrice">$5.18</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-down" id="flncRetPct">-13.2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-graph-wrap">
+          <div class="pg-head">
+            <span>포트폴리오 배분 비율</span>
+            <strong id="flncWeightText">FLNC 100%</strong>
+          </div>
+          <div class="pg-bar-track">
+            <div class="pg-bar-fill plv" style="width: 100%;"></div>
+          </div>
+          <div class="pg-legend">
+            <span><i class="dot plm"></i> 1부 해자 70% (목표)</span>
+            <span><i class="dot plv"></i> 2부 텐배거 30%</span>
+          </div>
+        </div>
+
+        <div class="rebalance-info">
+          <div class="rb-step">
+            <span class="rb-badge">매월</span>
+            <span class="rb-txt">1차 평가 · $1,000 리밸런싱</span>
+          </div>
+          <div class="rb-step">
+            <span class="rb-badge qtr">매분기</span>
+            <span class="rb-txt">2차 평가 · 승강제 리밸런싱</span>
+          </div>
+        </div>
+
+        <a href="../invest.html" class="holding-link-btn">
+          개인투자 퀀트 레이더 보기 →
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 justmakehabit. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="../about.html">소개 (About)</a>
+        <span>·</span>
+        <a href="../invest.html">개인투자</a>
+        <span>·</span>
+        <a href="../index.html">홈</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+  <script>
+    // 퀵 칩 헬퍼 함수
+    function addPrincipal(amount) {
+      const input = document.getElementById('rpPrincipal');
+      if (input) {
+        input.value = parseInt(input.value || 0, 10) + amount;
+        calculateRp();
+      }
+    }
+
+    function setPrincipal(amount) {
+      const input = document.getElementById('rpPrincipal');
+      if (input) {
+        input.value = amount;
+        calculateRp();
+      }
+    }
+
+    function setRpRate(rate) {
+      const input = document.getElementById('rpRate');
+      if (input) {
+        input.value = rate.toFixed(2);
+        calculateRp();
+      }
+    }
+
+    function setRpDays(days) {
+      const input = document.getElementById('rpDays');
+      if (input) {
+        input.value = days;
+        calculateRp();
+      }
+    }
+
+    // RP 계산 엔진
+    function calculateRp() {
+      const principal = Math.max(0, parseInt(document.getElementById('rpPrincipal')?.value || '10000000', 10));
+      const annualRate = Math.max(0, parseFloat(document.getElementById('rpRate')?.value || '2.80')) / 100;
+      const days = Math.max(1, parseInt(document.getElementById('rpDays')?.value || '30', 10));
+      const mode = document.getElementById('rpCompoundMode')?.value || 'daily_compound';
+      const taxScheme = document.getElementById('rpTaxScheme')?.value || 'normal';
+
+      let taxRate = 0.154;
+      let taxLabel = '15.4%';
+      if (taxScheme === 'tax_free') {
+        taxRate = 0;
+        taxLabel = '0.0% (비과세)';
+      } else if (taxScheme === 'tax_benefit') {
+        taxRate = 0.095;
+        taxLabel = '9.5% (세금우대)';
+      }
+
+      let grossInterest = 0;
+      let netInterest = 0;
+      let totalTax = 0;
+
+      const dailyRate = annualRate / 365;
+
+      if (mode === 'daily_compound') {
+        // 일일 복리 계산
+        let currentBalance = principal;
+        for (let d = 0; d < days; d++) {
+          const dayGross = currentBalance * dailyRate;
+          const dayTax = Math.floor(dayGross * taxRate);
+          const dayNet = Math.floor(dayGross) - dayTax;
+
+          grossInterest += Math.floor(dayGross);
+          totalTax += dayTax;
+          netInterest += dayNet;
+          currentBalance += dayNet; // 세후 이자 일일 재예치
+        }
+      } else {
+        // 단리 계산
+        grossInterest = Math.floor(principal * annualRate * (days / 365));
+        totalTax = Math.floor(grossInterest * taxRate);
+        netInterest = grossInterest - totalTax;
+      }
+
+      const totalPayout = principal + netInterest;
+      const dailyNetAvg = Math.round(netInterest / days);
+      const hourlyNetAvg = (dailyNetAvg / 24).toFixed(1);
+      const effAnnualRate = ((netInterest / principal) * (365 / days) * 100).toFixed(2);
+
+      // DOM 갱신
+      document.getElementById('resRpTotalPayout').textContent = totalPayout.toLocaleString('ko-KR') + '원';
+      document.getElementById('resRpPrincipalText').textContent = principal.toLocaleString('ko-KR') + '원';
+      document.getElementById('resRpDaysLabel').textContent = days + '일간';
+      document.getElementById('resRpGrossInterest').textContent = '+' + grossInterest.toLocaleString('ko-KR') + '원';
+      document.getElementById('resRpTaxRateLabel').textContent = taxLabel;
+      document.getElementById('resRpTaxAmount').textContent = '-' + totalTax.toLocaleString('ko-KR') + '원';
+      document.getElementById('resRpNetInterest').textContent = '+' + netInterest.toLocaleString('ko-KR') + '원';
+      document.getElementById('resRpEffRate').textContent = '세후 연 ' + effAnnualRate + '%';
+
+      // 1초 = 1원 시그니처 갱신
+      document.getElementById('resRpDailyWon').textContent = dailyNetAvg.toLocaleString('ko-KR') + '원';
+      document.getElementById('resRpSecSub').innerHTML = 
+        `내 삶의 <strong>${dailyNetAvg.toLocaleString('ko-KR')}초</strong>를 자본이 대신 살아주고 있습니다. (시간당 ${hourlyNetAvg}원)`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      calculateRp();
+    });
+  </script>
+</body>
+</html>
