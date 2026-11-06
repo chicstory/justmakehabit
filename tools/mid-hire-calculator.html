@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>중도입사 급여 & 세후 실수령액 계산기 - justmakehabit 실전 도구</title>
+  <title>급여 / 세후 실수령액 계산기 (지속근무 & 중도입사) - justmakehabit 실전 도구</title>
   <meta name="description" content="월 도중에 입사했을 때, 입사일과 근무 요일에 따라 4대 보험과 세금을 공제한 뒤 실제로 통장에 꽂히는 금액을 정확하게 계산합니다.">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="../style.css">
@@ -41,26 +41,36 @@
         <header class="art-header" style="margin-bottom: 20px;">
           <div class="art-category">
             <span class="art-badge">실전 도구 (Tools)</span>
-            <span class="art-sub">/ 중도입사 급여 계산기</span>
+            <span class="art-sub">/ 급여 & 세후 실수령액 계산기</span>
           </div>
-          <h1 class="art-title" style="font-size: 22px; margin-bottom: 8px;">🧮 중도입사 급여 & 세후 실수령액 계산기</h1>
+          <h1 class="art-title" style="font-size: 22px; margin-bottom: 8px;">🧮 급여 / 세후 실수령액 계산기</h1>
           <p style="font-size: 13px; color: var(--text-muted); margin: 0;">
-            월 도중에 입사했을 때, 입사일과 근무 요일에 따라 4대 보험과 세금을 공제한 뒤 실제로 통장에 꽂히는 금액을 정확하게 계산합니다.
+            한 달 전체를 근무하는 <strong>'지속근무(정규 만근)'</strong>와 월 도중에 입사한 <strong>'중도입사(일할계산)'</strong>를 선택하여, 4대 보험 요율과 소득세 실시간 공제 비율 및 실제 통장 입금액을 정밀하게 산출합니다.
           </p>
         </header>
 
-        <!-- 이전 버전의 알차고 직관적인 2열 그리드 -->
+        <!-- 2열 반응형 그리드: 입력 정보 & 산출 결과 -->
         <div class="calc-grid-2col">
           
           <!-- 입력 폼 패널 -->
           <div class="calc-panel">
             <h3 class="panel-title">입력 정보</h3>
             
+            <!-- 1. 근무 유형 선택 메뉴 (지속근무 vs 중도입사) -->
             <div class="c-form-group">
-              <label for="joinDate">입사 일자</label>
-              <input type="date" id="joinDate" value="2026-10-12" class="c-field" onchange="calculateSalary()">
+              <label>근무 유형 선택</label>
+              <div class="work-type-toggle">
+                <button type="button" class="wt-btn active" id="btnRegular" onclick="setWorkType('regular')">
+                  🏢 지속근무 (정규 만근)
+                </button>
+                <button type="button" class="wt-btn" id="btnMid" onclick="setWorkType('mid')">
+                  📅 중도입사 (일할 계산)
+                </button>
+              </div>
+              <input type="hidden" id="workType" value="regular">
             </div>
 
+            <!-- 2. 기본 계약 총급여 -->
             <div class="c-form-group">
               <label for="monthlySalary">월 계약 총급여 (세전 총액)</label>
               <div class="c-input-box">
@@ -69,80 +79,120 @@
               </div>
             </div>
 
+            <!-- 3. 비과세 식대 -->
             <div class="c-form-group">
               <label for="nonTaxFood">총급여 중 비과세 식대 포함액</label>
               <div class="c-input-box">
                 <input type="number" id="nonTaxFood" value="200000" step="10000" class="c-field" oninput="calculateSalary()">
                 <span class="c-unit">원</span>
               </div>
-              <span class="c-hint">총급여에 식대 20만 원이 포함되어 있으면 해당 금액만큼 세금/보험이 면제됩니다.</span>
+              <span class="c-hint">총급여에 식대 20만 원이 포함되어 있으면 해당 금액만큼 세금/보험이 비과세 처리됩니다.</span>
             </div>
 
-            <div class="c-form-group">
-              <label for="insuranceScheme">중도입사 첫 달 4대보험 공제 방식</label>
-              <select id="insuranceScheme" class="c-field" onchange="calculateSalary()">
-                <option value="exempt_all" selected>국민연금·건강보험 첫 달 미부과 (법정 원칙 / 실무 다수 - 실수령 179~183만 원)</option>
-                <option value="exempt_nps">국민연금만 첫 달 유예 (건강보험+고용보험 공제 - 약 175~179만 원)</option>
-                <option value="full">4대보험 첫 달 전액 공제 (회사 일괄 징수 - 약 167만 원)</option>
-              </select>
-              <span class="c-hint">※ 1일이 아닌 중도입사자는 국민연금·건강보험이 당월 미부과되는 것이 법정 원칙입니다.</span>
+            <!-- 4. 중도입사 전용 설정 영역 (지속근무 시에는 자동 숨김) -->
+            <div id="midHireSection" style="display: none; border-top: 1px dashed var(--border-color); padding-top: 14px; margin-top: 14px;">
+              <div class="c-form-group">
+                <label for="joinDate">입사 일자</label>
+                <input type="date" id="joinDate" value="2026-10-12" class="c-field" onchange="calculateSalary()">
+              </div>
+
+              <div class="c-form-group">
+                <label for="insuranceScheme">중도입사 첫 달 4대보험 공제 방식</label>
+                <select id="insuranceScheme" class="c-field" onchange="calculateSalary()">
+                  <option value="exempt_all" selected>국민연금·건강보험 첫 달 미부과 (법정 원칙 / 실무 다수 - 실수령 179~183만 원)</option>
+                  <option value="exempt_nps">국민연금만 첫 달 유예 (건강보험+고용보험 공제 - 약 175~179만 원)</option>
+                  <option value="full">4대보험 첫 달 전액 공제 (회사 일괄 징수 - 약 167만 원)</option>
+                </select>
+                <span class="c-hint">※ 1일이 아닌 중도입사자는 국민연금·건강보험이 당월 미부과되는 것이 법정 원칙입니다.</span>
+              </div>
+
+              <div class="c-form-group" style="margin-bottom: 0;">
+                <label for="workDaysScheme">일할 계산 기준</label>
+                <select id="workDaysScheme" class="c-field" onchange="calculateSalary()">
+                  <option value="calendar" selected>역일 기준 (해당 월 총일수 대비 재직일수 - 일반 기업/노동부 권고)</option>
+                  <option value="actualWorkDays">실제 소정근로일수 기준 (일~목 주 5일 물류 스케줄)</option>
+                </select>
+              </div>
             </div>
 
-            <div class="c-form-group" style="margin-bottom: 0;">
-              <label for="workDaysScheme">일할 계산 기준</label>
-              <select id="workDaysScheme" class="c-field" onchange="calculateSalary()">
-                <option value="calendar" selected>역일 기준 (해당 월 총일수 대비 재직일수 - 일반 기업/노동부 권고)</option>
-                <option value="actualWorkDays">실제 소정근로일수 기준 (일~목 주 5일 물류 스케줄)</option>
-              </select>
-            </div>
           </div>
 
           <!-- 산출 결과 패널 -->
           <div class="result-panel">
             <div class="net-display">
-              <span class="net-label">예상 통장 입금액 (실수령액)</span>
+              <span class="net-label">예상 통장 입금액 (세후 실수령액)</span>
               <span class="net-val" id="resNetPay">계산 중...</span>
+            </div>
+
+            <!-- 4대보험 + 소득세 공제 비율 시각화 바 -->
+            <div class="pay-ratio-box">
+              <div class="prb-head">
+                <span class="prb-net">실수령 <strong id="resNetRatio">89.8%</strong></span>
+                <span class="prb-deduct">총 공제 <strong id="resDeductRatio">10.2%</strong></span>
+              </div>
+              <div class="prb-track">
+                <div class="prb-fill-net" id="prbNetFill" style="width: 89.8%;"></div>
+                <div class="prb-fill-deduct" id="prbDeductFill" style="width: 10.2%;"></div>
+              </div>
             </div>
 
             <div class="deduct-list">
               <div class="d-row highlight">
-                <span>중도입사 세전 총액</span>
-                <span id="resGrossPay">0원</span>
+                <span id="resGrossLabel">세전 총급여</span>
+                <span id="resGrossPay">2,900,000원</span>
               </div>
               <div class="d-row" id="resDaysInfo" style="font-size: 11px;">
-                <span>반영 일수</span>
-                <span>-</span>
+                <span>근무 형태</span>
+                <span>한 달 전체 100% 만근</span>
               </div>
 
-              <div class="d-row" style="margin-top: 4px;">
-                <span>국민연금 (4.5%)</span>
-                <span id="resNps">0원</span>
+              <div class="d-row" style="margin-top: 6px;">
+                <span>국민연금 <span class="d-rate-badge">4.50%</span></span>
+                <div>
+                  <span id="resNps">121,500원</span>
+                  <span class="d-share-badge" id="resNpsShare">4.2%</span>
+                </div>
               </div>
               <div class="d-row">
-                <span>건강보험 (3.545%)</span>
-                <span id="resNhi">0원</span>
+                <span>건강보험 <span class="d-rate-badge">3.545%</span></span>
+                <div>
+                  <span id="resNhi">95,710원</span>
+                  <span class="d-share-badge" id="resNhiShare">3.3%</span>
+                </div>
               </div>
               <div class="d-row">
-                <span>장기요양 (건보 12.95%)</span>
-                <span id="resLtc">0원</span>
+                <span>장기요양 <span class="d-rate-badge">건보 12.95%</span></span>
+                <div>
+                  <span id="resLtc">12,390원</span>
+                  <span class="d-share-badge" id="resLtcShare">0.4%</span>
+                </div>
               </div>
               <div class="d-row">
-                <span>고용보험 (0.9%)</span>
-                <span id="resEi">0원</span>
+                <span>고용보험 <span class="d-rate-badge">0.90%</span></span>
+                <div>
+                  <span id="resEi">24,300원</span>
+                  <span class="d-share-badge" id="resEiShare">0.8%</span>
+                </div>
               </div>
               <div class="d-row">
-                <span>소득세 + 지방세 (추정)</span>
-                <span id="resTax">0원</span>
+                <span>소득세 + 지방세 <span class="d-rate-badge">간이세액표</span></span>
+                <div>
+                  <span id="resTax">41,280원</span>
+                  <span class="d-share-badge" id="resTaxShare">1.4%</span>
+                </div>
               </div>
 
               <div class="d-row total">
                 <span>총 공제 합계</span>
-                <span id="resTotalDeduction">0원</span>
+                <div>
+                  <span id="resTotalDeduction">-295,180원</span>
+                  <span class="d-share-badge" id="resTotalDeductShare" style="color: #dc2626; font-weight: 700;">10.2%</span>
+                </div>
               </div>
             </div>
 
             <div class="calc-disclaimer">
-              * 본 계산기는 현행 세법 및 4대보험 법정 요율을 기준으로 근로자 본인 부담분을 산출합니다.
+              * 본 계산기는 현행 세법(비과세 식대 20만 원 반영) 및 4대보험 법정 요율을 기준으로 근로자 본인 부담분을 산출합니다.
             </div>
           </div>
 

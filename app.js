@@ -142,79 +142,107 @@ function initMobileMenu() {
 /* ===================================================
    2. 중도입사 급여/세후 실수령액 정밀 계산 엔진
    =================================================== */
-function calculateSalary() {
-  const joinDateVal = document.getElementById('joinDate')?.value || '2026-10-12';
-  const totalMonthlySalary = parseInt(document.getElementById('monthlySalary')?.value || '2900000', 10);
-  const nonTaxFood = parseInt(document.getElementById('nonTaxFood')?.value || '200000', 10);
-  const scheme = document.getElementById('workDaysScheme')?.value || 'calendar';
-  const insuranceScheme = document.getElementById('insuranceScheme')?.value || 'exempt_all';
+/* ===================================================
+   2. 급여/세후 실수령액 정밀 계산 엔진 (지속근무 vs 중도입사)
+   =================================================== */
+function setWorkType(type) {
+  const input = document.getElementById('workType');
+  const btnReg = document.getElementById('btnRegular');
+  const btnMid = document.getElementById('btnMid');
+  const midSec = document.getElementById('midHireSection');
 
-  const joinDate = new Date(joinDateVal);
-  if (isNaN(joinDate.getTime())) return;
+  if (input) input.value = type;
 
-  const year = joinDate.getFullYear();
-  const month = joinDate.getMonth(); // 0-indexed (9 = 10월)
-  const joinDay = joinDate.getDate();
-
-  // 해당 월의 총 일수 (10월: 31일)
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-  // 입사일부터 말일까지의 재직 일수
-  const tenureDays = daysInMonth - joinDay + 1;
-
-  let ratio = 1;
-  let daysInfoText = '';
-
-  if (scheme === 'calendar') {
-    ratio = tenureDays / daysInMonth;
-    daysInfoText = `${month + 1}월 ${daysInMonth}일 중 ${tenureDays}일 근무 (${(ratio * 100).toFixed(1)}% 반영)`;
+  if (type === 'regular') {
+    if (btnReg) btnReg.classList.add('active');
+    if (btnMid) btnMid.classList.remove('active');
+    if (midSec) midSec.style.display = 'none';
   } else {
-    // 실제 소정근로일수 기준 (일~목 주 5일)
-    let totalWorkDays = 0;
-    let actualWorkDays = 0;
-
-    for (let d = 1; d <= daysInMonth; d++) {
-      const dayOfWeek = new Date(year, month, d).getDay(); // 0:일, 1:월, 2:화, 3:수, 4:목, 5:금, 6:토
-      const isWorkDay = (dayOfWeek >= 0 && dayOfWeek <= 4); // 일~목
-      if (isWorkDay) {
-        totalWorkDays++;
-        if (d >= joinDay) actualWorkDays++;
-      }
-    }
-    ratio = totalWorkDays > 0 ? (actualWorkDays / totalWorkDays) : 1;
-    daysInfoText = `총 소정근로 ${totalWorkDays}일 중 ${actualWorkDays}일 근무 (${(ratio * 100).toFixed(1)}% 반영)`;
+    if (btnMid) btnMid.classList.add('active');
+    if (btnReg) btnReg.classList.remove('active');
+    if (midSec) midSec.style.display = 'block';
   }
 
-  // 1) 세전 일할 총액 산출 (총액에서 20만 원이 중복으로 더해지지 않음!)
+  calculateSalary();
+}
+
+function calculateSalary() {
+  const workType = document.getElementById('workType')?.value || 'regular';
+  const totalMonthlySalary = parseInt(document.getElementById('monthlySalary')?.value || '2900000', 10);
+  const nonTaxFood = parseInt(document.getElementById('nonTaxFood')?.value || '200000', 10);
+
+  let ratio = 1;
+  let daysInfoText = '한 달 전체 100% 만근 (정규 월급)';
+  let grossLabel = '월 세전 총급여';
+
+  if (workType === 'mid') {
+    grossLabel = '중도입사 세전 총액';
+    const joinDateVal = document.getElementById('joinDate')?.value || '2026-10-12';
+    const scheme = document.getElementById('workDaysScheme')?.value || 'calendar';
+    const joinDate = new Date(joinDateVal);
+
+    if (!isNaN(joinDate.getTime())) {
+      const year = joinDate.getFullYear();
+      const month = joinDate.getMonth();
+      const joinDay = joinDate.getDate();
+      const daysInMonth = new Date(year, month + 1, 0).getDate();
+      const tenureDays = daysInMonth - joinDay + 1;
+
+      if (scheme === 'calendar') {
+        ratio = tenureDays / daysInMonth;
+        daysInfoText = `${month + 1}월 ${daysInMonth}일 중 ${tenureDays}일 근무 (${(ratio * 100).toFixed(1)}% 반영)`;
+      } else {
+        // 일~목 물류 스케줄
+        let totalWorkDays = 0;
+        let actualWorkDays = 0;
+        for (let d = 1; d <= daysInMonth; d++) {
+          const dayOfWeek = new Date(year, month, d).getDay();
+          if (dayOfWeek >= 0 && dayOfWeek <= 4) {
+            totalWorkDays++;
+            if (d >= joinDay) actualWorkDays++;
+          }
+        }
+        ratio = totalWorkDays > 0 ? (actualWorkDays / totalWorkDays) : 1;
+        daysInfoText = `총 소정근로 ${totalWorkDays}일 중 ${actualWorkDays}일 근무 (${(ratio * 100).toFixed(1)}% 반영)`;
+      }
+    }
+  }
+
+  // 1) 세전 일할 총액 및 과세 대상
   const grossPay = Math.floor(totalMonthlySalary * ratio);
   const proRatedNonTax = Math.floor(nonTaxFood * ratio);
-  // 과세 대상 = 세전 일할 총액 - 비과세 식대 일할분
   const proRatedTaxable = Math.max(0, grossPay - proRatedNonTax);
 
-  // 2) 4대 보험 공제 로직 (중도입사 첫 달 옵션 분기)
+  // 2) 4대 보험 공제 로직
   let nps = 0;
   let nhi = 0;
   let ltc = 0;
-  const ei = Math.floor(proRatedTaxable * 0.009); // 고용보험은 0.9% 무조건 부과
+  const ei = Math.floor(proRatedTaxable * 0.009); // 고용보험 0.9%
 
-  if (insuranceScheme === 'full') {
-    // 전액 공제
+  if (workType === 'regular') {
+    // 지속근무: 정상 4대 보험 전액 공제
     nps = Math.floor(proRatedTaxable * 0.045);
     nhi = Math.floor(proRatedTaxable * 0.03545);
     ltc = Math.floor(nhi * 0.1295);
-  } else if (insuranceScheme === 'exempt_nps') {
-    // 국민연금만 첫 달 유예 (건보+장기요양+고용보험 부과)
-    nps = 0;
-    nhi = Math.floor(proRatedTaxable * 0.03545);
-    ltc = Math.floor(nhi * 0.1295);
   } else {
-    // exempt_all: 법정 원칙 및 다수 실무 (국민연금 & 건보 모두 첫 달 미부과)
-    nps = 0;
-    nhi = 0;
-    ltc = 0;
+    // 중도입사: 첫 달 공제 옵션 분기
+    const insuranceScheme = document.getElementById('insuranceScheme')?.value || 'exempt_all';
+    if (insuranceScheme === 'full') {
+      nps = Math.floor(proRatedTaxable * 0.045);
+      nhi = Math.floor(proRatedTaxable * 0.03545);
+      ltc = Math.floor(nhi * 0.1295);
+    } else if (insuranceScheme === 'exempt_nps') {
+      nps = 0;
+      nhi = Math.floor(proRatedTaxable * 0.03545);
+      ltc = Math.floor(nhi * 0.1295);
+    } else {
+      nps = 0;
+      nhi = 0;
+      ltc = 0;
+    }
   }
 
-  // 3) 간이세액표 약식 근로소득세 & 지방소득세
+  // 3) 간이세액표 근로소득세 & 지방소득세
   let estIncomeTax = 0;
   if (proRatedTaxable > 1060000) {
     if (proRatedTaxable < 2000000) {
@@ -232,12 +260,20 @@ function calculateSalary() {
   const totalDeduction = nps + nhi + ltc + ei + totalTax;
   const netPay = Math.max(0, grossPay - totalDeduction);
 
-  // DOM 갱신
+  // 5) 비율(%) 계산 (급여 총액 대비 각 항목 점유율)
+  const calcShare = (val) => grossPay > 0 ? (val / grossPay * 100).toFixed(1) + '%' : '0.0%';
+  const deductRatio = grossPay > 0 ? (totalDeduction / grossPay * 100).toFixed(1) : '0.0';
+  const netRatio = (100 - parseFloat(deductRatio)).toFixed(1);
+
+  // DOM 갱신: 금액
   const netPayElem = document.getElementById('resNetPay');
   if (netPayElem) netPayElem.textContent = netPay.toLocaleString('ko-KR') + '원';
 
   const grossPayElem = document.getElementById('resGrossPay');
   if (grossPayElem) grossPayElem.textContent = grossPay.toLocaleString('ko-KR') + '원';
+
+  const grossLabelElem = document.getElementById('resGrossLabel');
+  if (grossLabelElem) grossLabelElem.textContent = grossLabel;
 
   const totalDeductElem = document.getElementById('resTotalDeduction') || document.getElementById('resTotalDeduct');
   if (totalDeductElem) totalDeductElem.textContent = '-' + totalDeduction.toLocaleString('ko-KR') + '원';
@@ -259,6 +295,37 @@ function calculateSalary() {
 
   const taxElem = document.getElementById('resTax');
   if (taxElem) taxElem.textContent = totalTax.toLocaleString('ko-KR') + '원';
+
+  // DOM 갱신: 비율 및 시각화 바
+  const netRatioElem = document.getElementById('resNetRatio');
+  if (netRatioElem) netRatioElem.textContent = netRatio + '%';
+
+  const deductRatioElem = document.getElementById('resDeductRatio');
+  if (deductRatioElem) deductRatioElem.textContent = deductRatio + '%';
+
+  const prbNetFill = document.getElementById('prbNetFill');
+  if (prbNetFill) prbNetFill.style.width = netRatio + '%';
+
+  const prbDeductFill = document.getElementById('prbDeductFill');
+  if (prbDeductFill) prbDeductFill.style.width = deductRatio + '%';
+
+  const npsShareElem = document.getElementById('resNpsShare');
+  if (npsShareElem) npsShareElem.textContent = nps === 0 ? '0.0%' : calcShare(nps);
+
+  const nhiShareElem = document.getElementById('resNhiShare');
+  if (nhiShareElem) nhiShareElem.textContent = nhi === 0 ? '0.0%' : calcShare(nhi);
+
+  const ltcShareElem = document.getElementById('resLtcShare');
+  if (ltcShareElem) ltcShareElem.textContent = ltc === 0 ? '0.0%' : calcShare(ltc);
+
+  const eiShareElem = document.getElementById('resEiShare');
+  if (eiShareElem) eiShareElem.textContent = calcShare(ei);
+
+  const taxShareElem = document.getElementById('resTaxShare');
+  if (taxShareElem) taxShareElem.textContent = calcShare(totalTax);
+
+  const totalDeductShareElem = document.getElementById('resTotalDeductShare');
+  if (totalDeductShareElem) totalDeductShareElem.textContent = deductRatio + '%';
 }
 
 /* ===================================================

@@ -1399,3 +1399,115 @@ body {
   background: #f1f5f9;
   color: #64748b;
 }
+
+
+/* ==========================================================================
+   급여/세후 실수령액 계산기 개편 스타일링 (근무유형 토글 & 공제비율 시각화)
+   ========================================================================== */
+
+/* 근무 유형 선택 세그먼트 토글 */
+.work-type-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  margin-top: 4px;
+}
+
+.wt-btn {
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #64748b;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.wt-btn.active {
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.wt-btn:hover:not(.active) {
+  color: #1e293b;
+}
+
+/* 실수령 vs 총 공제 비율 시각화 바 */
+.pay-ratio-box {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.prb-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.prb-head .prb-net {
+  color: #059669;
+}
+
+.prb-head .prb-deduct {
+  color: #dc2626;
+}
+
+.prb-track {
+  height: 8px;
+  background: #fee2e2;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+}
+
+.prb-fill-net {
+  background: #10b981;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.prb-fill-deduct {
+  background: #ef4444;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* 공제 항목별 요율 태그 */
+.d-rate-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: #475569;
+  background: #f1f5f9;
+  padding: 1px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.d-share-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  color: #ef4444;
+  margin-left: 6px;
+}
+
+.d-rate-badge.exempt {
+  color: #0284c7;
+  background: #e0f2fe;
+}
