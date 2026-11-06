@@ -995,40 +995,40 @@ body {
    실전 자산 매매 현황 & 개인투자 (Invest) 스타일링
    ========================================================================== */
 
-/* 우측 사이드바: 실전 자산 매매 현황 카드 */
+/* 우측 사이드바: 실전 자산 매매 현황 카드 (콤팩트 & 폰트 다이어트) */
 .holding-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
-  padding: 18px 20px;
+  padding: 14px 16px;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
-  margin-top: 16px;
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 11px;
 }
 
 .holding-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   border-bottom: 1px solid var(--border-color);
 }
 
 .holding-title {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .holding-badge {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 600;
   color: #2563eb;
   background: #eff6ff;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 1px 6px;
+  border-radius: 3px;
 }
 
 /* 핵심 종목 매매 현황 박스 */
@@ -1036,55 +1036,55 @@ body {
   background: var(--bg-subtle);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 12px 14px;
+  padding: 9px 11px;
 }
 
 .h-stock-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 
 .h-ticker {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--text-primary);
 }
 
 .h-qty {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: #475569;
   background: #ffffff;
   border: 1px solid var(--border-color);
-  padding: 2px 7px;
-  border-radius: 4px;
+  padding: 1px 6px;
+  border-radius: 3px;
 }
 
 .h-price-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 6px;
   text-align: center;
 }
 
 .hp-col {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 2px;
 }
 
 .hp-lbl {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-muted);
 }
 
 .hp-val {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--text-primary);
 }
@@ -1105,25 +1105,26 @@ body {
 .portfolio-graph-wrap {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
 }
 
 .pg-head {
   display: flex;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text-muted);
 }
 
 .pg-head strong {
   color: var(--text-primary);
   font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
 }
 
 .pg-bar-track {
-  height: 8px;
+  height: 6px;
   background: #e2e8f0;
-  border-radius: 4px;
+  border-radius: 3px;
   overflow: hidden;
   display: flex;
 }
@@ -1146,20 +1147,20 @@ body {
 .pg-legend {
   display: flex;
   justify-content: space-between;
-  font-size: 10.5px;
+  font-size: 9.5px;
   color: var(--text-muted);
-  margin-top: 2px;
+  margin-top: 1px;
 }
 
 .pg-legend span {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .pg-legend .dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -1171,9 +1172,9 @@ body {
 .rebalance-info {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   background: #f8fafc;
-  padding: 8px 10px;
+  padding: 7px 9px;
   border-radius: var(--radius-md);
   border: 1px solid #e2e8f0;
 }
@@ -1181,18 +1182,18 @@ body {
 .rb-step {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 11.5px;
+  gap: 7px;
+  font-size: 10.5px;
 }
 
 .rb-badge {
-  font-size: 10px;
+  font-size: 9.5px;
   font-weight: 700;
   color: #1e293b;
   background: #e2e8f0;
-  padding: 1px 5px;
+  padding: 1px 4px;
   border-radius: 3px;
-  min-width: 38px;
+  min-width: 34px;
   text-align: center;
 }
 
@@ -1203,18 +1204,18 @@ body {
 
 .rb-txt {
   color: #334155;
-  font-size: 11px;
+  font-size: 10px;
 }
 
 .holding-link-btn {
   display: block;
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   color: #2563eb;
   background: #eff6ff;
   border: 1px solid #dbeafe;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: var(--radius-md);
   text-decoration: none;
   transition: all 0.2s ease;
