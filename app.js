@@ -147,6 +147,7 @@ function calculateSalary() {
   const totalMonthlySalary = parseInt(document.getElementById('monthlySalary')?.value || '2900000', 10);
   const nonTaxFood = parseInt(document.getElementById('nonTaxFood')?.value || '200000', 10);
   const scheme = document.getElementById('workDaysScheme')?.value || 'calendar';
+  const insuranceScheme = document.getElementById('insuranceScheme')?.value || 'exempt_all';
 
   const joinDate = new Date(joinDateVal);
   if (isNaN(joinDate.getTime())) return;
@@ -190,15 +191,28 @@ function calculateSalary() {
   // 과세 대상 = 세전 일할 총액 - 비과세 식대 일할분
   const proRatedTaxable = Math.max(0, grossPay - proRatedNonTax);
 
-  // 2) 4대 보험 법정 요율 (근로자 부담분)
-  // 국민연금: 4.5% (월 도중 입사 시 유예 가능하나 보수적 산정)
-  const nps = Math.floor(proRatedTaxable * 0.045);
-  // 건강보험: 3.545%
-  const nhi = Math.floor(proRatedTaxable * 0.03545);
-  // 장기요양보험: 건강보험료의 12.95%
-  const ltc = Math.floor(nhi * 0.1295);
-  // 고용보험: 0.9%
-  const ei = Math.floor(proRatedTaxable * 0.009);
+  // 2) 4대 보험 공제 로직 (중도입사 첫 달 옵션 분기)
+  let nps = 0;
+  let nhi = 0;
+  let ltc = 0;
+  const ei = Math.floor(proRatedTaxable * 0.009); // 고용보험은 0.9% 무조건 부과
+
+  if (insuranceScheme === 'full') {
+    // 전액 공제
+    nps = Math.floor(proRatedTaxable * 0.045);
+    nhi = Math.floor(proRatedTaxable * 0.03545);
+    ltc = Math.floor(nhi * 0.1295);
+  } else if (insuranceScheme === 'exempt_nps') {
+    // 국민연금만 첫 달 유예 (건보+장기요양+고용보험 부과)
+    nps = 0;
+    nhi = Math.floor(proRatedTaxable * 0.03545);
+    ltc = Math.floor(nhi * 0.1295);
+  } else {
+    // exempt_all: 법정 원칙 및 다수 실무 (국민연금 & 건보 모두 첫 달 미부과)
+    nps = 0;
+    nhi = 0;
+    ltc = 0;
+  }
 
   // 3) 간이세액표 약식 근로소득세 & 지방소득세
   let estIncomeTax = 0;
@@ -219,16 +233,32 @@ function calculateSalary() {
   const netPay = Math.max(0, grossPay - totalDeduction);
 
   // DOM 갱신
-  document.getElementById('resNetPay').textContent = netPay.toLocaleString('ko-KR');
-  document.getElementById('resGrossPay').textContent = grossPay.toLocaleString('ko-KR') + '원';
-  document.getElementById('resTotalDeduct').textContent = '-' + totalDeduction.toLocaleString('ko-KR') + '원';
-  document.getElementById('resDaysInfo').textContent = daysInfoText;
+  const netPayElem = document.getElementById('resNetPay');
+  if (netPayElem) netPayElem.textContent = netPay.toLocaleString('ko-KR') + '원';
 
-  document.getElementById('resNps').textContent = nps.toLocaleString('ko-KR') + '원';
-  document.getElementById('resNhi').textContent = nhi.toLocaleString('ko-KR') + '원';
-  document.getElementById('resLtc').textContent = ltc.toLocaleString('ko-KR') + '원';
-  document.getElementById('resEi').textContent = ei.toLocaleString('ko-KR') + '원';
-  document.getElementById('resTax').textContent = totalTax.toLocaleString('ko-KR') + '원';
+  const grossPayElem = document.getElementById('resGrossPay');
+  if (grossPayElem) grossPayElem.textContent = grossPay.toLocaleString('ko-KR') + '원';
+
+  const totalDeductElem = document.getElementById('resTotalDeduction') || document.getElementById('resTotalDeduct');
+  if (totalDeductElem) totalDeductElem.textContent = '-' + totalDeduction.toLocaleString('ko-KR') + '원';
+
+  const daysInfoElem = document.getElementById('resDaysInfo');
+  if (daysInfoElem) daysInfoElem.textContent = daysInfoText;
+
+  const npsElem = document.getElementById('resNps');
+  if (npsElem) npsElem.textContent = nps === 0 ? '0원 (당월 미부과)' : nps.toLocaleString('ko-KR') + '원';
+
+  const nhiElem = document.getElementById('resNhi');
+  if (nhiElem) nhiElem.textContent = nhi === 0 ? '0원 (당월 미부과)' : nhi.toLocaleString('ko-KR') + '원';
+
+  const ltcElem = document.getElementById('resLtc');
+  if (ltcElem) ltcElem.textContent = ltc === 0 ? '0원 (당월 미부과)' : ltc.toLocaleString('ko-KR') + '원';
+
+  const eiElem = document.getElementById('resEi');
+  if (eiElem) eiElem.textContent = ei.toLocaleString('ko-KR') + '원';
+
+  const taxElem = document.getElementById('resTax');
+  if (taxElem) taxElem.textContent = totalTax.toLocaleString('ko-KR') + '원';
 }
 
 /* ===================================================

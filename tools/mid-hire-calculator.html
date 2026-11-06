@@ -78,6 +78,16 @@
               <span class="c-hint">총급여에 식대 20만 원이 포함되어 있으면 해당 금액만큼 세금/보험이 면제됩니다.</span>
             </div>
 
+            <div class="c-form-group">
+              <label for="insuranceScheme">중도입사 첫 달 4대보험 공제 방식</label>
+              <select id="insuranceScheme" class="c-field" onchange="calculateSalary()">
+                <option value="exempt_all" selected>국민연금·건강보험 첫 달 미부과 (법정 원칙 / 실무 다수 - 실수령 179~183만 원)</option>
+                <option value="exempt_nps">국민연금만 첫 달 유예 (건강보험+고용보험 공제 - 약 175~179만 원)</option>
+                <option value="full">4대보험 첫 달 전액 공제 (회사 일괄 징수 - 약 167만 원)</option>
+              </select>
+              <span class="c-hint">※ 1일이 아닌 중도입사자는 국민연금·건강보험이 당월 미부과되는 것이 법정 원칙입니다.</span>
+            </div>
+
             <div class="c-form-group" style="margin-bottom: 0;">
               <label for="workDaysScheme">일할 계산 기준</label>
               <select id="workDaysScheme" class="c-field" onchange="calculateSalary()">
