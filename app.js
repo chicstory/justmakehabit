@@ -61,33 +61,81 @@ function fetchMacroData() {
 
 
 /* ===================================================
-   0-1. 실전 자산 매매 현황 동기화 (radar_data.json 연동)
+   0-1. 실전 자산 매매 현황 동기화 (ROOT & FLNC 바벨 포트폴리오)
    =================================================== */
 function fetchHoldingData() {
-  const priceElem = document.getElementById('flncCurPrice');
-  const retElem = document.getElementById('flncRetPct');
-  if (!priceElem || !retElem) return;
+  const rootPriceElem = document.getElementById('rootCurPrice');
+  const rootRetElem = document.getElementById('rootRetPct');
+  const flncPriceElem = document.getElementById('flncCurPrice');
+  const flncRetElem = document.getElementById('flncRetPct');
+  const weightText = document.getElementById('holdingWeightText');
+  const rootBar = document.getElementById('rootBarFill');
+  const flncBar = document.getElementById('flncBarFill');
 
-  const buyPrice = 5.9685;
-  const buyQty = 117;
+  // 실전 포트폴리오 매입 원장 (2026.11 실측)
+  const portfolio = {
+    ROOT: { buyPrice: 43.30, qty: 30, curPrice: 43.34 },
+    FLNC: { buyPrice: 5.9476, qty: 120, curPrice: 5.11 }
+  };
 
   fetch('radar/radar_data.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
-      if (data && data.plv100_items) {
-        const flnc = data.plv100_items.find(i => i.ticker === 'FLNC');
-        if (flnc && flnc.price) {
-          const curPrice = flnc.price;
-          priceElem.textContent = '$' + curPrice.toFixed(2);
-          
-          const retPct = ((curPrice - buyPrice) / buyPrice) * 100;
-          retElem.textContent = (retPct >= 0 ? '+' : '') + retPct.toFixed(1) + '%';
-          retElem.className = 'hp-val ' + (retPct >= 0 ? 'ret-up' : 'ret-down');
+      if (data) {
+        // ROOT (1부 리그 PLM100)
+        if (data.plm100_items) {
+          const rootItem = data.plm100_items.find(i => i.ticker === 'ROOT');
+          if (rootItem && rootItem.price) {
+            portfolio.ROOT.curPrice = rootItem.price;
+          }
+        }
+        // FLNC (2부 리그 PLV100)
+        if (data.plv100_items) {
+          const flncItem = data.plv100_items.find(i => i.ticker === 'FLNC');
+          if (flncItem && flncItem.price) {
+            portfolio.FLNC.curPrice = flncItem.price;
+          }
+        }
+
+        // ROOT 렌더링
+        if (rootPriceElem && rootRetElem) {
+          const rCur = portfolio.ROOT.curPrice;
+          const rBuy = portfolio.ROOT.buyPrice;
+          const rRet = ((rCur - rBuy) / rBuy) * 100;
+          rootPriceElem.textContent = '$' + rCur.toFixed(2);
+          rootRetElem.textContent = (rRet >= 0 ? '+' : '') + rRet.toFixed(1) + '%';
+          rootRetElem.className = 'hp-val ' + (rRet >= 0 ? 'ret-up' : 'ret-down');
+        }
+
+        // FLNC 렌더링
+        if (flncPriceElem && flncRetElem) {
+          const fCur = portfolio.FLNC.curPrice;
+          const fBuy = portfolio.FLNC.buyPrice;
+          const fRet = ((fCur - fBuy) / fBuy) * 100;
+          flncPriceElem.textContent = '$' + fCur.toFixed(2);
+          flncRetElem.textContent = (fRet >= 0 ? '+' : '') + fRet.toFixed(1) + '%';
+          flncRetElem.className = 'hp-val ' + (fRet >= 0 ? 'ret-up' : 'ret-down');
+        }
+
+        // 포트폴리오 평가금액 및 배분 비중 자동 계산
+        const rootEval = portfolio.ROOT.curPrice * portfolio.ROOT.qty;
+        const flncEval = portfolio.FLNC.curPrice * portfolio.FLNC.qty;
+        const totalEval = rootEval + flncEval;
+
+        if (totalEval > 0) {
+          const rootWeight = Math.round((rootEval / totalEval) * 100);
+          const flncWeight = 100 - rootWeight;
+
+          if (weightText) {
+            weightText.textContent = `ROOT ${rootWeight}% · FLNC ${flncWeight}%`;
+          }
+          if (rootBar) rootBar.style.width = rootWeight + '%';
+          if (flncBar) flncBar.style.width = flncWeight + '%';
         }
       }
     })
     .catch(err => {
-      console.log('radar_data.json 로드 대기 중 (정적 기본값 표시):', err);
+      console.log('radar_data.json 로드 대기 중 (정적 기본값 유지):', err);
     });
 }
 
