@@ -23,6 +23,7 @@
       <nav class="header-nav">
         <a href="index.html" class="h-nav-link active">홈</a>
         <a href="assets/2026-10-24-zero-base-cashflow.html" class="h-nav-link">자산</a>
+        <a href="invest.html" class="h-nav-link">개인투자</a>
         <a href="tools/mid-hire-calculator.html" class="h-nav-link">도구</a>
         <a href="about.html" class="h-nav-link">소개</a>
       </nav>
@@ -120,7 +121,7 @@
 
     </main>
 
-    <!-- 우측: 실시간 거시 경제 배너 (영구 고정) -->
+    <!-- 우측: 실시간 거시 경제 배너 & 실전 자산 매매 현황 -->
     <aside class="sidebar-right">
       <div class="macro-card">
         <div class="macro-header">
@@ -144,6 +145,67 @@
         <div class="macro-footer">
           * ThePathLab 데일리 매크로 브리핑 연동
         </div>
+      </div>
+
+      <!-- 실전 자산 매매 현황 카드 (거시 경제 지표 하단 배치) -->
+      <div class="holding-card">
+        <div class="holding-header">
+          <span class="holding-title">💼 실전 자산 매매 현황</span>
+          <span class="holding-badge">실시간 연동</span>
+        </div>
+        
+        <!-- 핵심 종목 매매 현황 -->
+        <div class="holding-stock-box">
+          <div class="h-stock-top">
+            <span class="h-ticker">FLNC (플루언스)</span>
+            <span class="h-qty">117주</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$5.9685</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="flncCurPrice">$5.18</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-down" id="flncRetPct">-13.2%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 포트폴리오 비중 그래프 -->
+        <div class="portfolio-graph-wrap">
+          <div class="pg-head">
+            <span>포트폴리오 배분 비율</span>
+            <strong id="flncWeightText">FLNC 100%</strong>
+          </div>
+          <div class="pg-bar-track">
+            <div class="pg-bar-fill plv" style="width: 100%;"></div>
+          </div>
+          <div class="pg-legend">
+            <span><i class="dot plm"></i> 1부 해자 70% (목표)</span>
+            <span><i class="dot plv"></i> 2부 텐배거 30%</span>
+          </div>
+        </div>
+
+        <!-- 리밸런싱 주기 -->
+        <div class="rebalance-info">
+          <div class="rb-step">
+            <span class="rb-badge">매월</span>
+            <span class="rb-txt">1차 평가 · $1,000 리밸런싱</span>
+          </div>
+          <div class="rb-step">
+            <span class="rb-badge qtr">매분기</span>
+            <span class="rb-txt">2차 평가 · 승강제 리밸런싱</span>
+          </div>
+        </div>
+
+        <a href="invest.html" class="holding-link-btn">
+          개인투자 퀀트 레이더 보기 →
+        </a>
       </div>
     </aside>
 

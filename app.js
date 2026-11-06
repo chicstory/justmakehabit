@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateSalary(); // 초기 로드 시 10월 12일 입사 기준 계산 실행
   loadComments();
   fetchMacroData();  // 실시간 거시 경제 지표 자동 연동
+  fetchHoldingData(); // 실전 자산 매매 현황 연동
 });
 
 /* ===================================================
@@ -55,6 +56,38 @@ function fetchMacroData() {
         .catch(() => {
           // 실패 시 HTML 정적 기본값 유지 (10월 24일 기준 / 1,338.4원)
         });
+    });
+}
+
+
+/* ===================================================
+   0-1. 실전 자산 매매 현황 동기화 (radar_data.json 연동)
+   =================================================== */
+function fetchHoldingData() {
+  const priceElem = document.getElementById('flncCurPrice');
+  const retElem = document.getElementById('flncRetPct');
+  if (!priceElem || !retElem) return;
+
+  const buyPrice = 5.9685;
+  const buyQty = 117;
+
+  fetch('radar/radar_data.json?v=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.plv100_items) {
+        const flnc = data.plv100_items.find(i => i.ticker === 'FLNC');
+        if (flnc && flnc.price) {
+          const curPrice = flnc.price;
+          priceElem.textContent = '$' + curPrice.toFixed(2);
+          
+          const retPct = ((curPrice - buyPrice) / buyPrice) * 100;
+          retElem.textContent = (retPct >= 0 ? '+' : '') + retPct.toFixed(1) + '%';
+          retElem.className = 'hp-val ' + (retPct >= 0 ? 'ret-up' : 'ret-down');
+        }
+      }
+    })
+    .catch(err => {
+      console.log('radar_data.json 로드 대기 중 (정적 기본값 표시):', err);
     });
 }
 

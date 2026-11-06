@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3PFHN6VW7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K3PFHN6VW7');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePathLab 듀얼 레이더 | PLM100 & PLV100 승강제 지수</title>
+    <meta name="description" content="ThePathLab 2대 독자 지수: 1부 철옹성 독점 해자(PLM100)와 2부 텐배거 벤처(PLV100) 승강제 시스템. 11월 1일 1,000pt 기준 실시간 지수, RSI 과매도 및 킬스위치 시나리오">
+    <meta name="google-adsense-account" content="ca-pub-1876940323402065">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1876940323402065" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://chicstory.github.io/radar/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --bg-body: #070a12;
+            --bg-card: rgba(15, 23, 42, 0.75);
+            --bg-card-hover: rgba(30, 41, 59, 0.95);
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            --border-glow: rgba(0, 242, 254, 0.4);
+            --cyan: #00f2fe;
+            --blue: #38bdf8;
+            --purple: #a855f7;
+            --gold: #ffb800;
+            --red: #f43f5e;
+            --green: #10b981;
+            --text-main: #f8fafc;
+            --text-sub: #94a3b8;
+            --text-dim: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            padding-bottom: 5rem;
+        }
+
+        /* 내비게이션 바 */
+        .radar-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 10, 18, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 0.75rem 1.25rem;
+        }
+        .nav-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: -0.5px;
+        }
+        .brand-link i { color: var(--cyan); }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+        }
+        .hub-link {
+            color: var(--text-sub);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s;
+        }
+        .hub-link:hover { color: #ffffff; }
+
+        /* Beta 시범운용 알림 배너 */
+        .beta-banner {
+            background: linear-gradient(90deg, rgba(168, 85, 247, 0.15), rgba(0, 242, 254, 0.15));
+            border-bottom: 1px solid rgba(0, 242, 254, 0.25);
+            padding: 8px 16px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #e2e8f0;
+        }
+        .beta-banner strong {
+            color: var(--cyan);
+        }
+        .beta-tag {
+            background: var(--purple);
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-right: 6px;
+            text-transform: uppercase;
+        }
+
+        /* 헤로 섹션 */
+        .hero-wrap {
+            max-width: 1280px;
+            margin: 2rem auto 1.2rem;
+            padding: 0 1.25rem;
+        }
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-desc {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            max-width: 860px;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        /* 듀얼 지수 요약 카드 */
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 1.5rem;
+        }
+        .index-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 18px 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+        .index-card.plm {
+            border-left: 4px solid var(--cyan);
+        }
+        .index-card.plv {
+            border-left: 4px solid var(--purple);
+        }
+        .index-card.spy {
+            border-left: 4px solid var(--gold);
+        }
+        .index-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: var(--text-sub);
+            margin-bottom: 8px;
+        }
+        .index-card-badge {
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+        }
+        .badge-plm { background: rgba(0, 242, 254, 0.15); color: var(--cyan); border: 1px solid rgba(0, 242, 254, 0.3); }
+        .badge-plv { background: rgba(168, 85, 247, 0.15); color: var(--purple); border: 1px solid rgba(168, 85, 247, 0.3); }
+        .badge-spy { background: rgba(255, 184, 0, 0.15); color: var(--gold); border: 1px solid rgba(255, 184, 0, 0.3); }
+
+        .index-card-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+        .index-return {
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .ret-up { color: var(--green); }
+        .ret-down { color: var(--red); }
+        .index-card-sub {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            margin-top: 6px;
+        }
+
+        /* 지수 비교 차트 영역 */
+        .chart-section {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 2rem;
+        }
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 0.88rem;
+            color: var(--text-sub);
+        }
+        .chart-legend {
+            display: flex;
+            gap: 16px;
+            font-size: 0.8rem;
+        }
+        .leg-item { display: flex; align-items: center; gap: 6px; }
+        .leg-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .dot-plm { background: var(--cyan); }
+        .dot-plv { background: var(--purple); }
+        .dot-spy { background: var(--gold); }
+        .chart-canvas-wrap {
+            position: relative;
+            height: 160px;
+            width: 100%;
+        }
+
+        /* 리그 탭 셀렉터 */
+        .league-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid var(--border-subtle);
+            padding-bottom: 8px;
+        }
+        .tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-sub);
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+        .tab-btn:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .tab-btn.active.plm {
+            background: rgba(0, 242, 254, 0.12);
+            color: var(--cyan);
+            border-color: rgba(0, 242, 254, 0.4);
+        }
+        .tab-btn.active.plv {
+            background: rgba(168, 85, 247, 0.12);
+            color: var(--purple);
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+        .tab-count {
+            font-size: 0.78rem;
+            padding: 2px 6px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* 컨트롤 & 필터 바 */
+        .filter-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 260px;
+            max-width: 400px;
+        }
+        .search-box i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-dim);
+        }
+        .search-input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-subtle);
+            color: #ffffff;
+            padding: 9px 14px 9px 38px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus {
+            border-color: var(--cyan);
+        }
+        .quick-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .chip-btn {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--border-subtle);
+            color: var(--text-sub);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .chip-btn:hover, .chip-btn.active {
+            color: #ffffff;
+            border-color: var(--border-glow);
+            background: rgba(0, 242, 254, 0.1);
+        }
+        .chip-btn.rsi-alert {
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, 0.35);
+        }
+        .chip-btn.rsi-alert.active {
+            background: rgba(56, 189, 248, 0.2);
+            color: #ffffff;
+        }
+        .sort-select {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid var(--border-subtle);
+            color: #ffffff;
+            padding: 7px 12px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .sort-select:focus {
+            border-color: var(--cyan);
+        }
+
+        /* 종목 그리드 */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+            gap: 18px;
+        }
+        @media (max-width: 768px) {
+            .cards-grid { grid-template-columns: 1fr; }
+        }
+
+        .stock-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+        .stock-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .card-ticker-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .ticker-pill {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+        .country-flag {
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+        .rsi-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 6px;
+        }
+        .rsi-low {
+            background: rgba(0, 242, 254, 0.15);
+            color: var(--cyan);
+            border: 1px solid rgba(0, 242, 254, 0.35);
+        }
+        .rsi-mid {
+            background: rgba(148, 163, 184, 0.1);
+            color: #94a3b8;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        .rsi-high {
+            background: rgba(244, 63, 94, 0.15);
+            color: var(--red);
+            border: 1px solid rgba(244, 63, 94, 0.35);
+        }
+
+        .card-name {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-top: 2px;
+        }
+        .card-sector {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+        }
+        .card-price-col {
+            text-align: right;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .current-price {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+        .from-high {
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        /* 52주 레인지 게이지 */
+        .range-wrap {
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            padding: 8px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+        .range-text-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            margin-bottom: 4px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .range-bar {
+            height: 5px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 3px;
+            position: relative;
+        }
+        .range-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #38bdf8, #00f2fe);
+            border-radius: 3px;
+        }
+        .range-pin {
+            position: absolute;
+            top: -3px;
+            width: 11px;
+            height: 11px;
+            background: #ffffff;
+            border: 2px solid var(--cyan);
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 해자 논거 박스 */
+        .thesis-box {
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 2px solid var(--cyan);
+            padding: 8px 12px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+        }
+
+        /* IF 시나리오 & 킬스위치 아코디언 */
+        .sc-details {
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 10px;
+        }
+        .sc-details details summary {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-sub);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4px 0;
+            user-select: none;
+        }
+        .sc-details details summary::-webkit-details-marker { display: none; }
+        .sc-details details summary::after {
+            content: '▼';
+            font-size: 0.65rem;
+            transition: transform 0.2s;
+        }
+        .sc-details details[open] summary::after {
+            transform: rotate(180deg);
+        }
+        .sc-content {
+            margin-top: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.78rem;
+            line-height: 1.5;
+        }
+        .sc-item {
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+        .sc-best {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 3px solid var(--green);
+            color: #d1fae5;
+        }
+        .sc-worst {
+            background: rgba(244, 63, 94, 0.08);
+            border-left: 3px solid var(--red);
+            color: #ffe4e6;
+        }
+        .sc-kill {
+            background: rgba(255, 184, 0, 0.1);
+            border-left: 3px solid var(--gold);
+            color: #fef3c7;
+        }
+
+        /* 카드 하단 액션 */
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 6px;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+        }
+        .chart-ext-btn {
+            color: var(--blue);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .chart-ext-btn:hover { color: #ffffff; }
+
+        /* 푸터 & 면책 조항 */
+        .radar-footer {
+            max-width: 1280px;
+            margin: 4rem auto 0;
+            padding: 0 1.25rem;
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 2rem;
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.6;
+        }
+        .disclaimer-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 184, 0, 0.2);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 1.5rem;
+            color: #cbd5e1;
+        }
+        .disclaimer-card strong {
+            color: var(--gold);
+            display: block;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 내비게이션 바 -->
+    <header class="radar-nav">
+        <div class="nav-inner">
+            <a href="../invest.html" class="brand-link">
+                <i class="bi bi-radar"></i> JMH 퀀트 레이더 3.0
+            </a>
+            <div class="nav-right">
+                <a href="../invest.html" class="hub-link" style="margin-right: 8px;">
+                    <i class="bi bi-person-badge"></i> 개인투자
+                </a>
+                <a href="../index.html" class="hub-link" style="margin-right: 12px;">
+                    <i class="bi bi-house"></i> JMH 홈
+                </a>
+                <span id="updateTimeText" style="font-family: 'JetBrains Mono', monospace;">동기화 중...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Beta 시범 운용 배너 -->
+    <div class="beta-banner">
+        <span class="beta-tag">BETA</span>
+        현재 시스템은 <strong>2026.11.01 ~ 12.31 시범 운용</strong> 모드입니다. 
+        <strong>2027년 1월 2일 공식 론칭 및 제1회 정기 승강제 심사</strong>가 단행됩니다. (매일 오전 09:00 KST 갱신)
+    </div>
+
+    <main class="hero-wrap">
+        <h1 class="hero-title">ThePathLab 듀얼 레이더 (PLM & PLV)</h1>
+        <p class="hero-desc">
+            전 세계 1등 독점 톨게이트 100대 기업(<strong>PLM100</strong>, 1부 리그)과 
+            Rule of 40% 고성장 텐배거 유망주 100선(<strong>PLV100</strong>, 2부 리그)을 
+            <strong>승강제(Promotion & Relegation)</strong> 구조로 매일 추적하는 퀀트 벤치마크 대시보드입니다.
+        </p>
+
+        <!-- 지수 요약 카드 -->
+        <div class="index-grid">
+            <div class="index-card plm">
+                <div class="index-card-header">
+                    <span>1부 리그 : 철옹성 독점 해자</span>
+                    <span class="index-card-badge badge-plm">PLM100</span>
+                </div>
+                <div class="index-card-value">
+                    <span id="plmIdxVal">1,000.00</span>
+                    <span id="plmRetVal" class="index-return">0.00%</span>
+                </div>
+                <div class="index-card-sub">기준: 2026-11-02 = 1,000.00 pt (100종목 균등)</div>
+            </div>
+
+            <div class="index-card plv">
+                <div class="index-card-header">
+                    <span>2부 리그 : 텐배거 벤처 육성</span>
+                    <span class="index-card-badge badge-plv">PLV100</span>
+                </div>
+                <div class="index-card-value">
+                    <span id="plvIdxVal">1,000.00</span>
+                    <span id="plvRetVal" class="index-return">0.00%</span>
+                </div>
+                <div class="index-card-sub">기준: 2026-11-02 = 1,000.00 pt (Rule of 40 100선)</div>
+            </div>
+
+            <div class="index-card spy">
+                <div class="index-card-header">
+                    <span>시장 벤치마크 (S&P 500 ETF)</span>
+                    <span class="index-card-badge badge-spy">SPY 500</span>
+                </div>
+                <div class="index-card-value">
+                    <span id="spyIdxVal">1,000.00</span>
+                    <span id="spyRetVal" class="index-return">0.00%</span>
+                </div>
+                <div class="index-card-sub">동일 기준일(11.02) 1,000 pt 상대 비교</div>
+            </div>
+        </div>
+
+        <!-- 미니 상대수익률 차트 -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <div><strong>지수 추이 비교</strong> (11월 2일 1,000pt 베이스 상대 누적 곡선)</div>
+                <div class="chart-legend">
+                    <div class="leg-item"><span class="leg-dot dot-plm"></span> PLM100 (1부)</div>
+                    <div class="leg-item"><span class="leg-dot dot-plv"></span> PLV100 (2부)</div>
+                    <div class="leg-item"><span class="leg-dot dot-spy"></span> SPY (S&P500)</div>
+                </div>
+            </div>
+            <div class="chart-canvas-wrap">
+                <canvas id="indexChart" height="150"></canvas>
+            </div>
+        </div>
+
+        <!-- 리그 선택 탭 -->
+        <div class="league-tabs">
+            <button class="tab-btn active plm" onclick="switchLeague('PLM')">
+                <i class="bi bi-shield-lock-fill"></i> 1부 리그: PLM100 (독점 해자 요새)
+                <span class="tab-count" id="plmCount">100</span>
+            </button>
+            <button class="tab-btn plv" onclick="switchLeague('PLV')">
+                <i class="bi bi-rocket-takeoff-fill"></i> 2부 리그: PLV100 (텐배거 벤처)
+                <span class="tab-count" id="plvCount">100</span>
+            </button>
+        </div>
+
+        <!-- 검색 및 퀵 필터 -->
+        <div class="filter-wrap">
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" id="searchInput" class="search-input" placeholder="티커 또는 기업명 검색 (예: MKC, 하이닉스, RDDT)..." oninput="handleSearch()">
+            </div>
+            <div class="quick-filters">
+                <button class="chip-btn active" onclick="setQuickFilter('all', this)">전체 보기</button>
+                <button class="chip-btn rsi-alert" onclick="setQuickFilter('oversold', this)">
+                    <i class="bi bi-water"></i> 🌊 과매도 바닥 (RSI &lt; 35)
+                </button>
+                <button class="chip-btn" onclick="setQuickFilter('drop30', this)">
+                    🔻 고점대비 -30%+ 낙폭
+                </button>
+                <select id="sortSelect" class="sort-select" onchange="handleSortChange(this.value)">
+                    <option value="drop_desc">🔻 고점대비 낙폭 큰 순</option>
+                    <option value="rsi_asc">🌊 RSI 낮은 순 (과매도)</option>
+                    <option value="rsi_desc">🔥 RSI 높은 순 (과열)</option>
+                    <option value="return_desc">🚀 11.02 대비 수익률순</option>
+                    <option value="price_desc">💰 주가 높은 순</option>
+                    <option value="ticker_asc">🔤 티커 알파벳 순</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 종목 카드 렌더링 그리드 -->
+        <div class="cards-grid" id="cardsGrid">
+            <!-- 자바스크립트로 동적 렌더링 -->
+        </div>
+
+        <!-- 푸터 및 법적 면책 조항 -->
+        <footer class="radar-footer">
+            <div class="disclaimer-card">
+                <strong><i class="bi bi-exclamation-triangle-fill"></i> [법적 면책 조항 (Legal Disclaimer)]</strong>
+                본 대시보드(ThePathLab 듀얼 레이더 / PLM100 / PLV100)에 수록된 모든 데이터, 1,000pt 기준 지수, 종목별 분석 내용, IF 시나리오 및 킬 스위치 기준은 <strong>운영자의 개인적인 퀀트 연구 및 스터디 목적의 아카이브 기록물</strong>입니다. 
+                어떠한 경우에도 특정 금융투자상품의 매수/매도를 유도하거나 권유하는 금융투자 자문이 아니며, 모든 투자의 최종 결정과 그에 따른 손익의 법적 책임은 투자자 본인에게 있습니다.
+            </div>
+            <div style="text-align: center; color: var(--text-dim); font-size: 0.78rem;">
+                © 2026 ThePathLab Workspace. All rights reserved. Powered by GitHub Actions & Yahoo Finance API.
+            </div>
+        </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let radarData = null;
+        let currentLeague = 'PLM'; // 'PLM' or 'PLV'
+        let currentQuickFilter = 'all'; // 'all', 'oversold', 'drop20'
+        let chartInstance = null;
+
+        async function initRadar() {
+            try {
+                const res = await fetch('./radar_data.json?v=' + Date.now());
+                radarData = await res.json();
+                
+                // 1. 헤더 메타 동기화
+                document.getElementById('updateTimeText').textContent = radarData.updated + ' KST 갱신';
+                
+                // 2. 듀얼 지수 카드 렌더링
+                renderIndices(radarData.indices);
+                
+                // 3. 차트 렌더링
+                renderChart(radarData.history);
+                
+                // 4. 종목 카드 렌더링
+                renderCards();
+            } catch (err) {
+                console.error("데이터 로드 실패:", err);
+                document.getElementById('cardsGrid').innerHTML = '<div style="color: #f43f5e; padding: 2rem;">데이터를 불러오는 중 오류가 발생했습니다.</div>';
+            }
+        }
+
+        function renderIndices(idx) {
+            if (!idx) return;
+            
+            // PLM
+            document.getElementById('plmIdxVal').textContent = idx.plm100.current.toFixed(2);
+            const plmRet = document.getElementById('plmRetVal');
+            plmRet.textContent = (idx.plm100.return_pct >= 0 ? '+' : '') + idx.plm100.return_pct.toFixed(2) + '%';
+            plmRet.className = 'index-return ' + (idx.plm100.return_pct >= 0 ? 'ret-up' : 'ret-down');
+
+            // PLV
+            document.getElementById('plvIdxVal').textContent = idx.plv100.current.toFixed(2);
+            const plvRet = document.getElementById('plvRetVal');
+            plvRet.textContent = (idx.plv100.return_pct >= 0 ? '+' : '') + idx.plv100.return_pct.toFixed(2) + '%';
+            plvRet.className = 'index-return ' + (idx.plv100.return_pct >= 0 ? 'ret-up' : 'ret-down');
+
+            // SPY
+            document.getElementById('spyIdxVal').textContent = idx.spy.current.toFixed(2);
+            const spyRet = document.getElementById('spyRetVal');
+            spyRet.textContent = (idx.spy.return_pct >= 0 ? '+' : '') + idx.spy.return_pct.toFixed(2) + '%';
+            spyRet.className = 'index-return ' + (idx.spy.return_pct >= 0 ? 'ret-up' : 'ret-down');
+        }
+
+        function renderChart(history) {
+            if (!history || !history.length) return;
+            const ctx = document.getElementById('indexChart').getContext('2d');
+            
+            const labels = history.map(h => h.date.slice(5)); // '11-02'
+            const plmData = history.map(h => h.plm100);
+            const plvData = history.map(h => h.plv100);
+            const spyData = history.map(h => h.spy);
+
+            if (chartInstance) chartInstance.destroy();
+
+            chartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'PLM100 (1부)',
+                            data: plmData,
+                            borderColor: '#00f2fe',
+                            backgroundColor: 'rgba(0, 242, 254, 0.05)',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            pointRadius: 4,
+                            pointBackgroundColor: '#00f2fe'
+                        },
+                        {
+                            label: 'PLV100 (2부)',
+                            data: plvData,
+                            borderColor: '#a855f7',
+                            backgroundColor: 'rgba(168, 85, 247, 0.05)',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            pointRadius: 4,
+                            pointBackgroundColor: '#a855f7'
+                        },
+                        {
+                            label: 'SPY (S&P500)',
+                            data: spyData,
+                            borderColor: '#ffb800',
+                            backgroundColor: 'transparent',
+                            borderWidth: 1.5,
+                            borderDash: [4, 4],
+                            tension: 0.3,
+                            pointRadius: 3,
+                            pointBackgroundColor: '#ffb800'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1
+                        }
+                    },
+                    scales: {
+                        x: {
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
+                            ticks: { color: '#64748b', font: { family: 'JetBrains Mono' } }
+                        },
+                        y: {
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
+                            ticks: { color: '#64748b', font: { family: 'JetBrains Mono' } }
+                        }
+                    }
+                }
+            });
+        }
+
+        function switchLeague(league) {
+            currentLeague = league;
+            document.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active');
+            });
+            if (league === 'PLM') document.querySelector('.tab-btn.plm').classList.add('active');
+            else document.querySelector('.tab-btn.plv').classList.add('active');
+            
+            renderCards();
+        }
+
+        let currentSort = 'drop_desc'; // 'drop_desc', 'rsi_asc', 'rsi_desc', 'return_desc', 'price_desc', 'ticker_asc'
+
+        function handleSortChange(val) {
+            currentSort = val;
+            renderCards();
+        }
+
+        function setQuickFilter(flt, btnEl) {
+            currentQuickFilter = flt;
+            document.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('active'));
+            if (btnEl) {
+                btnEl.classList.add('active');
+            } else {
+                const targetBtn = document.querySelector(`.chip-btn[onclick*="'${flt}'"]`);
+                if (targetBtn) targetBtn.classList.add('active');
+            }
+            
+            // 과매도 필터 클릭 시 정렬도 RSI 낮은 순으로 자동 연동
+            const sortSelect = document.getElementById('sortSelect');
+            if (flt === 'oversold') {
+                currentSort = 'rsi_asc';
+                if (sortSelect) sortSelect.value = 'rsi_asc';
+            } else if (flt === 'drop30') {
+                currentSort = 'drop_desc';
+                if (sortSelect) sortSelect.value = 'drop_desc';
+            }
+
+            renderCards();
+        }
+
+        function handleSearch() {
+            renderCards();
+        }
+
+        function formatPrice(val, country) {
+            if (val === undefined || val === null || isNaN(val) || val === 0) return '-';
+            if (country === 'KR') {
+                return Math.round(val).toLocaleString() + '원';
+            } else if (country === 'JP') {
+                return '¥' + Math.round(val).toLocaleString();
+            } else if (country === 'CA') {
+                return 'C$' + val.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            } else {
+                return '$' + val.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            }
+        }
+
+        function renderCards() {
+            if (!radarData) return;
+            const container = document.getElementById('cardsGrid');
+            const items = (currentLeague === 'PLM') ? radarData.plm100_items : radarData.plv100_items;
+            
+            const searchKeyword = document.getElementById('searchInput').value.trim().toLowerCase();
+
+            // 1. 필터링
+            let filtered = items.filter(item => {
+                // 검색어
+                if (searchKeyword) {
+                    const matchTicker = item.ticker.toLowerCase().includes(searchKeyword);
+                    const matchName = item.name.toLowerCase().includes(searchKeyword);
+                    if (!matchTicker && !matchName) return false;
+                }
+                // 퀵 필터
+                if (currentQuickFilter === 'oversold') {
+                    if (item.rsi >= 35) return false;
+                } else if (currentQuickFilter === 'drop30') {
+                    if (item.from_high_pct > -30) return false;
+                }
+                return true;
+            });
+
+            // 2. 정렬 적용
+            filtered.sort((a, b) => {
+                if (currentSort === 'drop_desc') {
+                    return a.from_high_pct - b.from_high_pct; // 고점대비 더 많이 떨어진 순 (-70% -> -5%)
+                } else if (currentSort === 'rsi_asc') {
+                    return a.rsi - b.rsi; // RSI 낮은 순 (과매도 바닥)
+                } else if (currentSort === 'rsi_desc') {
+                    return b.rsi - a.rsi; // RSI 높은 순 (과열 모멘텀)
+                } else if (currentSort === 'return_desc') {
+                    return b.return_pct - a.return_pct; // 11.02 기준 수익률 높은 순
+                } else if (currentSort === 'price_desc') {
+                    return b.price - a.price; // 주가 높은 순
+                } else if (currentSort === 'ticker_asc') {
+                    return a.ticker.localeCompare(b.ticker); // 티커 알파벳 순
+                }
+                return 0;
+            });
+
+            if (!filtered.length) {
+                container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #64748b;">조건에 일치하는 종목이 없습니다.</div>';
+                return;
+            }
+
+            container.innerHTML = filtered.map(item => {
+                // RSI 배지 클래스
+                let rsiClass = 'rsi-mid';
+                let rsiLabel = `RSI ${item.rsi}`;
+                if (item.rsi < 35) {
+                    rsiClass = 'rsi-low';
+                    rsiLabel = `🌊 과매도 ${item.rsi}`;
+                } else if (item.rsi > 65) {
+                    rsiClass = 'rsi-high';
+                    rsiLabel = `🔥 과열 ${item.rsi}`;
+                }
+
+                // 국기 표시
+                let flag = '🇺🇸';
+                if (item.country === 'KR') flag = '🇰🇷';
+                else if (item.country === 'JP') flag = '🇯🇵';
+                else if (item.country === 'CA') flag = '🇨🇦';
+                else if (item.country === 'IN') flag = '🇮🇳';
+                else if (item.country === 'NL') flag = '🇳🇱';
+                else if (item.country === 'AU') flag = '🇦🇺';
+
+                // 야후 링크
+                const chartUrl = `https://finance.yahoo.com/quote/${item.ticker}`;
+
+                // 52주 고저 안전 폴백
+                const lowVal = (item.low52 && item.low52 > 0) ? item.low52 : item.price;
+                const highVal = (item.high52 && item.high52 > 0) ? item.high52 : item.price;
+
+                return `
+                    <div class="stock-card">
+                        <div class="card-top">
+                            <div>
+                                <div class="card-ticker-row">
+                                    <span class="country-flag">${flag}</span>
+                                    <span class="ticker-pill">${item.ticker}</span>
+                                    <span class="rsi-badge ${rsiClass}">${rsiLabel}</span>
+                                </div>
+                                <div class="card-name">${item.name}</div>
+                                <div class="card-sector">${item.sector}</div>
+                            </div>
+                            <div class="card-price-col">
+                                <div class="current-price">${formatPrice(item.price, item.country)}</div>
+                                <div class="from-high" style="color: ${item.from_high_pct <= -25 ? '#38bdf8' : '#94a3b8'};">
+                                    고점대비 ${item.from_high_pct.toFixed(1)}%
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 52주 레인지 바 -->
+                        <div class="range-wrap">
+                            <div class="range-text-row">
+                                <span>52주 저 ${formatPrice(lowVal, item.country)}</span>
+                                <span>52주 고 ${formatPrice(highVal, item.country)}</span>
+                            </div>
+                            <div class="range-bar">
+                                <div class="range-fill" style="width: ${Math.min(Math.max(item.range_pct, 5), 100)}%;"></div>
+                                <div class="range-pin" style="left: ${Math.min(Math.max(item.range_pct, 5), 100)}%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- 핵심 투자 논거 -->
+                        <div class="thesis-box">
+                            <strong>💡 독점 해자:</strong> ${item.thesis || '업계 최고 수준의 해자와 마진 보유'}
+                        </div>
+
+                        <!-- IF 시나리오 & 킬스위치 -->
+                        <div class="sc-details">
+                            <details>
+                                <summary>🎯 IF 시나리오 & 킬스위치 보기</summary>
+                                <div class="sc-content">
+                                    <div class="sc-item sc-best">
+                                        <strong>🌟 BEST:</strong> ${item.if_best || '업황 턴어라운드 및 전고점 돌파'}
+                                    </div>
+                                    <div class="sc-item sc-worst">
+                                        <strong>💥 WORST:</strong> ${item.if_worst || '거시 경제 둔화 및 원가 상승'}
+                                    </div>
+                                    <div class="sc-item sc-kill">
+                                        <strong>🚨 KILL-SWITCH:</strong> ${item.kill_switch || '핵심 마진 훼손 또는 FCF 적자 시'}
+                                    </div>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="card-actions">
+                            <span>기준일(11.02) 대비: <strong style="color: ${item.return_pct >= 0 ? '#10b981' : '#f43f5e'}">${item.return_pct >= 0 ? '+' : ''}${item.return_pct.toFixed(1)}%</strong></span>
+                            <a href="${chartUrl}" target="_blank" rel="noopener" class="chart-ext-btn">
+                                야후 차트 <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 초기 실행
+        document.addEventListener('DOMContentLoaded', initRadar);
+    </script>
+</body>
+</html>
