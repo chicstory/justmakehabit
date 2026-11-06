@@ -4,6 +4,31 @@
 
 ---
 
+## [2026-11-07] 모바일 뷰포트 헤더 글자 쪼개짐 & 가로 스크롤 잘림 버그 긴급 완벽 수정
+- **1. 요청사항**: 
+  - 모바일 기기에서 상단 헤더 로고(`justmakehabit` ➔ `justmakehabi` / `t`) 및 GNB 메뉴 글자(`개인투`/`자`, `도`/`구`)가 위아래로 쪼개지고, 카드 본문 우측 날짜 및 테두리가 화면 밖으로 잘려 나가는 현상 수정 ("모바일에선 아예 잘리기도 하네").
+- **2. 원인 분석**:
+  - GNB에 [개인투자] 메뉴가 추가되어 5개 메뉴로 확장되었으나, 모바일(360px~412px) 미디어 쿼리가 미흡하여 헤더 최소 너비가 447px을 초과함.
+  - `.logo-text` 및 `.h-nav-link`에 `white-space: nowrap`이 누락되어 공간 부족 시 단어가 글자 단위로 강제 개행됨.
+  - 헤더의 오버플로우로 인해 페이지 전체 가로 스크롤이 발생하여 본문 덱 카드의 오른쪽 영역(`2026.10.24` 및 우측 테두리)이 화면 밖으로 밀려남.
+- **3. 솔루션 & 구현 (`style.css`)**:
+  - `html, body`: `overflow-x: hidden; width: 100%;`로 가로 스크롤 원천 차단.
+  - **글로벌 헤더 모바일 핏**:
+    - `.logo-text`: `white-space: nowrap;`, 640px 이하 14.5px, 400px 이하 13.5px로 축소하여 단어 줄바꿈 영구 방지.
+    - `.h-nav-link`: `white-space: nowrap; word-break: keep-all; font-size: 12px` (400px 이하는 11.5px), `padding: 4px 2px`, `gap: 8px`로 360px 화면에서도 5개 메뉴가 한 줄에 칼정렬되도록 최적화.
+    - `.header-container`: 패딩 슬림화 (`0 12px`, 400px 이하는 `0 8px`).
+  - **표준 레이아웃 & 덱 카드 오버플로우 제로화**:
+    - `.standard-layout`: 모바일에서 `margin: 14px auto 40px; padding: 0 12px; width: 100%; box-sizing: border-box;` 적용.
+    - `.deck-board`: `padding: 16px 14px; width: 100%; box-sizing: border-box;`로 여백을 슬림화하여 카드 테두리가 모바일 화면에 칼같이 감싸지도록 처리.
+    - `.deck-item`: `width: 100%; box-sizing: border-box; gap: 8px;`
+    - `.di-title`: `min-width: 0; flex: 1;` 말줄임표(`ellipsis`) 보존.
+    - `.di-date`: `flex-shrink: 0; font-size: 10.5px;`로 우측 잘림 없이 100% 온전하게 노출.
+    - `about-lead-deck` 및 `radar-launcher-card`: 모바일에서 `flex-direction: column`으로 자동 전환하여 버튼 및 텍스트 100% 폭 보장.
+- **4. 결과 & 검증**:
+  - 360px(아이폰 SE/갤럭시 초소형)부터 412px까지 헤더 로고/메뉴 글자 쪼개짐 제로 & 카드 테두리/날짜 온전 노출 실전 검증 완료.
+
+---
+
 ## [2026-11-07] 개인투자 퀀트 레이더 스마트 필터 & 실시간 검색 & 체감 정렬 엔진 전면 개편
 - **1. 요청사항**: 
   - `justmakehabit.com/invest.html`에서 필터 버튼을 클릭해도 화면에 아무런 변화가 없어 작동하지 않는 것처럼 보이는 현상 수정 요청 ("justmakehiabit쪽에 필터는 아예 작동을 안하네?").
