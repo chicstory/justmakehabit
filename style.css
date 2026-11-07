@@ -1000,26 +1000,44 @@ body {
   /* 글로벌 헤더 모바일 최적화 (글자 쪼개짐 & 줄바꿈 제로 보장) */
   .site-header {
     height: 52px;
+    overflow: hidden;
   }
   .header-container {
-    padding: 0 12px;
+    padding: 0 10px;
+    gap: 8px;
   }
   .logo-wrap {
-    gap: 6px;
+    gap: 5px;
+    flex-shrink: 0;
   }
   .logo-badge {
     font-size: 10px;
-    padding: 2px 5px;
+    padding: 2px 4px;
   }
   .logo-text {
-    font-size: 14.5px;
+    font-size: 13.5px;
   }
   .header-nav {
-    gap: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 1;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 2px 0;
+  }
+  .header-nav::-webkit-scrollbar {
+    display: none;
   }
   .h-nav-link {
     font-size: 12px;
-    padding: 4px 2px;
+    padding: 3px 4px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    word-break: keep-all;
   }
 
   /* 표준 레이아웃 모바일 여백 및 오버플로우 제로화 */
@@ -1089,20 +1107,28 @@ body {
 @media (max-width: 400px) {
   /* 360px ~ 400px 초소형 모바일 헤더 및 컨테이너 */
   .header-container {
-    padding: 0 8px;
+    padding: 0 6px;
+    gap: 6px;
   }
   .logo-wrap {
-    gap: 5px;
+    gap: 4px;
+    flex-shrink: 0;
+  }
+  .logo-badge {
+    font-size: 9.5px;
+    padding: 1px 4px;
   }
   .logo-text {
-    font-size: 13.5px;
+    font-size: 13px;
   }
   .header-nav {
-    gap: 5px;
+    gap: 4px;
+    padding: 2px 0;
   }
   .h-nav-link {
     font-size: 11.5px;
-    padding: 2px 1px;
+    padding: 3px 2px;
+    flex-shrink: 0;
   }
   .standard-layout {
     padding: 0 10px;

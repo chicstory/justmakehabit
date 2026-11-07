@@ -4,6 +4,25 @@
 
 ---
 
+## [2026-11-08] 📱 모바일 헤더 2글자 콤팩트화(개인투자 ➔ 투자) & 360px 무결성 실전 검증
+- **1. 요청사항**: 
+  - 모바일(360px~412px) 뷰포트에서 GNB 헤더 6개 메뉴 도입 시 글자 쪼개짐이나 줄바꿈(오버플로우) 우려 해소.
+  - 메뉴 텍스트를 2글자 리듬감으로 콤팩트화하고, 10개 전수 페이지의 상호 링크 및 모바일/데스크탑 레이아웃 동작 검증.
+- **2. 솔루션 & 구현**:
+  - **GNB 메뉴 2글자화**: `홈` | `자산` | `체력` | `투자` (구 '개인투자'에서 25px 확보) | `도구` | `소개`
+  - **모바일 스무스 스와이프 (`style.css`)**:
+    - `.header-nav`: `overflow-x: auto; flex-shrink: 1; -webkit-overflow-scrolling: touch; scrollbar-width: none;` 탑재.
+    - 360px 극소형 기기에서도 줄바꿈 0%, 로고 찌그러짐 0%의 견고한 안전장치 확보.
+  - **10개 전수 페이지 헤더 동기화**:
+    - `index.html`, `about.html`, `invest.html`
+    - `tools/mid-hire-calculator.html`, `rp-calculator.html`, `gold-vs-fiat.html`
+    - `assets/2026-10-24-zero-base-cashflow.html`, `2026-10-24-one-second-one-won-baseline.html`, `2026-11-08-fixed-vs-irregular-cashflow.html`, `2026-11-08-resting-heart-rate-weekly-steps-mileage.html`
+- **3. 결과 & 검증**:
+  - 전수 상대 링크 154개 유효성 검사 결과: **깨진 링크 0건 (404 오류 제로)**.
+  - 360px 모바일 화면 계산: 총 필요 너비 296px로 360px 기준 **64px의 넉넉한 여유 마진** 확보.
+
+---
+
 ## [2026-11-08] 🏃 습관 & 체력(Fitness) 1호 아티클 발행 & 3대 보드 체제 확장
 - **1. 요청사항**: 
   - "속도는 이제 중요하지 않다. 주간 스텝과 주간 러닝 거리의 총량, 그리고 오직 안정시 심박수(54~56bpm)로만 몸 상태를 체크한다"는 실전 신체 자본 루틴을 justmakehabit의 정규 체력 아티클로 집대성.
