@@ -200,7 +200,7 @@
           <div class="gcm-col gold">
             <div class="gcm-top">
               <span class="gcm-title">🥇 실물 금(Gold) 매입</span>
-              <span class="gcm-badge">자산 방어</span>
+              <span class="gcm-badge" id="simGoldBadge">자산 방어</span>
             </div>
             <div class="gcm-val" id="simGoldValue">1억 1,782만 원</div>
             <div class="gcm-profit" id="simGoldReturn">+1,078.2% (CAGR +11.3%)</div>
@@ -213,7 +213,7 @@
           <div class="gcm-col usd">
             <div class="gcm-top">
               <span class="gcm-title">💵 달러(USD) 환전 보유</span>
-              <span class="gcm-badge">기축통화</span>
+              <span class="gcm-badge" id="simUsdBadge">기축통화</span>
             </div>
             <div class="gcm-val" id="simUsdValue">1,163만 원</div>
             <div class="gcm-profit" id="simUsdReturn">+16.3% ($8,528)</div>
@@ -226,7 +226,7 @@
           <div class="gcm-col krw">
             <div class="gcm-top">
               <span class="gcm-title">🇰🇷 원화(KRW) 현금 방치</span>
-              <span class="gcm-badge">녹는 얼음</span>
+              <span class="gcm-badge" id="simKrwBadge">녹는 얼음</span>
             </div>
             <div class="gcm-val" id="simKrwValue">85만 원 (실질가치)</div>
             <div class="gcm-profit" id="simKrwReturn">-91.5% (구매력 증발)</div>
@@ -670,13 +670,32 @@
       const donBought = amount / pastKrwDon;
       const currentGoldVal = donBought * latestKrwDon;
       const goldReturn = ((currentGoldVal - amount) / amount) * 100;
-      const elapsedYears = 2026 - year || 0.1;
-      const cagr = (Math.pow(currentGoldVal / amount, 1 / elapsedYears) - 1) * 100;
+      const elapsedYears = Math.max(1, 2026 - year);
+      const cagr = elapsedYears > 0 ? (Math.pow(currentGoldVal / amount, 1 / elapsedYears) - 1) * 100 : 0;
 
       document.getElementById('simGoldValue').textContent = formatMoneyKorean(currentGoldVal);
-      document.getElementById('simGoldReturn').textContent = `+${goldReturn.toFixed(1)}% (연평균 CAGR +${cagr.toFixed(1)}%)`;
-      document.getElementById('simGoldDesc').textContent = 
-        `당시 1돈 ${pastKrwDon.toLocaleString()}원에 ${donBought.toFixed(1)}돈 매입 ➔ 현재 실물 평가 가치로 환산`;
+      
+      const goldProfitEl = document.getElementById('simGoldReturn');
+      const goldBadgeEl = document.getElementById('simGoldBadge');
+      if (goldReturn >= 0) {
+        goldProfitEl.textContent = `+${goldReturn.toFixed(1)}% (연평균 CAGR +${cagr.toFixed(1)}%)`;
+        goldProfitEl.style.color = '#d97706';
+        if (goldBadgeEl) {
+          goldBadgeEl.textContent = '자산 방어 (수익)';
+          goldBadgeEl.style.background = '#d97706';
+        }
+        document.getElementById('simGoldDesc').textContent = 
+          `당시 1돈 ${pastKrwDon.toLocaleString()}원에 ${donBought.toFixed(1)}돈 매입 ➔ 현재 실물 평가 가치로 환산 (+${goldReturn.toFixed(1)}% 상승)`;
+      } else {
+        goldProfitEl.textContent = `${goldReturn.toFixed(1)}% (연평균 CAGR ${cagr.toFixed(1)}%)`;
+        goldProfitEl.style.color = '#ef4444';
+        if (goldBadgeEl) {
+          goldBadgeEl.textContent = '조정 국면 (평가손)';
+          goldBadgeEl.style.background = '#64748b';
+        }
+        document.getElementById('simGoldDesc').textContent = 
+          `당시 1돈 ${pastKrwDon.toLocaleString()}원에 ${donBought.toFixed(1)}돈 매입 ➔ 최근 금값 조정으로 일시 평가손실 (${goldReturn.toFixed(1)}%)`;
+      }
 
       // 2) 달러 환전 보유 결과
       const usdExchanged = amount / pastUsdRate;
@@ -684,19 +703,59 @@
       const usdReturn = ((currentUsdVal - amount) / amount) * 100;
 
       document.getElementById('simUsdValue').textContent = formatMoneyKorean(currentUsdVal);
-      document.getElementById('simUsdReturn').textContent = `${usdReturn >= 0 ? '+' : ''}${usdReturn.toFixed(1)}% ($${Math.round(usdExchanged).toLocaleString()})`;
-      document.getElementById('simUsdDesc').textContent = 
-        `환율 ${pastUsdRate}원 ➔ ${latestUsdRate}원으로 원화 가치 소폭 방어, 금 대비 실질 구매력은 -${(100 - (pastRecord.fiat_power_usd / latestRecord.fiat_power_usd * 100 * (pastRecord.gold_usd.toz / latestRecord.gold_usd.toz))).toFixed(0)}% 증발`;
+      const usdProfitEl = document.getElementById('simUsdReturn');
+      const usdBadgeEl = document.getElementById('simUsdBadge');
 
-      // 3) 원화 현금 방치 결과
+      if (usdReturn >= 0) {
+        usdProfitEl.textContent = `+${usdReturn.toFixed(1)}% ($${Math.round(usdExchanged).toLocaleString()})`;
+        usdProfitEl.style.color = '#2563eb';
+        if (usdBadgeEl) {
+          usdBadgeEl.textContent = '환차익 방어';
+          usdBadgeEl.style.background = '#2563eb';
+        }
+      } else {
+        usdProfitEl.textContent = `${usdReturn.toFixed(1)}% ($${Math.round(usdExchanged).toLocaleString()})`;
+        usdProfitEl.style.color = '#ef4444';
+        if (usdBadgeEl) {
+          usdBadgeEl.textContent = '환차손 발생';
+          usdBadgeEl.style.background = '#64748b';
+        }
+      }
+      
+      const usdGoldPowerChange = ((pastRecord.gold_usd.toz / latestRecord.gold_usd.toz) - 1) * 100;
+      document.getElementById('simUsdDesc').textContent = 
+        `환율 ${pastUsdRate}원 ➔ ${latestUsdRate}원 (${usdReturn >= 0 ? '+' : ''}${usdReturn.toFixed(1)}%). 달러 자체의 금 대비 구매력은 ${usdGoldPowerChange >= 0 ? '+' : ''}${usdGoldPowerChange.toFixed(1)}% 변동`;
+
+      // 3) 원화 현금 방치 결과 (금 대비 실질 구매력 변동)
       const krwRemainingRatio = pastRecord.gold_krw.g / latestRecord.gold_krw.g;
       const krwRealVal = amount * krwRemainingRatio;
-      const krwLoss = (1 - krwRemainingRatio) * 100;
+      const powerChangePct = (krwRemainingRatio - 1) * 100; // 양수면 구매력 증가, 음수면 구매력 증발
 
       document.getElementById('simKrwValue').textContent = `${formatMoneyKorean(krwRealVal)} (실질가치)`;
-      document.getElementById('simKrwReturn').textContent = `-${krwLoss.toFixed(1)}% (구매력 증발)`;
-      document.getElementById('simKrwDesc').textContent = 
-        `명목 잔고는 ${formatMoneyKorean(amount)} 그대로이나, 당시 살 수 있던 실물 금의 ${(krwRemainingRatio * 100).toFixed(1)}%밖에 못 사는 종이화폐로 축소`;
+      const krwProfitEl = document.getElementById('simKrwReturn');
+      const krwBadgeEl = document.getElementById('simKrwBadge');
+
+      if (powerChangePct < 0) {
+        // 금값 상승 시: 화폐 구매력 하락/증발
+        krwProfitEl.textContent = `${powerChangePct.toFixed(1)}% (실질 구매력 증발)`;
+        krwProfitEl.style.color = '#ef4444';
+        if (krwBadgeEl) {
+          krwBadgeEl.textContent = '녹는 얼음 (구매력 감소)';
+          krwBadgeEl.style.background = '#dc2626';
+        }
+        document.getElementById('simKrwDesc').textContent = 
+          `명목 잔고는 ${formatMoneyKorean(amount)} 그대로이나, 당시 대비 실물 금 구매력이 ${(krwRemainingRatio * 100).toFixed(1)}% 수준으로 축소되었습니다.`;
+      } else {
+        // 금값/환율 하락 시: 화폐 구매력 일시 증가!
+        krwProfitEl.textContent = `+${powerChangePct.toFixed(1)}% (실질 구매력 증가)`;
+        krwProfitEl.style.color = '#059669';
+        if (krwBadgeEl) {
+          krwBadgeEl.textContent = '단기 구매력 증가 (금값 조정)';
+          krwBadgeEl.style.background = '#059669';
+        }
+        document.getElementById('simKrwDesc').textContent = 
+          `금값 및 환율 조정으로 인해, 당시보다 현재 실물 금을 ${powerChangePct.toFixed(1)}% 더 많이 매입할 수 있는 상태입니다.`;
+      }
     }
 
     function formatMoneyKorean(val) {
