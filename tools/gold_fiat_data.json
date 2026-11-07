@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "금 vs 실용화폐 23년 실물가치 변동 시계열 (2004~2026)",
-    "source": "Yahoo Finance (GC=F, KRW=X)",
+    "title": "금 vs 실용화폐 vs 부동산(서울아파트) 23년 실물가치 변동 시계열 (2004~2026)",
+    "source": "Yahoo Finance (GC=F, KRW=X), KB국민은행·한국부동산원 서울 아파트 매매가격 시계열",
     "updated": "2026-11-07",
     "units": {
       "toz_to_g": 31.1034768,
@@ -31,8 +31,14 @@
         "toz": 438638,
         "kg": 14102523
       },
+      "apt": {
+        "price_krw": 312000000,
+        "gold_kg": 22.12,
+        "gold_don": 5900
+      },
       "fiat_power_usd": 91.9,
-      "fiat_power_krw": 107.5
+      "fiat_power_krw": 107.5,
+      "apt_return_pct": 0.0
     },
     {
       "date": "2005-12",
@@ -51,8 +57,14 @@
         "toz": 516728,
         "kg": 16613181
       },
+      "apt": {
+        "price_krw": 354000000,
+        "gold_kg": 21.31,
+        "gold_don": 5682
+      },
       "fiat_power_usd": 77.8,
-      "fiat_power_krw": 91.3
+      "fiat_power_krw": 91.3,
+      "apt_return_pct": 13.5
     },
     {
       "date": "2006-12",
@@ -71,8 +83,14 @@
         "toz": 563454,
         "kg": 18115472
       },
+      "apt": {
+        "price_krw": 438000000,
+        "gold_kg": 24.18,
+        "gold_don": 6448
+      },
       "fiat_power_usd": 63.3,
-      "fiat_power_krw": 83.7
+      "fiat_power_krw": 83.7,
+      "apt_return_pct": 40.4
     },
     {
       "date": "2007-12",
@@ -91,8 +109,14 @@
         "toz": 773418,
         "kg": 24865965
       },
+      "apt": {
+        "price_krw": 469000000,
+        "gold_kg": 18.86,
+        "gold_don": 5030
+      },
       "fiat_power_usd": 48.2,
-      "fiat_power_krw": 61.0
+      "fiat_power_krw": 61.0,
+      "apt_return_pct": 50.3
     },
     {
       "date": "2008-12",
@@ -111,8 +135,14 @@
         "toz": 1097608,
         "kg": 35288914
       },
+      "apt": {
+        "price_krw": 475000000,
+        "gold_kg": 13.46,
+        "gold_don": 3589
+      },
       "fiat_power_usd": 45.5,
-      "fiat_power_krw": 43.0
+      "fiat_power_krw": 43.0,
+      "apt_return_pct": 52.2
     },
     {
       "date": "2009-12",
@@ -131,8 +161,14 @@
         "toz": 1260685,
         "kg": 40531955
       },
+      "apt": {
+        "price_krw": 498000000,
+        "gold_kg": 12.29,
+        "gold_don": 3276
+      },
       "fiat_power_usd": 36.7,
-      "fiat_power_krw": 37.4
+      "fiat_power_krw": 37.4,
+      "apt_return_pct": 59.6
     },
     {
       "date": "2010-12",
@@ -151,8 +187,14 @@
         "toz": 1601722,
         "kg": 51496552
       },
+      "apt": {
+        "price_krw": 489000000,
+        "gold_kg": 9.5,
+        "gold_don": 2532
+      },
       "fiat_power_usd": 28.3,
-      "fiat_power_krw": 29.4
+      "fiat_power_krw": 29.4,
+      "apt_return_pct": 56.7
     },
     {
       "date": "2011-12",
@@ -171,8 +213,14 @@
         "toz": 1809125,
         "kg": 58164730
       },
+      "apt": {
+        "price_krw": 485000000,
+        "gold_kg": 8.34,
+        "gold_don": 2224
+      },
       "fiat_power_usd": 25.7,
-      "fiat_power_krw": 26.1
+      "fiat_power_krw": 26.1,
+      "apt_return_pct": 55.4
     },
     {
       "date": "2012-12",
@@ -191,8 +239,14 @@
         "toz": 1738610,
         "kg": 55897606
       },
+      "apt": {
+        "price_krw": 459000000,
+        "gold_kg": 8.21,
+        "gold_don": 2190
+      },
       "fiat_power_usd": 24.0,
-      "fiat_power_krw": 27.1
+      "fiat_power_krw": 27.1,
+      "apt_return_pct": 47.1
     },
     {
       "date": "2013-11",
@@ -211,8 +265,14 @@
         "toz": 1322009,
         "kg": 42503585
       },
+      "apt": {
+        "price_krw": 479000000,
+        "gold_kg": 11.27,
+        "gold_don": 3005
+      },
       "fiat_power_usd": 32.2,
-      "fiat_power_krw": 35.7
+      "fiat_power_krw": 35.7,
+      "apt_return_pct": 53.5
     },
     {
       "date": "2014-12",
@@ -231,8 +291,14 @@
         "toz": 1296726,
         "kg": 41690698
       },
+      "apt": {
+        "price_krw": 492000000,
+        "gold_kg": 11.8,
+        "gold_don": 3147
+      },
       "fiat_power_usd": 34.0,
-      "fiat_power_krw": 36.4
+      "fiat_power_krw": 36.4,
+      "apt_return_pct": 57.7
     },
     {
       "date": "2015-12",
@@ -251,8 +317,14 @@
         "toz": 1246319,
         "kg": 40070087
       },
+      "apt": {
+        "price_krw": 526000000,
+        "gold_kg": 13.13,
+        "gold_don": 3501
+      },
       "fiat_power_usd": 37.9,
-      "fiat_power_krw": 37.8
+      "fiat_power_krw": 37.8,
+      "apt_return_pct": 68.6
     },
     {
       "date": "2016-12",
@@ -271,8 +343,14 @@
         "toz": 1387199,
         "kg": 44599483
       },
+      "apt": {
+        "price_krw": 568000000,
+        "gold_kg": 12.74,
+        "gold_don": 3396
+      },
       "fiat_power_usd": 35.0,
-      "fiat_power_krw": 34.0
+      "fiat_power_krw": 34.0,
+      "apt_return_pct": 82.1
     },
     {
       "date": "2017-12",
@@ -291,8 +369,14 @@
         "toz": 1393012,
         "kg": 44786382
       },
+      "apt": {
+        "price_krw": 662000000,
+        "gold_kg": 14.78,
+        "gold_don": 3942
+      },
       "fiat_power_usd": 30.8,
-      "fiat_power_krw": 33.9
+      "fiat_power_krw": 33.9,
+      "apt_return_pct": 112.2
     },
     {
       "date": "2018-12",
@@ -311,8 +395,14 @@
         "toz": 1426966,
         "kg": 45878032
       },
+      "apt": {
+        "price_krw": 785000000,
+        "gold_kg": 17.11,
+        "gold_don": 4563
+      },
       "fiat_power_usd": 31.5,
-      "fiat_power_krw": 33.1
+      "fiat_power_krw": 33.1,
+      "apt_return_pct": 151.6
     },
     {
       "date": "2019-11",
@@ -331,8 +421,14 @@
         "toz": 1731709,
         "kg": 55675737
       },
+      "apt": {
+        "price_krw": 865000000,
+        "gold_kg": 15.54,
+        "gold_don": 4143
+      },
       "fiat_power_usd": 27.4,
-      "fiat_power_krw": 27.2
+      "fiat_power_krw": 27.2,
+      "apt_return_pct": 177.2
     },
     {
       "date": "2020-12",
@@ -351,8 +447,14 @@
         "toz": 2058875,
         "kg": 66194354
       },
+      "apt": {
+        "price_krw": 1043000000,
+        "gold_kg": 15.76,
+        "gold_don": 4202
+      },
       "fiat_power_usd": 21.2,
-      "fiat_power_krw": 22.9
+      "fiat_power_krw": 22.9,
+      "apt_return_pct": 234.3
     },
     {
       "date": "2021-12",
@@ -371,8 +473,14 @@
         "toz": 2175833,
         "kg": 69954651
       },
+      "apt": {
+        "price_krw": 1296500000,
+        "gold_kg": 18.53,
+        "gold_don": 4942
+      },
       "fiat_power_usd": 22.0,
-      "fiat_power_krw": 21.7
+      "fiat_power_krw": 21.7,
+      "apt_return_pct": 315.5
     },
     {
       "date": "2022-12",
@@ -391,8 +499,14 @@
         "toz": 2302674,
         "kg": 74032683
       },
+      "apt": {
+        "price_krw": 1215000000,
+        "gold_kg": 16.41,
+        "gold_don": 4376
+      },
       "fiat_power_usd": 22.0,
-      "fiat_power_krw": 20.5
+      "fiat_power_krw": 20.5,
+      "apt_return_pct": 289.4
     },
     {
       "date": "2023-12",
@@ -411,8 +525,14 @@
         "toz": 2679935,
         "kg": 86161926
       },
+      "apt": {
+        "price_krw": 1198000000,
+        "gold_kg": 13.9,
+        "gold_don": 3708
+      },
       "fiat_power_usd": 19.4,
-      "fiat_power_krw": 17.6
+      "fiat_power_krw": 17.6,
+      "apt_return_pct": 284.0
     },
     {
       "date": "2024-11",
@@ -431,8 +551,14 @@
         "toz": 3719428,
         "kg": 119582388
       },
+      "apt": {
+        "price_krw": 1285000000,
+        "gold_kg": 10.75,
+        "gold_don": 2866
+      },
       "fiat_power_usd": 15.1,
-      "fiat_power_krw": 12.7
+      "fiat_power_krw": 12.7,
+      "apt_return_pct": 311.9
     },
     {
       "date": "2025-12",
@@ -451,8 +577,14 @@
         "toz": 6242111,
         "kg": 200688532
       },
+      "apt": {
+        "price_krw": 1420000000,
+        "gold_kg": 7.08,
+        "gold_don": 1887
+      },
       "fiat_power_usd": 9.3,
-      "fiat_power_krw": 7.6
+      "fiat_power_krw": 7.6,
+      "apt_return_pct": 355.1
     },
     {
       "date": "2026-11",
@@ -471,8 +603,14 @@
         "toz": 5556737,
         "kg": 178653255
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 8.4,
+        "gold_don": 2239
+      },
       "fiat_power_usd": 9.9,
-      "fiat_power_krw": 8.5
+      "fiat_power_krw": 8.5,
+      "apt_return_pct": 380.8
     }
   ],
   "monthly": [
@@ -493,8 +631,14 @@
         "toz": 471620,
         "kg": 15162926
       },
+      "apt": {
+        "price_krw": 312000000,
+        "gold_kg": 20.58,
+        "gold_don": 5487
+      },
       "fiat_power_usd": 100.0,
-      "fiat_power_krw": 100.0
+      "fiat_power_krw": 100.0,
+      "apt_return_pct": 0.0
     },
     {
       "date": "2004-03",
@@ -513,8 +657,14 @@
         "toz": 498360,
         "kg": 16022646
       },
+      "apt": {
+        "price_krw": 319000000,
+        "gold_kg": 19.91,
+        "gold_don": 5309
+      },
       "fiat_power_usd": 94.1,
-      "fiat_power_krw": 94.6
+      "fiat_power_krw": 94.6,
+      "apt_return_pct": 2.2
     },
     {
       "date": "2004-04",
@@ -533,8 +683,14 @@
         "toz": 449965,
         "kg": 14466707
       },
+      "apt": {
+        "price_krw": 322500000,
+        "gold_kg": 22.29,
+        "gold_don": 5945
+      },
       "fiat_power_usd": 103.9,
-      "fiat_power_krw": 104.8
+      "fiat_power_krw": 104.8,
+      "apt_return_pct": 3.4
     },
     {
       "date": "2004-05",
@@ -553,8 +709,14 @@
         "toz": 456804,
         "kg": 14686577
       },
+      "apt": {
+        "price_krw": 326000000,
+        "gold_kg": 22.2,
+        "gold_don": 5919
+      },
       "fiat_power_usd": 102.1,
-      "fiat_power_krw": 103.2
+      "fiat_power_krw": 103.2,
+      "apt_return_pct": 4.5
     },
     {
       "date": "2004-06",
@@ -573,8 +735,14 @@
         "toz": 453728,
         "kg": 14587688
       },
+      "apt": {
+        "price_krw": 329500000,
+        "gold_kg": 22.59,
+        "gold_don": 6023
+      },
       "fiat_power_usd": 102.5,
-      "fiat_power_krw": 103.9
+      "fiat_power_krw": 103.9,
+      "apt_return_pct": 5.6
     },
     {
       "date": "2004-07",
@@ -593,8 +761,14 @@
         "toz": 455359,
         "kg": 14640119
       },
+      "apt": {
+        "price_krw": 333000000,
+        "gold_kg": 22.75,
+        "gold_don": 6066
+      },
       "fiat_power_usd": 102.9,
-      "fiat_power_krw": 103.6
+      "fiat_power_krw": 103.6,
+      "apt_return_pct": 6.7
     },
     {
       "date": "2004-09",
@@ -613,8 +787,14 @@
         "toz": 481840,
         "kg": 15491514
       },
+      "apt": {
+        "price_krw": 340000000,
+        "gold_kg": 21.95,
+        "gold_don": 5853
+      },
       "fiat_power_usd": 96.1,
-      "fiat_power_krw": 97.9
+      "fiat_power_krw": 97.9,
+      "apt_return_pct": 9.0
     },
     {
       "date": "2004-10",
@@ -633,8 +813,14 @@
         "toz": 472636,
         "kg": 15195584
       },
+      "apt": {
+        "price_krw": 343500000,
+        "gold_kg": 22.61,
+        "gold_don": 6028
+      },
       "fiat_power_usd": 93.8,
-      "fiat_power_krw": 99.8
+      "fiat_power_krw": 99.8,
+      "apt_return_pct": 10.1
     },
     {
       "date": "2004-11",
@@ -653,8 +839,14 @@
         "toz": 472782,
         "kg": 15200290
       },
+      "apt": {
+        "price_krw": 347000000,
+        "gold_kg": 22.83,
+        "gold_don": 6088
+      },
       "fiat_power_usd": 89.1,
-      "fiat_power_krw": 99.8
+      "fiat_power_krw": 99.8,
+      "apt_return_pct": 11.2
     },
     {
       "date": "2004-12",
@@ -673,8 +865,14 @@
         "toz": 438638,
         "kg": 14102523
       },
+      "apt": {
+        "price_krw": 350500000,
+        "gold_kg": 24.85,
+        "gold_don": 6628
+      },
       "fiat_power_usd": 91.9,
-      "fiat_power_krw": 107.5
+      "fiat_power_krw": 107.5,
+      "apt_return_pct": 12.3
     },
     {
       "date": "2005-01",
@@ -693,8 +891,14 @@
         "toz": 432518,
         "kg": 13905775
       },
+      "apt": {
+        "price_krw": 354000000,
+        "gold_kg": 25.46,
+        "gold_don": 6789
+      },
       "fiat_power_usd": 95.4,
-      "fiat_power_krw": 109.0
+      "fiat_power_krw": 109.0,
+      "apt_return_pct": 13.5
     },
     {
       "date": "2005-02",
@@ -713,8 +917,14 @@
         "toz": 438159,
         "kg": 14087129
       },
+      "apt": {
+        "price_krw": 361000000,
+        "gold_kg": 25.63,
+        "gold_don": 6834
+      },
       "fiat_power_usd": 92.2,
-      "fiat_power_krw": 107.6
+      "fiat_power_krw": 107.6,
+      "apt_return_pct": 15.7
     },
     {
       "date": "2005-03",
@@ -733,8 +943,14 @@
         "toz": 435988,
         "kg": 14017336
       },
+      "apt": {
+        "price_krw": 368000000,
+        "gold_kg": 26.25,
+        "gold_don": 7001
+      },
       "fiat_power_usd": 93.8,
-      "fiat_power_krw": 108.2
+      "fiat_power_krw": 108.2,
+      "apt_return_pct": 17.9
     },
     {
       "date": "2005-04",
@@ -753,8 +969,14 @@
         "toz": 431955,
         "kg": 13887676
       },
+      "apt": {
+        "price_krw": 375000000,
+        "gold_kg": 27.0,
+        "gold_don": 7201
+      },
       "fiat_power_usd": 92.4,
-      "fiat_power_krw": 109.2
+      "fiat_power_krw": 109.2,
+      "apt_return_pct": 20.2
     },
     {
       "date": "2005-06",
@@ -773,8 +995,14 @@
         "toz": 450633,
         "kg": 14488201
       },
+      "apt": {
+        "price_krw": 389000000,
+        "gold_kg": 26.85,
+        "gold_don": 7160
+      },
       "fiat_power_usd": 92.3,
-      "fiat_power_krw": 104.7
+      "fiat_power_krw": 104.7,
+      "apt_return_pct": 24.7
     },
     {
       "date": "2005-07",
@@ -793,8 +1021,14 @@
         "toz": 437208,
         "kg": 14056573
       },
+      "apt": {
+        "price_krw": 396000000,
+        "gold_kg": 28.17,
+        "gold_don": 7512
+      },
       "fiat_power_usd": 93.6,
-      "fiat_power_krw": 107.9
+      "fiat_power_krw": 107.9,
+      "apt_return_pct": 26.9
     },
     {
       "date": "2005-08",
@@ -813,8 +1047,14 @@
         "toz": 450935,
         "kg": 14497900
       },
+      "apt": {
+        "price_krw": 403000000,
+        "gold_kg": 27.8,
+        "gold_don": 7413
+      },
       "fiat_power_usd": 92.7,
-      "fiat_power_krw": 104.6
+      "fiat_power_krw": 104.6,
+      "apt_return_pct": 29.2
     },
     {
       "date": "2005-09",
@@ -833,8 +1073,14 @@
         "toz": 484055,
         "kg": 15562726
       },
+      "apt": {
+        "price_krw": 410000000,
+        "gold_kg": 26.34,
+        "gold_don": 7025
+      },
       "fiat_power_usd": 85.7,
-      "fiat_power_krw": 97.4
+      "fiat_power_krw": 97.4,
+      "apt_return_pct": 31.4
     },
     {
       "date": "2005-10",
@@ -853,8 +1099,14 @@
         "toz": 485611,
         "kg": 15612753
       },
+      "apt": {
+        "price_krw": 417000000,
+        "gold_kg": 26.71,
+        "gold_don": 7122
+      },
       "fiat_power_usd": 86.5,
-      "fiat_power_krw": 97.1
+      "fiat_power_krw": 97.1,
+      "apt_return_pct": 33.7
     },
     {
       "date": "2005-11",
@@ -873,8 +1125,14 @@
         "toz": 504047,
         "kg": 16205483
       },
+      "apt": {
+        "price_krw": 424000000,
+        "gold_kg": 26.16,
+        "gold_don": 6977
+      },
       "fiat_power_usd": 81.3,
-      "fiat_power_krw": 93.6
+      "fiat_power_krw": 93.6,
+      "apt_return_pct": 35.9
     },
     {
       "date": "2005-12",
@@ -893,8 +1151,14 @@
         "toz": 516728,
         "kg": 16613181
       },
+      "apt": {
+        "price_krw": 431000000,
+        "gold_kg": 25.94,
+        "gold_don": 6918
+      },
       "fiat_power_usd": 77.8,
-      "fiat_power_krw": 91.3
+      "fiat_power_krw": 91.3,
+      "apt_return_pct": 38.1
     },
     {
       "date": "2006-02",
@@ -913,8 +1177,14 @@
         "toz": 535070,
         "kg": 17202900
       },
+      "apt": {
+        "price_krw": 440583333,
+        "gold_kg": 25.61,
+        "gold_don": 6830
+      },
       "fiat_power_usd": 71.6,
-      "fiat_power_krw": 88.1
+      "fiat_power_krw": 88.1,
+      "apt_return_pct": 41.2
     },
     {
       "date": "2006-03",
@@ -933,8 +1203,14 @@
         "toz": 560908,
         "kg": 18033597
       },
+      "apt": {
+        "price_krw": 443166666,
+        "gold_kg": 24.57,
+        "gold_don": 6553
+      },
       "fiat_power_usd": 69.1,
-      "fiat_power_krw": 84.1
+      "fiat_power_krw": 84.1,
+      "apt_return_pct": 42.0
     },
     {
       "date": "2006-04",
@@ -953,8 +1229,14 @@
         "toz": 582846,
         "kg": 18738937
       },
+      "apt": {
+        "price_krw": 445750000,
+        "gold_kg": 23.79,
+        "gold_don": 6343
+      },
       "fiat_power_usd": 61.7,
-      "fiat_power_krw": 80.9
+      "fiat_power_krw": 80.9,
+      "apt_return_pct": 42.9
     },
     {
       "date": "2006-05",
@@ -973,8 +1255,14 @@
         "toz": 602138,
         "kg": 19359191
       },
+      "apt": {
+        "price_krw": 448333333,
+        "gold_kg": 23.16,
+        "gold_don": 6176
+      },
       "fiat_power_usd": 62.6,
-      "fiat_power_krw": 78.3
+      "fiat_power_krw": 78.3,
+      "apt_return_pct": 43.7
     },
     {
       "date": "2006-06",
@@ -993,8 +1281,14 @@
         "toz": 574518,
         "kg": 18471189
       },
+      "apt": {
+        "price_krw": 450916666,
+        "gold_kg": 24.41,
+        "gold_don": 6510
+      },
       "fiat_power_usd": 65.6,
-      "fiat_power_krw": 82.1
+      "fiat_power_krw": 82.1,
+      "apt_return_pct": 44.5
     },
     {
       "date": "2006-07",
@@ -1013,8 +1307,14 @@
         "toz": 597385,
         "kg": 19206364
       },
+      "apt": {
+        "price_krw": 453500000,
+        "gold_kg": 23.61,
+        "gold_don": 6297
+      },
       "fiat_power_usd": 63.4,
-      "fiat_power_krw": 78.9
+      "fiat_power_krw": 78.9,
+      "apt_return_pct": 45.4
     },
     {
       "date": "2006-08",
@@ -1033,8 +1333,14 @@
         "toz": 594699,
         "kg": 19120013
       },
+      "apt": {
+        "price_krw": 456083333,
+        "gold_kg": 23.85,
+        "gold_don": 6361
+      },
       "fiat_power_usd": 64.3,
-      "fiat_power_krw": 79.3
+      "fiat_power_krw": 79.3,
+      "apt_return_pct": 46.2
     },
     {
       "date": "2006-09",
@@ -1053,8 +1359,14 @@
         "toz": 559302,
         "kg": 17981974
       },
+      "apt": {
+        "price_krw": 458666666,
+        "gold_kg": 25.51,
+        "gold_don": 6802
+      },
       "fiat_power_usd": 67.2,
-      "fiat_power_krw": 84.3
+      "fiat_power_krw": 84.3,
+      "apt_return_pct": 47.0
     },
     {
       "date": "2006-11",
@@ -1073,8 +1385,14 @@
         "toz": 595025,
         "kg": 19130501
       },
+      "apt": {
+        "price_krw": 463833333,
+        "gold_kg": 24.25,
+        "gold_don": 6466
+      },
       "fiat_power_usd": 62.2,
-      "fiat_power_krw": 79.3
+      "fiat_power_krw": 79.3,
+      "apt_return_pct": 48.7
     },
     {
       "date": "2006-12",
@@ -1093,8 +1411,14 @@
         "toz": 563454,
         "kg": 18115472
       },
+      "apt": {
+        "price_krw": 466416666,
+        "gold_kg": 25.75,
+        "gold_don": 6866
+      },
       "fiat_power_usd": 63.3,
-      "fiat_power_krw": 83.7
+      "fiat_power_krw": 83.7,
+      "apt_return_pct": 49.5
     },
     {
       "date": "2007-01",
@@ -1113,8 +1437,14 @@
         "toz": 602474,
         "kg": 19369991
       },
+      "apt": {
+        "price_krw": 469000000,
+        "gold_kg": 24.21,
+        "gold_don": 6457
+      },
       "fiat_power_usd": 61.7,
-      "fiat_power_krw": 78.3
+      "fiat_power_krw": 78.3,
+      "apt_return_pct": 50.3
     },
     {
       "date": "2007-02",
@@ -1133,8 +1463,14 @@
         "toz": 621605,
         "kg": 19985060
       },
+      "apt": {
+        "price_krw": 469500000,
+        "gold_kg": 23.49,
+        "gold_don": 6265
+      },
       "fiat_power_usd": 60.1,
-      "fiat_power_krw": 75.9
+      "fiat_power_krw": 75.9,
+      "apt_return_pct": 50.5
     },
     {
       "date": "2007-03",
@@ -1153,8 +1489,14 @@
         "toz": 594307,
         "kg": 19107400
       },
+      "apt": {
+        "price_krw": 470000000,
+        "gold_kg": 24.6,
+        "gold_don": 6559
+      },
       "fiat_power_usd": 60.6,
-      "fiat_power_krw": 79.4
+      "fiat_power_krw": 79.4,
+      "apt_return_pct": 50.6
     },
     {
       "date": "2007-05",
@@ -1173,8 +1515,14 @@
         "toz": 615662,
         "kg": 19793993
       },
+      "apt": {
+        "price_krw": 471000000,
+        "gold_kg": 23.8,
+        "gold_don": 6345
+      },
       "fiat_power_usd": 60.8,
-      "fiat_power_krw": 76.6
+      "fiat_power_krw": 76.6,
+      "apt_return_pct": 51.0
     },
     {
       "date": "2007-06",
@@ -1193,8 +1541,14 @@
         "toz": 585260,
         "kg": 18816553
       },
+      "apt": {
+        "price_krw": 471500000,
+        "gold_kg": 25.06,
+        "gold_don": 6682
+      },
       "fiat_power_usd": 62.0,
-      "fiat_power_krw": 80.6
+      "fiat_power_krw": 80.6,
+      "apt_return_pct": 51.1
     },
     {
       "date": "2007-08",
@@ -1213,8 +1567,14 @@
         "toz": 630668,
         "kg": 20276457
       },
+      "apt": {
+        "price_krw": 472500000,
+        "gold_kg": 23.3,
+        "gold_don": 6214
+      },
       "fiat_power_usd": 59.8,
-      "fiat_power_krw": 74.8
+      "fiat_power_krw": 74.8,
+      "apt_return_pct": 51.4
     },
     {
       "date": "2007-09",
@@ -1233,8 +1593,14 @@
         "toz": 676669,
         "kg": 21755398
       },
+      "apt": {
+        "price_krw": 473000000,
+        "gold_kg": 21.74,
+        "gold_don": 5798
+      },
       "fiat_power_usd": 54.1,
-      "fiat_power_krw": 69.7
+      "fiat_power_krw": 69.7,
+      "apt_return_pct": 51.6
     },
     {
       "date": "2007-10",
@@ -1253,8 +1619,14 @@
         "toz": 711762,
         "kg": 22883695
       },
+      "apt": {
+        "price_krw": 473500000,
+        "gold_kg": 20.69,
+        "gold_don": 5518
+      },
       "fiat_power_usd": 50.8,
-      "fiat_power_krw": 66.3
+      "fiat_power_krw": 66.3,
+      "apt_return_pct": 51.8
     },
     {
       "date": "2007-11",
@@ -1273,8 +1645,14 @@
         "toz": 719217,
         "kg": 23123372
       },
+      "apt": {
+        "price_krw": 474000000,
+        "gold_kg": 20.5,
+        "gold_don": 5466
+      },
       "fiat_power_usd": 51.4,
-      "fiat_power_krw": 65.6
+      "fiat_power_krw": 65.6,
+      "apt_return_pct": 51.9
     },
     {
       "date": "2007-12",
@@ -1293,8 +1671,14 @@
         "toz": 773418,
         "kg": 24865965
       },
+      "apt": {
+        "price_krw": 474500000,
+        "gold_kg": 19.08,
+        "gold_don": 5089
+      },
       "fiat_power_usd": 48.2,
-      "fiat_power_krw": 61.0
+      "fiat_power_krw": 61.0,
+      "apt_return_pct": 52.1
     },
     {
       "date": "2008-01",
@@ -1313,8 +1697,14 @@
         "toz": 868464,
         "kg": 27921756
       },
+      "apt": {
+        "price_krw": 475000000,
+        "gold_kg": 17.01,
+        "gold_don": 4536
+      },
       "fiat_power_usd": 43.6,
-      "fiat_power_krw": 54.3
+      "fiat_power_krw": 54.3,
+      "apt_return_pct": 52.2
     },
     {
       "date": "2008-02",
@@ -1333,8 +1723,14 @@
         "toz": 911674,
         "kg": 29311008
       },
+      "apt": {
+        "price_krw": 476916666,
+        "gold_kg": 16.27,
+        "gold_don": 4339
+      },
       "fiat_power_usd": 41.4,
-      "fiat_power_krw": 51.7
+      "fiat_power_krw": 51.7,
+      "apt_return_pct": 52.9
     },
     {
       "date": "2008-03",
@@ -1353,8 +1749,14 @@
         "toz": 909127,
         "kg": 29229110
       },
+      "apt": {
+        "price_krw": 478833333,
+        "gold_kg": 16.38,
+        "gold_don": 4369
+      },
       "fiat_power_usd": 43.9,
-      "fiat_power_krw": 51.9
+      "fiat_power_krw": 51.9,
+      "apt_return_pct": 53.5
     },
     {
       "date": "2008-04",
@@ -1373,8 +1775,14 @@
         "toz": 864871,
         "kg": 27806239
       },
+      "apt": {
+        "price_krw": 480750000,
+        "gold_kg": 17.29,
+        "gold_don": 4610
+      },
       "fiat_power_usd": 46.6,
-      "fiat_power_krw": 54.5
+      "fiat_power_krw": 54.5,
+      "apt_return_pct": 54.1
     },
     {
       "date": "2008-05",
@@ -1393,8 +1801,14 @@
         "toz": 912233,
         "kg": 29328976
       },
+      "apt": {
+        "price_krw": 482666666,
+        "gold_kg": 16.46,
+        "gold_don": 4389
+      },
       "fiat_power_usd": 45.3,
-      "fiat_power_krw": 51.7
+      "fiat_power_krw": 51.7,
+      "apt_return_pct": 54.7
     },
     {
       "date": "2008-07",
@@ -1413,8 +1827,14 @@
         "toz": 923679,
         "kg": 29696961
       },
+      "apt": {
+        "price_krw": 486500000,
+        "gold_kg": 16.38,
+        "gold_don": 4369
+      },
       "fiat_power_usd": 44.0,
-      "fiat_power_krw": 51.1
+      "fiat_power_krw": 51.1,
+      "apt_return_pct": 55.9
     },
     {
       "date": "2008-08",
@@ -1433,8 +1853,14 @@
         "toz": 901034,
         "kg": 28968930
       },
+      "apt": {
+        "price_krw": 488416666,
+        "gold_kg": 16.86,
+        "gold_don": 4496
+      },
       "fiat_power_usd": 48.5,
-      "fiat_power_krw": 52.3
+      "fiat_power_krw": 52.3,
+      "apt_return_pct": 56.5
     },
     {
       "date": "2008-09",
@@ -1453,8 +1879,14 @@
         "toz": 1053236,
         "kg": 33862329
       },
+      "apt": {
+        "price_krw": 490333333,
+        "gold_kg": 14.48,
+        "gold_don": 3861
+      },
       "fiat_power_usd": 46.0,
-      "fiat_power_krw": 44.8
+      "fiat_power_krw": 44.8,
+      "apt_return_pct": 57.2
     },
     {
       "date": "2008-10",
@@ -1473,8 +1905,14 @@
         "toz": 924099,
         "kg": 29710459
       },
+      "apt": {
+        "price_krw": 492250000,
+        "gold_kg": 16.57,
+        "gold_don": 4418
+      },
       "fiat_power_usd": 56.1,
-      "fiat_power_krw": 51.0
+      "fiat_power_krw": 51.0,
+      "apt_return_pct": 57.8
     },
     {
       "date": "2008-11",
@@ -1493,8 +1931,14 @@
         "toz": 1193611,
         "kg": 38375481
       },
+      "apt": {
+        "price_krw": 494166666,
+        "gold_kg": 12.88,
+        "gold_don": 3434
+      },
       "fiat_power_usd": 49.3,
-      "fiat_power_krw": 39.5
+      "fiat_power_krw": 39.5,
+      "apt_return_pct": 58.4
     },
     {
       "date": "2008-12",
@@ -1513,8 +1957,14 @@
         "toz": 1097608,
         "kg": 35288914
       },
+      "apt": {
+        "price_krw": 496083333,
+        "gold_kg": 14.06,
+        "gold_don": 3749
+      },
       "fiat_power_usd": 45.5,
-      "fiat_power_krw": 43.0
+      "fiat_power_krw": 43.0,
+      "apt_return_pct": 59.0
     },
     {
       "date": "2009-01",
@@ -1533,8 +1983,14 @@
         "toz": 1258161,
         "kg": 40450804
       },
+      "apt": {
+        "price_krw": 498000000,
+        "gold_kg": 12.31,
+        "gold_don": 3283
+      },
       "fiat_power_usd": 43.4,
-      "fiat_power_krw": 37.5
+      "fiat_power_krw": 37.5,
+      "apt_return_pct": 59.6
     },
     {
       "date": "2009-04",
@@ -1553,8 +2009,14 @@
         "toz": 1138404,
         "kg": 36600528
       },
+      "apt": {
+        "price_krw": 495750000,
+        "gold_kg": 13.54,
+        "gold_don": 3612
+      },
       "fiat_power_usd": 45.1,
-      "fiat_power_krw": 41.4
+      "fiat_power_krw": 41.4,
+      "apt_return_pct": 58.9
     },
     {
       "date": "2009-05",
@@ -1573,8 +2035,14 @@
         "toz": 1226730,
         "kg": 39440287
       },
+      "apt": {
+        "price_krw": 495000000,
+        "gold_kg": 12.55,
+        "gold_don": 3347
+      },
       "fiat_power_usd": 41.1,
-      "fiat_power_krw": 38.4
+      "fiat_power_krw": 38.4,
+      "apt_return_pct": 58.7
     },
     {
       "date": "2009-06",
@@ -1593,8 +2061,14 @@
         "toz": 1179827,
         "kg": 37932334
       },
+      "apt": {
+        "price_krw": 494250000,
+        "gold_kg": 13.03,
+        "gold_don": 3475
+      },
       "fiat_power_usd": 43.4,
-      "fiat_power_krw": 40.0
+      "fiat_power_krw": 40.0,
+      "apt_return_pct": 58.4
     },
     {
       "date": "2009-07",
@@ -1613,8 +2087,14 @@
         "toz": 1166470,
         "kg": 37502896
       },
+      "apt": {
+        "price_krw": 493500000,
+        "gold_kg": 13.16,
+        "gold_don": 3509
+      },
       "fiat_power_usd": 42.2,
-      "fiat_power_krw": 40.4
+      "fiat_power_krw": 40.4,
+      "apt_return_pct": 58.2
     },
     {
       "date": "2009-08",
@@ -1633,8 +2113,14 @@
         "toz": 1189149,
         "kg": 38232033
       },
+      "apt": {
+        "price_krw": 492750000,
+        "gold_kg": 12.89,
+        "gold_don": 3437
+      },
       "fiat_power_usd": 42.3,
-      "fiat_power_krw": 39.7
+      "fiat_power_krw": 39.7,
+      "apt_return_pct": 57.9
     },
     {
       "date": "2009-09",
@@ -1653,8 +2139,14 @@
         "toz": 1183090,
         "kg": 38037214
       },
+      "apt": {
+        "price_krw": 492000000,
+        "gold_kg": 12.93,
+        "gold_don": 3449
+      },
       "fiat_power_usd": 39.9,
-      "fiat_power_krw": 39.9
+      "fiat_power_krw": 39.9,
+      "apt_return_pct": 57.7
     },
     {
       "date": "2009-10",
@@ -1673,8 +2165,14 @@
         "toz": 1208963,
         "kg": 38869068
       },
+      "apt": {
+        "price_krw": 491250000,
+        "gold_kg": 12.64,
+        "gold_don": 3370
+      },
       "fiat_power_usd": 38.7,
-      "fiat_power_krw": 39.0
+      "fiat_power_krw": 39.0,
+      "apt_return_pct": 57.5
     },
     {
       "date": "2009-12",
@@ -1693,8 +2191,14 @@
         "toz": 1260685,
         "kg": 40531955
       },
+      "apt": {
+        "price_krw": 489750000,
+        "gold_kg": 12.08,
+        "gold_don": 3222
+      },
       "fiat_power_usd": 36.7,
-      "fiat_power_krw": 37.4
+      "fiat_power_krw": 37.4,
+      "apt_return_pct": 57.0
     },
     {
       "date": "2010-01",
@@ -1713,8 +2217,14 @@
         "toz": 1242959,
         "kg": 39962063
       },
+      "apt": {
+        "price_krw": 489000000,
+        "gold_kg": 12.24,
+        "gold_don": 3263
+      },
       "fiat_power_usd": 37.1,
-      "fiat_power_krw": 37.9
+      "fiat_power_krw": 37.9,
+      "apt_return_pct": 56.7
     },
     {
       "date": "2010-02",
@@ -1733,8 +2243,14 @@
         "toz": 1267705,
         "kg": 40757658
       },
+      "apt": {
+        "price_krw": 488666666,
+        "gold_kg": 11.99,
+        "gold_don": 3197
+      },
       "fiat_power_usd": 36.0,
-      "fiat_power_krw": 37.2
+      "fiat_power_krw": 37.2,
+      "apt_return_pct": 56.6
     },
     {
       "date": "2010-03",
@@ -1753,8 +2269,14 @@
         "toz": 1259810,
         "kg": 40503841
       },
+      "apt": {
+        "price_krw": 488333333,
+        "gold_kg": 12.06,
+        "gold_don": 3215
+      },
       "fiat_power_usd": 36.1,
-      "fiat_power_krw": 37.4
+      "fiat_power_krw": 37.4,
+      "apt_return_pct": 56.5
     },
     {
       "date": "2010-04",
@@ -1773,8 +2295,14 @@
         "toz": 1307433,
         "kg": 42034940
       },
+      "apt": {
+        "price_krw": 488000000,
+        "gold_kg": 11.61,
+        "gold_don": 3096
+      },
       "fiat_power_usd": 34.1,
-      "fiat_power_krw": 36.1
+      "fiat_power_krw": 36.1,
+      "apt_return_pct": 56.4
     },
     {
       "date": "2010-05",
@@ -1793,8 +2321,14 @@
         "toz": 1454640,
         "kg": 46767762
       },
+      "apt": {
+        "price_krw": 487666666,
+        "gold_kg": 10.43,
+        "gold_don": 2781
+      },
       "fiat_power_usd": 33.2,
-      "fiat_power_krw": 32.4
+      "fiat_power_krw": 32.4,
+      "apt_return_pct": 56.3
     },
     {
       "date": "2010-06",
@@ -1813,8 +2347,14 @@
         "toz": 1528478,
         "kg": 49141696
       },
+      "apt": {
+        "price_krw": 487333333,
+        "gold_kg": 9.92,
+        "gold_don": 2645
+      },
       "fiat_power_usd": 32.3,
-      "fiat_power_krw": 30.9
+      "fiat_power_krw": 30.9,
+      "apt_return_pct": 56.2
     },
     {
       "date": "2010-07",
@@ -1833,8 +2373,14 @@
         "toz": 1399251,
         "kg": 44986963
       },
+      "apt": {
+        "price_krw": 487000000,
+        "gold_kg": 10.83,
+        "gold_don": 2887
+      },
       "fiat_power_usd": 34.0,
-      "fiat_power_krw": 33.7
+      "fiat_power_krw": 33.7,
+      "apt_return_pct": 56.1
     },
     {
       "date": "2010-09",
@@ -1853,8 +2399,14 @@
         "toz": 1489846,
         "kg": 47899653
       },
+      "apt": {
+        "price_krw": 486333333,
+        "gold_kg": 10.15,
+        "gold_don": 2708
+      },
       "fiat_power_usd": 30.7,
-      "fiat_power_krw": 31.7
+      "fiat_power_krw": 31.7,
+      "apt_return_pct": 55.9
     },
     {
       "date": "2010-10",
@@ -1873,8 +2425,14 @@
         "toz": 1536780,
         "kg": 49408626
       },
+      "apt": {
+        "price_krw": 486000000,
+        "gold_kg": 9.84,
+        "gold_don": 2623
+      },
       "fiat_power_usd": 29.6,
-      "fiat_power_krw": 30.7
+      "fiat_power_krw": 30.7,
+      "apt_return_pct": 55.8
     },
     {
       "date": "2010-11",
@@ -1893,8 +2451,14 @@
         "toz": 1610755,
         "kg": 51786976
       },
+      "apt": {
+        "price_krw": 485666666,
+        "gold_kg": 9.38,
+        "gold_don": 2501
+      },
       "fiat_power_usd": 29.0,
-      "fiat_power_krw": 29.3
+      "fiat_power_krw": 29.3,
+      "apt_return_pct": 55.7
     },
     {
       "date": "2010-12",
@@ -1913,8 +2477,14 @@
         "toz": 1601722,
         "kg": 51496552
       },
+      "apt": {
+        "price_krw": 485333333,
+        "gold_kg": 9.42,
+        "gold_don": 2513
+      },
       "fiat_power_usd": 28.3,
-      "fiat_power_krw": 29.4
+      "fiat_power_krw": 29.4,
+      "apt_return_pct": 55.6
     },
     {
       "date": "2011-01",
@@ -1933,8 +2503,14 @@
         "toz": 1490388,
         "kg": 47917091
       },
+      "apt": {
+        "price_krw": 485000000,
+        "gold_kg": 10.12,
+        "gold_don": 2699
+      },
       "fiat_power_usd": 30.2,
-      "fiat_power_krw": 31.6
+      "fiat_power_krw": 31.6,
+      "apt_return_pct": 55.4
     },
     {
       "date": "2011-02",
@@ -1953,8 +2529,14 @@
         "toz": 1588422,
         "kg": 51068954
       },
+      "apt": {
+        "price_krw": 482833333,
+        "gold_kg": 9.45,
+        "gold_don": 2521
+      },
       "fiat_power_usd": 28.5,
-      "fiat_power_krw": 29.7
+      "fiat_power_krw": 29.7,
+      "apt_return_pct": 54.8
     },
     {
       "date": "2011-03",
@@ -1973,8 +2555,14 @@
         "toz": 1580344,
         "kg": 50809235
       },
+      "apt": {
+        "price_krw": 480666666,
+        "gold_kg": 9.46,
+        "gold_don": 2523
+      },
       "fiat_power_usd": 28.0,
-      "fiat_power_krw": 29.8
+      "fiat_power_krw": 29.8,
+      "apt_return_pct": 54.1
     },
     {
       "date": "2011-04",
@@ -1993,8 +2581,14 @@
         "toz": 1663053,
         "kg": 53468389
       },
+      "apt": {
+        "price_krw": 478500000,
+        "gold_kg": 8.95,
+        "gold_don": 2386
+      },
       "fiat_power_usd": 25.8,
-      "fiat_power_krw": 28.4
+      "fiat_power_krw": 28.4,
+      "apt_return_pct": 53.4
     },
     {
       "date": "2011-06",
@@ -2013,8 +2607,14 @@
         "toz": 1605808,
         "kg": 51627941
       },
+      "apt": {
+        "price_krw": 474166666,
+        "gold_kg": 9.18,
+        "gold_don": 2449
+      },
       "fiat_power_usd": 26.8,
-      "fiat_power_krw": 29.4
+      "fiat_power_krw": 29.4,
+      "apt_return_pct": 52.0
     },
     {
       "date": "2011-07",
@@ -2033,8 +2633,14 @@
         "toz": 1708087,
         "kg": 54916263
       },
+      "apt": {
+        "price_krw": 472000000,
+        "gold_kg": 8.59,
+        "gold_don": 2292
+      },
       "fiat_power_usd": 24.7,
-      "fiat_power_krw": 27.6
+      "fiat_power_krw": 27.6,
+      "apt_return_pct": 51.3
     },
     {
       "date": "2011-08",
@@ -2053,8 +2659,14 @@
         "toz": 1959786,
         "kg": 63008593
       },
+      "apt": {
+        "price_krw": 469833333,
+        "gold_kg": 7.46,
+        "gold_don": 1988
+      },
       "fiat_power_usd": 22.0,
-      "fiat_power_krw": 24.1
+      "fiat_power_krw": 24.1,
+      "apt_return_pct": 50.6
     },
     {
       "date": "2011-09",
@@ -2073,8 +2685,14 @@
         "toz": 1907211,
         "kg": 61318251
       },
+      "apt": {
+        "price_krw": 467666666,
+        "gold_kg": 7.63,
+        "gold_don": 2034
+      },
       "fiat_power_usd": 24.8,
-      "fiat_power_krw": 24.7
+      "fiat_power_krw": 24.7,
+      "apt_return_pct": 49.9
     },
     {
       "date": "2011-10",
@@ -2093,8 +2711,14 @@
         "toz": 1903517,
         "kg": 61199486
       },
+      "apt": {
+        "price_krw": 465500000,
+        "gold_kg": 7.61,
+        "gold_don": 2028
+      },
       "fiat_power_usd": 23.3,
-      "fiat_power_krw": 24.8
+      "fiat_power_krw": 24.8,
+      "apt_return_pct": 49.2
     },
     {
       "date": "2011-11",
@@ -2113,8 +2737,14 @@
         "toz": 1990394,
         "kg": 63992642
       },
+      "apt": {
+        "price_krw": 463333333,
+        "gold_kg": 7.24,
+        "gold_don": 1931
+      },
       "fiat_power_usd": 23.0,
-      "fiat_power_krw": 23.7
+      "fiat_power_krw": 23.7,
+      "apt_return_pct": 48.5
     },
     {
       "date": "2011-12",
@@ -2133,8 +2763,14 @@
         "toz": 1809125,
         "kg": 58164730
       },
+      "apt": {
+        "price_krw": 461166666,
+        "gold_kg": 7.93,
+        "gold_don": 2114
+      },
       "fiat_power_usd": 25.7,
-      "fiat_power_krw": 26.1
+      "fiat_power_krw": 26.1,
+      "apt_return_pct": 47.8
     },
     {
       "date": "2012-02",
@@ -2153,8 +2789,14 @@
         "toz": 1922954,
         "kg": 61824392
       },
+      "apt": {
+        "price_krw": 460666666,
+        "gold_kg": 7.45,
+        "gold_don": 1987
+      },
       "fiat_power_usd": 23.5,
-      "fiat_power_krw": 24.5
+      "fiat_power_krw": 24.5,
+      "apt_return_pct": 47.6
     },
     {
       "date": "2012-03",
@@ -2173,8 +2815,14 @@
         "toz": 1887478,
         "kg": 60683811
       },
+      "apt": {
+        "price_krw": 462333333,
+        "gold_kg": 7.62,
+        "gold_don": 2032
+      },
       "fiat_power_usd": 24.1,
-      "fiat_power_krw": 25.0
+      "fiat_power_krw": 25.0,
+      "apt_return_pct": 48.2
     },
     {
       "date": "2012-05",
@@ -2193,8 +2841,14 @@
         "toz": 1843399,
         "kg": 59266661
       },
+      "apt": {
+        "price_krw": 465666666,
+        "gold_kg": 7.86,
+        "gold_don": 2095
+      },
       "fiat_power_usd": 25.7,
-      "fiat_power_krw": 25.6
+      "fiat_power_krw": 25.6,
+      "apt_return_pct": 49.3
     },
     {
       "date": "2012-06",
@@ -2213,8 +2867,14 @@
         "toz": 1786299,
         "kg": 57430846
       },
+      "apt": {
+        "price_krw": 467333333,
+        "gold_kg": 8.14,
+        "gold_don": 2170
+      },
       "fiat_power_usd": 25.1,
-      "fiat_power_krw": 26.4
+      "fiat_power_krw": 26.4,
+      "apt_return_pct": 49.8
     },
     {
       "date": "2012-08",
@@ -2233,8 +2893,14 @@
         "toz": 1909663,
         "kg": 61397077
       },
+      "apt": {
+        "price_krw": 470666666,
+        "gold_kg": 7.67,
+        "gold_don": 2044
+      },
       "fiat_power_usd": 23.9,
-      "fiat_power_krw": 24.7
+      "fiat_power_krw": 24.7,
+      "apt_return_pct": 50.9
     },
     {
       "date": "2012-09",
@@ -2253,8 +2919,14 @@
         "toz": 1942188,
         "kg": 62442803
       },
+      "apt": {
+        "price_krw": 472333333,
+        "gold_kg": 7.56,
+        "gold_don": 2017
+      },
       "fiat_power_usd": 22.7,
-      "fiat_power_krw": 24.3
+      "fiat_power_krw": 24.3,
+      "apt_return_pct": 51.4
     },
     {
       "date": "2012-10",
@@ -2273,8 +2945,14 @@
         "toz": 1872590,
         "kg": 60205175
       },
+      "apt": {
+        "price_krw": 474000000,
+        "gold_kg": 7.87,
+        "gold_don": 2099
+      },
       "fiat_power_usd": 23.4,
-      "fiat_power_krw": 25.2
+      "fiat_power_krw": 25.2,
+      "apt_return_pct": 51.9
     },
     {
       "date": "2012-11",
@@ -2293,8 +2971,14 @@
         "toz": 1851365,
         "kg": 59522763
       },
+      "apt": {
+        "price_krw": 475666666,
+        "gold_kg": 7.99,
+        "gold_don": 2131
+      },
       "fiat_power_usd": 23.5,
-      "fiat_power_krw": 25.5
+      "fiat_power_krw": 25.5,
+      "apt_return_pct": 52.5
     },
     {
       "date": "2012-12",
@@ -2313,8 +2997,14 @@
         "toz": 1738610,
         "kg": 55897606
       },
+      "apt": {
+        "price_krw": 477333333,
+        "gold_kg": 8.54,
+        "gold_don": 2277
+      },
       "fiat_power_usd": 24.0,
-      "fiat_power_krw": 27.1
+      "fiat_power_krw": 27.1,
+      "apt_return_pct": 53.0
     },
     {
       "date": "2013-01",
@@ -2333,8 +3023,14 @@
         "toz": 1802415,
         "kg": 57948996
       },
+      "apt": {
+        "price_krw": 479000000,
+        "gold_kg": 8.27,
+        "gold_don": 2204
+      },
       "fiat_power_usd": 24.2,
-      "fiat_power_krw": 26.2
+      "fiat_power_krw": 26.2,
+      "apt_return_pct": 53.5
     },
     {
       "date": "2013-02",
@@ -2353,8 +3049,14 @@
         "toz": 1710069,
         "kg": 54979996
       },
+      "apt": {
+        "price_krw": 480083333,
+        "gold_kg": 8.73,
+        "gold_don": 2329
+      },
       "fiat_power_usd": 25.5,
-      "fiat_power_krw": 27.6
+      "fiat_power_krw": 27.6,
+      "apt_return_pct": 53.9
     },
     {
       "date": "2013-03",
@@ -2373,8 +3075,14 @@
         "toz": 1738332,
         "kg": 55888672
       },
+      "apt": {
+        "price_krw": 481166666,
+        "gold_kg": 8.61,
+        "gold_don": 2296
+      },
       "fiat_power_usd": 25.2,
-      "fiat_power_krw": 27.1
+      "fiat_power_krw": 27.1,
+      "apt_return_pct": 54.2
     },
     {
       "date": "2013-04",
@@ -2393,8 +3101,14 @@
         "toz": 1624131,
         "kg": 52217025
       },
+      "apt": {
+        "price_krw": 482250000,
+        "gold_kg": 9.24,
+        "gold_don": 2463
+      },
       "fiat_power_usd": 27.3,
-      "fiat_power_krw": 29.0
+      "fiat_power_krw": 29.0,
+      "apt_return_pct": 54.6
     },
     {
       "date": "2013-05",
@@ -2413,8 +3127,14 @@
         "toz": 1570296,
         "kg": 50486181
       },
+      "apt": {
+        "price_krw": 483333333,
+        "gold_kg": 9.57,
+        "gold_don": 2553
+      },
       "fiat_power_usd": 28.9,
-      "fiat_power_krw": 30.0
+      "fiat_power_krw": 30.0,
+      "apt_return_pct": 54.9
     },
     {
       "date": "2013-06",
@@ -2433,8 +3153,14 @@
         "toz": 1373226,
         "kg": 44150240
       },
+      "apt": {
+        "price_krw": 484416666,
+        "gold_kg": 10.97,
+        "gold_don": 2926
+      },
       "fiat_power_usd": 32.9,
-      "fiat_power_krw": 34.3
+      "fiat_power_krw": 34.3,
+      "apt_return_pct": 55.3
     },
     {
       "date": "2013-07",
@@ -2453,8 +3179,14 @@
         "toz": 1461095,
         "kg": 46975292
       },
+      "apt": {
+        "price_krw": 485500000,
+        "gold_kg": 10.34,
+        "gold_don": 2756
+      },
       "fiat_power_usd": 30.6,
-      "fiat_power_krw": 32.3
+      "fiat_power_krw": 32.3,
+      "apt_return_pct": 55.6
     },
     {
       "date": "2013-08",
@@ -2473,8 +3205,14 @@
         "toz": 1516165,
         "kg": 48745824
       },
+      "apt": {
+        "price_krw": 486583333,
+        "gold_kg": 9.98,
+        "gold_don": 2662
+      },
       "fiat_power_usd": 28.8,
-      "fiat_power_krw": 31.1
+      "fiat_power_krw": 31.1,
+      "apt_return_pct": 56.0
     },
     {
       "date": "2013-10",
@@ -2493,8 +3231,14 @@
         "toz": 1400634,
         "kg": 45031413
       },
+      "apt": {
+        "price_krw": 488750000,
+        "gold_kg": 10.85,
+        "gold_don": 2894
+      },
       "fiat_power_usd": 30.4,
-      "fiat_power_krw": 33.7
+      "fiat_power_krw": 33.7,
+      "apt_return_pct": 56.7
     },
     {
       "date": "2013-11",
@@ -2513,8 +3257,14 @@
         "toz": 1322009,
         "kg": 42503585
       },
+      "apt": {
+        "price_krw": 489833333,
+        "gold_kg": 11.52,
+        "gold_don": 3073
+      },
       "fiat_power_usd": 32.2,
-      "fiat_power_krw": 35.7
+      "fiat_power_krw": 35.7,
+      "apt_return_pct": 57.0
     },
     {
       "date": "2014-01",
@@ -2533,8 +3283,14 @@
         "toz": 1338440,
         "kg": 43031843
       },
+      "apt": {
+        "price_krw": 492000000,
+        "gold_kg": 11.43,
+        "gold_don": 3049
+      },
       "fiat_power_usd": 32.4,
-      "fiat_power_krw": 35.2
+      "fiat_power_krw": 35.2,
+      "apt_return_pct": 57.7
     },
     {
       "date": "2014-02",
@@ -2553,8 +3309,14 @@
         "toz": 1412180,
         "kg": 45402647
       },
+      "apt": {
+        "price_krw": 494833333,
+        "gold_kg": 10.9,
+        "gold_don": 2906
+      },
       "fiat_power_usd": 30.4,
-      "fiat_power_krw": 33.4
+      "fiat_power_krw": 33.4,
+      "apt_return_pct": 58.6
     },
     {
       "date": "2014-03",
@@ -2573,8 +3335,14 @@
         "toz": 1368810,
         "kg": 44008272
       },
+      "apt": {
+        "price_krw": 497666666,
+        "gold_kg": 11.31,
+        "gold_don": 3016
+      },
       "fiat_power_usd": 31.3,
-      "fiat_power_krw": 34.5
+      "fiat_power_krw": 34.5,
+      "apt_return_pct": 59.5
     },
     {
       "date": "2014-04",
@@ -2593,8 +3361,14 @@
         "toz": 1333742,
         "kg": 42880816
       },
+      "apt": {
+        "price_krw": 500500000,
+        "gold_kg": 11.67,
+        "gold_don": 3113
+      },
       "fiat_power_usd": 31.0,
-      "fiat_power_krw": 35.4
+      "fiat_power_krw": 35.4,
+      "apt_return_pct": 60.4
     },
     {
       "date": "2014-05",
@@ -2613,8 +3387,14 @@
         "toz": 1270263,
         "kg": 40839900
       },
+      "apt": {
+        "price_krw": 503333333,
+        "gold_kg": 12.32,
+        "gold_don": 3287
+      },
       "fiat_power_usd": 32.3,
-      "fiat_power_krw": 37.1
+      "fiat_power_krw": 37.1,
+      "apt_return_pct": 61.3
     },
     {
       "date": "2014-07",
@@ -2633,8 +3413,14 @@
         "toz": 1311539,
         "kg": 42166948
       },
+      "apt": {
+        "price_krw": 509000000,
+        "gold_kg": 12.07,
+        "gold_don": 3219
+      },
       "fiat_power_usd": 31.4,
-      "fiat_power_krw": 36.0
+      "fiat_power_krw": 36.0,
+      "apt_return_pct": 63.1
     },
     {
       "date": "2014-08",
@@ -2653,8 +3439,14 @@
         "toz": 1302387,
         "kg": 41872709
       },
+      "apt": {
+        "price_krw": 511833333,
+        "gold_kg": 12.22,
+        "gold_don": 3260
+      },
       "fiat_power_usd": 31.3,
-      "fiat_power_krw": 36.2
+      "fiat_power_krw": 36.2,
+      "apt_return_pct": 64.0
     },
     {
       "date": "2014-09",
@@ -2673,8 +3465,14 @@
         "toz": 1273688,
         "kg": 40950023
       },
+      "apt": {
+        "price_krw": 514666666,
+        "gold_kg": 12.57,
+        "gold_don": 3352
+      },
       "fiat_power_usd": 33.2,
-      "fiat_power_krw": 37.0
+      "fiat_power_krw": 37.0,
+      "apt_return_pct": 65.0
     },
     {
       "date": "2014-10",
@@ -2693,8 +3491,14 @@
         "toz": 1234105,
         "kg": 39677403
       },
+      "apt": {
+        "price_krw": 517500000,
+        "gold_kg": 13.04,
+        "gold_don": 3478
+      },
       "fiat_power_usd": 34.3,
-      "fiat_power_krw": 38.2
+      "fiat_power_krw": 38.2,
+      "apt_return_pct": 65.9
     },
     {
       "date": "2014-11",
@@ -2713,8 +3517,14 @@
         "toz": 1279323,
         "kg": 41131181
       },
+      "apt": {
+        "price_krw": 520333333,
+        "gold_kg": 12.65,
+        "gold_don": 3373
+      },
       "fiat_power_usd": 34.2,
-      "fiat_power_krw": 36.9
+      "fiat_power_krw": 36.9,
+      "apt_return_pct": 66.8
     },
     {
       "date": "2014-12",
@@ -2733,8 +3543,14 @@
         "toz": 1296726,
         "kg": 41690698
       },
+      "apt": {
+        "price_krw": 523166666,
+        "gold_kg": 12.55,
+        "gold_don": 3346
+      },
       "fiat_power_usd": 34.0,
-      "fiat_power_krw": 36.4
+      "fiat_power_krw": 36.4,
+      "apt_return_pct": 67.7
     },
     {
       "date": "2015-01",
@@ -2753,8 +3569,14 @@
         "toz": 1407628,
         "kg": 45256307
       },
+      "apt": {
+        "price_krw": 526000000,
+        "gold_kg": 11.62,
+        "gold_don": 3099
+      },
       "fiat_power_usd": 31.5,
-      "fiat_power_krw": 33.5
+      "fiat_power_krw": 33.5,
+      "apt_return_pct": 68.6
     },
     {
       "date": "2015-04",
@@ -2773,8 +3595,14 @@
         "toz": 1263950,
         "kg": 40636940
       },
+      "apt": {
+        "price_krw": 536500000,
+        "gold_kg": 13.2,
+        "gold_don": 3521
+      },
       "fiat_power_usd": 34.0,
-      "fiat_power_krw": 37.3
+      "fiat_power_krw": 37.3,
+      "apt_return_pct": 72.0
     },
     {
       "date": "2015-05",
@@ -2793,8 +3621,14 @@
         "toz": 1316666,
         "kg": 42331788
       },
+      "apt": {
+        "price_krw": 540000000,
+        "gold_kg": 12.76,
+        "gold_don": 3402
+      },
       "fiat_power_usd": 33.8,
-      "fiat_power_krw": 35.8
+      "fiat_power_krw": 35.8,
+      "apt_return_pct": 73.1
     },
     {
       "date": "2015-06",
@@ -2813,8 +3647,14 @@
         "toz": 1309995,
         "kg": 42117309
       },
+      "apt": {
+        "price_krw": 543500000,
+        "gold_kg": 12.9,
+        "gold_don": 3441
+      },
       "fiat_power_usd": 34.3,
-      "fiat_power_krw": 36.0
+      "fiat_power_krw": 36.0,
+      "apt_return_pct": 74.2
     },
     {
       "date": "2015-07",
@@ -2833,8 +3673,14 @@
         "toz": 1281876,
         "kg": 41213273
       },
+      "apt": {
+        "price_krw": 547000000,
+        "gold_kg": 13.27,
+        "gold_don": 3539
+      },
       "fiat_power_usd": 36.7,
-      "fiat_power_krw": 36.8
+      "fiat_power_krw": 36.8,
+      "apt_return_pct": 75.3
     },
     {
       "date": "2015-08",
@@ -2853,8 +3699,14 @@
         "toz": 1332572,
         "kg": 42843190
       },
+      "apt": {
+        "price_krw": 550500000,
+        "gold_kg": 12.85,
+        "gold_don": 3426
+      },
       "fiat_power_usd": 35.5,
-      "fiat_power_krw": 35.4
+      "fiat_power_krw": 35.4,
+      "apt_return_pct": 76.4
     },
     {
       "date": "2015-09",
@@ -2873,8 +3725,14 @@
         "toz": 1332085,
         "kg": 42827543
       },
+      "apt": {
+        "price_krw": 554000000,
+        "gold_kg": 12.94,
+        "gold_don": 3449
+      },
       "fiat_power_usd": 36.1,
-      "fiat_power_krw": 35.4
+      "fiat_power_krw": 35.4,
+      "apt_return_pct": 77.6
     },
     {
       "date": "2015-10",
@@ -2893,8 +3751,14 @@
         "toz": 126,
         "kg": 4037
       },
+      "apt": {
+        "price_krw": 557500000,
+        "gold_kg": 138097.31,
+        "gold_don": 36825948
+      },
       "fiat_power_usd": 35.2,
-      "fiat_power_krw": 379075.0
+      "fiat_power_krw": 379075.0,
+      "apt_return_pct": 78.7
     },
     {
       "date": "2015-12",
@@ -2913,8 +3777,14 @@
         "toz": 1246319,
         "kg": 40070087
       },
+      "apt": {
+        "price_krw": 564500000,
+        "gold_kg": 14.09,
+        "gold_don": 3757
+      },
       "fiat_power_usd": 37.9,
-      "fiat_power_krw": 37.8
+      "fiat_power_krw": 37.8,
+      "apt_return_pct": 80.9
     },
     {
       "date": "2016-01",
@@ -2933,8 +3803,14 @@
         "toz": 134,
         "kg": 4307
       },
+      "apt": {
+        "price_krw": 568000000,
+        "gold_kg": 131873.1,
+        "gold_don": 35166159
+      },
       "fiat_power_usd": 36.0,
-      "fiat_power_krw": 379075.0
+      "fiat_power_krw": 379075.0,
+      "apt_return_pct": 82.1
     },
     {
       "date": "2016-02",
@@ -2953,8 +3829,14 @@
         "toz": 1531430,
         "kg": 49236628
       },
+      "apt": {
+        "price_krw": 575833333,
+        "gold_kg": 11.7,
+        "gold_don": 3119
+      },
       "fiat_power_usd": 32.6,
-      "fiat_power_krw": 30.8
+      "fiat_power_krw": 30.8,
+      "apt_return_pct": 84.6
     },
     {
       "date": "2016-03",
@@ -2973,8 +3855,14 @@
         "toz": 1407272,
         "kg": 45244841
       },
+      "apt": {
+        "price_krw": 583666666,
+        "gold_kg": 12.9,
+        "gold_don": 3440
+      },
       "fiat_power_usd": 32.6,
-      "fiat_power_krw": 33.5
+      "fiat_power_krw": 33.5,
+      "apt_return_pct": 87.1
     },
     {
       "date": "2016-04",
@@ -2993,8 +3881,14 @@
         "toz": 1473556,
         "kg": 47375913
       },
+      "apt": {
+        "price_krw": 591500000,
+        "gold_kg": 12.49,
+        "gold_don": 3329
+      },
       "fiat_power_usd": 31.2,
-      "fiat_power_krw": 32.0
+      "fiat_power_krw": 32.0,
+      "apt_return_pct": 89.6
     },
     {
       "date": "2016-06",
@@ -3013,8 +3907,14 @@
         "toz": 1518995,
         "kg": 48836809
       },
+      "apt": {
+        "price_krw": 607166666,
+        "gold_kg": 12.43,
+        "gold_don": 3315
+      },
       "fiat_power_usd": 30.5,
-      "fiat_power_krw": 31.0
+      "fiat_power_krw": 31.0,
+      "apt_return_pct": 94.6
     },
     {
       "date": "2016-07",
@@ -3033,8 +3933,14 @@
         "toz": 148,
         "kg": 4771
       },
+      "apt": {
+        "price_krw": 615000000,
+        "gold_kg": 128907.87,
+        "gold_don": 34375431
+      },
       "fiat_power_usd": 29.8,
-      "fiat_power_krw": 303260.0
+      "fiat_power_krw": 303260.0,
+      "apt_return_pct": 97.1
     },
     {
       "date": "2016-08",
@@ -3053,8 +3959,14 @@
         "toz": 1461611,
         "kg": 46991879
       },
+      "apt": {
+        "price_krw": 622833333,
+        "gold_kg": 13.25,
+        "gold_don": 3534
+      },
       "fiat_power_usd": 30.8,
-      "fiat_power_krw": 32.3
+      "fiat_power_krw": 32.3,
+      "apt_return_pct": 99.6
     },
     {
       "date": "2016-09",
@@ -3073,8 +3985,14 @@
         "toz": 1446758,
         "kg": 46514335
       },
+      "apt": {
+        "price_krw": 630666666,
+        "gold_kg": 13.56,
+        "gold_don": 3616
+      },
       "fiat_power_usd": 30.6,
-      "fiat_power_krw": 32.6
+      "fiat_power_krw": 32.6,
+      "apt_return_pct": 102.1
     },
     {
       "date": "2016-10",
@@ -3093,8 +4011,14 @@
         "toz": 1458029,
         "kg": 46876722
       },
+      "apt": {
+        "price_krw": 638500000,
+        "gold_kg": 13.62,
+        "gold_don": 3632
+      },
       "fiat_power_usd": 31.6,
-      "fiat_power_krw": 32.3
+      "fiat_power_krw": 32.3,
+      "apt_return_pct": 104.6
     },
     {
       "date": "2016-11",
@@ -3113,8 +4037,14 @@
         "toz": 1367330,
         "kg": 43960696
       },
+      "apt": {
+        "price_krw": 646333333,
+        "gold_kg": 14.7,
+        "gold_don": 3921
+      },
       "fiat_power_usd": 34.4,
-      "fiat_power_krw": 34.5
+      "fiat_power_krw": 34.5,
+      "apt_return_pct": 107.2
     },
     {
       "date": "2016-12",
@@ -3133,8 +4063,14 @@
         "toz": 1387199,
         "kg": 44599483
       },
+      "apt": {
+        "price_krw": 654166666,
+        "gold_kg": 14.67,
+        "gold_don": 3911
+      },
       "fiat_power_usd": 35.0,
-      "fiat_power_krw": 34.0
+      "fiat_power_krw": 34.0,
+      "apt_return_pct": 109.7
     },
     {
       "date": "2017-02",
@@ -3153,8 +4089,14 @@
         "toz": 1420373,
         "kg": 45666060
       },
+      "apt": {
+        "price_krw": 672250000,
+        "gold_kg": 14.72,
+        "gold_don": 3926
+      },
       "fiat_power_usd": 32.1,
-      "fiat_power_krw": 33.2
+      "fiat_power_krw": 33.2,
+      "apt_return_pct": 115.5
     },
     {
       "date": "2017-03",
@@ -3173,8 +4115,14 @@
         "toz": 1393259,
         "kg": 44794318
       },
+      "apt": {
+        "price_krw": 682500000,
+        "gold_kg": 15.24,
+        "gold_don": 4063
+      },
       "fiat_power_usd": 32.2,
-      "fiat_power_krw": 33.9
+      "fiat_power_krw": 33.9,
+      "apt_return_pct": 118.8
     },
     {
       "date": "2017-04",
@@ -3193,8 +4141,14 @@
         "toz": 1437834,
         "kg": 46227430
       },
+      "apt": {
+        "price_krw": 692750000,
+        "gold_kg": 14.99,
+        "gold_don": 3996
+      },
       "fiat_power_usd": 31.8,
-      "fiat_power_krw": 32.8
+      "fiat_power_krw": 32.8,
+      "apt_return_pct": 122.0
     },
     {
       "date": "2017-05",
@@ -3213,8 +4167,14 @@
         "toz": 1429601,
         "kg": 45962733
       },
+      "apt": {
+        "price_krw": 703000000,
+        "gold_kg": 15.29,
+        "gold_don": 4079
+      },
       "fiat_power_usd": 31.6,
-      "fiat_power_krw": 33.0
+      "fiat_power_krw": 33.0,
+      "apt_return_pct": 125.3
     },
     {
       "date": "2017-06",
@@ -3233,8 +4193,14 @@
         "toz": 1422016,
         "kg": 45718873
       },
+      "apt": {
+        "price_krw": 713250000,
+        "gold_kg": 15.6,
+        "gold_don": 4160
+      },
       "fiat_power_usd": 32.4,
-      "fiat_power_krw": 33.2
+      "fiat_power_krw": 33.2,
+      "apt_return_pct": 128.6
     },
     {
       "date": "2017-07",
@@ -3253,8 +4219,14 @@
         "toz": 1423722,
         "kg": 45773717
       },
+      "apt": {
+        "price_krw": 723500000,
+        "gold_kg": 15.81,
+        "gold_don": 4215
+      },
       "fiat_power_usd": 31.8,
-      "fiat_power_krw": 33.1
+      "fiat_power_krw": 33.1,
+      "apt_return_pct": 131.9
     },
     {
       "date": "2017-08",
@@ -3273,8 +4245,14 @@
         "toz": 1478527,
         "kg": 47535745
       },
+      "apt": {
+        "price_krw": 733750000,
+        "gold_kg": 15.44,
+        "gold_don": 4116
+      },
       "fiat_power_usd": 30.6,
-      "fiat_power_krw": 31.9
+      "fiat_power_krw": 31.9,
+      "apt_return_pct": 135.2
     },
     {
       "date": "2017-09",
@@ -3293,8 +4271,14 @@
         "toz": 154,
         "kg": 4944
       },
+      "apt": {
+        "price_krw": 744000000,
+        "gold_kg": 150481.12,
+        "gold_don": 40128299
+      },
       "fiat_power_usd": 31.4,
-      "fiat_power_krw": 303260.0
+      "fiat_power_krw": 303260.0,
+      "apt_return_pct": 138.5
     },
     {
       "date": "2017-11",
@@ -3313,8 +4297,14 @@
         "toz": 1375896,
         "kg": 44236094
       },
+      "apt": {
+        "price_krw": 764500000,
+        "gold_kg": 17.28,
+        "gold_don": 4609
+      },
       "fiat_power_usd": 31.6,
-      "fiat_power_krw": 34.3
+      "fiat_power_krw": 34.3,
+      "apt_return_pct": 145.0
     },
     {
       "date": "2017-12",
@@ -3333,8 +4323,14 @@
         "toz": 1393012,
         "kg": 44786382
       },
+      "apt": {
+        "price_krw": 774750000,
+        "gold_kg": 17.3,
+        "gold_don": 4613
+      },
       "fiat_power_usd": 30.8,
-      "fiat_power_krw": 33.9
+      "fiat_power_krw": 33.9,
+      "apt_return_pct": 148.3
     },
     {
       "date": "2018-01",
@@ -3353,8 +4349,14 @@
         "toz": 1436131,
         "kg": 46172686
       },
+      "apt": {
+        "price_krw": 785000000,
+        "gold_kg": 17.0,
+        "gold_don": 4534
+      },
       "fiat_power_usd": 30.0,
-      "fiat_power_krw": 32.8
+      "fiat_power_krw": 32.8,
+      "apt_return_pct": 151.6
     },
     {
       "date": "2018-02",
@@ -3373,8 +4375,14 @@
         "toz": 1419938,
         "kg": 45652052
       },
+      "apt": {
+        "price_krw": 791666666,
+        "gold_kg": 17.34,
+        "gold_don": 4624
+      },
       "fiat_power_usd": 30.6,
-      "fiat_power_krw": 33.2
+      "fiat_power_krw": 33.2,
+      "apt_return_pct": 153.7
     },
     {
       "date": "2018-03",
@@ -3393,8 +4401,14 @@
         "toz": 1402036,
         "kg": 45076495
       },
+      "apt": {
+        "price_krw": 798333333,
+        "gold_kg": 17.71,
+        "gold_don": 4723
+      },
       "fiat_power_usd": 30.4,
-      "fiat_power_krw": 33.6
+      "fiat_power_krw": 33.6,
+      "apt_return_pct": 155.9
     },
     {
       "date": "2018-05",
@@ -3413,8 +4427,14 @@
         "toz": 1397647,
         "kg": 44935379
       },
+      "apt": {
+        "price_krw": 811666666,
+        "gold_kg": 18.06,
+        "gold_don": 4817
+      },
       "fiat_power_usd": 30.9,
-      "fiat_power_krw": 33.7
+      "fiat_power_krw": 33.7,
+      "apt_return_pct": 160.1
     },
     {
       "date": "2018-06",
@@ -3433,8 +4453,14 @@
         "toz": 1402132,
         "kg": 45079581
       },
+      "apt": {
+        "price_krw": 818333333,
+        "gold_kg": 18.15,
+        "gold_don": 4841
+      },
       "fiat_power_usd": 32.1,
-      "fiat_power_krw": 33.6
+      "fiat_power_krw": 33.6,
+      "apt_return_pct": 162.3
     },
     {
       "date": "2018-08",
@@ -3453,8 +4479,14 @@
         "toz": 1338875,
         "kg": 43045819
       },
+      "apt": {
+        "price_krw": 831666666,
+        "gold_kg": 19.32,
+        "gold_don": 5152
+      },
       "fiat_power_usd": 33.5,
-      "fiat_power_krw": 35.2
+      "fiat_power_krw": 35.2,
+      "apt_return_pct": 166.6
     },
     {
       "date": "2018-09",
@@ -3473,8 +4505,14 @@
         "toz": 1321564,
         "kg": 42489274
       },
+      "apt": {
+        "price_krw": 838333333,
+        "gold_kg": 19.73,
+        "gold_don": 5261
+      },
       "fiat_power_usd": 33.8,
-      "fiat_power_krw": 35.7
+      "fiat_power_krw": 35.7,
+      "apt_return_pct": 168.7
     },
     {
       "date": "2018-10",
@@ -3493,8 +4531,14 @@
         "toz": 1379234,
         "kg": 44343393
       },
+      "apt": {
+        "price_krw": 845000000,
+        "gold_kg": 19.06,
+        "gold_don": 5082
+      },
       "fiat_power_usd": 33.2,
-      "fiat_power_krw": 34.2
+      "fiat_power_krw": 34.2,
+      "apt_return_pct": 170.8
     },
     {
       "date": "2018-11",
@@ -3513,8 +4557,14 @@
         "toz": 1362988,
         "kg": 43821075
       },
+      "apt": {
+        "price_krw": 851666666,
+        "gold_kg": 19.44,
+        "gold_don": 5183
+      },
       "fiat_power_usd": 33.0,
-      "fiat_power_krw": 34.6
+      "fiat_power_krw": 34.6,
+      "apt_return_pct": 173.0
     },
     {
       "date": "2018-12",
@@ -3533,8 +4583,14 @@
         "toz": 1426966,
         "kg": 45878032
       },
+      "apt": {
+        "price_krw": 858333333,
+        "gold_kg": 18.71,
+        "gold_don": 4989
+      },
       "fiat_power_usd": 31.5,
-      "fiat_power_krw": 33.1
+      "fiat_power_krw": 33.1,
+      "apt_return_pct": 175.1
     },
     {
       "date": "2019-01",
@@ -3553,8 +4609,14 @@
         "toz": 1463547,
         "kg": 47054138
       },
+      "apt": {
+        "price_krw": 865000000,
+        "gold_kg": 18.38,
+        "gold_don": 4902
+      },
       "fiat_power_usd": 30.5,
-      "fiat_power_krw": 32.2
+      "fiat_power_krw": 32.2,
+      "apt_return_pct": 177.2
     },
     {
       "date": "2019-02",
@@ -3573,8 +4635,14 @@
         "toz": 1463903,
         "kg": 47065583
       },
+      "apt": {
+        "price_krw": 879833333,
+        "gold_kg": 18.69,
+        "gold_don": 4985
+      },
       "fiat_power_usd": 30.6,
-      "fiat_power_krw": 32.2
+      "fiat_power_krw": 32.2,
+      "apt_return_pct": 182.0
     },
     {
       "date": "2019-03",
@@ -3593,8 +4661,14 @@
         "toz": 1468719,
         "kg": 47220403
       },
+      "apt": {
+        "price_krw": 894666666,
+        "gold_kg": 18.95,
+        "gold_don": 5052
+      },
       "fiat_power_usd": 31.1,
-      "fiat_power_krw": 32.1
+      "fiat_power_krw": 32.1,
+      "apt_return_pct": 186.8
     },
     {
       "date": "2019-04",
@@ -3613,8 +4687,14 @@
         "toz": 1486496,
         "kg": 47791950
       },
+      "apt": {
+        "price_krw": 909500000,
+        "gold_kg": 19.03,
+        "gold_don": 5075
+      },
       "fiat_power_usd": 31.4,
-      "fiat_power_krw": 31.7
+      "fiat_power_krw": 31.7,
+      "apt_return_pct": 191.5
     },
     {
       "date": "2019-05",
@@ -3633,8 +4713,14 @@
         "toz": 1551787,
         "kg": 49891098
       },
+      "apt": {
+        "price_krw": 924333333,
+        "gold_kg": 18.53,
+        "gold_don": 4941
+      },
       "fiat_power_usd": 30.8,
-      "fiat_power_krw": 30.4
+      "fiat_power_krw": 30.4,
+      "apt_return_pct": 196.3
     },
     {
       "date": "2019-06",
@@ -3653,8 +4739,14 @@
         "toz": 1628922,
         "kg": 52371073
       },
+      "apt": {
+        "price_krw": 939166666,
+        "gold_kg": 17.93,
+        "gold_don": 4782
+      },
       "fiat_power_usd": 28.5,
-      "fiat_power_krw": 29.0
+      "fiat_power_krw": 29.0,
+      "apt_return_pct": 201.0
     },
     {
       "date": "2019-07",
@@ -3673,8 +4765,14 @@
         "toz": 1683725,
         "kg": 54133015
       },
+      "apt": {
+        "price_krw": 954000000,
+        "gold_kg": 17.62,
+        "gold_don": 4700
+      },
       "fiat_power_usd": 28.2,
-      "fiat_power_krw": 28.0
+      "fiat_power_krw": 28.0,
+      "apt_return_pct": 205.8
     },
     {
       "date": "2019-08",
@@ -3693,8 +4791,14 @@
         "toz": 1833797,
         "kg": 58957935
       },
+      "apt": {
+        "price_krw": 968833333,
+        "gold_kg": 16.43,
+        "gold_don": 4382
+      },
       "fiat_power_usd": 26.5,
-      "fiat_power_krw": 25.7
+      "fiat_power_krw": 25.7,
+      "apt_return_pct": 210.5
     },
     {
       "date": "2019-10",
@@ -3713,8 +4817,14 @@
         "toz": 1758816,
         "kg": 56547253
       },
+      "apt": {
+        "price_krw": 998500000,
+        "gold_kg": 17.66,
+        "gold_don": 4709
+      },
       "fiat_power_usd": 26.6,
-      "fiat_power_krw": 26.8
+      "fiat_power_krw": 26.8,
+      "apt_return_pct": 220.0
     },
     {
       "date": "2019-11",
@@ -3733,8 +4843,14 @@
         "toz": 1731709,
         "kg": 55675737
       },
+      "apt": {
+        "price_krw": 1013333333,
+        "gold_kg": 18.2,
+        "gold_don": 4854
+      },
       "fiat_power_usd": 27.4,
-      "fiat_power_krw": 27.2
+      "fiat_power_krw": 27.2,
+      "apt_return_pct": 224.8
     },
     {
       "date": "2020-01",
@@ -3753,8 +4869,14 @@
         "toz": 1879092,
         "kg": 60414219
       },
+      "apt": {
+        "price_krw": 1043000000,
+        "gold_kg": 17.26,
+        "gold_don": 4604
+      },
       "fiat_power_usd": 25.4,
-      "fiat_power_krw": 25.1
+      "fiat_power_krw": 25.1,
+      "apt_return_pct": 234.3
     },
     {
       "date": "2020-02",
@@ -3773,8 +4895,14 @@
         "toz": 1877076,
         "kg": 60349408
       },
+      "apt": {
+        "price_krw": 1064125000,
+        "gold_kg": 17.63,
+        "gold_don": 4702
+      },
       "fiat_power_usd": 25.7,
-      "fiat_power_krw": 25.1
+      "fiat_power_krw": 25.1,
+      "apt_return_pct": 241.1
     },
     {
       "date": "2020-04",
@@ -3793,8 +4921,14 @@
         "toz": 2039213,
         "kg": 65562205
       },
+      "apt": {
+        "price_krw": 1106375000,
+        "gold_kg": 16.88,
+        "gold_don": 4500
+      },
       "fiat_power_usd": 23.9,
-      "fiat_power_krw": 23.1
+      "fiat_power_krw": 23.1,
+      "apt_return_pct": 254.6
     },
     {
       "date": "2020-05",
@@ -3813,8 +4947,14 @@
         "toz": 2155064,
         "kg": 69286915
       },
+      "apt": {
+        "price_krw": 1127500000,
+        "gold_kg": 16.27,
+        "gold_don": 4339
+      },
       "fiat_power_usd": 23.0,
-      "fiat_power_krw": 21.9
+      "fiat_power_krw": 21.9,
+      "apt_return_pct": 261.4
     },
     {
       "date": "2020-06",
@@ -3833,8 +4973,14 @@
         "toz": 2157881,
         "kg": 69377493
       },
+      "apt": {
+        "price_krw": 1148625000,
+        "gold_kg": 16.56,
+        "gold_don": 4415
+      },
       "fiat_power_usd": 22.3,
-      "fiat_power_krw": 21.9
+      "fiat_power_krw": 21.9,
+      "apt_return_pct": 268.1
     },
     {
       "date": "2020-07",
@@ -3853,8 +4999,14 @@
         "toz": 2334868,
         "kg": 75067761
       },
+      "apt": {
+        "price_krw": 1169750000,
+        "gold_kg": 15.58,
+        "gold_don": 4155
+      },
       "fiat_power_usd": 20.5,
-      "fiat_power_krw": 20.2
+      "fiat_power_krw": 20.2,
+      "apt_return_pct": 274.9
     },
     {
       "date": "2020-08",
@@ -3873,8 +5025,14 @@
         "toz": 2333937,
         "kg": 75037810
       },
+      "apt": {
+        "price_krw": 1190875000,
+        "gold_kg": 15.87,
+        "gold_don": 4232
+      },
       "fiat_power_usd": 20.3,
-      "fiat_power_krw": 20.2
+      "fiat_power_krw": 20.2,
+      "apt_return_pct": 281.7
     },
     {
       "date": "2020-09",
@@ -3893,8 +5051,14 @@
         "toz": 2213679,
         "kg": 71171421
       },
+      "apt": {
+        "price_krw": 1212000000,
+        "gold_kg": 17.03,
+        "gold_don": 4541
+      },
       "fiat_power_usd": 21.2,
-      "fiat_power_krw": 21.3
+      "fiat_power_krw": 21.3,
+      "apt_return_pct": 288.5
     },
     {
       "date": "2020-10",
@@ -3913,8 +5077,14 @@
         "toz": 2123385,
         "kg": 68268402
       },
+      "apt": {
+        "price_krw": 1233125000,
+        "gold_kg": 18.06,
+        "gold_don": 4817
+      },
       "fiat_power_usd": 21.4,
-      "fiat_power_krw": 22.2
+      "fiat_power_krw": 22.2,
+      "apt_return_pct": 295.2
     },
     {
       "date": "2020-12",
@@ -3933,8 +5103,14 @@
         "toz": 2058875,
         "kg": 66194354
       },
+      "apt": {
+        "price_krw": 1275375000,
+        "gold_kg": 19.27,
+        "gold_don": 5138
+      },
       "fiat_power_usd": 21.2,
-      "fiat_power_krw": 22.9
+      "fiat_power_krw": 22.9,
+      "apt_return_pct": 308.8
     },
     {
       "date": "2021-01",
@@ -3953,8 +5129,14 @@
         "toz": 2064228,
         "kg": 66366485
       },
+      "apt": {
+        "price_krw": 1296500000,
+        "gold_kg": 19.54,
+        "gold_don": 5209
+      },
       "fiat_power_usd": 21.8,
-      "fiat_power_krw": 22.8
+      "fiat_power_krw": 22.8,
+      "apt_return_pct": 315.5
     },
     {
       "date": "2021-02",
@@ -3973,8 +5155,14 @@
         "toz": 1942082,
         "kg": 62439388
       },
+      "apt": {
+        "price_krw": 1289708333,
+        "gold_kg": 20.66,
+        "gold_don": 5508
+      },
       "fiat_power_usd": 23.3,
-      "fiat_power_krw": 24.3
+      "fiat_power_krw": 24.3,
+      "apt_return_pct": 313.4
     },
     {
       "date": "2021-03",
@@ -3993,8 +5181,14 @@
         "toz": 1940570,
         "kg": 62390775
       },
+      "apt": {
+        "price_krw": 1282916666,
+        "gold_kg": 20.56,
+        "gold_don": 5483
+      },
       "fiat_power_usd": 23.5,
-      "fiat_power_krw": 24.3
+      "fiat_power_krw": 24.3,
+      "apt_return_pct": 311.2
     },
     {
       "date": "2021-04",
@@ -4013,8 +5207,14 @@
         "toz": 1956190,
         "kg": 62892964
       },
+      "apt": {
+        "price_krw": 1276125000,
+        "gold_kg": 20.29,
+        "gold_don": 5411
+      },
       "fiat_power_usd": 22.8,
-      "fiat_power_krw": 24.1
+      "fiat_power_krw": 24.1,
+      "apt_return_pct": 309.0
     },
     {
       "date": "2021-05",
@@ -4033,8 +5233,14 @@
         "toz": 2117197,
         "kg": 68069468
       },
+      "apt": {
+        "price_krw": 1269333333,
+        "gold_kg": 18.65,
+        "gold_don": 4973
+      },
       "fiat_power_usd": 21.1,
-      "fiat_power_krw": 22.3
+      "fiat_power_krw": 22.3,
+      "apt_return_pct": 306.8
     },
     {
       "date": "2021-06",
@@ -4053,8 +5259,14 @@
         "toz": 2002812,
         "kg": 64391885
       },
+      "apt": {
+        "price_krw": 1262541666,
+        "gold_kg": 19.61,
+        "gold_don": 5229
+      },
       "fiat_power_usd": 22.7,
-      "fiat_power_krw": 23.5
+      "fiat_power_krw": 23.5,
+      "apt_return_pct": 304.7
     },
     {
       "date": "2021-07",
@@ -4073,8 +5285,14 @@
         "toz": 2085632,
         "kg": 67054624
       },
+      "apt": {
+        "price_krw": 1255750000,
+        "gold_kg": 18.73,
+        "gold_don": 4994
+      },
       "fiat_power_usd": 22.2,
-      "fiat_power_krw": 22.6
+      "fiat_power_krw": 22.6,
+      "apt_return_pct": 302.5
     },
     {
       "date": "2021-09",
@@ -4093,8 +5311,14 @@
         "toz": 2086315,
         "kg": 67076569
       },
+      "apt": {
+        "price_krw": 1242166666,
+        "gold_kg": 18.52,
+        "gold_don": 4938
+      },
       "fiat_power_usd": 22.9,
-      "fiat_power_krw": 22.6
+      "fiat_power_krw": 22.6,
+      "apt_return_pct": 298.1
     },
     {
       "date": "2021-10",
@@ -4113,8 +5337,14 @@
         "toz": 2094976,
         "kg": 67355058
       },
+      "apt": {
+        "price_krw": 1235375000,
+        "gold_kg": 18.34,
+        "gold_don": 4891
+      },
       "fiat_power_usd": 22.5,
-      "fiat_power_krw": 22.5
+      "fiat_power_krw": 22.5,
+      "apt_return_pct": 296.0
     },
     {
       "date": "2021-11",
@@ -4133,8 +5363,14 @@
         "toz": 2111896,
         "kg": 67899048
       },
+      "apt": {
+        "price_krw": 1228583333,
+        "gold_kg": 18.09,
+        "gold_don": 4825
+      },
       "fiat_power_usd": 22.7,
-      "fiat_power_krw": 22.3
+      "fiat_power_krw": 22.3,
+      "apt_return_pct": 293.8
     },
     {
       "date": "2021-12",
@@ -4153,8 +5389,14 @@
         "toz": 2175833,
         "kg": 69954651
       },
+      "apt": {
+        "price_krw": 1221791666,
+        "gold_kg": 17.47,
+        "gold_don": 4657
+      },
       "fiat_power_usd": 22.0,
-      "fiat_power_krw": 21.7
+      "fiat_power_krw": 21.7,
+      "apt_return_pct": 291.6
     },
     {
       "date": "2022-01",
@@ -4173,8 +5415,14 @@
         "toz": 2167839,
         "kg": 69697657
       },
+      "apt": {
+        "price_krw": 1215000000,
+        "gold_kg": 17.43,
+        "gold_don": 4649
+      },
       "fiat_power_usd": 22.4,
-      "fiat_power_krw": 21.8
+      "fiat_power_krw": 21.8,
+      "apt_return_pct": 289.4
     },
     {
       "date": "2022-02",
@@ -4193,8 +5441,14 @@
         "toz": 2276259,
         "kg": 73183436
       },
+      "apt": {
+        "price_krw": 1213583333,
+        "gold_kg": 16.58,
+        "gold_don": 4422
+      },
       "fiat_power_usd": 21.2,
-      "fiat_power_krw": 20.7
+      "fiat_power_krw": 20.7,
+      "apt_return_pct": 289.0
     },
     {
       "date": "2022-03",
@@ -4213,8 +5467,14 @@
         "toz": 2359390,
         "kg": 75856139
       },
+      "apt": {
+        "price_krw": 1212166666,
+        "gold_kg": 15.98,
+        "gold_don": 4261
+      },
       "fiat_power_usd": 20.6,
-      "fiat_power_krw": 20.0
+      "fiat_power_krw": 20.0,
+      "apt_return_pct": 288.5
     },
     {
       "date": "2022-04",
@@ -4233,8 +5493,14 @@
         "toz": 2415204,
         "kg": 77650597
       },
+      "apt": {
+        "price_krw": 1210750000,
+        "gold_kg": 15.59,
+        "gold_don": 4158
+      },
       "fiat_power_usd": 21.0,
-      "fiat_power_krw": 19.5
+      "fiat_power_krw": 19.5,
+      "apt_return_pct": 288.1
     },
     {
       "date": "2022-06",
@@ -4253,8 +5519,14 @@
         "toz": 2352617,
         "kg": 75638381
       },
+      "apt": {
+        "price_krw": 1207916666,
+        "gold_kg": 15.97,
+        "gold_don": 4259
+      },
       "fiat_power_usd": 22.3,
-      "fiat_power_krw": 20.0
+      "fiat_power_krw": 20.0,
+      "apt_return_pct": 287.2
     },
     {
       "date": "2022-07",
@@ -4273,8 +5545,14 @@
         "toz": 2296830,
         "kg": 73844784
       },
+      "apt": {
+        "price_krw": 1206500000,
+        "gold_kg": 16.34,
+        "gold_don": 4357
+      },
       "fiat_power_usd": 22.8,
-      "fiat_power_krw": 20.5
+      "fiat_power_krw": 20.5,
+      "apt_return_pct": 286.7
     },
     {
       "date": "2022-08",
@@ -4293,8 +5571,14 @@
         "toz": 2330698,
         "kg": 74933680
       },
+      "apt": {
+        "price_krw": 1205083333,
+        "gold_kg": 16.08,
+        "gold_don": 4289
+      },
       "fiat_power_usd": 23.3,
-      "fiat_power_krw": 20.2
+      "fiat_power_krw": 20.2,
+      "apt_return_pct": 286.2
     },
     {
       "date": "2022-09",
@@ -4313,8 +5597,14 @@
         "toz": 2391244,
         "kg": 76880288
       },
+      "apt": {
+        "price_krw": 1203666666,
+        "gold_kg": 15.66,
+        "gold_don": 4175
+      },
       "fiat_power_usd": 24.1,
-      "fiat_power_krw": 19.7
+      "fiat_power_krw": 19.7,
+      "apt_return_pct": 285.8
     },
     {
       "date": "2022-10",
@@ -4333,8 +5623,14 @@
         "toz": 2332501,
         "kg": 74991654
       },
+      "apt": {
+        "price_krw": 1202250000,
+        "gold_kg": 16.03,
+        "gold_don": 4275
+      },
       "fiat_power_usd": 24.5,
-      "fiat_power_krw": 20.2
+      "fiat_power_krw": 20.2,
+      "apt_return_pct": 285.3
     },
     {
       "date": "2022-11",
@@ -4353,8 +5649,14 @@
         "toz": 2314096,
         "kg": 74399915
       },
+      "apt": {
+        "price_krw": 1200833333,
+        "gold_kg": 16.14,
+        "gold_don": 4304
+      },
       "fiat_power_usd": 23.0,
-      "fiat_power_krw": 20.4
+      "fiat_power_krw": 20.4,
+      "apt_return_pct": 284.9
     },
     {
       "date": "2022-12",
@@ -4373,8 +5675,14 @@
         "toz": 2302674,
         "kg": 74032683
       },
+      "apt": {
+        "price_krw": 1199416666,
+        "gold_kg": 16.2,
+        "gold_don": 4320
+      },
       "fiat_power_usd": 22.0,
-      "fiat_power_krw": 20.5
+      "fiat_power_krw": 20.5,
+      "apt_return_pct": 284.4
     },
     {
       "date": "2023-02",
@@ -4393,8 +5701,14 @@
         "toz": 2421413,
         "kg": 77850250
       },
+      "apt": {
+        "price_krw": 1205250000,
+        "gold_kg": 15.48,
+        "gold_don": 4128
+      },
       "fiat_power_usd": 21.9,
-      "fiat_power_krw": 19.5
+      "fiat_power_krw": 19.5,
+      "apt_return_pct": 286.3
     },
     {
       "date": "2023-03",
@@ -4413,8 +5727,14 @@
         "toz": 2552808,
         "kg": 82074699
       },
+      "apt": {
+        "price_krw": 1212500000,
+        "gold_kg": 14.77,
+        "gold_don": 3940
+      },
       "fiat_power_usd": 20.4,
-      "fiat_power_krw": 18.5
+      "fiat_power_krw": 18.5,
+      "apt_return_pct": 288.6
     },
     {
       "date": "2023-04",
@@ -4433,8 +5753,14 @@
         "toz": 2673436,
         "kg": 85952977
       },
+      "apt": {
+        "price_krw": 1219750000,
+        "gold_kg": 14.19,
+        "gold_don": 3784
+      },
       "fiat_power_usd": 20.1,
-      "fiat_power_krw": 17.6
+      "fiat_power_krw": 17.6,
+      "apt_return_pct": 290.9
     },
     {
       "date": "2023-05",
@@ -4453,8 +5779,14 @@
         "toz": 2591936,
         "kg": 83332664
       },
+      "apt": {
+        "price_krw": 1227000000,
+        "gold_kg": 14.72,
+        "gold_don": 3926
+      },
       "fiat_power_usd": 20.5,
-      "fiat_power_krw": 18.2
+      "fiat_power_krw": 18.2,
+      "apt_return_pct": 293.3
     },
     {
       "date": "2023-06",
@@ -4473,8 +5805,14 @@
         "toz": 2552731,
         "kg": 82072216
       },
+      "apt": {
+        "price_krw": 1234250000,
+        "gold_kg": 15.04,
+        "gold_don": 4010
+      },
       "fiat_power_usd": 20.8,
-      "fiat_power_krw": 18.5
+      "fiat_power_krw": 18.5,
+      "apt_return_pct": 295.6
     },
     {
       "date": "2023-07",
@@ -4493,8 +5831,14 @@
         "toz": 2507244,
         "kg": 80609782
       },
+      "apt": {
+        "price_krw": 1241500000,
+        "gold_kg": 15.4,
+        "gold_don": 4107
+      },
       "fiat_power_usd": 20.4,
-      "fiat_power_krw": 18.8
+      "fiat_power_krw": 18.8,
+      "apt_return_pct": 297.9
     },
     {
       "date": "2023-08",
@@ -4513,8 +5857,14 @@
         "toz": 2600945,
         "kg": 83622313
       },
+      "apt": {
+        "price_krw": 1248750000,
+        "gold_kg": 14.93,
+        "gold_don": 3982
+      },
       "fiat_power_usd": 20.5,
-      "fiat_power_krw": 18.1
+      "fiat_power_krw": 18.1,
+      "apt_return_pct": 300.2
     },
     {
       "date": "2023-09",
@@ -4533,8 +5883,14 @@
         "toz": 2522837,
         "kg": 81111079
       },
+      "apt": {
+        "price_krw": 1256000000,
+        "gold_kg": 15.48,
+        "gold_don": 4129
+      },
       "fiat_power_usd": 21.6,
-      "fiat_power_krw": 18.7
+      "fiat_power_krw": 18.7,
+      "apt_return_pct": 302.6
     },
     {
       "date": "2023-11",
@@ -4553,8 +5909,14 @@
         "toz": 2625807,
         "kg": 84421640
       },
+      "apt": {
+        "price_krw": 1270500000,
+        "gold_kg": 15.05,
+        "gold_don": 4013
+      },
       "fiat_power_usd": 19.7,
-      "fiat_power_krw": 18.0
+      "fiat_power_krw": 18.0,
+      "apt_return_pct": 307.2
     },
     {
       "date": "2023-12",
@@ -4573,8 +5935,14 @@
         "toz": 2679935,
         "kg": 86161926
       },
+      "apt": {
+        "price_krw": 1277750000,
+        "gold_kg": 14.83,
+        "gold_don": 3955
+      },
       "fiat_power_usd": 19.4,
-      "fiat_power_krw": 17.6
+      "fiat_power_krw": 17.6,
+      "apt_return_pct": 309.5
     },
     {
       "date": "2024-01",
@@ -4593,8 +5961,14 @@
         "toz": 2717448,
         "kg": 87367995
       },
+      "apt": {
+        "price_krw": 1285000000,
+        "gold_kg": 14.71,
+        "gold_don": 3922
+      },
       "fiat_power_usd": 19.6,
-      "fiat_power_krw": 17.4
+      "fiat_power_krw": 17.4,
+      "apt_return_pct": 311.9
     },
     {
       "date": "2024-02",
@@ -4613,8 +5987,14 @@
         "toz": 2739696,
         "kg": 88083268
       },
+      "apt": {
+        "price_krw": 1296250000,
+        "gold_kg": 14.72,
+        "gold_don": 3924
+      },
       "fiat_power_usd": 19.6,
-      "fiat_power_krw": 17.2
+      "fiat_power_krw": 17.2,
+      "apt_return_pct": 315.5
     },
     {
       "date": "2024-03",
@@ -4633,8 +6013,14 @@
         "toz": 2983046,
         "kg": 95907157
       },
+      "apt": {
+        "price_krw": 1307500000,
+        "gold_kg": 13.63,
+        "gold_don": 3635
+      },
       "fiat_power_usd": 18.1,
-      "fiat_power_krw": 15.8
+      "fiat_power_krw": 15.8,
+      "apt_return_pct": 319.1
     },
     {
       "date": "2024-04",
@@ -4653,8 +6039,14 @@
         "toz": 3165658,
         "kg": 101778283
       },
+      "apt": {
+        "price_krw": 1318750000,
+        "gold_kg": 12.96,
+        "gold_don": 3455
+      },
       "fiat_power_usd": 17.5,
-      "fiat_power_krw": 14.9
+      "fiat_power_krw": 14.9,
+      "apt_return_pct": 322.7
     },
     {
       "date": "2024-05",
@@ -4673,8 +6065,14 @@
         "toz": 3195428,
         "kg": 102735386
       },
+      "apt": {
+        "price_krw": 1330000000,
+        "gold_kg": 12.95,
+        "gold_don": 3452
+      },
       "fiat_power_usd": 17.3,
-      "fiat_power_krw": 14.8
+      "fiat_power_krw": 14.8,
+      "apt_return_pct": 326.3
     },
     {
       "date": "2024-06",
@@ -4693,8 +6091,14 @@
         "toz": 3229303,
         "kg": 103824505
       },
+      "apt": {
+        "price_krw": 1341250000,
+        "gold_kg": 12.92,
+        "gold_don": 3445
+      },
       "fiat_power_usd": 17.2,
-      "fiat_power_krw": 14.6
+      "fiat_power_krw": 14.6,
+      "apt_return_pct": 329.9
     },
     {
       "date": "2024-07",
@@ -4713,8 +6117,14 @@
         "toz": 3357063,
         "kg": 107932074
       },
+      "apt": {
+        "price_krw": 1352500000,
+        "gold_kg": 12.53,
+        "gold_don": 3342
+      },
       "fiat_power_usd": 16.6,
-      "fiat_power_krw": 14.0
+      "fiat_power_krw": 14.0,
+      "apt_return_pct": 333.5
     },
     {
       "date": "2024-08",
@@ -4733,8 +6143,14 @@
         "toz": 3378314,
         "kg": 108615328
       },
+      "apt": {
+        "price_krw": 1363750000,
+        "gold_kg": 12.56,
+        "gold_don": 3348
+      },
       "fiat_power_usd": 15.9,
-      "fiat_power_krw": 14.0
+      "fiat_power_krw": 14.0,
+      "apt_return_pct": 337.1
     },
     {
       "date": "2024-10",
@@ -4753,8 +6169,14 @@
         "toz": 3790103,
         "kg": 121854625
       },
+      "apt": {
+        "price_krw": 1386250000,
+        "gold_kg": 11.38,
+        "gold_don": 3034
+      },
       "fiat_power_usd": 14.6,
-      "fiat_power_krw": 12.4
+      "fiat_power_krw": 12.4,
+      "apt_return_pct": 344.3
     },
     {
       "date": "2024-11",
@@ -4773,8 +6195,14 @@
         "toz": 3719428,
         "kg": 119582388
       },
+      "apt": {
+        "price_krw": 1397500000,
+        "gold_kg": 11.69,
+        "gold_don": 3116
+      },
       "fiat_power_usd": 15.1,
-      "fiat_power_krw": 12.7
+      "fiat_power_krw": 12.7,
+      "apt_return_pct": 347.9
     },
     {
       "date": "2025-01",
@@ -4793,8 +6221,14 @@
         "toz": 4054669,
         "kg": 130360627
       },
+      "apt": {
+        "price_krw": 1420000000,
+        "gold_kg": 10.89,
+        "gold_don": 2905
+      },
       "fiat_power_usd": 14.3,
-      "fiat_power_krw": 11.6
+      "fiat_power_krw": 11.6,
+      "apt_return_pct": 355.1
     },
     {
       "date": "2025-02",
@@ -4813,8 +6247,14 @@
         "toz": 4129926,
         "kg": 132780211
       },
+      "apt": {
+        "price_krw": 1426666666,
+        "gold_kg": 10.74,
+        "gold_don": 2865
+      },
       "fiat_power_usd": 14.1,
-      "fiat_power_krw": 11.4
+      "fiat_power_krw": 11.4,
+      "apt_return_pct": 357.3
     },
     {
       "date": "2025-03",
@@ -4833,8 +6273,14 @@
         "toz": 4588674,
         "kg": 147529280
       },
+      "apt": {
+        "price_krw": 1433333333,
+        "gold_kg": 9.72,
+        "gold_don": 2591
+      },
       "fiat_power_usd": 12.9,
-      "fiat_power_krw": 10.3
+      "fiat_power_krw": 10.3,
+      "apt_return_pct": 359.4
     },
     {
       "date": "2025-04",
@@ -4853,8 +6299,14 @@
         "toz": 4750163,
         "kg": 152721292
       },
+      "apt": {
+        "price_krw": 1440000000,
+        "gold_kg": 9.43,
+        "gold_don": 2514
+      },
       "fiat_power_usd": 12.1,
-      "fiat_power_krw": 9.9
+      "fiat_power_krw": 9.9,
+      "apt_return_pct": 361.5
     },
     {
       "date": "2025-05",
@@ -4873,8 +6325,14 @@
         "toz": 4545194,
         "kg": 146131381
       },
+      "apt": {
+        "price_krw": 1446666666,
+        "gold_kg": 9.9,
+        "gold_don": 2640
+      },
       "fiat_power_usd": 12.2,
-      "fiat_power_krw": 10.4
+      "fiat_power_krw": 10.4,
+      "apt_return_pct": 363.7
     },
     {
       "date": "2025-07",
@@ -4893,8 +6351,14 @@
         "toz": 4585847,
         "kg": 147438400
       },
+      "apt": {
+        "price_krw": 1460000000,
+        "gold_kg": 9.9,
+        "gold_don": 2641
+      },
       "fiat_power_usd": 12.2,
-      "fiat_power_krw": 10.3
+      "fiat_power_krw": 10.3,
+      "apt_return_pct": 367.9
     },
     {
       "date": "2025-08",
@@ -4913,8 +6377,14 @@
         "toz": 4876725,
         "kg": 156790357
       },
+      "apt": {
+        "price_krw": 1466666666,
+        "gold_kg": 9.35,
+        "gold_don": 2494
+      },
       "fiat_power_usd": 11.4,
-      "fiat_power_krw": 9.7
+      "fiat_power_krw": 9.7,
+      "apt_return_pct": 370.1
     },
     {
       "date": "2025-09",
@@ -4933,8 +6403,14 @@
         "toz": 5419885,
         "kg": 174253348
       },
+      "apt": {
+        "price_krw": 1473333333,
+        "gold_kg": 8.46,
+        "gold_don": 2255
+      },
       "fiat_power_usd": 10.4,
-      "fiat_power_krw": 8.7
+      "fiat_power_krw": 8.7,
+      "apt_return_pct": 372.2
     },
     {
       "date": "2025-10",
@@ -4953,8 +6429,14 @@
         "toz": 5691096,
         "kg": 182972983
       },
+      "apt": {
+        "price_krw": 1480000000,
+        "gold_kg": 8.09,
+        "gold_don": 2157
+      },
       "fiat_power_usd": 10.1,
-      "fiat_power_krw": 8.3
+      "fiat_power_krw": 8.3,
+      "apt_return_pct": 374.4
     },
     {
       "date": "2025-11",
@@ -4973,8 +6455,14 @@
         "toz": 6238237,
         "kg": 200563962
       },
+      "apt": {
+        "price_krw": 1486666666,
+        "gold_kg": 7.41,
+        "gold_don": 1977
+      },
       "fiat_power_usd": 9.5,
-      "fiat_power_krw": 7.6
+      "fiat_power_krw": 7.6,
+      "apt_return_pct": 376.5
     },
     {
       "date": "2025-12",
@@ -4993,8 +6481,14 @@
         "toz": 6242111,
         "kg": 200688532
       },
+      "apt": {
+        "price_krw": 1493333333,
+        "gold_kg": 7.44,
+        "gold_don": 1984
+      },
       "fiat_power_usd": 9.3,
-      "fiat_power_krw": 7.6
+      "fiat_power_krw": 7.6,
+      "apt_return_pct": 378.6
     },
     {
       "date": "2026-01",
@@ -5013,8 +6507,14 @@
         "toz": 6878971,
         "kg": 221164068
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 6.78,
+        "gold_don": 1809
+      },
       "fiat_power_usd": 8.5,
-      "fiat_power_krw": 6.9
+      "fiat_power_krw": 6.9,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-04",
@@ -5033,8 +6533,14 @@
         "toz": 6885974,
         "kg": 221389219
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 6.78,
+        "gold_don": 1807
+      },
       "fiat_power_usd": 8.7,
-      "fiat_power_krw": 6.8
+      "fiat_power_krw": 6.8,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-05",
@@ -5053,8 +6559,14 @@
         "toz": 6916874,
         "kg": 222382672
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 6.75,
+        "gold_don": 1799
+      },
       "fiat_power_usd": 8.8,
-      "fiat_power_krw": 6.8
+      "fiat_power_krw": 6.8,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-06",
@@ -5073,8 +6585,14 @@
         "toz": 6226277,
         "kg": 200179441
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 7.49,
+        "gold_don": 1998
+      },
       "fiat_power_usd": 10.0,
-      "fiat_power_krw": 7.6
+      "fiat_power_krw": 7.6,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-07",
@@ -5093,8 +6611,14 @@
         "toz": 5834404,
         "kg": 187580451
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 8.0,
+        "gold_don": 2132
+      },
       "fiat_power_usd": 9.8,
-      "fiat_power_krw": 8.1
+      "fiat_power_krw": 8.1,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-08",
@@ -5113,8 +6637,14 @@
         "toz": 6171518,
         "kg": 198418926
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 7.56,
+        "gold_don": 2016
+      },
       "fiat_power_usd": 9.0,
-      "fiat_power_krw": 7.6
+      "fiat_power_krw": 7.6,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-09",
@@ -5133,8 +6663,14 @@
         "toz": 5654138,
         "kg": 181784769
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 8.25,
+        "gold_don": 2200
+      },
       "fiat_power_usd": 9.6,
-      "fiat_power_krw": 8.3
+      "fiat_power_krw": 8.3,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-10",
@@ -5153,8 +6689,14 @@
         "toz": 5164171,
         "kg": 166031954
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 9.03,
+        "gold_don": 2409
+      },
       "fiat_power_usd": 10.3,
-      "fiat_power_krw": 9.1
+      "fiat_power_krw": 9.1,
+      "apt_return_pct": 380.8
     },
     {
       "date": "2026-11",
@@ -5173,8 +6715,14 @@
         "toz": 5556737,
         "kg": 178653255
       },
+      "apt": {
+        "price_krw": 1500000000,
+        "gold_kg": 8.4,
+        "gold_don": 2239
+      },
       "fiat_power_usd": 9.9,
-      "fiat_power_krw": 8.5
+      "fiat_power_krw": 8.5,
+      "apt_return_pct": 380.8
     }
   ]
 }

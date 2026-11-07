@@ -2234,10 +2234,10 @@ body {
   border-color: #d97706;
 }
 
-/* 3자 비교 매트릭스 카드 */
+/* 4자 비교 매트릭스 카드 (금 / 아파트 / 달러 / 원화) */
 .gold-compare-matrix {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-bottom: 20px;
 }
@@ -2253,6 +2253,11 @@ body {
 .gcm-col.gold {
   background: #fffbeb;
   border: 1px solid #fde68a;
+}
+
+.gcm-col.apt {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
 }
 
 .gcm-col.usd {
@@ -2279,6 +2284,7 @@ body {
 }
 
 .gcm-col.gold .gcm-badge { background: #d97706; color: #fff; }
+.gcm-col.apt .gcm-badge { background: #059669; color: #fff; }
 .gcm-col.usd .gcm-badge { background: #2563eb; color: #fff; }
 .gcm-col.krw .gcm-badge { background: #dc2626; color: #fff; }
 
@@ -2303,6 +2309,7 @@ body {
 }
 
 .gcm-col.gold .gcm-profit { color: #d97706; }
+.gcm-col.apt .gcm-profit { color: #059669; }
 .gcm-col.usd .gcm-profit { color: #2563eb; }
 .gcm-col.krw .gcm-profit { color: #ef4444; }
 
@@ -2345,7 +2352,13 @@ body {
   line-height: 1.6;
 }
 
-/* 모바일 반응형 */
+/* 모바일 및 반응형 */
+@media (max-width: 992px) {
+  .gold-compare-matrix {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .gold-kpi-grid {
     grid-template-columns: repeat(2, 1fr);
