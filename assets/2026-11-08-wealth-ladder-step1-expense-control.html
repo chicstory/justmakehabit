@@ -32,9 +32,9 @@
       </a>
       <nav class="header-nav">
         <a href="../index.html" class="h-nav-link">홈</a>
-        <a href="../assets/2026-10-24-zero-base-cashflow.html" class="h-nav-link active">자산</a>
-        <a href="../assets/2026-11-08-resting-heart-rate-weekly-steps-mileage.html" class="h-nav-link">체력</a>
-        <a href="../assets/2026-11-08-time-is-gold-foucault-ai-renaissance.html" class="h-nav-link">사색</a>
+        <a href="../assets.html" class="h-nav-link active">자산</a>
+        <a href="../fitness.html" class="h-nav-link">체력</a>
+        <a href="../thoughts.html" class="h-nav-link">사색</a>
         <a href="../invest.html" class="h-nav-link">투자</a>
         <a href="../tools/mid-hire-calculator.html" class="h-nav-link">도구</a>
         <a href="../about.html" class="h-nav-link">소개</a>
@@ -178,36 +178,89 @@
     </main>
 
     <!-- 우측 거시 배너 -->
-    <aside class="sidebar-area">
-      <div class="macro-board-fixed">
-        <div class="mb-header">
-          <span class="mb-badge">MACRO CORE</span>
-          <span class="mb-date">2026.11 기준</span>
+    <aside class="sidebar-right">
+      <div class="macro-card">
+        <div class="macro-header">
+          <span class="macro-title">📊 거시 경제 지표</span>
+          <span class="macro-badge" id="macroDate">11월 기준</span>
         </div>
-        <div class="mb-grid">
-          <div class="mb-item">
-            <span class="mbi-label">원·달러 환율</span>
-            <span class="mbi-val">1,388.50 <small>원</small></span>
+        <div class="macro-list">
+          <div class="macro-item">
+            <span class="m-label">원/달러 환율</span>
+            <span class="m-val" id="macroUsdKrw">1,388.5원</span>
           </div>
-          <div class="mb-item">
-            <span class="mbi-label">국내 순금 (3.75g)</span>
-            <span class="mbi-val">462,000 <small>원</small></span>
+          <div class="macro-item">
+            <span class="m-label">한국 기준금리</span>
+            <span class="m-val">3.25%</span>
           </div>
-          <div class="mb-item">
-            <span class="mbi-label">국제 금 (oz)</span>
-            <span class="mbi-val">2,736.40 <small>$</small></span>
-          </div>
-          <div class="mb-item">
-            <span class="mbi-label">원화 RP 금리</span>
-            <span class="mbi-val">연 2.80 <small>%</small></span>
-          </div>
-          <div class="mb-item">
-            <span class="mbi-label">1초 환산 가치</span>
-            <span class="mbi-val">1.00 <small>원/초</small></span>
+          <div class="macro-item">
+            <span class="m-label">증권사 수시 RP</span>
+            <span class="m-val highlight">2.80%</span>
           </div>
         </div>
-        <div class="mb-footer">
+        <div class="macro-footer">
           * 1초=1원의 규율로 자본과 신체를 축적합니다.
+        </div>
+      </div>
+
+      <!-- 실전 자산 매매 현황 카드 -->
+      <div class="holding-card" style="margin-top: 16px;">
+        <div class="holding-header">
+          <span class="holding-title">💼 실전 자산 포트폴리오</span>
+          <span class="holding-badge">실시간 연동</span>
+        </div>
+        
+        <div class="holding-stock-box" style="margin-bottom: 7px;">
+          <div class="h-stock-top">
+            <span class="h-ticker">ROOT (루트)</span>
+            <span class="h-qty">30주</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$43.30</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="rootCurPrice">$43.34</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-up" id="rootRetPct">+0.1%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="holding-stock-box">
+          <div class="h-stock-top">
+            <span class="h-ticker">FLNC (플루언스)</span>
+            <span class="h-qty">120주</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$5.95</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="flncCurPrice">$5.11</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-down" id="flncRetPct">-14.1%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-graph-wrap" style="margin-top: 8px;">
+          <div class="pg-head">
+            <span>실전 포트폴리오 비중</span>
+            <strong id="holdingWeightText">ROOT 68% · FLNC 32%</strong>
+          </div>
+          <div class="pg-bar-track">
+            <div class="pg-bar-fill plm" id="rootBarFill" style="width: 68%;"></div>
+            <div class="pg-bar-fill plv" id="flncBarFill" style="width: 32%;"></div>
+          </div>
         </div>
       </div>
     </aside>
@@ -222,5 +275,6 @@
     </div>
   </footer>
 
+  <script src="../app.js"></script>
 </body>
 </html>
