@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>금 vs 실용화폐 시뮬레이터 (2004~2026) - justmakehabit 실전 도구</title>
+  <meta name="description" content="2004년부터 2026년까지 23년간의 금 시세와 신용화폐(달러·원화)의 가치 변동을 1g, 1돈, 1toz, 1kg 단위별로 정밀 대조하는 인터랙티브 차트 및 실물 자산 시뮬레이터.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- 상단 글로벌 헤더 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="logo-wrap">
+        <span class="logo-badge">JMH</span>
+        <span class="logo-text">justmakehabit</span>
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html" class="h-nav-link">홈</a>
+        <a href="../assets/2026-10-24-zero-base-cashflow.html" class="h-nav-link">자산</a>
+        <a href="../invest.html" class="h-nav-link">개인투자</a>
+        <a href="mid-hire-calculator.html" class="h-nav-link active">도구</a>
+        <a href="../about.html" class="h-nav-link">소개</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 실전 도구 3단 레이아웃 -->
+  <div class="tools-layout-3col">
+    
+    <!-- 좌측: 실전 도구 내비게이션 LNB 배너 -->
+    <aside class="sidebar-left">
+      <div class="tool-nav-card">
+        <div class="tool-nav-header">
+          <span class="tn-title">🛠️ 실전 도구 모음</span>
+          <span class="tn-badge">3종 가동</span>
+        </div>
+        <ul class="tool-nav-list">
+          <li>
+            <a href="mid-hire-calculator.html" class="tool-nav-item">
+              <span class="tni-icon">🧮</span>
+              <div class="tni-text">
+                <span class="tni-name">급여 / 세후 실수령액</span>
+                <span class="tni-desc">지속근무 & 중도입사 일할</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="rp-calculator.html" class="tool-nav-item">
+              <span class="tni-icon">📈</span>
+              <div class="tni-text">
+                <span class="tni-name">원화 RP 일일 복리 이자</span>
+                <span class="tni-desc">연 2.80% 세후 수익률</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="gold-vs-fiat.html" class="tool-nav-item active">
+              <span class="tni-icon">🪙</span>
+              <div class="tni-text">
+                <span class="tni-name">금 vs 실용화폐 시뮬레이터</span>
+                <span class="tni-desc">23년 실물 가치 변동 대조</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <div class="tool-nav-item disabled">
+              <span class="tni-icon">☕</span>
+              <div class="tni-text">
+                <span class="tni-name">월 고정비 누수 감지</span>
+                <span class="tni-desc">기호식품 캡 절감 (예정)</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="tool-nav-footer">
+          * 1원=1초의 규율로 구축된 현실적 자산 시뮬레이터
+        </div>
+      </div>
+    </aside>
+
+    <!-- 중앙 시뮬레이터 메인 영역 -->
+    <main class="main-content-area type-tools">
+      
+      <!-- 도구 헤더 안내 -->
+      <div class="calc-header-box">
+        <div class="chb-top">
+          <span class="chb-breadcrumb">실전 도구 (Tools) / 금 vs 실용화폐 시뮬레이터</span>
+          <span class="chb-badge" style="background: #fef3c7; color: #d97706; border-color: #fde68a;">23년 실계측 시계열</span>
+        </div>
+        <h1 class="chb-title">🪙 금 vs 실용화폐 시뮬레이터</h1>
+        <p class="chb-desc">
+          2004년부터 2026년까지 23년간의 금 시세와 신용화폐(달러·원화)의 가치 궤적을 <strong>1g, 1돈, 1toz, 1kg</strong> 단위별로 정밀 대조하고, 금값을 기준으로 실물 자산과 화폐의 구매력 변동을 시뮬레이션합니다.
+        </p>
+      </div>
+
+      <!-- 단위 / 주기 / 통화 컨트롤 패널 -->
+      <div class="gold-ctrl-panel">
+        <div class="gcp-row">
+          <div class="gcp-label">⚖️ 금 측정 단위 선택:</div>
+          <div class="gcp-chips">
+            <button class="g-chip" onclick="setGoldUnit('g', this)">1g (그램)</button>
+            <button class="g-chip active" onclick="setGoldUnit('don', this)">1돈 (3.75g 한국표준)</button>
+            <button class="g-chip" onclick="setGoldUnit('toz', this)">1toz (31.1g 국제온스)</button>
+            <button class="g-chip" onclick="setGoldUnit('kg', this)">1kg (골드바)</button>
+          </div>
+        </div>
+        <div class="gcp-row">
+          <div class="gcp-label">📅 차트 주기:</div>
+          <div class="gcp-chips">
+            <button class="g-chip period active" onclick="setChartPeriod('yearly', this)">연간 차트 (2004~2026)</button>
+            <button class="g-chip period" onclick="setChartPeriod('monthly', this)">월간 차트 (235개월 정밀)</button>
+          </div>
+          <div class="gcp-label" style="margin-left: auto;">💵 기준 통화:</div>
+          <div class="gcp-chips">
+            <button class="g-chip curr active" onclick="setChartCurr('krw', this)">원화 (KRW ₩)</button>
+            <button class="g-chip curr" onclick="setChartCurr('usd', this)">달러 (USD $)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 핵심 KPI 카드 4종 -->
+      <div class="gold-kpi-grid">
+        <div class="gold-kpi-card">
+          <span class="gk-title">현재 금 시세 (<span id="kpiUnitLabel">1돈</span>)</span>
+          <span class="gk-val" id="kpiCurrentPrice">669,950원</span>
+          <span class="gk-sub blue" id="kpiUsdSub">$491.29 (환율 1,363.7원)</span>
+        </div>
+        <div class="gold-kpi-card">
+          <span class="gk-title">2004년 대비 금값 상승률</span>
+          <span class="gk-val" style="color: #d97706;" id="kpiGoldReturn">+1,078.2%</span>
+          <span class="gk-sub gold" id="kpiCagrSub">연평균 CAGR +11.3%</span>
+        </div>
+        <div class="gold-kpi-card">
+          <span class="gk-title">달러(USD) 실질 구매력 잔존율</span>
+          <span class="gk-val" style="color: #ef4444;" id="kpiUsdPower">9.9%</span>
+          <span class="gk-sub down">2004년 $100 ➔ 현재 $9.9 가치</span>
+        </div>
+        <div class="gold-kpi-card">
+          <span class="gk-title">원화(KRW) 실질 구매력 잔존율</span>
+          <span class="gk-val" style="color: #ef4444;" id="kpiKrwPower">8.5%</span>
+          <span class="gk-sub down">2004년 100만 원 ➔ 현재 8.5만 원</span>
+        </div>
+      </div>
+
+      <!-- 인터랙티브 차트 박스 -->
+      <div class="gold-chart-box">
+        <div class="gcb-head">
+          <div class="gcb-title">
+            <span>📊 23년 실물 가치 변동 궤적</span>
+            <span style="font-size: 11px; font-weight: 600; color: #64748b;" id="chartMetaText">연간 데이터 · 1돈(3.75g) 기준</span>
+          </div>
+          <div class="gcb-tabs">
+            <button class="gcb-tab active" id="tabPriceBtn" onclick="switchChartTab('price')">금 시세 추이</button>
+            <button class="gcb-tab" id="tabPowerBtn" onclick="switchChartTab('power')">화폐 실질 구매력 붕괴율</button>
+          </div>
+        </div>
+        <div class="gcb-canvas-wrap">
+          <canvas id="goldChart"></canvas>
+        </div>
+      </div>
+
+      <!-- 실전 시뮬레이션 계산기 -->
+      <div class="gold-calc-card">
+        <div class="gcc-head">
+          <h3>🧮 과거 시점 실물 자산 vs 신용화폐 시뮬레이터</h3>
+          <p>과거 특정 연도에 현금(신용화폐)을 그대로 쥐고 있었을 때와 실물 금으로 바꿨을 때의 현재 자산 가치를 대조합니다.</p>
+        </div>
+
+        <div class="gcc-input-grid">
+          <div class="gcc-input-box">
+            <label for="simStartYear">📅 기준 과거 연도 선택:</label>
+            <select id="simStartYear" class="gcc-select" onchange="runSimulation()">
+              <!-- JS로 옵션 자동 생성 -->
+            </select>
+          </div>
+          <div class="gcc-input-box">
+            <label for="simAmount">💰 당시 보유했던 원화 금액 (원):</label>
+            <input type="number" id="simAmount" class="gcc-input" value="10000000" step="1000000" oninput="runSimulation()">
+            <div class="c-btn-chips">
+              <button class="c-chip" onclick="setSimAmount(1000000)">100만</button>
+              <button class="c-chip" onclick="setSimAmount(5000000)">500만</button>
+              <button class="c-chip" onclick="setSimAmount(10000000)">1,000만</button>
+              <button class="c-chip" onclick="setSimAmount(50000000)">5,000만</button>
+              <button class="c-chip" onclick="setSimAmount(100000000)">1억</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3자 비교 매트릭스 -->
+        <div class="gold-compare-matrix">
+          
+          <!-- 카드 1: 금 실물 자산 -->
+          <div class="gcm-col gold">
+            <div class="gcm-top">
+              <span class="gcm-title">🥇 실물 금(Gold) 매입</span>
+              <span class="gcm-badge">자산 방어</span>
+            </div>
+            <div class="gcm-val" id="simGoldValue">1억 1,782만 원</div>
+            <div class="gcm-profit" id="simGoldReturn">+1,078.2% (CAGR +11.3%)</div>
+            <div class="gcm-desc" id="simGoldDesc">
+              당시 1돈 56,861원에 175.8돈 매입 ➔ 현재 실물 평가 가치로 환산
+            </div>
+          </div>
+
+          <!-- 카드 2: 달러 보유 -->
+          <div class="gcm-col usd">
+            <div class="gcm-top">
+              <span class="gcm-title">💵 달러(USD) 환전 보유</span>
+              <span class="gcm-badge">기축통화</span>
+            </div>
+            <div class="gcm-val" id="simUsdValue">1,163만 원</div>
+            <div class="gcm-profit" id="simUsdReturn">+16.3% ($8,528)</div>
+            <div class="gcm-desc" id="simUsdDesc">
+              환율 1,172원 ➔ 1,363원 상승으로 원화 가치 소폭 방어, 금 대비 구매력은 -90% 하락
+            </div>
+          </div>
+
+          <!-- 카드 3: 원화 현금 예금 방치 -->
+          <div class="gcm-col krw">
+            <div class="gcm-top">
+              <span class="gcm-title">🇰🇷 원화(KRW) 현금 방치</span>
+              <span class="gcm-badge">녹는 얼음</span>
+            </div>
+            <div class="gcm-val" id="simKrwValue">85만 원 (실질가치)</div>
+            <div class="gcm-profit" id="simKrwReturn">-91.5% (구매력 증발)</div>
+            <div class="gcm-desc" id="simKrwDesc">
+              명목 잔고는 1,000만 원이나, 당시 살 수 있던 실물 금의 8.5%밖에 못 사는 종이화폐로 축소
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 1초=1원 아카이브 철학 인사이트 -->
+      <div class="gold-insight-card">
+        <span class="gic-tag">JUSTMAKEHABIT ARCHIVE INSIGHT</span>
+        <h4 class="gic-title">1원=1초의 규율: 왜 실물 자산(금)을 알아야 하는가?</h4>
+        <p class="gic-desc">
+          신용화폐는 끊임없는 양적완화와 통화량 팽창으로 인해 시간이 지날수록 구매력이 녹아내리는 소모성 연료입니다. 2004년에 땀 흘려 번 1,000만 원을 통장에 넣어두면 2026년 현재 그 돈으로 살 수 있는 실물의 양은 10분의 1도 채 되지 않습니다.<br>
+          반면 실물 금은 어떠한 정부도 자의적으로 찍어낼 수 없기에, 지난 수천 년간 인류의 시간과 노동 가치를 온전히 보존해 온 절대적 닻입니다. 1원과 1초의 규율을 세우는 진정한 자산 축적은 화폐의 환상을 걷어내고 실물 가치를 직시하는 것에서 시작합니다.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- 우측: 실시간 거시 경제 배너 & 실전 자산 매매 현황 -->
+    <aside class="sidebar-right">
+      <div class="macro-card">
+        <div class="macro-header">
+          <span class="macro-title">📊 거시 경제 지표</span>
+          <span class="macro-badge" id="macroDate">11월 7일 기준</span>
+        </div>
+        <div class="macro-list">
+          <div class="macro-item">
+            <span class="m-label">원/달러 환율</span>
+            <span class="m-val" id="macroUsdKrw">1,347.7원</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">한국 기준금리</span>
+            <span class="m-val">3.25%</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">증권사 수시 RP</span>
+            <span class="m-val highlight">2.80%</span>
+          </div>
+        </div>
+        <div class="macro-footer">
+          * ThePathLab 데일리 매크로 브리핑 연동
+        </div>
+      </div>
+
+      <!-- 실전 자산 매매 현황 카드 -->
+      <div class="holding-card">
+        <div class="holding-header">
+          <span class="holding-title">💼 실전 자산 매매 현황</span>
+          <span class="holding-badge">실시간 연동</span>
+        </div>
+        
+        <!-- 종목 1: ROOT (1부 리그 PLM100) -->
+        <div class="holding-stock-box" style="margin-bottom: 7px;">
+          <div class="h-stock-top">
+            <span class="h-ticker">ROOT (루트)</span>
+            <span class="h-qty">30주</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$43.30</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="rootCurPrice">$43.34</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-up" id="rootRetPct">+0.1%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 종목 2: FLNC (2부 리그 PLV100) -->
+        <div class="holding-stock-box">
+          <div class="h-stock-top">
+            <span class="h-ticker">FLNC (플루언스)</span>
+            <span class="h-qty">120주</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$5.95</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="flncCurPrice">$5.11</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-down" id="flncRetPct">-14.1%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 포트폴리오 비중 그래프 -->
+        <div class="portfolio-graph-wrap" style="margin-top: 4px;">
+          <div class="pg-head">
+            <span>실전 포트폴리오 비중</span>
+            <strong id="holdingWeightText">ROOT 68% · FLNC 32%</strong>
+          </div>
+          <div class="pg-bar-track">
+            <div class="pg-bar-fill plm" id="rootBarFill" style="width: 68%;"></div>
+            <div class="pg-bar-fill plv" id="flncBarFill" style="width: 32%;"></div>
+          </div>
+          <div class="pg-legend">
+            <span><i class="dot plm"></i> ROOT 68% (1부)</span>
+            <span><i class="dot plv"></i> FLNC 32% (2부)</span>
+          </div>
+        </div>
+
+        <!-- 리밸런싱 주기 -->
+        <div class="rebalance-info">
+          <div class="rb-step">
+            <span class="rb-badge">매월</span>
+            <span class="rb-txt">1차 평가 · 1개월 관찰 후 리밸런싱</span>
+          </div>
+          <div class="rb-step">
+            <span class="rb-badge qtr">매분기</span>
+            <span class="rb-txt">2차 평가 · 승강제 리밸런싱</span>
+          </div>
+        </div>
+
+        <a href="../invest.html" class="holding-link-btn">
+          개인투자 퀀트 레이더 보기 →
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">justmakehabit</span>
+        <p class="footer-desc">1초와 1원의 규율을 다지는 실전 자산 아카이브.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../about.html">소개</a>
+        <a href="mid-hire-calculator.html">도구</a>
+        <a href="../invest.html">개인투자</a>
+        <a href="https://github.com/chicstory/justmakehabit" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+  <script>
+    let goldDataset = null;
+    let selectedUnit = 'don'; // 'g', 'don', 'toz', 'kg'
+    let selectedPeriod = 'yearly'; // 'yearly', 'monthly'
+    let selectedCurr = 'krw'; // 'krw', 'usd'
+    let activeChartTab = 'price'; // 'price', 'power'
+    let chartInstance = null;
+
+    const unitLabels = {
+      'g': '1g (그램)',
+      'don': '1돈 (3.75g)',
+      'toz': '1toz (31.1g)',
+      'kg': '1kg (골드바)'
+    };
+
+    // 1. 데이터 로드
+    async function loadGoldData() {
+      try {
+        const res = await fetch('gold_fiat_data.json?v=' + Date.now());
+        goldDataset = await res.json();
+        
+        initYearSelect();
+        updateKpis();
+        renderChart();
+        runSimulation();
+      } catch (err) {
+        console.error('금 데이터 로드 실패:', err);
+      }
+    }
+
+    // 2. 기준 연도 셀렉트 초기화
+    function initYearSelect() {
+      const select = document.getElementById('simStartYear');
+      if (!select || !goldDataset) return;
+      select.innerHTML = '';
+      
+      const years = goldDataset.yearly.map(r => r.year);
+      years.forEach((yr, idx) => {
+        const opt = document.createElement('option');
+        opt.value = yr;
+        const diff = 2026 - yr;
+        opt.textContent = `${yr}년 (${diff === 0 ? '올해' : diff + '년 전'})`;
+        if (yr === 2004) opt.selected = true;
+        select.appendChild(opt);
+      });
+    }
+
+    // 3. 단위 설정
+    function setGoldUnit(unit, btn) {
+      selectedUnit = unit;
+      document.querySelectorAll('.g-chip:not(.period):not(.curr)').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      
+      updateKpis();
+      renderChart();
+      runSimulation();
+    }
+
+    // 4. 주기 설정 (연간 / 월간)
+    function setChartPeriod(period, btn) {
+      selectedPeriod = period;
+      document.querySelectorAll('.g-chip.period').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      
+      renderChart();
+    }
+
+    // 5. 통화 설정 (원화 / 달러)
+    function setChartCurr(curr, btn) {
+      selectedCurr = curr;
+      document.querySelectorAll('.g-chip.curr').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      
+      updateKpis();
+      renderChart();
+    }
+
+    // 6. 차트 탭 전환 (시세 vs 구매력)
+    function switchChartTab(tab) {
+      activeChartTab = tab;
+      document.getElementById('tabPriceBtn').classList.toggle('active', tab === 'price');
+      document.getElementById('tabPowerBtn').classList.toggle('active', tab === 'power');
+      renderChart();
+    }
+
+    // 7. KPI 카드 수치 갱신
+    function updateKpis() {
+      if (!goldDataset) return;
+      const first = goldDataset.monthly[0];
+      const last = goldDataset.monthly[goldDataset.monthly.length - 1];
+
+      document.getElementById('kpiUnitLabel').textContent = unitLabels[selectedUnit];
+      
+      const lastPriceKrw = last.gold_krw[selectedUnit];
+      const lastPriceUsd = last.gold_usd[selectedUnit];
+      const firstPriceKrw = first.gold_krw[selectedUnit];
+
+      if (selectedCurr === 'krw') {
+        document.getElementById('kpiCurrentPrice').textContent = Math.round(lastPriceKrw).toLocaleString() + '원';
+        document.getElementById('kpiUsdSub').textContent = `$${lastPriceUsd.toLocaleString()} (환율 ${last.usdkrw}원)`;
+      } else {
+        document.getElementById('kpiCurrentPrice').textContent = '$' + lastPriceUsd.toLocaleString();
+        document.getElementById('kpiUsdSub').textContent = `${Math.round(lastPriceKrw).toLocaleString()}원 (환율 ${last.usdkrw}원)`;
+      }
+
+      const totalReturn = ((lastPriceKrw - firstPriceKrw) / firstPriceKrw) * 100;
+      const years = 22.8;
+      const cagr = (Math.pow(lastPriceKrw / firstPriceKrw, 1 / years) - 1) * 100;
+
+      document.getElementById('kpiGoldReturn').textContent = `+${totalReturn.toFixed(1)}%`;
+      document.getElementById('kpiCagrSub').textContent = `연평균 CAGR +${cagr.toFixed(1)}%`;
+
+      document.getElementById('kpiUsdPower').textContent = `${last.fiat_power_usd}%`;
+      document.getElementById('kpiKrwPower').textContent = `${last.fiat_power_krw}%`;
+    }
+
+    // 8. 차트 렌더링
+    function renderChart() {
+      if (!goldDataset) return;
+      const ctx = document.getElementById('goldChart').getContext('2d');
+      const dataRows = (selectedPeriod === 'yearly') ? goldDataset.yearly : goldDataset.monthly;
+
+      const labels = dataRows.map(r => r.date);
+      const metaText = document.getElementById('chartMetaText');
+      metaText.textContent = `${selectedPeriod === 'yearly' ? '연간' : '월간'} 데이터 · ${unitLabels[selectedUnit]} 기준`;
+
+      if (chartInstance) chartInstance.destroy();
+
+      if (activeChartTab === 'price') {
+        // 금 시세 추이 차트
+        const isKrw = (selectedCurr === 'krw');
+        const values = dataRows.map(r => isKrw ? r.gold_krw[selectedUnit] : r.gold_usd[selectedUnit]);
+
+        chartInstance = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [{
+              label: `금 시세 (${isKrw ? 'KRW ₩' : 'USD $'})`,
+              data: values,
+              borderColor: isKrw ? '#d97706' : '#2563eb',
+              backgroundColor: isKrw ? 'rgba(217, 119, 6, 0.08)' : 'rgba(37, 99, 235, 0.08)',
+              borderWidth: 2.2,
+              fill: true,
+              tension: 0.25,
+              pointRadius: selectedPeriod === 'yearly' ? 3.5 : 0,
+              pointHoverRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    const row = dataRows[ctx.dataIndex];
+                    if (isKrw) {
+                      return `금 시세: ${Math.round(ctx.parsed.y).toLocaleString()}원 ($${row.gold_usd[selectedUnit].toLocaleString()})`;
+                    } else {
+                      return `금 시세: $${ctx.parsed.y.toLocaleString()} (${Math.round(row.gold_krw[selectedUnit]).toLocaleString()}원)`;
+                    }
+                  },
+                  afterLabel: function(ctx) {
+                    const row = dataRows[ctx.dataIndex];
+                    return `환율: ${row.usdkrw}원/달러`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: {
+                  font: { family: 'JetBrains Mono', size: 11 },
+                  maxTicksLimit: 12
+                }
+              },
+              y: {
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { family: 'JetBrains Mono', size: 11 },
+                  callback: function(val) {
+                    if (isKrw) {
+                      if (val >= 100000000) return (val / 100000000).toFixed(1) + '억';
+                      if (val >= 10000) return (val / 10000).toLocaleString() + '만';
+                      return val.toLocaleString() + '원';
+                    }
+                    return '$' + val.toLocaleString();
+                  }
+                }
+              }
+            }
+          }
+        });
+
+      } else {
+        // 화폐 실질 구매력 붕괴율 차트 (달러 vs 원화)
+        const usdPower = dataRows.map(r => r.fiat_power_usd);
+        const krwPower = dataRows.map(r => r.fiat_power_krw);
+
+        chartInstance = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                label: '달러(USD) 실질 구매력 잔존율 (%)',
+                data: usdPower,
+                borderColor: '#2563eb',
+                backgroundColor: 'rgba(37, 99, 235, 0.05)',
+                borderWidth: 2,
+                tension: 0.2,
+                pointRadius: selectedPeriod === 'yearly' ? 3 : 0
+              },
+              {
+                label: '원화(KRW) 실질 구매력 잔존율 (%)',
+                data: krwPower,
+                borderColor: '#ef4444',
+                backgroundColor: 'rgba(239, 68, 68, 0.05)',
+                borderWidth: 2.2,
+                tension: 0.2,
+                pointRadius: selectedPeriod === 'yearly' ? 3 : 0
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'top',
+                labels: { font: { family: 'Pretendard', size: 12, weight: 600 } }
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(ctx) {
+                    return `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}% (초기대비 ${(100 - ctx.parsed.y).toFixed(1)}% 증발)`;
+                  }
+                }
+              }
+            },
+            scales: {
+              x: {
+                grid: { display: false },
+                ticks: {
+                  font: { family: 'JetBrains Mono', size: 11 },
+                  maxTicksLimit: 12
+                }
+              },
+              y: {
+                min: 0,
+                max: 110,
+                grid: { color: '#f1f5f9' },
+                ticks: {
+                  font: { family: 'JetBrains Mono', size: 11 },
+                  callback: function(val) { return val + '%'; }
+                }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // 9. 시뮬레이션 계산
+    function setSimAmount(amt) {
+      document.getElementById('simAmount').value = amt;
+      runSimulation();
+    }
+
+    function runSimulation() {
+      if (!goldDataset) return;
+      const year = parseInt(document.getElementById('simStartYear').value);
+      const amount = parseFloat(document.getElementById('simAmount').value) || 0;
+
+      const pastRecord = goldDataset.yearly.find(r => r.year === year) || goldDataset.yearly[0];
+      const latestRecord = goldDataset.yearly[goldDataset.yearly.length - 1];
+
+      const pastKrwDon = pastRecord.gold_krw.don;
+      const latestKrwDon = latestRecord.gold_krw.don;
+
+      const pastUsdRate = pastRecord.usdkrw;
+      const latestUsdRate = latestRecord.usdkrw;
+
+      // 1) 금 실물 자산 결과
+      const donBought = amount / pastKrwDon;
+      const currentGoldVal = donBought * latestKrwDon;
+      const goldReturn = ((currentGoldVal - amount) / amount) * 100;
+      const elapsedYears = 2026 - year || 0.1;
+      const cagr = (Math.pow(currentGoldVal / amount, 1 / elapsedYears) - 1) * 100;
+
+      document.getElementById('simGoldValue').textContent = formatMoneyKorean(currentGoldVal);
+      document.getElementById('simGoldReturn').textContent = `+${goldReturn.toFixed(1)}% (연평균 CAGR +${cagr.toFixed(1)}%)`;
+      document.getElementById('simGoldDesc').textContent = 
+        `당시 1돈 ${pastKrwDon.toLocaleString()}원에 ${donBought.toFixed(1)}돈 매입 ➔ 현재 실물 평가 가치로 환산`;
+
+      // 2) 달러 환전 보유 결과
+      const usdExchanged = amount / pastUsdRate;
+      const currentUsdVal = usdExchanged * latestUsdRate;
+      const usdReturn = ((currentUsdVal - amount) / amount) * 100;
+
+      document.getElementById('simUsdValue').textContent = formatMoneyKorean(currentUsdVal);
+      document.getElementById('simUsdReturn').textContent = `${usdReturn >= 0 ? '+' : ''}${usdReturn.toFixed(1)}% ($${Math.round(usdExchanged).toLocaleString()})`;
+      document.getElementById('simUsdDesc').textContent = 
+        `환율 ${pastUsdRate}원 ➔ ${latestUsdRate}원으로 원화 가치 소폭 방어, 금 대비 실질 구매력은 -${(100 - (pastRecord.fiat_power_usd / latestRecord.fiat_power_usd * 100 * (pastRecord.gold_usd.toz / latestRecord.gold_usd.toz))).toFixed(0)}% 증발`;
+
+      // 3) 원화 현금 방치 결과
+      const krwRemainingRatio = pastRecord.gold_krw.g / latestRecord.gold_krw.g;
+      const krwRealVal = amount * krwRemainingRatio;
+      const krwLoss = (1 - krwRemainingRatio) * 100;
+
+      document.getElementById('simKrwValue').textContent = `${formatMoneyKorean(krwRealVal)} (실질가치)`;
+      document.getElementById('simKrwReturn').textContent = `-${krwLoss.toFixed(1)}% (구매력 증발)`;
+      document.getElementById('simKrwDesc').textContent = 
+        `명목 잔고는 ${formatMoneyKorean(amount)} 그대로이나, 당시 살 수 있던 실물 금의 ${(krwRemainingRatio * 100).toFixed(1)}%밖에 못 사는 종이화폐로 축소`;
+    }
+
+    function formatMoneyKorean(val) {
+      if (val >= 100000000) {
+        const eok = Math.floor(val / 100000000);
+        const man = Math.round((val % 100000000) / 10000);
+        return `${eok}억 ${man > 0 ? man.toLocaleString() + '만 ' : ''}원`;
+      } else if (val >= 10000) {
+        return `${Math.round(val / 10000).toLocaleString()}만 원`;
+      }
+      return `${Math.round(val).toLocaleString()}원`;
+    }
+
+    document.addEventListener('DOMContentLoaded', loadGoldData);
+  </script>
+</body>
+</html>

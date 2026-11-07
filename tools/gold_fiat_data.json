@@ -1,0 +1,5180 @@
+{
+  "meta": {
+    "title": "금 vs 실용화폐 23년 실물가치 변동 시계열 (2004~2026)",
+    "source": "Yahoo Finance (GC=F, KRW=X)",
+    "updated": "2026-11-07",
+    "units": {
+      "toz_to_g": 31.1034768,
+      "don_to_g": 3.75,
+      "kg_to_g": 1000.0
+    },
+    "start_date": "2004-01",
+    "end_date": "2026-11",
+    "total_months": 235,
+    "total_years": 23
+  },
+  "yearly": [
+    {
+      "date": "2004-12",
+      "year": 2004,
+      "month": 12,
+      "usdkrw": 1002.6,
+      "gold_usd": {
+        "g": 14.07,
+        "don": 52.75,
+        "toz": 437.5,
+        "kg": 14066.0
+      },
+      "gold_krw": {
+        "g": 14103,
+        "don": 52884,
+        "toz": 438638,
+        "kg": 14102523
+      },
+      "fiat_power_usd": 91.9,
+      "fiat_power_krw": 107.5
+    },
+    {
+      "date": "2005-12",
+      "year": 2005,
+      "month": 12,
+      "usdkrw": 999.3,
+      "gold_usd": {
+        "g": 16.63,
+        "don": 62.34,
+        "toz": 517.1,
+        "kg": 16625.2
+      },
+      "gold_krw": {
+        "g": 16613,
+        "don": 62299,
+        "toz": 516728,
+        "kg": 16613181
+      },
+      "fiat_power_usd": 77.8,
+      "fiat_power_krw": 91.3
+    },
+    {
+      "date": "2006-12",
+      "year": 2006,
+      "month": 12,
+      "usdkrw": 887.0,
+      "gold_usd": {
+        "g": 20.42,
+        "don": 76.58,
+        "toz": 635.2,
+        "kg": 20422.2
+      },
+      "gold_krw": {
+        "g": 18115,
+        "don": 67933,
+        "toz": 563454,
+        "kg": 18115472
+      },
+      "fiat_power_usd": 63.3,
+      "fiat_power_krw": 83.7
+    },
+    {
+      "date": "2007-12",
+      "year": 2007,
+      "month": 12,
+      "usdkrw": 926.4,
+      "gold_usd": {
+        "g": 26.84,
+        "don": 100.66,
+        "toz": 834.9,
+        "kg": 26842.7
+      },
+      "gold_krw": {
+        "g": 24866,
+        "don": 93247,
+        "toz": 773418,
+        "kg": 24865965
+      },
+      "fiat_power_usd": 48.2,
+      "fiat_power_krw": 61.0
+    },
+    {
+      "date": "2008-12",
+      "year": 2008,
+      "month": 12,
+      "usdkrw": 1242.2,
+      "gold_usd": {
+        "g": 28.41,
+        "don": 106.53,
+        "toz": 883.6,
+        "kg": 28408.4
+      },
+      "gold_krw": {
+        "g": 35289,
+        "don": 132333,
+        "toz": 1097608,
+        "kg": 35288914
+      },
+      "fiat_power_usd": 45.5,
+      "fiat_power_krw": 43.0
+    },
+    {
+      "date": "2009-12",
+      "year": 2009,
+      "month": 12,
+      "usdkrw": 1151.1,
+      "gold_usd": {
+        "g": 35.21,
+        "don": 132.04,
+        "toz": 1095.2,
+        "kg": 35211.5
+      },
+      "gold_krw": {
+        "g": 40532,
+        "don": 151995,
+        "toz": 1260685,
+        "kg": 40531955
+      },
+      "fiat_power_usd": 36.7,
+      "fiat_power_krw": 37.4
+    },
+    {
+      "date": "2010-12",
+      "year": 2010,
+      "month": 12,
+      "usdkrw": 1127.1,
+      "gold_usd": {
+        "g": 45.69,
+        "don": 171.34,
+        "toz": 1421.1,
+        "kg": 45689.4
+      },
+      "gold_krw": {
+        "g": 51497,
+        "don": 193112,
+        "toz": 1601722,
+        "kg": 51496552
+      },
+      "fiat_power_usd": 28.3,
+      "fiat_power_krw": 29.4
+    },
+    {
+      "date": "2011-12",
+      "year": 2011,
+      "month": 12,
+      "usdkrw": 1155.4,
+      "gold_usd": {
+        "g": 50.34,
+        "don": 188.78,
+        "toz": 1565.8,
+        "kg": 50341.6
+      },
+      "gold_krw": {
+        "g": 58165,
+        "don": 218118,
+        "toz": 1809125,
+        "kg": 58164730
+      },
+      "fiat_power_usd": 25.7,
+      "fiat_power_krw": 26.1
+    },
+    {
+      "date": "2012-12",
+      "year": 2012,
+      "month": 12,
+      "usdkrw": 1038.1,
+      "gold_usd": {
+        "g": 53.85,
+        "don": 201.92,
+        "toz": 1674.8,
+        "kg": 53846.1
+      },
+      "gold_krw": {
+        "g": 55898,
+        "don": 209616,
+        "toz": 1738610,
+        "kg": 55897606
+      },
+      "fiat_power_usd": 24.0,
+      "fiat_power_krw": 27.1
+    },
+    {
+      "date": "2013-11",
+      "year": 2013,
+      "month": 11,
+      "usdkrw": 1057.1,
+      "gold_usd": {
+        "g": 40.21,
+        "don": 150.78,
+        "toz": 1250.6,
+        "kg": 40207.7
+      },
+      "gold_krw": {
+        "g": 42504,
+        "don": 159388,
+        "toz": 1322009,
+        "kg": 42503585
+      },
+      "fiat_power_usd": 32.2,
+      "fiat_power_krw": 35.7
+    },
+    {
+      "date": "2014-12",
+      "year": 2014,
+      "month": 12,
+      "usdkrw": 1095.3,
+      "gold_usd": {
+        "g": 38.06,
+        "don": 142.74,
+        "toz": 1183.9,
+        "kg": 38063.3
+      },
+      "gold_krw": {
+        "g": 41691,
+        "don": 156340,
+        "toz": 1296726,
+        "kg": 41690698
+      },
+      "fiat_power_usd": 34.0,
+      "fiat_power_krw": 36.4
+    },
+    {
+      "date": "2015-12",
+      "year": 2015,
+      "month": 12,
+      "usdkrw": 1175.4,
+      "gold_usd": {
+        "g": 34.09,
+        "don": 127.84,
+        "toz": 1060.3,
+        "kg": 34089.4
+      },
+      "gold_krw": {
+        "g": 40070,
+        "don": 150263,
+        "toz": 1246319,
+        "kg": 40070087
+      },
+      "fiat_power_usd": 37.9,
+      "fiat_power_krw": 37.8
+    },
+    {
+      "date": "2016-12",
+      "year": 2016,
+      "month": 12,
+      "usdkrw": 1206.3,
+      "gold_usd": {
+        "g": 36.97,
+        "don": 138.65,
+        "toz": 1150.0,
+        "kg": 36973.4
+      },
+      "gold_krw": {
+        "g": 44599,
+        "don": 167248,
+        "toz": 1387199,
+        "kg": 44599483
+      },
+      "fiat_power_usd": 35.0,
+      "fiat_power_krw": 34.0
+    },
+    {
+      "date": "2017-12",
+      "year": 2017,
+      "month": 12,
+      "usdkrw": 1066.4,
+      "gold_usd": {
+        "g": 42.0,
+        "don": 157.49,
+        "toz": 1306.3,
+        "kg": 41998.5
+      },
+      "gold_krw": {
+        "g": 44786,
+        "don": 167949,
+        "toz": 1393012,
+        "kg": 44786382
+      },
+      "fiat_power_usd": 30.8,
+      "fiat_power_krw": 33.9
+    },
+    {
+      "date": "2018-12",
+      "year": 2018,
+      "month": 12,
+      "usdkrw": 1116.3,
+      "gold_usd": {
+        "g": 41.1,
+        "don": 154.12,
+        "toz": 1278.3,
+        "kg": 41098.3
+      },
+      "gold_krw": {
+        "g": 45878,
+        "don": 172043,
+        "toz": 1426966,
+        "kg": 45878032
+      },
+      "fiat_power_usd": 31.5,
+      "fiat_power_krw": 33.1
+    },
+    {
+      "date": "2019-11",
+      "year": 2019,
+      "month": 11,
+      "usdkrw": 1181.6,
+      "gold_usd": {
+        "g": 47.12,
+        "don": 176.7,
+        "toz": 1465.6,
+        "kg": 47120.1
+      },
+      "gold_krw": {
+        "g": 55676,
+        "don": 208784,
+        "toz": 1731709,
+        "kg": 55675737
+      },
+      "fiat_power_usd": 27.4,
+      "fiat_power_krw": 27.2
+    },
+    {
+      "date": "2020-12",
+      "year": 2020,
+      "month": 12,
+      "usdkrw": 1086.4,
+      "gold_usd": {
+        "g": 60.93,
+        "don": 228.48,
+        "toz": 1895.1,
+        "kg": 60928.9
+      },
+      "gold_krw": {
+        "g": 66194,
+        "don": 248229,
+        "toz": 2058875,
+        "kg": 66194354
+      },
+      "fiat_power_usd": 21.2,
+      "fiat_power_krw": 22.9
+    },
+    {
+      "date": "2021-12",
+      "year": 2021,
+      "month": 12,
+      "usdkrw": 1189.9,
+      "gold_usd": {
+        "g": 58.79,
+        "don": 220.47,
+        "toz": 1828.6,
+        "kg": 58790.9
+      },
+      "gold_krw": {
+        "g": 69955,
+        "don": 262330,
+        "toz": 2175833,
+        "kg": 69954651
+      },
+      "fiat_power_usd": 22.0,
+      "fiat_power_krw": 21.7
+    },
+    {
+      "date": "2022-12",
+      "year": 2022,
+      "month": 12,
+      "usdkrw": 1260.9,
+      "gold_usd": {
+        "g": 58.71,
+        "don": 220.18,
+        "toz": 1826.2,
+        "kg": 58713.7
+      },
+      "gold_krw": {
+        "g": 74033,
+        "don": 277623,
+        "toz": 2302674,
+        "kg": 74032683
+      },
+      "fiat_power_usd": 22.0,
+      "fiat_power_krw": 20.5
+    },
+    {
+      "date": "2023-12",
+      "year": 2023,
+      "month": 12,
+      "usdkrw": 1293.5,
+      "gold_usd": {
+        "g": 66.61,
+        "don": 249.79,
+        "toz": 2071.8,
+        "kg": 66609.9
+      },
+      "gold_krw": {
+        "g": 86162,
+        "don": 323107,
+        "toz": 2679935,
+        "kg": 86161926
+      },
+      "fiat_power_usd": 19.4,
+      "fiat_power_krw": 17.6
+    },
+    {
+      "date": "2024-11",
+      "year": 2024,
+      "month": 11,
+      "usdkrw": 1399.9,
+      "gold_usd": {
+        "g": 85.42,
+        "don": 320.34,
+        "toz": 2657.0,
+        "kg": 85424.5
+      },
+      "gold_krw": {
+        "g": 119582,
+        "don": 448434,
+        "toz": 3719428,
+        "kg": 119582388
+      },
+      "fiat_power_usd": 15.1,
+      "fiat_power_krw": 12.7
+    },
+    {
+      "date": "2025-12",
+      "year": 2025,
+      "month": 12,
+      "usdkrw": 1437.9,
+      "gold_usd": {
+        "g": 139.57,
+        "don": 523.39,
+        "toz": 4341.1,
+        "kg": 139569.6
+      },
+      "gold_krw": {
+        "g": 200689,
+        "don": 752582,
+        "toz": 6242111,
+        "kg": 200688532
+      },
+      "fiat_power_usd": 9.3,
+      "fiat_power_krw": 7.6
+    },
+    {
+      "date": "2026-11",
+      "year": 2026,
+      "month": 11,
+      "usdkrw": 1363.7,
+      "gold_usd": {
+        "g": 131.01,
+        "don": 491.29,
+        "toz": 4074.9,
+        "kg": 131011.1
+      },
+      "gold_krw": {
+        "g": 178653,
+        "don": 669950,
+        "toz": 5556737,
+        "kg": 178653255
+      },
+      "fiat_power_usd": 9.9,
+      "fiat_power_krw": 8.5
+    }
+  ],
+  "monthly": [
+    {
+      "date": "2004-01",
+      "year": 2004,
+      "month": 1,
+      "usdkrw": 1172.6,
+      "gold_usd": {
+        "g": 12.93,
+        "don": 48.49,
+        "toz": 402.2,
+        "kg": 12931.0
+      },
+      "gold_krw": {
+        "g": 15163,
+        "don": 56861,
+        "toz": 471620,
+        "kg": 15162926
+      },
+      "fiat_power_usd": 100.0,
+      "fiat_power_krw": 100.0
+    },
+    {
+      "date": "2004-03",
+      "year": 2004,
+      "month": 3,
+      "usdkrw": 1166.3,
+      "gold_usd": {
+        "g": 13.74,
+        "don": 51.52,
+        "toz": 427.3,
+        "kg": 13738.0
+      },
+      "gold_krw": {
+        "g": 16023,
+        "don": 60085,
+        "toz": 498360,
+        "kg": 16022646
+      },
+      "fiat_power_usd": 94.1,
+      "fiat_power_krw": 94.6
+    },
+    {
+      "date": "2004-04",
+      "year": 2004,
+      "month": 4,
+      "usdkrw": 1162.7,
+      "gold_usd": {
+        "g": 12.44,
+        "don": 46.66,
+        "toz": 387.0,
+        "kg": 12442.3
+      },
+      "gold_krw": {
+        "g": 14467,
+        "don": 54250,
+        "toz": 449965,
+        "kg": 14466707
+      },
+      "fiat_power_usd": 103.9,
+      "fiat_power_krw": 104.8
+    },
+    {
+      "date": "2004-05",
+      "year": 2004,
+      "month": 5,
+      "usdkrw": 1159.4,
+      "gold_usd": {
+        "g": 12.67,
+        "don": 47.5,
+        "toz": 394.0,
+        "kg": 12667.4
+      },
+      "gold_krw": {
+        "g": 14687,
+        "don": 55075,
+        "toz": 456804,
+        "kg": 14686577
+      },
+      "fiat_power_usd": 102.1,
+      "fiat_power_krw": 103.2
+    },
+    {
+      "date": "2004-06",
+      "year": 2004,
+      "month": 6,
+      "usdkrw": 1155.7,
+      "gold_usd": {
+        "g": 12.62,
+        "don": 47.33,
+        "toz": 392.6,
+        "kg": 12622.4
+      },
+      "gold_krw": {
+        "g": 14588,
+        "don": 54704,
+        "toz": 453728,
+        "kg": 14587688
+      },
+      "fiat_power_usd": 102.5,
+      "fiat_power_krw": 103.9
+    },
+    {
+      "date": "2004-07",
+      "year": 2004,
+      "month": 7,
+      "usdkrw": 1164.6,
+      "gold_usd": {
+        "g": 12.57,
+        "don": 47.14,
+        "toz": 391.0,
+        "kg": 12570.9
+      },
+      "gold_krw": {
+        "g": 14640,
+        "don": 54900,
+        "toz": 455359,
+        "kg": 14640119
+      },
+      "fiat_power_usd": 102.9,
+      "fiat_power_krw": 103.6
+    },
+    {
+      "date": "2004-09",
+      "year": 2004,
+      "month": 9,
+      "usdkrw": 1150.8,
+      "gold_usd": {
+        "g": 13.46,
+        "don": 50.48,
+        "toz": 418.7,
+        "kg": 13461.5
+      },
+      "gold_krw": {
+        "g": 15492,
+        "don": 58093,
+        "toz": 481840,
+        "kg": 15491514
+      },
+      "fiat_power_usd": 96.1,
+      "fiat_power_krw": 97.9
+    },
+    {
+      "date": "2004-10",
+      "year": 2004,
+      "month": 10,
+      "usdkrw": 1103.0,
+      "gold_usd": {
+        "g": 13.78,
+        "don": 51.66,
+        "toz": 428.5,
+        "kg": 13776.6
+      },
+      "gold_krw": {
+        "g": 15196,
+        "don": 56983,
+        "toz": 472636,
+        "kg": 15195584
+      },
+      "fiat_power_usd": 93.8,
+      "fiat_power_krw": 99.8
+    },
+    {
+      "date": "2004-11",
+      "year": 2004,
+      "month": 11,
+      "usdkrw": 1047.6,
+      "gold_usd": {
+        "g": 14.51,
+        "don": 54.41,
+        "toz": 451.3,
+        "kg": 14509.6
+      },
+      "gold_krw": {
+        "g": 15200,
+        "don": 57001,
+        "toz": 472782,
+        "kg": 15200290
+      },
+      "fiat_power_usd": 89.1,
+      "fiat_power_krw": 99.8
+    },
+    {
+      "date": "2004-12",
+      "year": 2004,
+      "month": 12,
+      "usdkrw": 1002.6,
+      "gold_usd": {
+        "g": 14.07,
+        "don": 52.75,
+        "toz": 437.5,
+        "kg": 14066.0
+      },
+      "gold_krw": {
+        "g": 14103,
+        "don": 52884,
+        "toz": 438638,
+        "kg": 14102523
+      },
+      "fiat_power_usd": 91.9,
+      "fiat_power_krw": 107.5
+    },
+    {
+      "date": "2005-01",
+      "year": 2005,
+      "month": 1,
+      "usdkrw": 1025.4,
+      "gold_usd": {
+        "g": 13.56,
+        "don": 50.85,
+        "toz": 421.8,
+        "kg": 13561.2
+      },
+      "gold_krw": {
+        "g": 13906,
+        "don": 52147,
+        "toz": 432518,
+        "kg": 13905775
+      },
+      "fiat_power_usd": 95.4,
+      "fiat_power_krw": 109.0
+    },
+    {
+      "date": "2005-02",
+      "year": 2005,
+      "month": 2,
+      "usdkrw": 1003.8,
+      "gold_usd": {
+        "g": 14.03,
+        "don": 52.63,
+        "toz": 436.5,
+        "kg": 14033.8
+      },
+      "gold_krw": {
+        "g": 14087,
+        "don": 52827,
+        "toz": 438159,
+        "kg": 14087129
+      },
+      "fiat_power_usd": 92.2,
+      "fiat_power_krw": 107.6
+    },
+    {
+      "date": "2005-03",
+      "year": 2005,
+      "month": 3,
+      "usdkrw": 1017.0,
+      "gold_usd": {
+        "g": 13.78,
+        "don": 51.69,
+        "toz": 428.7,
+        "kg": 13783.0
+      },
+      "gold_krw": {
+        "g": 14017,
+        "don": 52565,
+        "toz": 435988,
+        "kg": 14017336
+      },
+      "fiat_power_usd": 93.8,
+      "fiat_power_krw": 108.2
+    },
+    {
+      "date": "2005-04",
+      "year": 2005,
+      "month": 4,
+      "usdkrw": 993.0,
+      "gold_usd": {
+        "g": 13.99,
+        "don": 52.45,
+        "toz": 435.0,
+        "kg": 13985.6
+      },
+      "gold_krw": {
+        "g": 13888,
+        "don": 52079,
+        "toz": 431955,
+        "kg": 13887676
+      },
+      "fiat_power_usd": 92.4,
+      "fiat_power_krw": 109.2
+    },
+    {
+      "date": "2005-06",
+      "year": 2005,
+      "month": 6,
+      "usdkrw": 1033.8,
+      "gold_usd": {
+        "g": 14.01,
+        "don": 52.55,
+        "toz": 435.9,
+        "kg": 14014.5
+      },
+      "gold_krw": {
+        "g": 14488,
+        "don": 54331,
+        "toz": 450633,
+        "kg": 14488201
+      },
+      "fiat_power_usd": 92.3,
+      "fiat_power_krw": 104.7
+    },
+    {
+      "date": "2005-07",
+      "year": 2005,
+      "month": 7,
+      "usdkrw": 1017.0,
+      "gold_usd": {
+        "g": 13.82,
+        "don": 51.83,
+        "toz": 429.9,
+        "kg": 13821.6
+      },
+      "gold_krw": {
+        "g": 14057,
+        "don": 52712,
+        "toz": 437208,
+        "kg": 14056573
+      },
+      "fiat_power_usd": 93.6,
+      "fiat_power_krw": 107.9
+    },
+    {
+      "date": "2005-08",
+      "year": 2005,
+      "month": 8,
+      "usdkrw": 1039.5,
+      "gold_usd": {
+        "g": 13.95,
+        "don": 52.3,
+        "toz": 433.8,
+        "kg": 13947.0
+      },
+      "gold_krw": {
+        "g": 14498,
+        "don": 54367,
+        "toz": 450935,
+        "kg": 14497900
+      },
+      "fiat_power_usd": 92.7,
+      "fiat_power_krw": 104.6
+    },
+    {
+      "date": "2005-09",
+      "year": 2005,
+      "month": 9,
+      "usdkrw": 1032.1,
+      "gold_usd": {
+        "g": 15.08,
+        "don": 56.55,
+        "toz": 469.0,
+        "kg": 15078.7
+      },
+      "gold_krw": {
+        "g": 15563,
+        "don": 58360,
+        "toz": 484055,
+        "kg": 15562726
+      },
+      "fiat_power_usd": 85.7,
+      "fiat_power_krw": 97.4
+    },
+    {
+      "date": "2005-10",
+      "year": 2005,
+      "month": 10,
+      "usdkrw": 1044.1,
+      "gold_usd": {
+        "g": 14.95,
+        "don": 56.07,
+        "toz": 465.1,
+        "kg": 14953.3
+      },
+      "gold_krw": {
+        "g": 15613,
+        "don": 58548,
+        "toz": 485611,
+        "kg": 15612753
+      },
+      "fiat_power_usd": 86.5,
+      "fiat_power_krw": 97.1
+    },
+    {
+      "date": "2005-11",
+      "year": 2005,
+      "month": 11,
+      "usdkrw": 1019.1,
+      "gold_usd": {
+        "g": 15.9,
+        "don": 59.63,
+        "toz": 494.6,
+        "kg": 15901.8
+      },
+      "gold_krw": {
+        "g": 16205,
+        "don": 60771,
+        "toz": 504047,
+        "kg": 16205483
+      },
+      "fiat_power_usd": 81.3,
+      "fiat_power_krw": 93.6
+    },
+    {
+      "date": "2005-12",
+      "year": 2005,
+      "month": 12,
+      "usdkrw": 999.3,
+      "gold_usd": {
+        "g": 16.63,
+        "don": 62.34,
+        "toz": 517.1,
+        "kg": 16625.2
+      },
+      "gold_krw": {
+        "g": 16613,
+        "don": 62299,
+        "toz": 516728,
+        "kg": 16613181
+      },
+      "fiat_power_usd": 77.8,
+      "fiat_power_krw": 91.3
+    },
+    {
+      "date": "2006-02",
+      "year": 2006,
+      "month": 2,
+      "usdkrw": 952.8,
+      "gold_usd": {
+        "g": 18.06,
+        "don": 67.71,
+        "toz": 561.6,
+        "kg": 18055.9
+      },
+      "gold_krw": {
+        "g": 17203,
+        "don": 64511,
+        "toz": 535070,
+        "kg": 17202900
+      },
+      "fiat_power_usd": 71.6,
+      "fiat_power_krw": 88.1
+    },
+    {
+      "date": "2006-03",
+      "year": 2006,
+      "month": 3,
+      "usdkrw": 964.1,
+      "gold_usd": {
+        "g": 18.71,
+        "don": 70.14,
+        "toz": 581.8,
+        "kg": 18705.3
+      },
+      "gold_krw": {
+        "g": 18034,
+        "don": 67626,
+        "toz": 560908,
+        "kg": 18033597
+      },
+      "fiat_power_usd": 69.1,
+      "fiat_power_krw": 84.1
+    },
+    {
+      "date": "2006-04",
+      "year": 2006,
+      "month": 4,
+      "usdkrw": 894.2,
+      "gold_usd": {
+        "g": 20.96,
+        "don": 78.58,
+        "toz": 651.8,
+        "kg": 20955.9
+      },
+      "gold_krw": {
+        "g": 18739,
+        "don": 70271,
+        "toz": 582846,
+        "kg": 18738937
+      },
+      "fiat_power_usd": 61.7,
+      "fiat_power_krw": 80.9
+    },
+    {
+      "date": "2006-05",
+      "year": 2006,
+      "month": 5,
+      "usdkrw": 937.2,
+      "gold_usd": {
+        "g": 20.66,
+        "don": 77.46,
+        "toz": 642.5,
+        "kg": 20656.9
+      },
+      "gold_krw": {
+        "g": 19359,
+        "don": 72597,
+        "toz": 602138,
+        "kg": 19359191
+      },
+      "fiat_power_usd": 62.6,
+      "fiat_power_krw": 78.3
+    },
+    {
+      "date": "2006-06",
+      "year": 2006,
+      "month": 6,
+      "usdkrw": 936.5,
+      "gold_usd": {
+        "g": 19.72,
+        "don": 73.97,
+        "toz": 613.5,
+        "kg": 19724.5
+      },
+      "gold_krw": {
+        "g": 18471,
+        "don": 69267,
+        "toz": 574518,
+        "kg": 18471189
+      },
+      "fiat_power_usd": 65.6,
+      "fiat_power_krw": 82.1
+    },
+    {
+      "date": "2006-07",
+      "year": 2006,
+      "month": 7,
+      "usdkrw": 942.0,
+      "gold_usd": {
+        "g": 20.39,
+        "don": 76.46,
+        "toz": 634.2,
+        "kg": 20390.0
+      },
+      "gold_krw": {
+        "g": 19206,
+        "don": 72024,
+        "toz": 597385,
+        "kg": 19206364
+      },
+      "fiat_power_usd": 63.4,
+      "fiat_power_krw": 78.9
+    },
+    {
+      "date": "2006-08",
+      "year": 2006,
+      "month": 8,
+      "usdkrw": 950.1,
+      "gold_usd": {
+        "g": 20.12,
+        "don": 75.46,
+        "toz": 625.9,
+        "kg": 20123.2
+      },
+      "gold_krw": {
+        "g": 19120,
+        "don": 71700,
+        "toz": 594699,
+        "kg": 19120013
+      },
+      "fiat_power_usd": 64.3,
+      "fiat_power_krw": 79.3
+    },
+    {
+      "date": "2006-09",
+      "year": 2006,
+      "month": 9,
+      "usdkrw": 934.4,
+      "gold_usd": {
+        "g": 19.25,
+        "don": 72.17,
+        "toz": 598.6,
+        "kg": 19245.4
+      },
+      "gold_krw": {
+        "g": 17982,
+        "don": 67432,
+        "toz": 559302,
+        "kg": 17981974
+      },
+      "fiat_power_usd": 67.2,
+      "fiat_power_krw": 84.3
+    },
+    {
+      "date": "2006-11",
+      "year": 2006,
+      "month": 11,
+      "usdkrw": 919.8,
+      "gold_usd": {
+        "g": 20.8,
+        "don": 77.99,
+        "toz": 646.9,
+        "kg": 20798.3
+      },
+      "gold_krw": {
+        "g": 19131,
+        "don": 71739,
+        "toz": 595025,
+        "kg": 19130501
+      },
+      "fiat_power_usd": 62.2,
+      "fiat_power_krw": 79.3
+    },
+    {
+      "date": "2006-12",
+      "year": 2006,
+      "month": 12,
+      "usdkrw": 887.0,
+      "gold_usd": {
+        "g": 20.42,
+        "don": 76.58,
+        "toz": 635.2,
+        "kg": 20422.2
+      },
+      "gold_krw": {
+        "g": 18115,
+        "don": 67933,
+        "toz": 563454,
+        "kg": 18115472
+      },
+      "fiat_power_usd": 63.3,
+      "fiat_power_krw": 83.7
+    },
+    {
+      "date": "2007-01",
+      "year": 2007,
+      "month": 1,
+      "usdkrw": 924.0,
+      "gold_usd": {
+        "g": 20.96,
+        "don": 78.61,
+        "toz": 652.0,
+        "kg": 20962.3
+      },
+      "gold_krw": {
+        "g": 19370,
+        "don": 72637,
+        "toz": 602474,
+        "kg": 19369991
+      },
+      "fiat_power_usd": 61.7,
+      "fiat_power_krw": 78.3
+    },
+    {
+      "date": "2007-02",
+      "year": 2007,
+      "month": 2,
+      "usdkrw": 928.6,
+      "gold_usd": {
+        "g": 21.52,
+        "don": 80.71,
+        "toz": 669.4,
+        "kg": 21521.7
+      },
+      "gold_krw": {
+        "g": 19985,
+        "don": 74944,
+        "toz": 621605,
+        "kg": 19985060
+      },
+      "fiat_power_usd": 60.1,
+      "fiat_power_krw": 75.9
+    },
+    {
+      "date": "2007-03",
+      "year": 2007,
+      "month": 3,
+      "usdkrw": 896.4,
+      "gold_usd": {
+        "g": 21.32,
+        "don": 79.93,
+        "toz": 663.0,
+        "kg": 21315.9
+      },
+      "gold_krw": {
+        "g": 19107,
+        "don": 71653,
+        "toz": 594307,
+        "kg": 19107400
+      },
+      "fiat_power_usd": 60.6,
+      "fiat_power_krw": 79.4
+    },
+    {
+      "date": "2007-05",
+      "year": 2007,
+      "month": 5,
+      "usdkrw": 931.4,
+      "gold_usd": {
+        "g": 21.25,
+        "don": 79.69,
+        "toz": 661.0,
+        "kg": 21251.6
+      },
+      "gold_krw": {
+        "g": 19794,
+        "don": 74227,
+        "toz": 615662,
+        "kg": 19793993
+      },
+      "fiat_power_usd": 60.8,
+      "fiat_power_krw": 76.6
+    },
+    {
+      "date": "2007-06",
+      "year": 2007,
+      "month": 6,
+      "usdkrw": 903.0,
+      "gold_usd": {
+        "g": 20.84,
+        "don": 78.14,
+        "toz": 648.1,
+        "kg": 20836.9
+      },
+      "gold_krw": {
+        "g": 18817,
+        "don": 70562,
+        "toz": 585260,
+        "kg": 18816553
+      },
+      "fiat_power_usd": 62.0,
+      "fiat_power_krw": 80.6
+    },
+    {
+      "date": "2007-08",
+      "year": 2007,
+      "month": 8,
+      "usdkrw": 937.1,
+      "gold_usd": {
+        "g": 21.64,
+        "don": 81.14,
+        "toz": 673.0,
+        "kg": 21637.5
+      },
+      "gold_krw": {
+        "g": 20276,
+        "don": 76037,
+        "toz": 630668,
+        "kg": 20276457
+      },
+      "fiat_power_usd": 59.8,
+      "fiat_power_krw": 74.8
+    },
+    {
+      "date": "2007-09",
+      "year": 2007,
+      "month": 9,
+      "usdkrw": 911.0,
+      "gold_usd": {
+        "g": 23.88,
+        "don": 89.56,
+        "toz": 742.8,
+        "kg": 23881.6
+      },
+      "gold_krw": {
+        "g": 21755,
+        "don": 81583,
+        "toz": 676669,
+        "kg": 21755398
+      },
+      "fiat_power_usd": 54.1,
+      "fiat_power_krw": 69.7
+    },
+    {
+      "date": "2007-10",
+      "year": 2007,
+      "month": 10,
+      "usdkrw": 898.7,
+      "gold_usd": {
+        "g": 25.46,
+        "don": 95.49,
+        "toz": 792.0,
+        "kg": 25463.4
+      },
+      "gold_krw": {
+        "g": 22884,
+        "don": 85814,
+        "toz": 711762,
+        "kg": 22883695
+      },
+      "fiat_power_usd": 50.8,
+      "fiat_power_krw": 66.3
+    },
+    {
+      "date": "2007-11",
+      "year": 2007,
+      "month": 11,
+      "usdkrw": 919.5,
+      "gold_usd": {
+        "g": 25.15,
+        "don": 94.31,
+        "toz": 782.2,
+        "kg": 25148.3
+      },
+      "gold_krw": {
+        "g": 23123,
+        "don": 86713,
+        "toz": 719217,
+        "kg": 23123372
+      },
+      "fiat_power_usd": 51.4,
+      "fiat_power_krw": 65.6
+    },
+    {
+      "date": "2007-12",
+      "year": 2007,
+      "month": 12,
+      "usdkrw": 926.4,
+      "gold_usd": {
+        "g": 26.84,
+        "don": 100.66,
+        "toz": 834.9,
+        "kg": 26842.7
+      },
+      "gold_krw": {
+        "g": 24866,
+        "don": 93247,
+        "toz": 773418,
+        "kg": 24865965
+      },
+      "fiat_power_usd": 48.2,
+      "fiat_power_krw": 61.0
+    },
+    {
+      "date": "2008-01",
+      "year": 2008,
+      "month": 1,
+      "usdkrw": 941.2,
+      "gold_usd": {
+        "g": 29.67,
+        "don": 111.25,
+        "toz": 922.7,
+        "kg": 29665.5
+      },
+      "gold_krw": {
+        "g": 27922,
+        "don": 104707,
+        "toz": 868464,
+        "kg": 27921756
+      },
+      "fiat_power_usd": 43.6,
+      "fiat_power_krw": 54.3
+    },
+    {
+      "date": "2008-02",
+      "year": 2008,
+      "month": 2,
+      "usdkrw": 937.8,
+      "gold_usd": {
+        "g": 31.25,
+        "don": 117.2,
+        "toz": 972.1,
+        "kg": 31253.7
+      },
+      "gold_krw": {
+        "g": 29311,
+        "don": 109916,
+        "toz": 911674,
+        "kg": 29311008
+      },
+      "fiat_power_usd": 41.4,
+      "fiat_power_krw": 51.7
+    },
+    {
+      "date": "2008-03",
+      "year": 2008,
+      "month": 3,
+      "usdkrw": 992.3,
+      "gold_usd": {
+        "g": 29.46,
+        "don": 110.46,
+        "toz": 916.2,
+        "kg": 29456.5
+      },
+      "gold_krw": {
+        "g": 29229,
+        "don": 109609,
+        "toz": 909127,
+        "kg": 29229110
+      },
+      "fiat_power_usd": 43.9,
+      "fiat_power_krw": 51.9
+    },
+    {
+      "date": "2008-04",
+      "year": 2008,
+      "month": 4,
+      "usdkrw": 1002.4,
+      "gold_usd": {
+        "g": 27.74,
+        "don": 104.02,
+        "toz": 862.8,
+        "kg": 27739.7
+      },
+      "gold_krw": {
+        "g": 27806,
+        "don": 104273,
+        "toz": 864871,
+        "kg": 27806239
+      },
+      "fiat_power_usd": 46.6,
+      "fiat_power_krw": 54.5
+    },
+    {
+      "date": "2008-05",
+      "year": 2008,
+      "month": 5,
+      "usdkrw": 1028.1,
+      "gold_usd": {
+        "g": 28.53,
+        "don": 106.98,
+        "toz": 887.3,
+        "kg": 28527.4
+      },
+      "gold_krw": {
+        "g": 29329,
+        "don": 109984,
+        "toz": 912233,
+        "kg": 29328976
+      },
+      "fiat_power_usd": 45.3,
+      "fiat_power_krw": 51.7
+    },
+    {
+      "date": "2008-07",
+      "year": 2008,
+      "month": 7,
+      "usdkrw": 1010.7,
+      "gold_usd": {
+        "g": 29.38,
+        "don": 110.18,
+        "toz": 913.9,
+        "kg": 29382.6
+      },
+      "gold_krw": {
+        "g": 29697,
+        "don": 111364,
+        "toz": 923679,
+        "kg": 29696961
+      },
+      "fiat_power_usd": 44.0,
+      "fiat_power_krw": 51.1
+    },
+    {
+      "date": "2008-08",
+      "year": 2008,
+      "month": 8,
+      "usdkrw": 1086.5,
+      "gold_usd": {
+        "g": 26.66,
+        "don": 99.98,
+        "toz": 829.3,
+        "kg": 26662.6
+      },
+      "gold_krw": {
+        "g": 28969,
+        "don": 108633,
+        "toz": 901034,
+        "kg": 28968930
+      },
+      "fiat_power_usd": 48.5,
+      "fiat_power_krw": 52.3
+    },
+    {
+      "date": "2008-09",
+      "year": 2008,
+      "month": 9,
+      "usdkrw": 1204.8,
+      "gold_usd": {
+        "g": 28.11,
+        "don": 105.4,
+        "toz": 874.2,
+        "kg": 28106.2
+      },
+      "gold_krw": {
+        "g": 33862,
+        "don": 126984,
+        "toz": 1053236,
+        "kg": 33862329
+      },
+      "fiat_power_usd": 46.0,
+      "fiat_power_krw": 44.8
+    },
+    {
+      "date": "2008-10",
+      "year": 2008,
+      "month": 10,
+      "usdkrw": 1289.2,
+      "gold_usd": {
+        "g": 23.05,
+        "don": 86.42,
+        "toz": 716.8,
+        "kg": 23045.7
+      },
+      "gold_krw": {
+        "g": 29710,
+        "don": 111414,
+        "toz": 924099,
+        "kg": 29710459
+      },
+      "fiat_power_usd": 56.1,
+      "fiat_power_krw": 51.0
+    },
+    {
+      "date": "2008-11",
+      "year": 2008,
+      "month": 11,
+      "usdkrw": 1462.4,
+      "gold_usd": {
+        "g": 26.24,
+        "don": 98.41,
+        "toz": 816.2,
+        "kg": 26241.4
+      },
+      "gold_krw": {
+        "g": 38375,
+        "don": 143908,
+        "toz": 1193611,
+        "kg": 38375481
+      },
+      "fiat_power_usd": 49.3,
+      "fiat_power_krw": 39.5
+    },
+    {
+      "date": "2008-12",
+      "year": 2008,
+      "month": 12,
+      "usdkrw": 1242.2,
+      "gold_usd": {
+        "g": 28.41,
+        "don": 106.53,
+        "toz": 883.6,
+        "kg": 28408.4
+      },
+      "gold_krw": {
+        "g": 35289,
+        "don": 132333,
+        "toz": 1097608,
+        "kg": 35288914
+      },
+      "fiat_power_usd": 45.5,
+      "fiat_power_krw": 43.0
+    },
+    {
+      "date": "2009-01",
+      "year": 2009,
+      "month": 1,
+      "usdkrw": 1356.8,
+      "gold_usd": {
+        "g": 29.81,
+        "don": 111.8,
+        "toz": 927.3,
+        "kg": 29813.4
+      },
+      "gold_krw": {
+        "g": 40451,
+        "don": 151691,
+        "toz": 1258161,
+        "kg": 40450804
+      },
+      "fiat_power_usd": 43.4,
+      "fiat_power_krw": 37.5
+    },
+    {
+      "date": "2009-04",
+      "year": 2009,
+      "month": 4,
+      "usdkrw": 1278.1,
+      "gold_usd": {
+        "g": 28.64,
+        "don": 107.39,
+        "toz": 890.7,
+        "kg": 28636.7
+      },
+      "gold_krw": {
+        "g": 36601,
+        "don": 137252,
+        "toz": 1138404,
+        "kg": 36600528
+      },
+      "fiat_power_usd": 45.1,
+      "fiat_power_krw": 41.4
+    },
+    {
+      "date": "2009-05",
+      "year": 2009,
+      "month": 5,
+      "usdkrw": 1253.3,
+      "gold_usd": {
+        "g": 31.47,
+        "don": 118.01,
+        "toz": 978.8,
+        "kg": 31469.2
+      },
+      "gold_krw": {
+        "g": 39440,
+        "don": 147901,
+        "toz": 1226730,
+        "kg": 39440287
+      },
+      "fiat_power_usd": 41.1,
+      "fiat_power_krw": 38.4
+    },
+    {
+      "date": "2009-06",
+      "year": 2009,
+      "month": 6,
+      "usdkrw": 1272.6,
+      "gold_usd": {
+        "g": 29.81,
+        "don": 111.78,
+        "toz": 927.1,
+        "kg": 29807.0
+      },
+      "gold_krw": {
+        "g": 37932,
+        "don": 142246,
+        "toz": 1179827,
+        "kg": 37932334
+      },
+      "fiat_power_usd": 43.4,
+      "fiat_power_krw": 40.0
+    },
+    {
+      "date": "2009-07",
+      "year": 2009,
+      "month": 7,
+      "usdkrw": 1223.1,
+      "gold_usd": {
+        "g": 30.66,
+        "don": 114.98,
+        "toz": 953.7,
+        "kg": 30662.2
+      },
+      "gold_krw": {
+        "g": 37503,
+        "don": 140636,
+        "toz": 1166470,
+        "kg": 37502896
+      },
+      "fiat_power_usd": 42.2,
+      "fiat_power_krw": 40.4
+    },
+    {
+      "date": "2009-08",
+      "year": 2009,
+      "month": 8,
+      "usdkrw": 1249.5,
+      "gold_usd": {
+        "g": 30.6,
+        "don": 114.74,
+        "toz": 951.7,
+        "kg": 30597.9
+      },
+      "gold_krw": {
+        "g": 38232,
+        "don": 143370,
+        "toz": 1189149,
+        "kg": 38232033
+      },
+      "fiat_power_usd": 42.3,
+      "fiat_power_krw": 39.7
+    },
+    {
+      "date": "2009-09",
+      "year": 2009,
+      "month": 9,
+      "usdkrw": 1173.7,
+      "gold_usd": {
+        "g": 32.41,
+        "don": 121.53,
+        "toz": 1008.0,
+        "kg": 32408.0
+      },
+      "gold_krw": {
+        "g": 38037,
+        "don": 142640,
+        "toz": 1183090,
+        "kg": 38037214
+      },
+      "fiat_power_usd": 39.9,
+      "fiat_power_krw": 39.9
+    },
+    {
+      "date": "2009-10",
+      "year": 2009,
+      "month": 10,
+      "usdkrw": 1162.8,
+      "gold_usd": {
+        "g": 33.43,
+        "don": 125.35,
+        "toz": 1039.7,
+        "kg": 33427.1
+      },
+      "gold_krw": {
+        "g": 38869,
+        "don": 145759,
+        "toz": 1208963,
+        "kg": 38869068
+      },
+      "fiat_power_usd": 38.7,
+      "fiat_power_krw": 39.0
+    },
+    {
+      "date": "2009-12",
+      "year": 2009,
+      "month": 12,
+      "usdkrw": 1151.1,
+      "gold_usd": {
+        "g": 35.21,
+        "don": 132.04,
+        "toz": 1095.2,
+        "kg": 35211.5
+      },
+      "gold_krw": {
+        "g": 40532,
+        "don": 151995,
+        "toz": 1260685,
+        "kg": 40531955
+      },
+      "fiat_power_usd": 36.7,
+      "fiat_power_krw": 37.4
+    },
+    {
+      "date": "2010-01",
+      "year": 2010,
+      "month": 1,
+      "usdkrw": 1147.7,
+      "gold_usd": {
+        "g": 34.82,
+        "don": 130.57,
+        "toz": 1083.0,
+        "kg": 34819.3
+      },
+      "gold_krw": {
+        "g": 39962,
+        "don": 149858,
+        "toz": 1242959,
+        "kg": 39962063
+      },
+      "fiat_power_usd": 37.1,
+      "fiat_power_krw": 37.9
+    },
+    {
+      "date": "2010-02",
+      "year": 2010,
+      "month": 2,
+      "usdkrw": 1133.6,
+      "gold_usd": {
+        "g": 35.95,
+        "don": 134.83,
+        "toz": 1118.3,
+        "kg": 35954.2
+      },
+      "gold_krw": {
+        "g": 40758,
+        "don": 152841,
+        "toz": 1267705,
+        "kg": 40757658
+      },
+      "fiat_power_usd": 36.0,
+      "fiat_power_krw": 37.2
+    },
+    {
+      "date": "2010-03",
+      "year": 2010,
+      "month": 3,
+      "usdkrw": 1131.6,
+      "gold_usd": {
+        "g": 35.79,
+        "don": 134.23,
+        "toz": 1113.3,
+        "kg": 35793.4
+      },
+      "gold_krw": {
+        "g": 40504,
+        "don": 151889,
+        "toz": 1259810,
+        "kg": 40503841
+      },
+      "fiat_power_usd": 36.1,
+      "fiat_power_krw": 37.4
+    },
+    {
+      "date": "2010-04",
+      "year": 2010,
+      "month": 4,
+      "usdkrw": 1107.9,
+      "gold_usd": {
+        "g": 37.94,
+        "don": 142.28,
+        "toz": 1180.1,
+        "kg": 37941.1
+      },
+      "gold_krw": {
+        "g": 42035,
+        "don": 157631,
+        "toz": 1307433,
+        "kg": 42034940
+      },
+      "fiat_power_usd": 34.1,
+      "fiat_power_krw": 36.1
+    },
+    {
+      "date": "2010-05",
+      "year": 2010,
+      "month": 5,
+      "usdkrw": 1200.0,
+      "gold_usd": {
+        "g": 38.97,
+        "don": 146.15,
+        "toz": 1212.2,
+        "kg": 38973.1
+      },
+      "gold_krw": {
+        "g": 46768,
+        "don": 175379,
+        "toz": 1454640,
+        "kg": 46767762
+      },
+      "fiat_power_usd": 33.2,
+      "fiat_power_krw": 32.4
+    },
+    {
+      "date": "2010-06",
+      "year": 2010,
+      "month": 6,
+      "usdkrw": 1227.2,
+      "gold_usd": {
+        "g": 40.04,
+        "don": 150.16,
+        "toz": 1245.5,
+        "kg": 40043.8
+      },
+      "gold_krw": {
+        "g": 49142,
+        "don": 184281,
+        "toz": 1528478,
+        "kg": 49141696
+      },
+      "fiat_power_usd": 32.3,
+      "fiat_power_krw": 30.9
+    },
+    {
+      "date": "2010-07",
+      "year": 2010,
+      "month": 7,
+      "usdkrw": 1184.1,
+      "gold_usd": {
+        "g": 37.99,
+        "don": 142.47,
+        "toz": 1181.7,
+        "kg": 37992.5
+      },
+      "gold_krw": {
+        "g": 44987,
+        "don": 168701,
+        "toz": 1399251,
+        "kg": 44986963
+      },
+      "fiat_power_usd": 34.0,
+      "fiat_power_krw": 33.7
+    },
+    {
+      "date": "2010-09",
+      "year": 2010,
+      "month": 9,
+      "usdkrw": 1139.2,
+      "gold_usd": {
+        "g": 42.05,
+        "don": 157.68,
+        "toz": 1307.8,
+        "kg": 42046.7
+      },
+      "gold_krw": {
+        "g": 47900,
+        "don": 179624,
+        "toz": 1489846,
+        "kg": 47899653
+      },
+      "fiat_power_usd": 30.7,
+      "fiat_power_krw": 31.7
+    },
+    {
+      "date": "2010-10",
+      "year": 2010,
+      "month": 10,
+      "usdkrw": 1132.4,
+      "gold_usd": {
+        "g": 43.63,
+        "don": 163.62,
+        "toz": 1357.1,
+        "kg": 43631.8
+      },
+      "gold_krw": {
+        "g": 49409,
+        "don": 185282,
+        "toz": 1536780,
+        "kg": 49408626
+      },
+      "fiat_power_usd": 29.6,
+      "fiat_power_krw": 30.7
+    },
+    {
+      "date": "2010-11",
+      "year": 2010,
+      "month": 11,
+      "usdkrw": 1163.0,
+      "gold_usd": {
+        "g": 44.53,
+        "don": 166.98,
+        "toz": 1385.0,
+        "kg": 44528.8
+      },
+      "gold_krw": {
+        "g": 51787,
+        "don": 194201,
+        "toz": 1610755,
+        "kg": 51786976
+      },
+      "fiat_power_usd": 29.0,
+      "fiat_power_krw": 29.3
+    },
+    {
+      "date": "2010-12",
+      "year": 2010,
+      "month": 12,
+      "usdkrw": 1127.1,
+      "gold_usd": {
+        "g": 45.69,
+        "don": 171.34,
+        "toz": 1421.1,
+        "kg": 45689.4
+      },
+      "gold_krw": {
+        "g": 51497,
+        "don": 193112,
+        "toz": 1601722,
+        "kg": 51496552
+      },
+      "fiat_power_usd": 28.3,
+      "fiat_power_krw": 29.4
+    },
+    {
+      "date": "2011-01",
+      "year": 2011,
+      "month": 1,
+      "usdkrw": 1117.4,
+      "gold_usd": {
+        "g": 42.88,
+        "don": 160.81,
+        "toz": 1333.8,
+        "kg": 42882.7
+      },
+      "gold_krw": {
+        "g": 47917,
+        "don": 179689,
+        "toz": 1490388,
+        "kg": 47917091
+      },
+      "fiat_power_usd": 30.2,
+      "fiat_power_krw": 31.6
+    },
+    {
+      "date": "2011-02",
+      "year": 2011,
+      "month": 2,
+      "usdkrw": 1127.1,
+      "gold_usd": {
+        "g": 45.31,
+        "don": 169.91,
+        "toz": 1409.3,
+        "kg": 45310.0
+      },
+      "gold_krw": {
+        "g": 51069,
+        "don": 191509,
+        "toz": 1588422,
+        "kg": 51068954
+      },
+      "fiat_power_usd": 28.5,
+      "fiat_power_krw": 29.7
+    },
+    {
+      "date": "2011-03",
+      "year": 2011,
+      "month": 3,
+      "usdkrw": 1098.3,
+      "gold_usd": {
+        "g": 46.26,
+        "don": 173.48,
+        "toz": 1438.9,
+        "kg": 46261.7
+      },
+      "gold_krw": {
+        "g": 50809,
+        "don": 190535,
+        "toz": 1580344,
+        "kg": 50809235
+      },
+      "fiat_power_usd": 28.0,
+      "fiat_power_krw": 29.8
+    },
+    {
+      "date": "2011-04",
+      "year": 2011,
+      "month": 4,
+      "usdkrw": 1068.8,
+      "gold_usd": {
+        "g": 50.03,
+        "don": 187.6,
+        "toz": 1556.0,
+        "kg": 50026.6
+      },
+      "gold_krw": {
+        "g": 53468,
+        "don": 200506,
+        "toz": 1663053,
+        "kg": 53468389
+      },
+      "fiat_power_usd": 25.8,
+      "fiat_power_krw": 28.4
+    },
+    {
+      "date": "2011-06",
+      "year": 2011,
+      "month": 6,
+      "usdkrw": 1068.9,
+      "gold_usd": {
+        "g": 48.3,
+        "don": 181.13,
+        "toz": 1502.3,
+        "kg": 48300.1
+      },
+      "gold_krw": {
+        "g": 51628,
+        "don": 193605,
+        "toz": 1605808,
+        "kg": 51627941
+      },
+      "fiat_power_usd": 26.8,
+      "fiat_power_krw": 29.4
+    },
+    {
+      "date": "2011-07",
+      "year": 2011,
+      "month": 7,
+      "usdkrw": 1049.0,
+      "gold_usd": {
+        "g": 52.35,
+        "don": 196.32,
+        "toz": 1628.3,
+        "kg": 52351.1
+      },
+      "gold_krw": {
+        "g": 54916,
+        "don": 205936,
+        "toz": 1708087,
+        "kg": 54916263
+      },
+      "fiat_power_usd": 24.7,
+      "fiat_power_krw": 27.6
+    },
+    {
+      "date": "2011-08",
+      "year": 2011,
+      "month": 8,
+      "usdkrw": 1071.8,
+      "gold_usd": {
+        "g": 58.79,
+        "don": 220.45,
+        "toz": 1828.5,
+        "kg": 58787.6
+      },
+      "gold_krw": {
+        "g": 63009,
+        "don": 236282,
+        "toz": 1959786,
+        "kg": 63008593
+      },
+      "fiat_power_usd": 22.0,
+      "fiat_power_krw": 24.1
+    },
+    {
+      "date": "2011-09",
+      "year": 2011,
+      "month": 9,
+      "usdkrw": 1177.0,
+      "gold_usd": {
+        "g": 52.1,
+        "don": 195.36,
+        "toz": 1620.4,
+        "kg": 52097.1
+      },
+      "gold_krw": {
+        "g": 61318,
+        "don": 229943,
+        "toz": 1907211,
+        "kg": 61318251
+      },
+      "fiat_power_usd": 24.8,
+      "fiat_power_krw": 24.7
+    },
+    {
+      "date": "2011-10",
+      "year": 2011,
+      "month": 10,
+      "usdkrw": 1104.0,
+      "gold_usd": {
+        "g": 55.43,
+        "don": 207.88,
+        "toz": 1724.2,
+        "kg": 55434.3
+      },
+      "gold_krw": {
+        "g": 61199,
+        "don": 229498,
+        "toz": 1903517,
+        "kg": 61199486
+      },
+      "fiat_power_usd": 23.3,
+      "fiat_power_krw": 24.8
+    },
+    {
+      "date": "2011-11",
+      "year": 2011,
+      "month": 11,
+      "usdkrw": 1140.3,
+      "gold_usd": {
+        "g": 56.12,
+        "don": 210.45,
+        "toz": 1745.5,
+        "kg": 56119.1
+      },
+      "gold_krw": {
+        "g": 63993,
+        "don": 239972,
+        "toz": 1990394,
+        "kg": 63992642
+      },
+      "fiat_power_usd": 23.0,
+      "fiat_power_krw": 23.7
+    },
+    {
+      "date": "2011-12",
+      "year": 2011,
+      "month": 12,
+      "usdkrw": 1155.4,
+      "gold_usd": {
+        "g": 50.34,
+        "don": 188.78,
+        "toz": 1565.8,
+        "kg": 50341.6
+      },
+      "gold_krw": {
+        "g": 58165,
+        "don": 218118,
+        "toz": 1809125,
+        "kg": 58164730
+      },
+      "fiat_power_usd": 25.7,
+      "fiat_power_krw": 26.1
+    },
+    {
+      "date": "2012-02",
+      "year": 2012,
+      "month": 2,
+      "usdkrw": 1124.6,
+      "gold_usd": {
+        "g": 54.97,
+        "don": 206.15,
+        "toz": 1709.9,
+        "kg": 54974.6
+      },
+      "gold_krw": {
+        "g": 61824,
+        "don": 231841,
+        "toz": 1922954,
+        "kg": 61824392
+      },
+      "fiat_power_usd": 23.5,
+      "fiat_power_krw": 24.5
+    },
+    {
+      "date": "2012-03",
+      "year": 2012,
+      "month": 3,
+      "usdkrw": 1130.7,
+      "gold_usd": {
+        "g": 53.67,
+        "don": 201.26,
+        "toz": 1669.3,
+        "kg": 53669.2
+      },
+      "gold_krw": {
+        "g": 60684,
+        "don": 227564,
+        "toz": 1887478,
+        "kg": 60683811
+      },
+      "fiat_power_usd": 24.1,
+      "fiat_power_krw": 25.0
+    },
+    {
+      "date": "2012-05",
+      "year": 2012,
+      "month": 5,
+      "usdkrw": 1179.7,
+      "gold_usd": {
+        "g": 50.24,
+        "don": 188.4,
+        "toz": 1562.6,
+        "kg": 50238.8
+      },
+      "gold_krw": {
+        "g": 59267,
+        "don": 222250,
+        "toz": 1843399,
+        "kg": 59266661
+      },
+      "fiat_power_usd": 25.7,
+      "fiat_power_krw": 25.6
+    },
+    {
+      "date": "2012-06",
+      "year": 2012,
+      "month": 6,
+      "usdkrw": 1114.0,
+      "gold_usd": {
+        "g": 51.55,
+        "don": 193.33,
+        "toz": 1603.5,
+        "kg": 51553.7
+      },
+      "gold_krw": {
+        "g": 57431,
+        "don": 215366,
+        "toz": 1786299,
+        "kg": 57430846
+      },
+      "fiat_power_usd": 25.1,
+      "fiat_power_krw": 26.4
+    },
+    {
+      "date": "2012-08",
+      "year": 2012,
+      "month": 8,
+      "usdkrw": 1133.6,
+      "gold_usd": {
+        "g": 54.16,
+        "don": 203.1,
+        "toz": 1684.6,
+        "kg": 54161.1
+      },
+      "gold_krw": {
+        "g": 61397,
+        "don": 230239,
+        "toz": 1909663,
+        "kg": 61397077
+      },
+      "fiat_power_usd": 23.9,
+      "fiat_power_krw": 24.7
+    },
+    {
+      "date": "2012-09",
+      "year": 2012,
+      "month": 9,
+      "usdkrw": 1096.6,
+      "gold_usd": {
+        "g": 56.94,
+        "don": 213.53,
+        "toz": 1771.1,
+        "kg": 56942.2
+      },
+      "gold_krw": {
+        "g": 62443,
+        "don": 234161,
+        "toz": 1942188,
+        "kg": 62442803
+      },
+      "fiat_power_usd": 22.7,
+      "fiat_power_krw": 24.3
+    },
+    {
+      "date": "2012-10",
+      "year": 2012,
+      "month": 10,
+      "usdkrw": 1090.3,
+      "gold_usd": {
+        "g": 55.22,
+        "don": 207.07,
+        "toz": 1717.5,
+        "kg": 55218.9
+      },
+      "gold_krw": {
+        "g": 60205,
+        "don": 225769,
+        "toz": 1872590,
+        "kg": 60205175
+      },
+      "fiat_power_usd": 23.4,
+      "fiat_power_krw": 25.2
+    },
+    {
+      "date": "2012-11",
+      "year": 2012,
+      "month": 11,
+      "usdkrw": 1082.1,
+      "gold_usd": {
+        "g": 55.01,
+        "don": 206.28,
+        "toz": 1710.9,
+        "kg": 55006.7
+      },
+      "gold_krw": {
+        "g": 59523,
+        "don": 223210,
+        "toz": 1851365,
+        "kg": 59522763
+      },
+      "fiat_power_usd": 23.5,
+      "fiat_power_krw": 25.5
+    },
+    {
+      "date": "2012-12",
+      "year": 2012,
+      "month": 12,
+      "usdkrw": 1038.1,
+      "gold_usd": {
+        "g": 53.85,
+        "don": 201.92,
+        "toz": 1674.8,
+        "kg": 53846.1
+      },
+      "gold_krw": {
+        "g": 55898,
+        "don": 209616,
+        "toz": 1738610,
+        "kg": 55897606
+      },
+      "fiat_power_usd": 24.0,
+      "fiat_power_krw": 27.1
+    },
+    {
+      "date": "2013-01",
+      "year": 2013,
+      "month": 1,
+      "usdkrw": 1085.4,
+      "gold_usd": {
+        "g": 53.39,
+        "don": 200.21,
+        "toz": 1660.6,
+        "kg": 53389.5
+      },
+      "gold_krw": {
+        "g": 57949,
+        "don": 217309,
+        "toz": 1802415,
+        "kg": 57948996
+      },
+      "fiat_power_usd": 24.2,
+      "fiat_power_krw": 26.2
+    },
+    {
+      "date": "2013-02",
+      "year": 2013,
+      "month": 2,
+      "usdkrw": 1083.9,
+      "gold_usd": {
+        "g": 50.72,
+        "don": 190.22,
+        "toz": 1577.7,
+        "kg": 50724.2
+      },
+      "gold_krw": {
+        "g": 54980,
+        "don": 206175,
+        "toz": 1710069,
+        "kg": 54979996
+      },
+      "fiat_power_usd": 25.5,
+      "fiat_power_krw": 27.6
+    },
+    {
+      "date": "2013-03",
+      "year": 2013,
+      "month": 3,
+      "usdkrw": 1090.0,
+      "gold_usd": {
+        "g": 51.27,
+        "don": 192.28,
+        "toz": 1594.8,
+        "kg": 51274.0
+      },
+      "gold_krw": {
+        "g": 55889,
+        "don": 209583,
+        "toz": 1738332,
+        "kg": 55888672
+      },
+      "fiat_power_usd": 25.2,
+      "fiat_power_krw": 27.1
+    },
+    {
+      "date": "2013-04",
+      "year": 2013,
+      "month": 4,
+      "usdkrw": 1103.2,
+      "gold_usd": {
+        "g": 47.33,
+        "don": 177.5,
+        "toz": 1472.2,
+        "kg": 47332.3
+      },
+      "gold_krw": {
+        "g": 52217,
+        "don": 195814,
+        "toz": 1624131,
+        "kg": 52217025
+      },
+      "fiat_power_usd": 27.3,
+      "fiat_power_krw": 29.0
+    },
+    {
+      "date": "2013-05",
+      "year": 2013,
+      "month": 5,
+      "usdkrw": 1127.6,
+      "gold_usd": {
+        "g": 44.77,
+        "don": 167.9,
+        "toz": 1392.6,
+        "kg": 44773.1
+      },
+      "gold_krw": {
+        "g": 50486,
+        "don": 189323,
+        "toz": 1570296,
+        "kg": 50486181
+      },
+      "fiat_power_usd": 28.9,
+      "fiat_power_krw": 30.0
+    },
+    {
+      "date": "2013-06",
+      "year": 2013,
+      "month": 6,
+      "usdkrw": 1122.1,
+      "gold_usd": {
+        "g": 39.35,
+        "don": 147.55,
+        "toz": 1223.8,
+        "kg": 39346.1
+      },
+      "gold_krw": {
+        "g": 44150,
+        "don": 165563,
+        "toz": 1373226,
+        "kg": 44150240
+      },
+      "fiat_power_usd": 32.9,
+      "fiat_power_krw": 34.3
+    },
+    {
+      "date": "2013-07",
+      "year": 2013,
+      "month": 7,
+      "usdkrw": 1113.3,
+      "gold_usd": {
+        "g": 42.19,
+        "don": 158.23,
+        "toz": 1312.4,
+        "kg": 42194.6
+      },
+      "gold_krw": {
+        "g": 46975,
+        "don": 176157,
+        "toz": 1461095,
+        "kg": 46975292
+      },
+      "fiat_power_usd": 30.6,
+      "fiat_power_krw": 32.3
+    },
+    {
+      "date": "2013-08",
+      "year": 2013,
+      "month": 8,
+      "usdkrw": 1086.0,
+      "gold_usd": {
+        "g": 44.89,
+        "don": 168.32,
+        "toz": 1396.1,
+        "kg": 44885.7
+      },
+      "gold_krw": {
+        "g": 48746,
+        "don": 182797,
+        "toz": 1516165,
+        "kg": 48745824
+      },
+      "fiat_power_usd": 28.8,
+      "fiat_power_krw": 31.1
+    },
+    {
+      "date": "2013-10",
+      "year": 2013,
+      "month": 10,
+      "usdkrw": 1058.2,
+      "gold_usd": {
+        "g": 42.55,
+        "don": 159.58,
+        "toz": 1323.6,
+        "kg": 42554.7
+      },
+      "gold_krw": {
+        "g": 45031,
+        "don": 168868,
+        "toz": 1400634,
+        "kg": 45031413
+      },
+      "fiat_power_usd": 30.4,
+      "fiat_power_krw": 33.7
+    },
+    {
+      "date": "2013-11",
+      "year": 2013,
+      "month": 11,
+      "usdkrw": 1057.1,
+      "gold_usd": {
+        "g": 40.21,
+        "don": 150.78,
+        "toz": 1250.6,
+        "kg": 40207.7
+      },
+      "gold_krw": {
+        "g": 42504,
+        "don": 159388,
+        "toz": 1322009,
+        "kg": 42503585
+      },
+      "fiat_power_usd": 32.2,
+      "fiat_power_krw": 35.7
+    },
+    {
+      "date": "2014-01",
+      "year": 2014,
+      "month": 1,
+      "usdkrw": 1079.3,
+      "gold_usd": {
+        "g": 39.87,
+        "don": 149.51,
+        "toz": 1240.1,
+        "kg": 39870.1
+      },
+      "gold_krw": {
+        "g": 43032,
+        "don": 161369,
+        "toz": 1338440,
+        "kg": 43031843
+      },
+      "fiat_power_usd": 32.4,
+      "fiat_power_krw": 35.2
+    },
+    {
+      "date": "2014-02",
+      "year": 2014,
+      "month": 2,
+      "usdkrw": 1068.7,
+      "gold_usd": {
+        "g": 42.48,
+        "don": 159.31,
+        "toz": 1321.4,
+        "kg": 42484.0
+      },
+      "gold_krw": {
+        "g": 45403,
+        "don": 170260,
+        "toz": 1412180,
+        "kg": 45402647
+      },
+      "fiat_power_usd": 30.4,
+      "fiat_power_krw": 33.4
+    },
+    {
+      "date": "2014-03",
+      "year": 2014,
+      "month": 3,
+      "usdkrw": 1066.5,
+      "gold_usd": {
+        "g": 41.26,
+        "don": 154.73,
+        "toz": 1283.4,
+        "kg": 41262.3
+      },
+      "gold_krw": {
+        "g": 44008,
+        "don": 165031,
+        "toz": 1368810,
+        "kg": 44008272
+      },
+      "fiat_power_usd": 31.3,
+      "fiat_power_krw": 34.5
+    },
+    {
+      "date": "2014-04",
+      "year": 2014,
+      "month": 4,
+      "usdkrw": 1029.4,
+      "gold_usd": {
+        "g": 41.65,
+        "don": 156.2,
+        "toz": 1295.6,
+        "kg": 41654.5
+      },
+      "gold_krw": {
+        "g": 42881,
+        "don": 160803,
+        "toz": 1333742,
+        "kg": 42880816
+      },
+      "fiat_power_usd": 31.0,
+      "fiat_power_krw": 35.4
+    },
+    {
+      "date": "2014-05",
+      "year": 2014,
+      "month": 5,
+      "usdkrw": 1019.8,
+      "gold_usd": {
+        "g": 40.05,
+        "don": 150.18,
+        "toz": 1245.6,
+        "kg": 40047.0
+      },
+      "gold_krw": {
+        "g": 40840,
+        "don": 153150,
+        "toz": 1270263,
+        "kg": 40839900
+      },
+      "fiat_power_usd": 32.3,
+      "fiat_power_krw": 37.1
+    },
+    {
+      "date": "2014-07",
+      "year": 2014,
+      "month": 7,
+      "usdkrw": 1023.6,
+      "gold_usd": {
+        "g": 41.19,
+        "don": 154.48,
+        "toz": 1281.3,
+        "kg": 41194.8
+      },
+      "gold_krw": {
+        "g": 42167,
+        "don": 158126,
+        "toz": 1311539,
+        "kg": 42166948
+      },
+      "fiat_power_usd": 31.4,
+      "fiat_power_krw": 36.0
+    },
+    {
+      "date": "2014-08",
+      "year": 2014,
+      "month": 8,
+      "usdkrw": 1012.9,
+      "gold_usd": {
+        "g": 41.34,
+        "don": 155.02,
+        "toz": 1285.8,
+        "kg": 41339.4
+      },
+      "gold_krw": {
+        "g": 41873,
+        "don": 157023,
+        "toz": 1302387,
+        "kg": 41872709
+      },
+      "fiat_power_usd": 31.3,
+      "fiat_power_krw": 36.2
+    },
+    {
+      "date": "2014-09",
+      "year": 2014,
+      "month": 9,
+      "usdkrw": 1052.2,
+      "gold_usd": {
+        "g": 38.92,
+        "don": 145.94,
+        "toz": 1210.5,
+        "kg": 38918.5
+      },
+      "gold_krw": {
+        "g": 40950,
+        "don": 153563,
+        "toz": 1273688,
+        "kg": 40950023
+      },
+      "fiat_power_usd": 33.2,
+      "fiat_power_krw": 37.0
+    },
+    {
+      "date": "2014-10",
+      "year": 2014,
+      "month": 10,
+      "usdkrw": 1053.8,
+      "gold_usd": {
+        "g": 37.65,
+        "don": 141.19,
+        "toz": 1171.1,
+        "kg": 37651.7
+      },
+      "gold_krw": {
+        "g": 39677,
+        "don": 148790,
+        "toz": 1234105,
+        "kg": 39677403
+      },
+      "fiat_power_usd": 34.3,
+      "fiat_power_krw": 38.2
+    },
+    {
+      "date": "2014-11",
+      "year": 2014,
+      "month": 11,
+      "usdkrw": 1088.6,
+      "gold_usd": {
+        "g": 37.78,
+        "don": 141.69,
+        "toz": 1175.2,
+        "kg": 37783.6
+      },
+      "gold_krw": {
+        "g": 41131,
+        "don": 154242,
+        "toz": 1279323,
+        "kg": 41131181
+      },
+      "fiat_power_usd": 34.2,
+      "fiat_power_krw": 36.9
+    },
+    {
+      "date": "2014-12",
+      "year": 2014,
+      "month": 12,
+      "usdkrw": 1095.3,
+      "gold_usd": {
+        "g": 38.06,
+        "don": 142.74,
+        "toz": 1183.9,
+        "kg": 38063.3
+      },
+      "gold_krw": {
+        "g": 41691,
+        "don": 156340,
+        "toz": 1296726,
+        "kg": 41690698
+      },
+      "fiat_power_usd": 34.0,
+      "fiat_power_krw": 36.4
+    },
+    {
+      "date": "2015-01",
+      "year": 2015,
+      "month": 1,
+      "usdkrw": 1101.0,
+      "gold_usd": {
+        "g": 41.1,
+        "don": 154.14,
+        "toz": 1278.5,
+        "kg": 41104.7
+      },
+      "gold_krw": {
+        "g": 45256,
+        "don": 169711,
+        "toz": 1407628,
+        "kg": 45256307
+      },
+      "fiat_power_usd": 31.5,
+      "fiat_power_krw": 33.5
+    },
+    {
+      "date": "2015-04",
+      "year": 2015,
+      "month": 4,
+      "usdkrw": 1069.0,
+      "gold_usd": {
+        "g": 38.02,
+        "don": 142.56,
+        "toz": 1182.4,
+        "kg": 38015.0
+      },
+      "gold_krw": {
+        "g": 40637,
+        "don": 152389,
+        "toz": 1263950,
+        "kg": 40636940
+      },
+      "fiat_power_usd": 34.0,
+      "fiat_power_krw": 37.3
+    },
+    {
+      "date": "2015-05",
+      "year": 2015,
+      "month": 5,
+      "usdkrw": 1107.0,
+      "gold_usd": {
+        "g": 38.24,
+        "don": 143.4,
+        "toz": 1189.4,
+        "kg": 38240.1
+      },
+      "gold_krw": {
+        "g": 42332,
+        "don": 158744,
+        "toz": 1316666,
+        "kg": 42331788
+      },
+      "fiat_power_usd": 33.8,
+      "fiat_power_krw": 35.8
+    },
+    {
+      "date": "2015-06",
+      "year": 2015,
+      "month": 6,
+      "usdkrw": 1118.2,
+      "gold_usd": {
+        "g": 37.66,
+        "don": 141.24,
+        "toz": 1171.5,
+        "kg": 37664.6
+      },
+      "gold_krw": {
+        "g": 42117,
+        "don": 157940,
+        "toz": 1309995,
+        "kg": 42117309
+      },
+      "fiat_power_usd": 34.3,
+      "fiat_power_krw": 36.0
+    },
+    {
+      "date": "2015-07",
+      "year": 2015,
+      "month": 7,
+      "usdkrw": 1170.8,
+      "gold_usd": {
+        "g": 35.2,
+        "don": 132.01,
+        "toz": 1094.9,
+        "kg": 35201.9
+      },
+      "gold_krw": {
+        "g": 41213,
+        "don": 154550,
+        "toz": 1281876,
+        "kg": 41213273
+      },
+      "fiat_power_usd": 36.7,
+      "fiat_power_krw": 36.8
+    },
+    {
+      "date": "2015-08",
+      "year": 2015,
+      "month": 8,
+      "usdkrw": 1177.6,
+      "gold_usd": {
+        "g": 36.38,
+        "don": 136.43,
+        "toz": 1131.6,
+        "kg": 36381.8
+      },
+      "gold_krw": {
+        "g": 42843,
+        "don": 160662,
+        "toz": 1332572,
+        "kg": 42843190
+      },
+      "fiat_power_usd": 35.5,
+      "fiat_power_krw": 35.4
+    },
+    {
+      "date": "2015-09",
+      "year": 2015,
+      "month": 9,
+      "usdkrw": 1194.2,
+      "gold_usd": {
+        "g": 35.86,
+        "don": 134.49,
+        "toz": 1115.5,
+        "kg": 35864.2
+      },
+      "gold_krw": {
+        "g": 42828,
+        "don": 160603,
+        "toz": 1332085,
+        "kg": 42827543
+      },
+      "fiat_power_usd": 36.1,
+      "fiat_power_krw": 35.4
+    },
+    {
+      "date": "2015-10",
+      "year": 2015,
+      "month": 10,
+      "usdkrw": 0.1,
+      "gold_usd": {
+        "g": 36.7,
+        "don": 137.63,
+        "toz": 1141.5,
+        "kg": 36700.1
+      },
+      "gold_krw": {
+        "g": 4,
+        "don": 15,
+        "toz": 126,
+        "kg": 4037
+      },
+      "fiat_power_usd": 35.2,
+      "fiat_power_krw": 379075.0
+    },
+    {
+      "date": "2015-12",
+      "year": 2015,
+      "month": 12,
+      "usdkrw": 1175.4,
+      "gold_usd": {
+        "g": 34.09,
+        "don": 127.84,
+        "toz": 1060.3,
+        "kg": 34089.4
+      },
+      "gold_krw": {
+        "g": 40070,
+        "don": 150263,
+        "toz": 1246319,
+        "kg": 40070087
+      },
+      "fiat_power_usd": 37.9,
+      "fiat_power_krw": 37.8
+    },
+    {
+      "date": "2016-01",
+      "year": 2016,
+      "month": 1,
+      "usdkrw": 0.1,
+      "gold_usd": {
+        "g": 35.89,
+        "don": 134.6,
+        "toz": 1116.4,
+        "kg": 35893.1
+      },
+      "gold_krw": {
+        "g": 4,
+        "don": 16,
+        "toz": 134,
+        "kg": 4307
+      },
+      "fiat_power_usd": 36.0,
+      "fiat_power_krw": 379075.0
+    },
+    {
+      "date": "2016-02",
+      "year": 2016,
+      "month": 2,
+      "usdkrw": 1241.1,
+      "gold_usd": {
+        "g": 39.67,
+        "don": 148.77,
+        "toz": 1233.9,
+        "kg": 39670.8
+      },
+      "gold_krw": {
+        "g": 49237,
+        "don": 184637,
+        "toz": 1531430,
+        "kg": 49236628
+      },
+      "fiat_power_usd": 32.6,
+      "fiat_power_krw": 30.8
+    },
+    {
+      "date": "2016-03",
+      "year": 2016,
+      "month": 3,
+      "usdkrw": 1140.2,
+      "gold_usd": {
+        "g": 39.68,
+        "don": 148.8,
+        "toz": 1234.2,
+        "kg": 39680.5
+      },
+      "gold_krw": {
+        "g": 45245,
+        "don": 169668,
+        "toz": 1407272,
+        "kg": 45244841
+      },
+      "fiat_power_usd": 32.6,
+      "fiat_power_krw": 33.5
+    },
+    {
+      "date": "2016-04",
+      "year": 2016,
+      "month": 4,
+      "usdkrw": 1143.0,
+      "gold_usd": {
+        "g": 41.45,
+        "don": 155.43,
+        "toz": 1289.2,
+        "kg": 41448.7
+      },
+      "gold_krw": {
+        "g": 47376,
+        "don": 177660,
+        "toz": 1473556,
+        "kg": 47375913
+      },
+      "fiat_power_usd": 31.2,
+      "fiat_power_krw": 32.0
+    },
+    {
+      "date": "2016-06",
+      "year": 2016,
+      "month": 6,
+      "usdkrw": 1152.2,
+      "gold_usd": {
+        "g": 42.39,
+        "don": 158.95,
+        "toz": 1318.4,
+        "kg": 42387.5
+      },
+      "gold_krw": {
+        "g": 48837,
+        "don": 183138,
+        "toz": 1518995,
+        "kg": 48836809
+      },
+      "fiat_power_usd": 30.5,
+      "fiat_power_krw": 31.0
+    },
+    {
+      "date": "2016-07",
+      "year": 2016,
+      "month": 7,
+      "usdkrw": 0.1,
+      "gold_usd": {
+        "g": 43.37,
+        "don": 162.64,
+        "toz": 1349.0,
+        "kg": 43371.4
+      },
+      "gold_krw": {
+        "g": 5,
+        "don": 18,
+        "toz": 148,
+        "kg": 4771
+      },
+      "fiat_power_usd": 29.8,
+      "fiat_power_krw": 303260.0
+    },
+    {
+      "date": "2016-08",
+      "year": 2016,
+      "month": 8,
+      "usdkrw": 1118.4,
+      "gold_usd": {
+        "g": 42.02,
+        "don": 157.57,
+        "toz": 1306.9,
+        "kg": 42017.8
+      },
+      "gold_krw": {
+        "g": 46992,
+        "don": 176220,
+        "toz": 1461611,
+        "kg": 46991879
+      },
+      "fiat_power_usd": 30.8,
+      "fiat_power_krw": 32.3
+    },
+    {
+      "date": "2016-09",
+      "year": 2016,
+      "month": 9,
+      "usdkrw": 1101.6,
+      "gold_usd": {
+        "g": 42.22,
+        "don": 158.34,
+        "toz": 1313.3,
+        "kg": 42223.6
+      },
+      "gold_krw": {
+        "g": 46514,
+        "don": 174429,
+        "toz": 1446758,
+        "kg": 46514335
+      },
+      "fiat_power_usd": 30.6,
+      "fiat_power_krw": 32.6
+    },
+    {
+      "date": "2016-10",
+      "year": 2016,
+      "month": 10,
+      "usdkrw": 1146.7,
+      "gold_usd": {
+        "g": 40.88,
+        "don": 153.3,
+        "toz": 1271.5,
+        "kg": 40879.7
+      },
+      "gold_krw": {
+        "g": 46877,
+        "don": 175788,
+        "toz": 1458029,
+        "kg": 46876722
+      },
+      "fiat_power_usd": 31.6,
+      "fiat_power_krw": 32.3
+    },
+    {
+      "date": "2016-11",
+      "year": 2016,
+      "month": 11,
+      "usdkrw": 1167.9,
+      "gold_usd": {
+        "g": 37.64,
+        "don": 141.16,
+        "toz": 1170.8,
+        "kg": 37642.1
+      },
+      "gold_krw": {
+        "g": 43961,
+        "don": 164853,
+        "toz": 1367330,
+        "kg": 43960696
+      },
+      "fiat_power_usd": 34.4,
+      "fiat_power_krw": 34.5
+    },
+    {
+      "date": "2016-12",
+      "year": 2016,
+      "month": 12,
+      "usdkrw": 1206.3,
+      "gold_usd": {
+        "g": 36.97,
+        "don": 138.65,
+        "toz": 1150.0,
+        "kg": 36973.4
+      },
+      "gold_krw": {
+        "g": 44599,
+        "don": 167248,
+        "toz": 1387199,
+        "kg": 44599483
+      },
+      "fiat_power_usd": 35.0,
+      "fiat_power_krw": 34.0
+    },
+    {
+      "date": "2017-02",
+      "year": 2017,
+      "month": 2,
+      "usdkrw": 1133.9,
+      "gold_usd": {
+        "g": 40.27,
+        "don": 151.02,
+        "toz": 1252.6,
+        "kg": 40272.0
+      },
+      "gold_krw": {
+        "g": 45666,
+        "don": 171248,
+        "toz": 1420373,
+        "kg": 45666060
+      },
+      "fiat_power_usd": 32.1,
+      "fiat_power_krw": 33.2
+    },
+    {
+      "date": "2017-03",
+      "year": 2017,
+      "month": 3,
+      "usdkrw": 1117.0,
+      "gold_usd": {
+        "g": 40.1,
+        "don": 150.38,
+        "toz": 1247.3,
+        "kg": 40101.6
+      },
+      "gold_krw": {
+        "g": 44794,
+        "don": 167979,
+        "toz": 1393259,
+        "kg": 44794318
+      },
+      "fiat_power_usd": 32.2,
+      "fiat_power_krw": 33.9
+    },
+    {
+      "date": "2017-04",
+      "year": 2017,
+      "month": 4,
+      "usdkrw": 1135.6,
+      "gold_usd": {
+        "g": 40.71,
+        "don": 152.65,
+        "toz": 1266.1,
+        "kg": 40706.1
+      },
+      "gold_krw": {
+        "g": 46227,
+        "don": 173353,
+        "toz": 1437834,
+        "kg": 46227430
+      },
+      "fiat_power_usd": 31.8,
+      "fiat_power_krw": 32.8
+    },
+    {
+      "date": "2017-05",
+      "year": 2017,
+      "month": 5,
+      "usdkrw": 1123.9,
+      "gold_usd": {
+        "g": 40.9,
+        "don": 153.36,
+        "toz": 1272.0,
+        "kg": 40895.7
+      },
+      "gold_krw": {
+        "g": 45963,
+        "don": 172360,
+        "toz": 1429601,
+        "kg": 45962733
+      },
+      "fiat_power_usd": 31.6,
+      "fiat_power_krw": 33.0
+    },
+    {
+      "date": "2017-06",
+      "year": 2017,
+      "month": 6,
+      "usdkrw": 1146.1,
+      "gold_usd": {
+        "g": 39.89,
+        "don": 149.59,
+        "toz": 1240.7,
+        "kg": 39889.4
+      },
+      "gold_krw": {
+        "g": 45719,
+        "don": 171446,
+        "toz": 1422016,
+        "kg": 45718873
+      },
+      "fiat_power_usd": 32.4,
+      "fiat_power_krw": 33.2
+    },
+    {
+      "date": "2017-07",
+      "year": 2017,
+      "month": 7,
+      "usdkrw": 1124.0,
+      "gold_usd": {
+        "g": 40.72,
+        "don": 152.71,
+        "toz": 1266.6,
+        "kg": 40722.1
+      },
+      "gold_krw": {
+        "g": 45774,
+        "don": 171651,
+        "toz": 1423722,
+        "kg": 45773717
+      },
+      "fiat_power_usd": 31.8,
+      "fiat_power_krw": 33.1
+    },
+    {
+      "date": "2017-08",
+      "year": 2017,
+      "month": 8,
+      "usdkrw": 1123.3,
+      "gold_usd": {
+        "g": 42.32,
+        "don": 158.69,
+        "toz": 1316.2,
+        "kg": 42316.8
+      },
+      "gold_krw": {
+        "g": 47536,
+        "don": 178259,
+        "toz": 1478527,
+        "kg": 47535745
+      },
+      "fiat_power_usd": 30.6,
+      "fiat_power_krw": 31.9
+    },
+    {
+      "date": "2017-09",
+      "year": 2017,
+      "month": 9,
+      "usdkrw": 0.1,
+      "gold_usd": {
+        "g": 41.2,
+        "don": 154.5,
+        "toz": 1281.5,
+        "kg": 41201.2
+      },
+      "gold_krw": {
+        "g": 5,
+        "don": 19,
+        "toz": 154,
+        "kg": 4944
+      },
+      "fiat_power_usd": 31.4,
+      "fiat_power_krw": 303260.0
+    },
+    {
+      "date": "2017-11",
+      "year": 2017,
+      "month": 11,
+      "usdkrw": 1080.7,
+      "gold_usd": {
+        "g": 40.93,
+        "don": 153.5,
+        "toz": 1273.2,
+        "kg": 40934.3
+      },
+      "gold_krw": {
+        "g": 44236,
+        "don": 165885,
+        "toz": 1375896,
+        "kg": 44236094
+      },
+      "fiat_power_usd": 31.6,
+      "fiat_power_krw": 34.3
+    },
+    {
+      "date": "2017-12",
+      "year": 2017,
+      "month": 12,
+      "usdkrw": 1066.4,
+      "gold_usd": {
+        "g": 42.0,
+        "don": 157.49,
+        "toz": 1306.3,
+        "kg": 41998.5
+      },
+      "gold_krw": {
+        "g": 44786,
+        "don": 167949,
+        "toz": 1393012,
+        "kg": 44786382
+      },
+      "fiat_power_usd": 30.8,
+      "fiat_power_krw": 33.9
+    },
+    {
+      "date": "2018-01",
+      "year": 2018,
+      "month": 1,
+      "usdkrw": 1072.5,
+      "gold_usd": {
+        "g": 43.05,
+        "don": 161.44,
+        "toz": 1339.0,
+        "kg": 43049.8
+      },
+      "gold_krw": {
+        "g": 46173,
+        "don": 173148,
+        "toz": 1436131,
+        "kg": 46172686
+      },
+      "fiat_power_usd": 30.0,
+      "fiat_power_krw": 32.8
+    },
+    {
+      "date": "2018-02",
+      "year": 2018,
+      "month": 2,
+      "usdkrw": 1079.4,
+      "gold_usd": {
+        "g": 42.29,
+        "don": 158.6,
+        "toz": 1315.5,
+        "kg": 42294.3
+      },
+      "gold_krw": {
+        "g": 45652,
+        "don": 171195,
+        "toz": 1419938,
+        "kg": 45652052
+      },
+      "fiat_power_usd": 30.6,
+      "fiat_power_krw": 33.2
+    },
+    {
+      "date": "2018-03",
+      "year": 2018,
+      "month": 3,
+      "usdkrw": 1059.9,
+      "gold_usd": {
+        "g": 42.53,
+        "don": 159.48,
+        "toz": 1322.8,
+        "kg": 42529.0
+      },
+      "gold_krw": {
+        "g": 45076,
+        "don": 169037,
+        "toz": 1402036,
+        "kg": 45076495
+      },
+      "fiat_power_usd": 30.4,
+      "fiat_power_krw": 33.6
+    },
+    {
+      "date": "2018-05",
+      "year": 2018,
+      "month": 5,
+      "usdkrw": 1075.0,
+      "gold_usd": {
+        "g": 41.8,
+        "don": 156.75,
+        "toz": 1300.1,
+        "kg": 41799.2
+      },
+      "gold_krw": {
+        "g": 44935,
+        "don": 168508,
+        "toz": 1397647,
+        "kg": 44935379
+      },
+      "fiat_power_usd": 30.9,
+      "fiat_power_krw": 33.7
+    },
+    {
+      "date": "2018-06",
+      "year": 2018,
+      "month": 6,
+      "usdkrw": 1120.5,
+      "gold_usd": {
+        "g": 40.23,
+        "don": 150.86,
+        "toz": 1251.3,
+        "kg": 40230.2
+      },
+      "gold_krw": {
+        "g": 45080,
+        "don": 169048,
+        "toz": 1402132,
+        "kg": 45079581
+      },
+      "fiat_power_usd": 32.1,
+      "fiat_power_krw": 33.6
+    },
+    {
+      "date": "2018-08",
+      "year": 2018,
+      "month": 8,
+      "usdkrw": 1115.5,
+      "gold_usd": {
+        "g": 38.59,
+        "don": 144.71,
+        "toz": 1200.3,
+        "kg": 38590.5
+      },
+      "gold_krw": {
+        "g": 43046,
+        "don": 161422,
+        "toz": 1338875,
+        "kg": 43045819
+      },
+      "fiat_power_usd": 33.5,
+      "fiat_power_krw": 35.2
+    },
+    {
+      "date": "2018-09",
+      "year": 2018,
+      "month": 9,
+      "usdkrw": 1109.2,
+      "gold_usd": {
+        "g": 38.31,
+        "don": 143.65,
+        "toz": 1191.5,
+        "kg": 38307.6
+      },
+      "gold_krw": {
+        "g": 42489,
+        "don": 159335,
+        "toz": 1321564,
+        "kg": 42489274
+      },
+      "fiat_power_usd": 33.8,
+      "fiat_power_krw": 35.7
+    },
+    {
+      "date": "2018-10",
+      "year": 2018,
+      "month": 10,
+      "usdkrw": 1137.7,
+      "gold_usd": {
+        "g": 38.98,
+        "don": 146.16,
+        "toz": 1212.3,
+        "kg": 38976.4
+      },
+      "gold_krw": {
+        "g": 44343,
+        "don": 166288,
+        "toz": 1379234,
+        "kg": 44343393
+      },
+      "fiat_power_usd": 33.2,
+      "fiat_power_krw": 34.2
+    },
+    {
+      "date": "2018-11",
+      "year": 2018,
+      "month": 11,
+      "usdkrw": 1117.0,
+      "gold_usd": {
+        "g": 39.23,
+        "don": 147.11,
+        "toz": 1220.2,
+        "kg": 39230.3
+      },
+      "gold_krw": {
+        "g": 43821,
+        "don": 164329,
+        "toz": 1362988,
+        "kg": 43821075
+      },
+      "fiat_power_usd": 33.0,
+      "fiat_power_krw": 34.6
+    },
+    {
+      "date": "2018-12",
+      "year": 2018,
+      "month": 12,
+      "usdkrw": 1116.3,
+      "gold_usd": {
+        "g": 41.1,
+        "don": 154.12,
+        "toz": 1278.3,
+        "kg": 41098.3
+      },
+      "gold_krw": {
+        "g": 45878,
+        "don": 172043,
+        "toz": 1426966,
+        "kg": 45878032
+      },
+      "fiat_power_usd": 31.5,
+      "fiat_power_krw": 33.1
+    },
+    {
+      "date": "2019-01",
+      "year": 2019,
+      "month": 1,
+      "usdkrw": 1109.0,
+      "gold_usd": {
+        "g": 42.43,
+        "don": 159.11,
+        "toz": 1319.7,
+        "kg": 42429.3
+      },
+      "gold_krw": {
+        "g": 47054,
+        "don": 176453,
+        "toz": 1463547,
+        "kg": 47054138
+      },
+      "fiat_power_usd": 30.5,
+      "fiat_power_krw": 32.2
+    },
+    {
+      "date": "2019-02",
+      "year": 2019,
+      "month": 2,
+      "usdkrw": 1115.1,
+      "gold_usd": {
+        "g": 42.21,
+        "don": 158.28,
+        "toz": 1312.8,
+        "kg": 42207.5
+      },
+      "gold_krw": {
+        "g": 47066,
+        "don": 176496,
+        "toz": 1463903,
+        "kg": 47065583
+      },
+      "fiat_power_usd": 30.6,
+      "fiat_power_krw": 32.2
+    },
+    {
+      "date": "2019-03",
+      "year": 2019,
+      "month": 3,
+      "usdkrw": 1135.9,
+      "gold_usd": {
+        "g": 41.57,
+        "don": 155.89,
+        "toz": 1293.0,
+        "kg": 41570.9
+      },
+      "gold_krw": {
+        "g": 47220,
+        "don": 177077,
+        "toz": 1468719,
+        "kg": 47220403
+      },
+      "fiat_power_usd": 31.1,
+      "fiat_power_krw": 32.1
+    },
+    {
+      "date": "2019-04",
+      "year": 2019,
+      "month": 4,
+      "usdkrw": 1158.8,
+      "gold_usd": {
+        "g": 41.24,
+        "don": 154.66,
+        "toz": 1282.8,
+        "kg": 41243.0
+      },
+      "gold_krw": {
+        "g": 47792,
+        "don": 179220,
+        "toz": 1486496,
+        "kg": 47791950
+      },
+      "fiat_power_usd": 31.4,
+      "fiat_power_krw": 31.7
+    },
+    {
+      "date": "2019-05",
+      "year": 2019,
+      "month": 5,
+      "usdkrw": 1188.4,
+      "gold_usd": {
+        "g": 41.98,
+        "don": 157.43,
+        "toz": 1305.8,
+        "kg": 41982.4
+      },
+      "gold_krw": {
+        "g": 49891,
+        "don": 187092,
+        "toz": 1551787,
+        "kg": 49891098
+      },
+      "fiat_power_usd": 30.8,
+      "fiat_power_krw": 30.4
+    },
+    {
+      "date": "2019-06",
+      "year": 2019,
+      "month": 6,
+      "usdkrw": 1155.5,
+      "gold_usd": {
+        "g": 45.32,
+        "don": 169.96,
+        "toz": 1409.7,
+        "kg": 45322.9
+      },
+      "gold_krw": {
+        "g": 52371,
+        "don": 196392,
+        "toz": 1628922,
+        "kg": 52371073
+      },
+      "fiat_power_usd": 28.5,
+      "fiat_power_krw": 29.0
+    },
+    {
+      "date": "2019-07",
+      "year": 2019,
+      "month": 7,
+      "usdkrw": 1180.7,
+      "gold_usd": {
+        "g": 45.85,
+        "don": 171.94,
+        "toz": 1426.1,
+        "kg": 45850.2
+      },
+      "gold_krw": {
+        "g": 54133,
+        "don": 202999,
+        "toz": 1683725,
+        "kg": 54133015
+      },
+      "fiat_power_usd": 28.2,
+      "fiat_power_krw": 28.0
+    },
+    {
+      "date": "2019-08",
+      "year": 2019,
+      "month": 8,
+      "usdkrw": 1207.2,
+      "gold_usd": {
+        "g": 48.84,
+        "don": 183.15,
+        "toz": 1519.1,
+        "kg": 48840.2
+      },
+      "gold_krw": {
+        "g": 58958,
+        "don": 221092,
+        "toz": 1833797,
+        "kg": 58957935
+      },
+      "fiat_power_usd": 26.5,
+      "fiat_power_krw": 25.7
+    },
+    {
+      "date": "2019-10",
+      "year": 2019,
+      "month": 10,
+      "usdkrw": 1163.7,
+      "gold_usd": {
+        "g": 48.59,
+        "don": 182.22,
+        "toz": 1511.4,
+        "kg": 48592.6
+      },
+      "gold_krw": {
+        "g": 56547,
+        "don": 212052,
+        "toz": 1758816,
+        "kg": 56547253
+      },
+      "fiat_power_usd": 26.6,
+      "fiat_power_krw": 26.8
+    },
+    {
+      "date": "2019-11",
+      "year": 2019,
+      "month": 11,
+      "usdkrw": 1181.6,
+      "gold_usd": {
+        "g": 47.12,
+        "don": 176.7,
+        "toz": 1465.6,
+        "kg": 47120.1
+      },
+      "gold_krw": {
+        "g": 55676,
+        "don": 208784,
+        "toz": 1731709,
+        "kg": 55675737
+      },
+      "fiat_power_usd": 27.4,
+      "fiat_power_krw": 27.2
+    },
+    {
+      "date": "2020-01",
+      "year": 2020,
+      "month": 1,
+      "usdkrw": 1187.1,
+      "gold_usd": {
+        "g": 50.89,
+        "don": 190.84,
+        "toz": 1582.9,
+        "kg": 50891.4
+      },
+      "gold_krw": {
+        "g": 60414,
+        "don": 226553,
+        "toz": 1879092,
+        "kg": 60414219
+      },
+      "fiat_power_usd": 25.4,
+      "fiat_power_krw": 25.1
+    },
+    {
+      "date": "2020-02",
+      "year": 2020,
+      "month": 2,
+      "usdkrw": 1200.1,
+      "gold_usd": {
+        "g": 50.29,
+        "don": 188.58,
+        "toz": 1564.1,
+        "kg": 50287.0
+      },
+      "gold_krw": {
+        "g": 60349,
+        "don": 226310,
+        "toz": 1877076,
+        "kg": 60349408
+      },
+      "fiat_power_usd": 25.7,
+      "fiat_power_krw": 25.1
+    },
+    {
+      "date": "2020-04",
+      "year": 2020,
+      "month": 4,
+      "usdkrw": 1210.8,
+      "gold_usd": {
+        "g": 54.15,
+        "don": 203.06,
+        "toz": 1684.2,
+        "kg": 54148.3
+      },
+      "gold_krw": {
+        "g": 65562,
+        "don": 245858,
+        "toz": 2039213,
+        "kg": 65562205
+      },
+      "fiat_power_usd": 23.9,
+      "fiat_power_krw": 23.1
+    },
+    {
+      "date": "2020-05",
+      "year": 2020,
+      "month": 5,
+      "usdkrw": 1230.3,
+      "gold_usd": {
+        "g": 56.32,
+        "don": 211.19,
+        "toz": 1751.7,
+        "kg": 56318.5
+      },
+      "gold_krw": {
+        "g": 69287,
+        "don": 259826,
+        "toz": 2155064,
+        "kg": 69286915
+      },
+      "fiat_power_usd": 23.0,
+      "fiat_power_krw": 21.9
+    },
+    {
+      "date": "2020-06",
+      "year": 2020,
+      "month": 6,
+      "usdkrw": 1198.5,
+      "gold_usd": {
+        "g": 57.89,
+        "don": 217.08,
+        "toz": 1800.5,
+        "kg": 57887.4
+      },
+      "gold_krw": {
+        "g": 69377,
+        "don": 260166,
+        "toz": 2157881,
+        "kg": 69377493
+      },
+      "fiat_power_usd": 22.3,
+      "fiat_power_krw": 21.9
+    },
+    {
+      "date": "2020-07",
+      "year": 2020,
+      "month": 7,
+      "usdkrw": 1189.6,
+      "gold_usd": {
+        "g": 63.11,
+        "don": 236.65,
+        "toz": 1962.8,
+        "kg": 63105.5
+      },
+      "gold_krw": {
+        "g": 75068,
+        "don": 281504,
+        "toz": 2334868,
+        "kg": 75067761
+      },
+      "fiat_power_usd": 20.5,
+      "fiat_power_krw": 20.2
+    },
+    {
+      "date": "2020-08",
+      "year": 2020,
+      "month": 8,
+      "usdkrw": 1179.6,
+      "gold_usd": {
+        "g": 63.61,
+        "don": 238.55,
+        "toz": 1978.6,
+        "kg": 63613.5
+      },
+      "gold_krw": {
+        "g": 75038,
+        "don": 281392,
+        "toz": 2333937,
+        "kg": 75037810
+      },
+      "fiat_power_usd": 20.3,
+      "fiat_power_krw": 20.2
+    },
+    {
+      "date": "2020-09",
+      "year": 2020,
+      "month": 9,
+      "usdkrw": 1167.9,
+      "gold_usd": {
+        "g": 60.94,
+        "don": 228.53,
+        "toz": 1895.5,
+        "kg": 60941.7
+      },
+      "gold_krw": {
+        "g": 71171,
+        "don": 266893,
+        "toz": 2213679,
+        "kg": 71171421
+      },
+      "fiat_power_usd": 21.2,
+      "fiat_power_krw": 21.3
+    },
+    {
+      "date": "2020-10",
+      "year": 2020,
+      "month": 10,
+      "usdkrw": 1129.5,
+      "gold_usd": {
+        "g": 60.44,
+        "don": 226.65,
+        "toz": 1879.9,
+        "kg": 60440.2
+      },
+      "gold_krw": {
+        "g": 68268,
+        "don": 256007,
+        "toz": 2123385,
+        "kg": 68268402
+      },
+      "fiat_power_usd": 21.4,
+      "fiat_power_krw": 22.2
+    },
+    {
+      "date": "2020-12",
+      "year": 2020,
+      "month": 12,
+      "usdkrw": 1086.4,
+      "gold_usd": {
+        "g": 60.93,
+        "don": 228.48,
+        "toz": 1895.1,
+        "kg": 60928.9
+      },
+      "gold_krw": {
+        "g": 66194,
+        "don": 248229,
+        "toz": 2058875,
+        "kg": 66194354
+      },
+      "fiat_power_usd": 21.2,
+      "fiat_power_krw": 22.9
+    },
+    {
+      "date": "2021-01",
+      "year": 2021,
+      "month": 1,
+      "usdkrw": 1117.4,
+      "gold_usd": {
+        "g": 59.39,
+        "don": 222.72,
+        "toz": 1847.3,
+        "kg": 59392.1
+      },
+      "gold_krw": {
+        "g": 66366,
+        "don": 248874,
+        "toz": 2064228,
+        "kg": 66366485
+      },
+      "fiat_power_usd": 21.8,
+      "fiat_power_krw": 22.8
+    },
+    {
+      "date": "2021-02",
+      "year": 2021,
+      "month": 2,
+      "usdkrw": 1123.4,
+      "gold_usd": {
+        "g": 55.58,
+        "don": 208.43,
+        "toz": 1728.8,
+        "kg": 55582.2
+      },
+      "gold_krw": {
+        "g": 62439,
+        "don": 234148,
+        "toz": 1942082,
+        "kg": 62439388
+      },
+      "fiat_power_usd": 23.3,
+      "fiat_power_krw": 24.3
+    },
+    {
+      "date": "2021-03",
+      "year": 2021,
+      "month": 3,
+      "usdkrw": 1132.3,
+      "gold_usd": {
+        "g": 55.1,
+        "don": 206.62,
+        "toz": 1713.8,
+        "kg": 55099.9
+      },
+      "gold_krw": {
+        "g": 62391,
+        "don": 233965,
+        "toz": 1940570,
+        "kg": 62390775
+      },
+      "fiat_power_usd": 23.5,
+      "fiat_power_krw": 24.3
+    },
+    {
+      "date": "2021-04",
+      "year": 2021,
+      "month": 4,
+      "usdkrw": 1106.6,
+      "gold_usd": {
+        "g": 56.83,
+        "don": 213.12,
+        "toz": 1767.7,
+        "kg": 56832.9
+      },
+      "gold_krw": {
+        "g": 62893,
+        "don": 235849,
+        "toz": 1956190,
+        "kg": 62892964
+      },
+      "fiat_power_usd": 22.8,
+      "fiat_power_krw": 24.1
+    },
+    {
+      "date": "2021-05",
+      "year": 2021,
+      "month": 5,
+      "usdkrw": 1112.8,
+      "gold_usd": {
+        "g": 61.17,
+        "don": 229.38,
+        "toz": 1902.5,
+        "kg": 61166.8
+      },
+      "gold_krw": {
+        "g": 68069,
+        "don": 255261,
+        "toz": 2117197,
+        "kg": 68069468
+      },
+      "fiat_power_usd": 21.1,
+      "fiat_power_krw": 22.3
+    },
+    {
+      "date": "2021-06",
+      "year": 2021,
+      "month": 6,
+      "usdkrw": 1130.5,
+      "gold_usd": {
+        "g": 56.96,
+        "don": 213.59,
+        "toz": 1771.6,
+        "kg": 56958.3
+      },
+      "gold_krw": {
+        "g": 64392,
+        "don": 241470,
+        "toz": 2002812,
+        "kg": 64391885
+      },
+      "fiat_power_usd": 22.7,
+      "fiat_power_krw": 23.5
+    },
+    {
+      "date": "2021-07",
+      "year": 2021,
+      "month": 7,
+      "usdkrw": 1150.6,
+      "gold_usd": {
+        "g": 58.28,
+        "don": 218.54,
+        "toz": 1812.6,
+        "kg": 58276.4
+      },
+      "gold_krw": {
+        "g": 67055,
+        "don": 251455,
+        "toz": 2085632,
+        "kg": 67054624
+      },
+      "fiat_power_usd": 22.2,
+      "fiat_power_krw": 22.6
+    },
+    {
+      "date": "2021-09",
+      "year": 2021,
+      "month": 9,
+      "usdkrw": 1187.4,
+      "gold_usd": {
+        "g": 56.49,
+        "don": 211.83,
+        "toz": 1757.0,
+        "kg": 56488.9
+      },
+      "gold_krw": {
+        "g": 67077,
+        "don": 251537,
+        "toz": 2086315,
+        "kg": 67076569
+      },
+      "fiat_power_usd": 22.9,
+      "fiat_power_krw": 22.6
+    },
+    {
+      "date": "2021-10",
+      "year": 2021,
+      "month": 10,
+      "usdkrw": 1174.4,
+      "gold_usd": {
+        "g": 57.35,
+        "don": 215.08,
+        "toz": 1783.9,
+        "kg": 57353.7
+      },
+      "gold_krw": {
+        "g": 67355,
+        "don": 252581,
+        "toz": 2094976,
+        "kg": 67355058
+      },
+      "fiat_power_usd": 22.5,
+      "fiat_power_krw": 22.5
+    },
+    {
+      "date": "2021-11",
+      "year": 2021,
+      "month": 11,
+      "usdkrw": 1190.7,
+      "gold_usd": {
+        "g": 57.02,
+        "don": 213.83,
+        "toz": 1773.6,
+        "kg": 57022.6
+      },
+      "gold_krw": {
+        "g": 67899,
+        "don": 254621,
+        "toz": 2111896,
+        "kg": 67899048
+      },
+      "fiat_power_usd": 22.7,
+      "fiat_power_krw": 22.3
+    },
+    {
+      "date": "2021-12",
+      "year": 2021,
+      "month": 12,
+      "usdkrw": 1189.9,
+      "gold_usd": {
+        "g": 58.79,
+        "don": 220.47,
+        "toz": 1828.6,
+        "kg": 58790.9
+      },
+      "gold_krw": {
+        "g": 69955,
+        "don": 262330,
+        "toz": 2175833,
+        "kg": 69954651
+      },
+      "fiat_power_usd": 22.0,
+      "fiat_power_krw": 21.7
+    },
+    {
+      "date": "2022-01",
+      "year": 2022,
+      "month": 1,
+      "usdkrw": 1207.7,
+      "gold_usd": {
+        "g": 57.71,
+        "don": 216.41,
+        "toz": 1795.0,
+        "kg": 57710.6
+      },
+      "gold_krw": {
+        "g": 69698,
+        "don": 261366,
+        "toz": 2167839,
+        "kg": 69697657
+      },
+      "fiat_power_usd": 22.4,
+      "fiat_power_krw": 21.8
+    },
+    {
+      "date": "2022-02",
+      "year": 2022,
+      "month": 2,
+      "usdkrw": 1197.6,
+      "gold_usd": {
+        "g": 61.11,
+        "don": 229.16,
+        "toz": 1900.7,
+        "kg": 61108.9
+      },
+      "gold_krw": {
+        "g": 73183,
+        "don": 274438,
+        "toz": 2276259,
+        "kg": 73183436
+      },
+      "fiat_power_usd": 21.2,
+      "fiat_power_krw": 20.7
+    },
+    {
+      "date": "2022-03",
+      "year": 2022,
+      "month": 3,
+      "usdkrw": 1210.4,
+      "gold_usd": {
+        "g": 62.67,
+        "don": 235.01,
+        "toz": 1949.2,
+        "kg": 62668.2
+      },
+      "gold_krw": {
+        "g": 75856,
+        "don": 284461,
+        "toz": 2359390,
+        "kg": 75856139
+      },
+      "fiat_power_usd": 20.6,
+      "fiat_power_krw": 20.0
+    },
+    {
+      "date": "2022-04",
+      "year": 2022,
+      "month": 4,
+      "usdkrw": 1263.4,
+      "gold_usd": {
+        "g": 61.46,
+        "don": 230.48,
+        "toz": 1911.7,
+        "kg": 61462.6
+      },
+      "gold_krw": {
+        "g": 77651,
+        "don": 291190,
+        "toz": 2415204,
+        "kg": 77650597
+      },
+      "fiat_power_usd": 21.0,
+      "fiat_power_krw": 19.5
+    },
+    {
+      "date": "2022-06",
+      "year": 2022,
+      "month": 6,
+      "usdkrw": 1301.7,
+      "gold_usd": {
+        "g": 58.11,
+        "don": 217.9,
+        "toz": 1807.3,
+        "kg": 58106.0
+      },
+      "gold_krw": {
+        "g": 75638,
+        "don": 283644,
+        "toz": 2352617,
+        "kg": 75638381
+      },
+      "fiat_power_usd": 22.3,
+      "fiat_power_krw": 20.0
+    },
+    {
+      "date": "2022-07",
+      "year": 2022,
+      "month": 7,
+      "usdkrw": 1302.9,
+      "gold_usd": {
+        "g": 56.68,
+        "don": 212.54,
+        "toz": 1762.9,
+        "kg": 56678.6
+      },
+      "gold_krw": {
+        "g": 73845,
+        "don": 276918,
+        "toz": 2296830,
+        "kg": 73844784
+      },
+      "fiat_power_usd": 22.8,
+      "fiat_power_krw": 20.5
+    },
+    {
+      "date": "2022-08",
+      "year": 2022,
+      "month": 8,
+      "usdkrw": 1350.2,
+      "gold_usd": {
+        "g": 55.5,
+        "don": 208.12,
+        "toz": 1726.2,
+        "kg": 55498.6
+      },
+      "gold_krw": {
+        "g": 74934,
+        "don": 281001,
+        "toz": 2330698,
+        "kg": 74933680
+      },
+      "fiat_power_usd": 23.3,
+      "fiat_power_krw": 20.2
+    },
+    {
+      "date": "2022-09",
+      "year": 2022,
+      "month": 9,
+      "usdkrw": 1430.2,
+      "gold_usd": {
+        "g": 53.76,
+        "don": 201.59,
+        "toz": 1672.0,
+        "kg": 53756.0
+      },
+      "gold_krw": {
+        "g": 76880,
+        "don": 288301,
+        "toz": 2391244,
+        "kg": 76880288
+      },
+      "fiat_power_usd": 24.1,
+      "fiat_power_krw": 19.7
+    },
+    {
+      "date": "2022-10",
+      "year": 2022,
+      "month": 10,
+      "usdkrw": 1421.7,
+      "gold_usd": {
+        "g": 52.75,
+        "don": 197.81,
+        "toz": 1640.7,
+        "kg": 52749.7
+      },
+      "gold_krw": {
+        "g": 74992,
+        "don": 281219,
+        "toz": 2332501,
+        "kg": 74991654
+      },
+      "fiat_power_usd": 24.5,
+      "fiat_power_krw": 20.2
+    },
+    {
+      "date": "2022-11",
+      "year": 2022,
+      "month": 11,
+      "usdkrw": 1325.4,
+      "gold_usd": {
+        "g": 56.14,
+        "don": 210.51,
+        "toz": 1746.0,
+        "kg": 56135.2
+      },
+      "gold_krw": {
+        "g": 74400,
+        "don": 279000,
+        "toz": 2314096,
+        "kg": 74399915
+      },
+      "fiat_power_usd": 23.0,
+      "fiat_power_krw": 20.4
+    },
+    {
+      "date": "2022-12",
+      "year": 2022,
+      "month": 12,
+      "usdkrw": 1260.9,
+      "gold_usd": {
+        "g": 58.71,
+        "don": 220.18,
+        "toz": 1826.2,
+        "kg": 58713.7
+      },
+      "gold_krw": {
+        "g": 74033,
+        "don": 277623,
+        "toz": 2302674,
+        "kg": 74032683
+      },
+      "fiat_power_usd": 22.0,
+      "fiat_power_krw": 20.5
+    },
+    {
+      "date": "2023-02",
+      "year": 2023,
+      "month": 2,
+      "usdkrw": 1318.3,
+      "gold_usd": {
+        "g": 59.05,
+        "don": 221.44,
+        "toz": 1836.7,
+        "kg": 59051.3
+      },
+      "gold_krw": {
+        "g": 77850,
+        "don": 291938,
+        "toz": 2421413,
+        "kg": 77850250
+      },
+      "fiat_power_usd": 21.9,
+      "fiat_power_krw": 19.5
+    },
+    {
+      "date": "2023-03",
+      "year": 2023,
+      "month": 3,
+      "usdkrw": 1296.5,
+      "gold_usd": {
+        "g": 63.3,
+        "don": 237.39,
+        "toz": 1969.0,
+        "kg": 63304.8
+      },
+      "gold_krw": {
+        "g": 82075,
+        "don": 307780,
+        "toz": 2552808,
+        "kg": 82074699
+      },
+      "fiat_power_usd": 20.4,
+      "fiat_power_krw": 18.5
+    },
+    {
+      "date": "2023-04",
+      "year": 2023,
+      "month": 4,
+      "usdkrw": 1337.3,
+      "gold_usd": {
+        "g": 64.27,
+        "don": 241.02,
+        "toz": 1999.1,
+        "kg": 64272.6
+      },
+      "gold_krw": {
+        "g": 85953,
+        "don": 322324,
+        "toz": 2673436,
+        "kg": 85952977
+      },
+      "fiat_power_usd": 20.1,
+      "fiat_power_krw": 17.6
+    },
+    {
+      "date": "2023-05",
+      "year": 2023,
+      "month": 5,
+      "usdkrw": 1319.8,
+      "gold_usd": {
+        "g": 63.14,
+        "don": 236.78,
+        "toz": 1963.9,
+        "kg": 63140.9
+      },
+      "gold_krw": {
+        "g": 83333,
+        "don": 312497,
+        "toz": 2591936,
+        "kg": 83332664
+      },
+      "fiat_power_usd": 20.5,
+      "fiat_power_krw": 18.2
+    },
+    {
+      "date": "2023-06",
+      "year": 2023,
+      "month": 6,
+      "usdkrw": 1323.1,
+      "gold_usd": {
+        "g": 62.03,
+        "don": 232.62,
+        "toz": 1929.4,
+        "kg": 62031.7
+      },
+      "gold_krw": {
+        "g": 82072,
+        "don": 307771,
+        "toz": 2552731,
+        "kg": 82072216
+      },
+      "fiat_power_usd": 20.8,
+      "fiat_power_krw": 18.5
+    },
+    {
+      "date": "2023-07",
+      "year": 2023,
+      "month": 7,
+      "usdkrw": 1272.4,
+      "gold_usd": {
+        "g": 63.35,
+        "don": 237.57,
+        "toz": 1970.5,
+        "kg": 63353.0
+      },
+      "gold_krw": {
+        "g": 80610,
+        "don": 302287,
+        "toz": 2507244,
+        "kg": 80609782
+      },
+      "fiat_power_usd": 20.4,
+      "fiat_power_krw": 18.8
+    },
+    {
+      "date": "2023-08",
+      "year": 2023,
+      "month": 8,
+      "usdkrw": 1323.0,
+      "gold_usd": {
+        "g": 63.21,
+        "don": 237.02,
+        "toz": 1965.9,
+        "kg": 63205.2
+      },
+      "gold_krw": {
+        "g": 83622,
+        "don": 313584,
+        "toz": 2600945,
+        "kg": 83622313
+      },
+      "fiat_power_usd": 20.5,
+      "fiat_power_krw": 18.1
+    },
+    {
+      "date": "2023-09",
+      "year": 2023,
+      "month": 9,
+      "usdkrw": 1351.9,
+      "gold_usd": {
+        "g": 60.0,
+        "don": 224.99,
+        "toz": 1866.1,
+        "kg": 59996.5
+      },
+      "gold_krw": {
+        "g": 81111,
+        "don": 304167,
+        "toz": 2522837,
+        "kg": 81111079
+      },
+      "fiat_power_usd": 21.6,
+      "fiat_power_krw": 18.7
+    },
+    {
+      "date": "2023-11",
+      "year": 2023,
+      "month": 11,
+      "usdkrw": 1288.4,
+      "gold_usd": {
+        "g": 65.53,
+        "don": 245.72,
+        "toz": 2038.1,
+        "kg": 65526.4
+      },
+      "gold_krw": {
+        "g": 84422,
+        "don": 316581,
+        "toz": 2625807,
+        "kg": 84421640
+      },
+      "fiat_power_usd": 19.7,
+      "fiat_power_krw": 18.0
+    },
+    {
+      "date": "2023-12",
+      "year": 2023,
+      "month": 12,
+      "usdkrw": 1293.5,
+      "gold_usd": {
+        "g": 66.61,
+        "don": 249.79,
+        "toz": 2071.8,
+        "kg": 66609.9
+      },
+      "gold_krw": {
+        "g": 86162,
+        "don": 323107,
+        "toz": 2679935,
+        "kg": 86161926
+      },
+      "fiat_power_usd": 19.4,
+      "fiat_power_krw": 17.6
+    },
+    {
+      "date": "2024-01",
+      "year": 2024,
+      "month": 1,
+      "usdkrw": 1326.6,
+      "gold_usd": {
+        "g": 65.86,
+        "don": 246.97,
+        "toz": 2048.4,
+        "kg": 65857.6
+      },
+      "gold_krw": {
+        "g": 87368,
+        "don": 327630,
+        "toz": 2717448,
+        "kg": 87367995
+      },
+      "fiat_power_usd": 19.6,
+      "fiat_power_krw": 17.4
+    },
+    {
+      "date": "2024-02",
+      "year": 2024,
+      "month": 2,
+      "usdkrw": 1333.4,
+      "gold_usd": {
+        "g": 66.06,
+        "don": 247.73,
+        "toz": 2054.7,
+        "kg": 66060.1
+      },
+      "gold_krw": {
+        "g": 88083,
+        "don": 330312,
+        "toz": 2739696,
+        "kg": 88083268
+      },
+      "fiat_power_usd": 19.6,
+      "fiat_power_krw": 17.2
+    },
+    {
+      "date": "2024-03",
+      "year": 2024,
+      "month": 3,
+      "usdkrw": 1345.3,
+      "gold_usd": {
+        "g": 71.29,
+        "don": 267.34,
+        "toz": 2217.4,
+        "kg": 71291.1
+      },
+      "gold_krw": {
+        "g": 95907,
+        "don": 359652,
+        "toz": 2983046,
+        "kg": 95907157
+      },
+      "fiat_power_usd": 18.1,
+      "fiat_power_krw": 15.8
+    },
+    {
+      "date": "2024-04",
+      "year": 2024,
+      "month": 4,
+      "usdkrw": 1374.6,
+      "gold_usd": {
+        "g": 74.04,
+        "don": 277.65,
+        "toz": 2302.9,
+        "kg": 74040.0
+      },
+      "gold_krw": {
+        "g": 101778,
+        "don": 381669,
+        "toz": 3165658,
+        "kg": 101778283
+      },
+      "fiat_power_usd": 17.5,
+      "fiat_power_krw": 14.9
+    },
+    {
+      "date": "2024-05",
+      "year": 2024,
+      "month": 5,
+      "usdkrw": 1375.6,
+      "gold_usd": {
+        "g": 74.68,
+        "don": 280.06,
+        "toz": 2322.9,
+        "kg": 74683.0
+      },
+      "gold_krw": {
+        "g": 102735,
+        "don": 385258,
+        "toz": 3195428,
+        "kg": 102735386
+      },
+      "fiat_power_usd": 17.3,
+      "fiat_power_krw": 14.8
+    },
+    {
+      "date": "2024-06",
+      "year": 2024,
+      "month": 6,
+      "usdkrw": 1380.3,
+      "gold_usd": {
+        "g": 75.22,
+        "don": 282.07,
+        "toz": 2339.6,
+        "kg": 75219.9
+      },
+      "gold_krw": {
+        "g": 103825,
+        "don": 389342,
+        "toz": 3229303,
+        "kg": 103824505
+      },
+      "fiat_power_usd": 17.2,
+      "fiat_power_krw": 14.6
+    },
+    {
+      "date": "2024-07",
+      "year": 2024,
+      "month": 7,
+      "usdkrw": 1383.5,
+      "gold_usd": {
+        "g": 78.01,
+        "don": 292.55,
+        "toz": 2426.5,
+        "kg": 78013.8
+      },
+      "gold_krw": {
+        "g": 107932,
+        "don": 404745,
+        "toz": 3357063,
+        "kg": 107932074
+      },
+      "fiat_power_usd": 16.6,
+      "fiat_power_krw": 14.0
+    },
+    {
+      "date": "2024-08",
+      "year": 2024,
+      "month": 8,
+      "usdkrw": 1336.6,
+      "gold_usd": {
+        "g": 81.26,
+        "don": 304.74,
+        "toz": 2527.6,
+        "kg": 81264.2
+      },
+      "gold_krw": {
+        "g": 108615,
+        "don": 407307,
+        "toz": 3378314,
+        "kg": 108615328
+      },
+      "fiat_power_usd": 15.9,
+      "fiat_power_krw": 14.0
+    },
+    {
+      "date": "2024-10",
+      "year": 2024,
+      "month": 10,
+      "usdkrw": 1378.6,
+      "gold_usd": {
+        "g": 88.39,
+        "don": 331.47,
+        "toz": 2749.3,
+        "kg": 88392.0
+      },
+      "gold_krw": {
+        "g": 121855,
+        "don": 456955,
+        "toz": 3790103,
+        "kg": 121854625
+      },
+      "fiat_power_usd": 14.6,
+      "fiat_power_krw": 12.4
+    },
+    {
+      "date": "2024-11",
+      "year": 2024,
+      "month": 11,
+      "usdkrw": 1399.9,
+      "gold_usd": {
+        "g": 85.42,
+        "don": 320.34,
+        "toz": 2657.0,
+        "kg": 85424.5
+      },
+      "gold_krw": {
+        "g": 119582,
+        "don": 448434,
+        "toz": 3719428,
+        "kg": 119582388
+      },
+      "fiat_power_usd": 15.1,
+      "fiat_power_krw": 12.7
+    },
+    {
+      "date": "2025-01",
+      "year": 2025,
+      "month": 1,
+      "usdkrw": 1441.7,
+      "gold_usd": {
+        "g": 90.42,
+        "don": 339.09,
+        "toz": 2812.5,
+        "kg": 90424.0
+      },
+      "gold_krw": {
+        "g": 130361,
+        "don": 488852,
+        "toz": 4054669,
+        "kg": 130360627
+      },
+      "fiat_power_usd": 14.3,
+      "fiat_power_krw": 11.6
+    },
+    {
+      "date": "2025-02",
+      "year": 2025,
+      "month": 2,
+      "usdkrw": 1449.9,
+      "gold_usd": {
+        "g": 91.58,
+        "don": 343.43,
+        "toz": 2848.5,
+        "kg": 91581.4
+      },
+      "gold_krw": {
+        "g": 132780,
+        "don": 497926,
+        "toz": 4129926,
+        "kg": 132780211
+      },
+      "fiat_power_usd": 14.1,
+      "fiat_power_krw": 11.4
+    },
+    {
+      "date": "2025-03",
+      "year": 2025,
+      "month": 3,
+      "usdkrw": 1469.4,
+      "gold_usd": {
+        "g": 100.4,
+        "don": 376.5,
+        "toz": 3122.8,
+        "kg": 100400.4
+      },
+      "gold_krw": {
+        "g": 147529,
+        "don": 553235,
+        "toz": 4588674,
+        "kg": 147529280
+      },
+      "fiat_power_usd": 12.9,
+      "fiat_power_krw": 10.3
+    },
+    {
+      "date": "2025-04",
+      "year": 2025,
+      "month": 4,
+      "usdkrw": 1431.2,
+      "gold_usd": {
+        "g": 106.71,
+        "don": 400.17,
+        "toz": 3319.1,
+        "kg": 106711.5
+      },
+      "gold_krw": {
+        "g": 152721,
+        "don": 572705,
+        "toz": 4750163,
+        "kg": 152721292
+      },
+      "fiat_power_usd": 12.1,
+      "fiat_power_krw": 9.9
+    },
+    {
+      "date": "2025-05",
+      "year": 2025,
+      "month": 5,
+      "usdkrw": 1382.0,
+      "gold_usd": {
+        "g": 105.74,
+        "don": 396.53,
+        "toz": 3288.9,
+        "kg": 105740.6
+      },
+      "gold_krw": {
+        "g": 146131,
+        "don": 547993,
+        "toz": 4545194,
+        "kg": 146131381
+      },
+      "fiat_power_usd": 12.2,
+      "fiat_power_krw": 10.4
+    },
+    {
+      "date": "2025-07",
+      "year": 2025,
+      "month": 7,
+      "usdkrw": 1392.5,
+      "gold_usd": {
+        "g": 105.88,
+        "don": 397.05,
+        "toz": 3293.2,
+        "kg": 105878.8
+      },
+      "gold_krw": {
+        "g": 147438,
+        "don": 552894,
+        "toz": 4585847,
+        "kg": 147438400
+      },
+      "fiat_power_usd": 12.2,
+      "fiat_power_krw": 10.3
+    },
+    {
+      "date": "2025-08",
+      "year": 2025,
+      "month": 8,
+      "usdkrw": 1387.0,
+      "gold_usd": {
+        "g": 113.05,
+        "don": 423.92,
+        "toz": 3516.1,
+        "kg": 113045.2
+      },
+      "gold_krw": {
+        "g": 156790,
+        "don": 587964,
+        "toz": 4876725,
+        "kg": 156790357
+      },
+      "fiat_power_usd": 11.4,
+      "fiat_power_krw": 9.7
+    },
+    {
+      "date": "2025-09",
+      "year": 2025,
+      "month": 9,
+      "usdkrw": 1399.3,
+      "gold_usd": {
+        "g": 124.53,
+        "don": 466.97,
+        "toz": 3873.2,
+        "kg": 124526.3
+      },
+      "gold_krw": {
+        "g": 174253,
+        "don": 653450,
+        "toz": 5419885,
+        "kg": 174253348
+      },
+      "fiat_power_usd": 10.4,
+      "fiat_power_krw": 8.7
+    },
+    {
+      "date": "2025-10",
+      "year": 2025,
+      "month": 10,
+      "usdkrw": 1424.0,
+      "gold_usd": {
+        "g": 128.49,
+        "don": 481.84,
+        "toz": 3996.5,
+        "kg": 128490.5
+      },
+      "gold_krw": {
+        "g": 182973,
+        "don": 686149,
+        "toz": 5691096,
+        "kg": 182972983
+      },
+      "fiat_power_usd": 10.1,
+      "fiat_power_krw": 8.3
+    },
+    {
+      "date": "2025-11",
+      "year": 2025,
+      "month": 11,
+      "usdkrw": 1466.1,
+      "gold_usd": {
+        "g": 136.8,
+        "don": 512.99,
+        "toz": 4254.9,
+        "kg": 136798.2
+      },
+      "gold_krw": {
+        "g": 200564,
+        "don": 752115,
+        "toz": 6238237,
+        "kg": 200563962
+      },
+      "fiat_power_usd": 9.5,
+      "fiat_power_krw": 7.6
+    },
+    {
+      "date": "2025-12",
+      "year": 2025,
+      "month": 12,
+      "usdkrw": 1437.9,
+      "gold_usd": {
+        "g": 139.57,
+        "don": 523.39,
+        "toz": 4341.1,
+        "kg": 139569.6
+      },
+      "gold_krw": {
+        "g": 200689,
+        "don": 752582,
+        "toz": 6242111,
+        "kg": 200688532
+      },
+      "fiat_power_usd": 9.3,
+      "fiat_power_krw": 7.6
+    },
+    {
+      "date": "2026-01",
+      "year": 2026,
+      "month": 1,
+      "usdkrw": 1449.7,
+      "gold_usd": {
+        "g": 152.56,
+        "don": 572.09,
+        "toz": 4745.1,
+        "kg": 152558.5
+      },
+      "gold_krw": {
+        "g": 221164,
+        "don": 829365,
+        "toz": 6878971,
+        "kg": 221164068
+      },
+      "fiat_power_usd": 8.5,
+      "fiat_power_krw": 6.9
+    },
+    {
+      "date": "2026-04",
+      "year": 2026,
+      "month": 4,
+      "usdkrw": 1487.4,
+      "gold_usd": {
+        "g": 148.85,
+        "don": 558.17,
+        "toz": 4629.6,
+        "kg": 148845.1
+      },
+      "gold_krw": {
+        "g": 221389,
+        "don": 830210,
+        "toz": 6885974,
+        "kg": 221389219
+      },
+      "fiat_power_usd": 8.7,
+      "fiat_power_krw": 6.8
+    },
+    {
+      "date": "2026-05",
+      "year": 2026,
+      "month": 5,
+      "usdkrw": 1506.0,
+      "gold_usd": {
+        "g": 147.67,
+        "don": 553.76,
+        "toz": 4593.0,
+        "kg": 147668.4
+      },
+      "gold_krw": {
+        "g": 222383,
+        "don": 833935,
+        "toz": 6916874,
+        "kg": 222382672
+      },
+      "fiat_power_usd": 8.8,
+      "fiat_power_krw": 6.8
+    },
+    {
+      "date": "2026-06",
+      "year": 2026,
+      "month": 6,
+      "usdkrw": 1541.7,
+      "gold_usd": {
+        "g": 129.84,
+        "don": 486.9,
+        "toz": 4038.5,
+        "kg": 129840.8
+      },
+      "gold_krw": {
+        "g": 200179,
+        "don": 750673,
+        "toz": 6226277,
+        "kg": 200179441
+      },
+      "fiat_power_usd": 10.0,
+      "fiat_power_krw": 7.6
+    },
+    {
+      "date": "2026-07",
+      "year": 2026,
+      "month": 7,
+      "usdkrw": 1420.6,
+      "gold_usd": {
+        "g": 132.04,
+        "don": 495.16,
+        "toz": 4107.0,
+        "kg": 132043.1
+      },
+      "gold_krw": {
+        "g": 187580,
+        "don": 703427,
+        "toz": 5834404,
+        "kg": 187580451
+      },
+      "fiat_power_usd": 9.8,
+      "fiat_power_krw": 8.1
+    },
+    {
+      "date": "2026-08",
+      "year": 2026,
+      "month": 8,
+      "usdkrw": 1377.1,
+      "gold_usd": {
+        "g": 144.08,
+        "don": 540.31,
+        "toz": 4481.5,
+        "kg": 144083.6
+      },
+      "gold_krw": {
+        "g": 198419,
+        "don": 744071,
+        "toz": 6171518,
+        "kg": 198418926
+      },
+      "fiat_power_usd": 9.0,
+      "fiat_power_krw": 7.6
+    },
+    {
+      "date": "2026-09",
+      "year": 2026,
+      "month": 9,
+      "usdkrw": 1350.5,
+      "gold_usd": {
+        "g": 134.61,
+        "don": 504.77,
+        "toz": 4186.7,
+        "kg": 134605.5
+      },
+      "gold_krw": {
+        "g": 181785,
+        "don": 681693,
+        "toz": 5654138,
+        "kg": 181784769
+      },
+      "fiat_power_usd": 9.6,
+      "fiat_power_krw": 8.3
+    },
+    {
+      "date": "2026-10",
+      "year": 2026,
+      "month": 10,
+      "usdkrw": 1324.5,
+      "gold_usd": {
+        "g": 125.35,
+        "don": 470.07,
+        "toz": 3898.9,
+        "kg": 125352.5
+      },
+      "gold_krw": {
+        "g": 166032,
+        "don": 622620,
+        "toz": 5164171,
+        "kg": 166031954
+      },
+      "fiat_power_usd": 10.3,
+      "fiat_power_krw": 9.1
+    },
+    {
+      "date": "2026-11",
+      "year": 2026,
+      "month": 11,
+      "usdkrw": 1363.7,
+      "gold_usd": {
+        "g": 131.01,
+        "don": 491.29,
+        "toz": 4074.9,
+        "kg": 131011.1
+      },
+      "gold_krw": {
+        "g": 178653,
+        "don": 669950,
+        "toz": 5556737,
+        "kg": 178653255
+      },
+      "fiat_power_usd": 9.9,
+      "fiat_power_krw": 8.5
+    }
+  ]
+}

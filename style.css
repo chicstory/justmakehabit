@@ -1996,3 +1996,383 @@ body {
     order: -1;
   }
 }
+
+/* ==========================================================================
+   금 vs 실용화폐 시뮬레이터 (Gold vs Fiat Currency Simulator)
+   ========================================================================== */
+
+/* 컨트롤 패널 */
+.gold-ctrl-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.gcp-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gcp-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gcp-chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.g-chip {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.g-chip:hover {
+  background: #f8fafc;
+  border-color: #94a3b8;
+  color: #0f172a;
+}
+
+.g-chip.active {
+  background: #d97706;
+  border-color: #d97706;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(217, 119, 6, 0.25);
+}
+
+.g-chip.period.active {
+  background: #0f172a;
+  border-color: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
+}
+
+.g-chip.curr.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+/* KPI 지표 그리드 */
+.gold-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.gold-kpi-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gk-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.gk-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.gk-sub {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.gk-sub.gold { color: #d97706; }
+.gk-sub.down { color: #ef4444; }
+.gk-sub.blue { color: #2563eb; }
+
+/* 차트 박스 */
+.gold-chart-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.gcb-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.gcb-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.gcb-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.gcb-tab {
+  padding: 5px 11px;
+  font-size: 11.5px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.gcb-tab.active {
+  background: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+}
+
+.gcb-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+/* 실전 시뮬레이션 계산기 박스 */
+.gold-calc-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.gcc-head {
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.gcc-head h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.gcc-head p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.gcc-input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.gcc-input-box label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.gcc-select, .gcc-input {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 13px;
+  font-family: inherit;
+  background: #ffffff;
+  color: var(--text-primary);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.gcc-select:focus, .gcc-input:focus {
+  border-color: #d97706;
+}
+
+/* 3자 비교 매트릭스 카드 */
+.gold-compare-matrix {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.gcm-col {
+  border-radius: var(--radius-md);
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gcm-col.gold {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+}
+
+.gcm-col.usd {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.gcm-col.krw {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.gcm-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gcm-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+.gcm-col.gold .gcm-badge { background: #d97706; color: #fff; }
+.gcm-col.usd .gcm-badge { background: #2563eb; color: #fff; }
+.gcm-col.krw .gcm-badge { background: #dc2626; color: #fff; }
+
+.gcm-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.gcm-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.gcm-profit {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gcm-col.gold .gcm-profit { color: #d97706; }
+.gcm-col.usd .gcm-profit { color: #2563eb; }
+.gcm-col.krw .gcm-profit { color: #ef4444; }
+
+.gcm-desc {
+  font-size: 11px;
+  color: #64748b;
+  line-height: 1.5;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+  padding-top: 6px;
+}
+
+/* 철학 인사이트 배너 */
+.gold-insight-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  color: #ffffff;
+  margin-top: 24px;
+}
+
+.gic-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #fbbf24;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+
+.gic-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.gic-desc {
+  font-size: 12.5px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* 모바일 반응형 */
+@media (max-width: 768px) {
+  .gold-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gold-compare-matrix {
+    grid-template-columns: 1fr;
+  }
+  .gcc-input-grid {
+    grid-template-columns: 1fr;
+  }
+  .gcb-canvas-wrap {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gold-ctrl-panel {
+    padding: 12px 14px;
+  }
+  .g-chip {
+    padding: 4px 9px;
+    font-size: 11px;
+  }
+  .gk-val {
+    font-size: 15px;
+  }
+  .gold-calc-card {
+    padding: 16px 14px;
+  }
+}
