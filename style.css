@@ -1495,6 +1495,49 @@ body {
   margin-bottom: 24px;
 }
 
+/* 투자 카테고리 뷰 전환 세그먼트 탭 */
+.invest-nav-tabs {
+  display: flex;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: var(--radius-md);
+  margin-bottom: 18px;
+  border: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.int-tab {
+  flex: 1;
+  min-width: 140px;
+  border: none;
+  background: transparent;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.int-tab.active {
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.int-tab:hover:not(.active) {
+  color: #334155;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 /* ==========================================================================
    실전 자산 매매일지 (Real Trading Journal) 스타일링
    ========================================================================== */

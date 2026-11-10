@@ -49,279 +49,380 @@
         </p>
       </section>
 
-      <!-- 📜 서브 카테고리 1: 실전 자산 매매일지 (Personal Real Trading Journal) -->
-      <section class="journal-section" id="tradingJournal">
-        <div class="journal-header">
-          <div class="journal-title-wrap">
-            <span class="journal-badge-pill">SUB-CATEGORY 1 · REAL TRADING JOURNAL</span>
-            <h2 class="journal-title">💼 실전 자산 매매일지</h2>
-            <p class="journal-desc">1원=1초 규율에 따른 실제 자산 집행 원장 · 원칙과 근거(Thesis) 중심의 투명한 기록</p>
-          </div>
-          <div class="journal-meta-tag">
-            <i class="bi bi-shield-check"></i> 실전 매매 검증
-          </div>
-        </div>
+      <!-- 🎛️ 상단 뷰 전환 세그먼트 메뉴 바 -->
+      <div class="invest-nav-tabs">
+        <button class="int-tab active" id="viewTabRadar" onclick="switchInvestView('radar')">
+          <i class="bi bi-radar"></i> 🎯 퀀트 레이더 (기존 메뉴)
+        </button>
+        <button class="int-tab" id="viewTabJournal" onclick="switchInvestView('journal')">
+          <i class="bi bi-journal-text"></i> 💼 실전 자산 매매일지
+        </button>
+        <button class="int-tab" id="viewTabArchive" onclick="switchInvestView('archive')">
+          <i class="bi bi-collection"></i> 📚 투자 철학 아카이브
+        </button>
+      </div>
 
-        <!-- 상단 KPI 요약 서머리 3대 카드 -->
-        <div class="journal-kpi-grid">
-          <div class="jkpi-card">
-            <div class="jkpi-label">누적 확정 실현손익</div>
-            <div class="jkpi-val profit">+$15.00 <span class="jkpi-pct">(+1.2%)</span></div>
-            <div class="jkpi-sub">ROOT 30주 전량 차익 실현 완결</div>
+      <!-- ========================================================
+           VIEW 1: 🎯 퀀트 레이더 3.0 (기존 메뉴 - 기본 노출)
+           ======================================================== -->
+      <div id="viewSectionRadar">
+        <!-- 퀀트 레이더 대시보드 런처 배너 -->
+        <section class="radar-launcher-card">
+          <div class="rlc-left">
+            <h3>ThePathLab 듀얼 레이더 3.0 (PLM100 &amp; PLV100)</h3>
+            <p>글로벌 200개 종목 11월 1,000pt 기준 지수, 실시간 52주 레인지, RSI 과매도 및 킬스위치 점검</p>
           </div>
-          <div class="jkpi-card">
-            <div class="jkpi-label">실전 운용 포트폴리오</div>
-            <div class="jkpi-val">총 $1,930</div>
-            <div class="jkpi-sub">ADM 18주($1,257) · FLNC 120주($613) · 잔여현금($59)</div>
-          </div>
-          <div class="jkpi-card">
-            <div class="jkpi-label">실전 운용 원칙 (정규 vs 목적성 분리)</div>
-            <div class="jkpi-val rule">Buy &amp; Hold 분기 승강제</div>
-            <div class="jkpi-sub">정규: 들고 가며 분기 승강제 / ADM: 170만 ➔ 180만 회수</div>
-          </div>
-        </div>
+          <a href="radar/index.html" class="rlc-btn">
+            풀스크린 레이더 열기 <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </section>
 
-        <!-- 매매일지 타임라인 카드 목록 -->
-        <div class="journal-log-list">
-
-          <!-- LOG #3: ADM 신규 매수 -->
-          <article class="journal-item status-active">
-            <div class="ji-head">
-              <div class="ji-left">
-                <span class="ji-badge badge-buy">매수 체결</span>
-                <span class="ji-date">2026.11.11</span>
-                <strong class="ji-ticker">ADM</strong>
-                <span class="ji-name">아처 대니얼스 미들랜드 (Archer-Daniels-Midland)</span>
-              </div>
-              <div class="ji-status-tag active" style="background: #fef3c7; color: #92400e;">단기 목적성 (170만 ➔ 180만 회수)</div>
+        <!-- 종목 리스트 섹션 -->
+        <section class="invest-box">
+          <div class="invest-box-head">
+            <h3>🎯 퀀트 레이더 종목 리스트</h3>
+            <div style="display: flex; gap: 8px;">
+              <button class="rb-badge" id="tabPlmBtn" onclick="switchInvestTab('PLM')" style="cursor: pointer; padding: 4px 10px; background: #2563eb; color: #fff;">1부 리그 (PLM100)</button>
+              <button class="rb-badge qtr" id="tabPlvBtn" onclick="switchInvestTab('PLV')" style="cursor: pointer; padding: 4px 10px;">2부 리그 (PLV100)</button>
             </div>
-            
-            <div class="ji-body-grid">
-              <div class="ji-stat-box">
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">체결 단가</span>
-                  <span class="ji-val mono font-bold">$69.70</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">체결 수량</span>
-                  <span class="ji-val mono">18주</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">매수 총액</span>
-                  <span class="ji-val mono">$1,254.60 (약 175만 원)</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">자금 성격</span>
-                  <span class="ji-val" style="font-weight: 700; color: #b45309;">단기 용처 자금 (180만 목표)</span>
-                </div>
+          </div>
+
+          <div style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 14px;" id="tabDescText">
+            🏛️ <strong>1부 리그: PLM100</strong> — 글로벌 과점·해자 챔피언 (포트폴리오 70% 배분 타깃)
+          </div>
+
+          <!-- 실시간 검색 및 스마트 필터 바 -->
+          <div class="invest-control-bar">
+            <div class="icb-top-row">
+              <div class="icb-search-wrap">
+                <i class="bi bi-search"></i>
+                <input type="text" id="investSearchInput" class="icb-search-input" placeholder="티커 또는 기업명 검색 (예: ROOT, FLNC, 하이닉스, 크라토스)..." oninput="handleInvestSearch(this.value)">
               </div>
+              <select id="investSortSelect" class="icb-sort-select" onchange="handleInvestSort(this.value)">
+                <option value="default">기본 (내 보유 종목 최우선)</option>
+                <option value="rsi_asc">🌊 RSI 바닥순 (낮은 순)</option>
+                <option value="drop_asc">🔻 고점대비 낙폭순 (-70% ➔ -5%)</option>
+                <option value="price_desc">💵 현재가 높은순</option>
+                <option value="ticker_asc">🔤 티커명 (A-Z)</option>
+              </select>
+            </div>
 
-              <div class="ji-content-box">
-                <div class="ji-reason-title"><i class="bi bi-crosshair"></i> 매매 근거 &amp; 자금 운용 목적 (Thesis)</div>
-                <p class="ji-reason-text">
-                  글로벌 4대 곡물 메이저(ABCD). 회계 정정 및 가이던스 삭감 악재가 선반영되며 <strong>RSI 22.9의 극단적 과매도(매도 클라이맥스)</strong> 도달.<br>
-                  <strong>운용 목적</strong>: 170만 원은 단기적으로 용처가 있는 목적성 자금으로, 기계적 반등을 활용해 <strong>180만 원(약 $72.5~$73.5)까지 올려두고 깔끔하게 회수</strong>하는 것이 목표. 장기 동행하는 정규 자산(FLNC 등)과 명확히 분리하여 운용.
-                </p>
-                <div class="ji-plan-box">
-                  <span class="ji-plan-pill target">목표 회수가 $72.50~$73.50 (180만 원 목표 달성 시 전량 회수)</span>
-                  <span class="ji-plan-pill stop">손절선 $68.50 (-1.7% 엄수)</span>
+            <div class="icb-filter-chips">
+              <div class="icb-chip-group">
+                <button class="ic-chip active" id="chipAll" onclick="filterInvestList('all')">
+                  전체 <span class="ic-chip-count" id="countAll">100</span>
+                </button>
+                <button class="ic-chip holding" id="chipHolding" onclick="filterInvestList('holding')">
+                  ⭐ 내 보유 종목 <span class="ic-chip-count" id="countHolding">2</span>
+                </button>
+                <button class="ic-chip" id="chipOversold" onclick="filterInvestList('oversold')">
+                  🌊 RSI &lt; 35 바닥 <span class="ic-chip-count" id="countOversold">31</span>
+                </button>
+                <button class="ic-chip" id="chipDrop" onclick="filterInvestList('drop30')">
+                  🔻 -30%+ 낙폭 <span class="ic-chip-count" id="countDrop">30</span>
+                </button>
+              </div>
+              <div class="icb-count-text" id="resultCountText">조회 결과: 총 100개 종목</div>
+            </div>
+          </div>
+
+          <div class="radar-table-wrap">
+            <table class="radar-table">
+              <thead>
+                <tr>
+                  <th style="width: 100px;">티커</th>
+                  <th style="min-width: 140px;">기업명 / 섹터</th>
+                  <th style="width: 90px; text-align: right;">현재가</th>
+                  <th style="width: 95px; text-align: right;">고점대비</th>
+                  <th style="width: 90px; text-align: center;">RSI</th>
+                  <th style="min-width: 200px;">핵심 해자 (Thesis) &amp; 킬스위치</th>
+                </tr>
+              </thead>
+              <tbody id="investTableBody">
+                <tr>
+                  <td colspan="6" style="text-align: center; padding: 30px; color: #64748b;">레이더 데이터를 불러오는 중...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="margin-top: 16px; text-align: center;">
+            <a href="radar/index.html" style="font-size: 13px; font-weight: 600; color: #2563eb; text-decoration: none;">
+              200개 종목 인터랙티브 차트 및 전체 시세 보기 →
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <!-- ========================================================
+           VIEW 2: 💼 실전 자산 매매일지 (선택 탭 노출)
+           ======================================================== -->
+      <div id="viewSectionJournal" style="display: none;">
+        <!-- 📜 실전 자산 매매일지 섹션 (Personal Real Trading Journal) -->
+        <section class="journal-section" id="tradingJournal">
+          <div class="journal-header">
+            <div class="journal-title-wrap">
+              <span class="journal-badge-pill">REAL TRADING JOURNAL</span>
+              <h2 class="journal-title">💼 실전 자산 매매일지</h2>
+              <p class="journal-desc">1원=1초 규율에 따른 실제 자산 집행 원장 · 원칙과 근거(Thesis) 중심의 투명한 기록</p>
+            </div>
+            <div class="journal-meta-tag">
+              <i class="bi bi-shield-check"></i> 실전 매매 검증
+            </div>
+          </div>
+
+          <!-- 상단 KPI 요약 서머리 3대 카드 -->
+          <div class="journal-kpi-grid">
+            <div class="jkpi-card">
+              <div class="jkpi-label">누적 확정 실현손익</div>
+              <div class="jkpi-val profit">+$15.00 <span class="jkpi-pct">(+1.2%)</span></div>
+              <div class="jkpi-sub">ROOT 30주 전량 차익 실현 완결</div>
+            </div>
+            <div class="jkpi-card">
+              <div class="jkpi-label">실전 운용 포트폴리오</div>
+              <div class="jkpi-val">총 $1,930</div>
+              <div class="jkpi-sub">ADM 18주($1,257) · FLNC 120주($613) · 잔여현금($59)</div>
+            </div>
+            <div class="jkpi-card">
+              <div class="jkpi-label">실전 운용 원칙 (정규 vs 목적성 분리)</div>
+              <div class="jkpi-val rule">Buy &amp; Hold 분기 승강제</div>
+              <div class="jkpi-sub">정규: 들고 가며 분기 승강제 / ADM: 170만 ➔ 180만 회수</div>
+            </div>
+          </div>
+
+          <!-- 매매일지 타임라인 카드 목록 -->
+          <div class="journal-log-list">
+
+            <!-- LOG #3: ADM 신규 매수 -->
+            <article class="journal-item status-active">
+              <div class="ji-head">
+                <div class="ji-left">
+                  <span class="ji-badge badge-buy">매수 체결</span>
+                  <span class="ji-date">2026.11.11</span>
+                  <strong class="ji-ticker">ADM</strong>
+                  <span class="ji-name">아처 대니얼스 미들랜드 (Archer-Daniels-Midland)</span>
                 </div>
-
-                <!-- ⚠️ ADM 핵심 위험성 경고 박스 -->
-                <div class="ji-risk-box">
-                  <div class="ji-risk-title">
-                    <i class="bi bi-exclamation-triangle-fill"></i> ⚠️ ADM 핵심 투자 위험성 (Risk Factors Checklist)
+                <div class="ji-status-tag active" style="background: #fef3c7; color: #92400e;">단기 목적성 (170만 ➔ 180만 회수)</div>
+              </div>
+              
+              <div class="ji-body-grid">
+                <div class="ji-stat-box">
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">체결 단가</span>
+                    <span class="ji-val mono font-bold">$69.70</span>
                   </div>
-                  <ul class="ji-risk-list">
-                    <li><strong>🚨 회계 조사 및 CFO 정직</strong>: 고마진 영양(Nutrition) 부문 내부 거래 회계 의혹으로 SEC/DOJ 조사 및 재무제표 정정(Restatement) 리스크 상존.</li>
-                    <li><strong>🛢️ 크러시 마진(Crush Margin) 급락</strong>: 남미 대풍작과 글로벌 공급 과잉으로 대두 착유/가공 영업이익이 고점 대비 80% 이상 폭락.</li>
-                    <li><strong>🌿 미국 바이오연료 정책 불확실성</strong>: EPA 혼합 의무 발표 지연 및 트럼프 2기 친환경 보조금 삭감 우려로 대두유 수요 위축.</li>
-                    <li><strong>📉 가이던스 지속 하향</strong>: 연이은 실적 전망 삭감 ➔ 따라서 장기 동행이 아닌 목표치(180만 원) 도달 시 미련 없이 회수 원칙.</li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-          </article>
-
-          <!-- LOG #2: ROOT 전량 매도 완료 -->
-          <article class="journal-item status-completed">
-            <div class="ji-head">
-              <div class="ji-left">
-                <span class="ji-badge badge-sell">전량 매도</span>
-                <span class="ji-date">2026.11.11</span>
-                <strong class="ji-ticker">ROOT</strong>
-                <span class="ji-name">루트 (Root, Inc.)</span>
-              </div>
-              <div class="ji-status-tag completed">매도 완료 (실현익절 확정)</div>
-            </div>
-            
-            <div class="ji-body-grid">
-              <div class="ji-stat-box">
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">매입가 / 수량</span>
-                  <span class="ji-val mono">$43.30 (30주)</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">체결 매도가</span>
-                  <span class="ji-val mono font-bold">$43.80</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">회수 대금</span>
-                  <span class="ji-val mono">$1,314.00</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">확정 실현손익</span>
-                  <span class="ji-val mono profit font-bold">+$15.00 (+1.2%)</span>
-                </div>
-              </div>
-
-              <div class="ji-content-box">
-                <div class="ji-reason-title"><i class="bi bi-check-circle-fill"></i> 매도 근거 &amp; 결과 복기 (Review)</div>
-                <p class="ji-reason-text">
-                  1부 리그 PLM100 텔레매틱스 기반 흑자전환주. 매입가($43.30) 대비 미국 지수 낙폭 확대 및 거시 경제 변동성 심화 구간에서 <strong>+$15.00 (+1.15%)의 차익을 선제적으로 실현</strong>. 
-                  회수한 $1,314.00 전액은 안전 USD 예수금(현금)으로 보관하여 다음 기회 포착을 위한 기동성 확보.
-                </p>
-                <div class="ji-plan-box">
-                  <span class="ji-plan-pill result">체결일: 2026.11.11</span>
-                  <span class="ji-plan-pill result">30주 전량 체결 ($43.80)</span>
-                  <span class="ji-plan-pill result-profit">확정 수익률 +1.2% 실현 완결</span>
-                </div>
-
-                <!-- ⚠️ ROOT 핵심 위험성 및 전량 매도 결정 근거 (Exit Thesis) -->
-                <div class="ji-risk-box" style="background: #f8fafc; border-color: #cbd5e1;">
-                  <div class="ji-risk-title" style="color: #475569;">
-                    <i class="bi bi-shield-x"></i> ⚠️ ROOT 핵심 투자 위험성 &amp; 전량 매도 결정 배경 (Exit Thesis)
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">체결 수량</span>
+                    <span class="ji-val mono">18주</span>
                   </div>
-                  <ul class="ji-risk-list" style="color: #334155;">
-                    <li><strong>📉 기존 계약 유지 실패 &amp; 마른오징어 쥐어짜기</strong>: 신규 계약 유입 대비 기존 계약 유지율(Retention)이 지속 하락. 손해율(Loss Ratio) 방어를 위한 보험료 인상이 기존 우량 고객의 이탈을 부추기며 기존 가입자 기반을 쥐어짜는 성장 한계 노출.</li>
-                    <li><strong>🦈 전통 대형사(Progressive, GEICO)의 기술 추격</strong>: 막강한 자본력을 지닌 대형 보험사들이 자체 텔레매틱스(운전습관 데이터) 알고리즘을 고도화하며 ROOT만의 소프트웨어 해자를 빠르게 잠식.</li>
-                    <li><strong>🚗 임베디드(Embedded) 채널의 극단적 카바나(Carvana) 의존성</strong>: 자체 다이렉트 유입 한계로 인해 중고차 플랫폼 카바나(Carvana) 연계 임베디드 판매에 실적이 과도하게 종속. 파트너사 업황에 휘둘리는 취약한 유통 구조.</li>
-                    <li><strong>💡 매도 결론</strong>: 단기 흑자전환으로 매입가($43.30) 대비 익절 기회가 왔을 때, 구조적 리스크를 감수하며 장기 동행할 이유가 없다고 판단 ➔ <strong>+$15.00 (+1.2%) 실현익절로 전량 매도 완결 및 안전 USD 현금 확보</strong>.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- LOG #1: FLNC 신규 매수 -->
-          <article class="journal-item status-active">
-            <div class="ji-head">
-              <div class="ji-left">
-                <span class="ji-badge badge-buy">매수 체결</span>
-                <span class="ji-date">2026.11.01</span>
-                <strong class="ji-ticker">FLNC</strong>
-                <span class="ji-name">플루언스 에너지 (Fluence Energy)</span>
-              </div>
-              <div class="ji-status-tag active">정규 실전 운용 (Buy &amp; Hold)</div>
-            </div>
-            
-            <div class="ji-body-grid">
-              <div class="ji-stat-box">
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">체결 단가</span>
-                  <span class="ji-val mono font-bold">$5.95</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">체결 수량</span>
-                  <span class="ji-val mono">120주</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">매수 총액</span>
-                  <span class="ji-val mono">$713.71</span>
-                </div>
-                <div class="ji-stat-row">
-                  <span class="ji-lbl">운용 방식</span>
-                  <span class="ji-val" style="font-weight: 700; color: #7c3aed;">들고 가면서 분기 승강제</span>
-                </div>
-              </div>
-
-              <div class="ji-content-box">
-                <div class="ji-reason-title"><i class="bi bi-crosshair"></i> 매매 근거 &amp; 전략 (Thesis)</div>
-                <p class="ji-reason-text">
-                  2부 리그 PLV100 텐배거 벤처 축. 지멘스와 AES 합작의 글로벌 1위 배터리 에너지 저장 장치(ESS) 및 인공지능 전력 거래 소프트웨어 해자 보유.<br>
-                  <strong>운용 원칙</strong>: 단기 매매가 아니라 <strong>"그냥 들고 가면서 분기별 승강제로 리밸런싱"</strong>하는 코어 포트폴리오. 바벨 투자(30% 벤처 축)로서 장기 동행.
-                </p>
-                <div class="ji-plan-box">
-                  <span class="ji-plan-pill target">코어 원칙: Buy &amp; Hold 분기 승강제</span>
-                  <span class="ji-plan-pill neutral">바벨 포트폴리오 30% 벤처 배분</span>
-                </div>
-
-                <!-- ⚠️ FLNC 핵심 모니터링 위험성 & 킬스위치 -->
-                <div class="ji-risk-box" style="background: #fdf4ff; border-color: #f0abfc;">
-                  <div class="ji-risk-title" style="color: #86198f;">
-                    <i class="bi bi-eye-fill"></i> ⚠️ FLNC 핵심 모니터링 위험성 &amp; 승강제 킬스위치
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">매수 총액</span>
+                    <span class="ji-val mono">$1,254.60 (약 175만 원)</span>
                   </div>
-                  <ul class="ji-risk-list" style="color: #701a75;">
-                    <li><strong>⚡ 대형 유틸리티 프로젝트 납기 및 매출 인식 지연</strong>: 대형 전력망 ESS 구축 프로젝트 특성상 인허가·그리드 연결 지연에 따른 분기 실적 변동성 존재.</li>
-                    <li><strong>🔋 테슬라(메가팩) 등과의 하드웨어 경쟁</strong>: 하드웨어 마진 방어와 더불어 지멘스-AES 기반 AI 전력 거래 SaaS(Fluence OS) 매출 비중 확대 지속성이 관건.</li>
-                    <li><strong>승강제 킬스위치</strong>: 수주 잔고(Backlog) 2개 분기 연속 역성장 또는 SaaS 총이익률 훼손 시 분기 평가에서 가차 없이 제외.</li>
-                  </ul>
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">자금 성격</span>
+                    <span class="ji-val" style="font-weight: 700; color: #b45309;">단기 용처 자금 (180만 목표)</span>
+                  </div>
+                </div>
+
+                <div class="ji-content-box">
+                  <div class="ji-reason-title"><i class="bi bi-crosshair"></i> 매매 근거 &amp; 자금 운용 목적 (Thesis)</div>
+                  <p class="ji-reason-text">
+                    글로벌 4대 곡물 메이저(ABCD). 회계 정정 및 가이던스 삭감 악재가 선반영되며 <strong>RSI 22.9의 극단적 과매도(매도 클라이맥스)</strong> 도달.<br>
+                    <strong>운용 목적</strong>: 170만 원은 단기적으로 용처가 있는 목적성 자금으로, 기계적 반등을 활용해 <strong>180만 원(약 $72.5~$73.5)까지 올려두고 깔끔하게 회수</strong>하는 것이 목표. 장기 동행하는 정규 자산(FLNC 등)과 명확히 분리하여 운용.
+                  </p>
+                  <div class="ji-plan-box">
+                    <span class="ji-plan-pill target">목표 회수가 $72.50~$73.50 (180만 원 목표 달성 시 전량 회수)</span>
+                    <span class="ji-plan-pill stop">손절선 $68.50 (-1.7% 엄수)</span>
+                  </div>
+
+                  <!-- ⚠️ ADM 핵심 위험성 경고 박스 -->
+                  <div class="ji-risk-box">
+                    <div class="ji-risk-title">
+                      <i class="bi bi-exclamation-triangle-fill"></i> ⚠️ ADM 핵심 투자 위험성 (Risk Factors Checklist)
+                    </div>
+                    <ul class="ji-risk-list">
+                      <li><strong>🚨 회계 조사 및 CFO 정직</strong>: 고마진 영양(Nutrition) 부문 내부 거래 회계 의혹으로 SEC/DOJ 조사 및 재무제표 정정(Restatement) 리스크 상존.</li>
+                      <li><strong>🛢️ 크러시 마진(Crush Margin) 급락</strong>: 남미 대풍작과 글로벌 공급 과잉으로 대두 착유/가공 영업이익이 고점 대비 80% 이상 폭락.</li>
+                      <li><strong>🌿 미국 바이오연료 정책 불확실성</strong>: EPA 혼합 의무 발표 지연 및 트럼프 2기 친환경 보조금 삭감 우려로 대두유 수요 위축.</li>
+                      <li><strong>📉 가이던스 지속 하향</strong>: 연이은 실적 전망 삭감 ➔ 따라서 장기 동행이 아닌 목표치(180만 원) 도달 시 미련 없이 회수 원칙.</li>
+                    </ul>
+                  </div>
+
                 </div>
               </div>
-            </div>
-          </article>
+            </article>
 
-        </div>
-      </section>
+            <!-- LOG #2: ROOT 전량 매도 완료 -->
+            <article class="journal-item status-completed">
+              <div class="ji-head">
+                <div class="ji-left">
+                  <span class="ji-badge badge-sell">전량 매도</span>
+                  <span class="ji-date">2026.11.11</span>
+                  <strong class="ji-ticker">ROOT</strong>
+                  <span class="ji-name">루트 (Root, Inc.)</span>
+                </div>
+                <div class="ji-status-tag completed">매도 완료 (실현익절 확정)</div>
+              </div>
+              
+              <div class="ji-body-grid">
+                <div class="ji-stat-box">
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">매입가 / 수량</span>
+                    <span class="ji-val mono">$43.30 (30주)</span>
+                  </div>
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">체결 매도가</span>
+                    <span class="ji-val mono font-bold">$43.80</span>
+                  </div>
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">회수 대금</span>
+                    <span class="ji-val mono">$1,314.00</span>
+                  </div>
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">확정 실현손익</span>
+                    <span class="ji-val mono profit font-bold">+$15.00 (+1.2%)</span>
+                  </div>
+                </div>
 
-      <!-- 📚 서브 카테고리 2: 투자 철학 & 바벨 퀀트 아카이브 -->
-      <section class="subcat-group" style="margin-top: 24px; margin-bottom: 24px;">
-        <div class="subcat-header">
-          <h3>📚 투자 철학 &amp; 바벨 퀀트 아카이브 (Principles &amp; Guides)</h3>
-          <span class="subcat-count">3편</span>
-        </div>
-        <div class="archive-list">
-          
-          <div class="archive-card">
-            <div class="ac-top">
-              <span class="ac-tag" style="background: #eff6ff; color: #2563eb;">코어 원칙</span>
-              <span class="ac-date">2026.11.11</span>
-            </div>
-            <h4 class="ac-title">바벨 포트폴리오의 규율: "그냥 들고 가면서 분기별 승강제로 간다"</h4>
-            <p class="ac-snippet">
-              1부 글로벌 과점 챔피언(70%)과 2부 텐배거 벤처(30%)의 이중 방벽. 매일의 시세 노이즈에 일희일비하지 않고 그냥 들고 가면서, 분기 실적과 킬스위치를 점검하여 기계적으로 교체하는 승강제 룰.
-            </p>
+                <div class="ji-content-box">
+                  <div class="ji-reason-title"><i class="bi bi-check-circle-fill"></i> 매도 근거 &amp; 결과 복기 (Review)</div>
+                  <p class="ji-reason-text">
+                    1부 리그 PLM100 텔레매틱스 기반 흑자전환주. 매입가($43.30) 대비 미국 지수 낙폭 확대 및 거시 경제 변동성 심화 구간에서 <strong>+$15.00 (+1.15%)의 차익을 선제적으로 실현</strong>. 
+                    회수한 $1,314.00 전액은 안전 USD 예수금(현금)으로 보관하여 다음 기회 포착을 위한 기동성 확보.
+                  </p>
+                  <div class="ji-plan-box">
+                    <span class="ji-plan-pill result">체결일: 2026.11.11</span>
+                    <span class="ji-plan-pill result">30주 전량 체결 ($43.80)</span>
+                    <span class="ji-plan-pill result-profit">확정 수익률 +1.2% 실현 완결</span>
+                  </div>
+
+                  <!-- ⚠️ ROOT 핵심 위험성 및 전량 매도 결정 근거 (Exit Thesis) -->
+                  <div class="ji-risk-box" style="background: #f8fafc; border-color: #cbd5e1;">
+                    <div class="ji-risk-title" style="color: #475569;">
+                      <i class="bi bi-shield-x"></i> ⚠️ ROOT 핵심 투자 위험성 &amp; 전량 매도 결정 배경 (Exit Thesis)
+                    </div>
+                    <ul class="ji-risk-list" style="color: #334155;">
+                      <li><strong>📉 기존 계약 유지 실패 &amp; 마른오징어 쥐어짜기</strong>: 신규 계약 유입 대비 기존 계약 유지율(Retention)이 지속 하락. 손해율(Loss Ratio) 방어를 위한 보험료 인상이 기존 우량 고객의 이탈을 부추기며 기존 가입자 기반을 쥐어짜는 성장 한계 노출.</li>
+                      <li><strong>🦈 전통 대형사(Progressive, GEICO)의 기술 추격</strong>: 막강한 자본력을 지닌 대형 보험사들이 자체 텔레매틱스(운전습관 데이터) 알고리즘을 고도화하며 ROOT만의 소프트웨어 해자를 빠르게 잠식.</li>
+                      <li><strong>🚗 임베디드(Embedded) 채널의 극단적 카바나(Carvana) 의존성</strong>: 자체 다이렉트 유입 한계로 인해 중고차 플랫폼 카바나(Carvana) 연계 임베디드 판매에 실적이 과도하게 종속. 파트너사 업황에 휘둘리는 취약한 유통 구조.</li>
+                      <li><strong>💡 매도 결론</strong>: 단기 흑자전환으로 매입가($43.30) 대비 익절 기회가 왔을 때, 구조적 리스크를 감수하며 장기 동행할 이유가 없다고 판단 ➔ <strong>+$15.00 (+1.2%) 실현익절로 전량 매도 완결 및 안전 USD 현금 확보</strong>.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- LOG #1: FLNC 신규 매수 -->
+            <article class="journal-item status-active">
+              <div class="ji-head">
+                <div class="ji-left">
+                  <span class="ji-badge badge-buy">매수 체결</span>
+                  <span class="ji-date">2026.11.01</span>
+                  <strong class="ji-ticker">FLNC</strong>
+                  <span class="ji-name">플루언스 에너지 (Fluence Energy)</span>
+                </div>
+                <div class="ji-status-tag active">정규 실전 운용 (Buy &amp; Hold)</div>
+              </div>
+              
+              <div class="ji-body-grid">
+                <div class="ji-stat-box">
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">체결 단가</span>
+                    <span class="ji-val mono font-bold">$5.95</span>
+                  </div>
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">체결 수량</span>
+                    <span class="ji-val mono">120주</span>
+                  </div>
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">매수 총액</span>
+                    <span class="ji-val mono">$713.71</span>
+                  </div>
+                  <div class="ji-stat-row">
+                    <span class="ji-lbl">운용 방식</span>
+                    <span class="ji-val" style="font-weight: 700; color: #7c3aed;">들고 가면서 분기 승강제</span>
+                  </div>
+                </div>
+
+                <div class="ji-content-box">
+                  <div class="ji-reason-title"><i class="bi bi-crosshair"></i> 매매 근거 &amp; 전략 (Thesis)</div>
+                  <p class="ji-reason-text">
+                    2부 리그 PLV100 텐배거 벤처 축. 지멘스와 AES 합작의 글로벌 1위 배터리 에너지 저장 장치(ESS) 및 인공지능 전력 거래 소프트웨어 해자 보유.<br>
+                    <strong>운용 원칙</strong>: 단기 매매가 아니라 <strong>"그냥 들고 가면서 분기별 승강제로 리밸런싱"</strong>하는 코어 포트폴리오. 바벨 투자(30% 벤처 축)로서 장기 동행.
+                  </p>
+                  <div class="ji-plan-box">
+                    <span class="ji-plan-pill target">코어 원칙: Buy &amp; Hold 분기 승강제</span>
+                    <span class="ji-plan-pill neutral">바벨 포트폴리오 30% 벤처 배분</span>
+                  </div>
+
+                  <!-- ⚠️ FLNC 핵심 모니터링 위험성 & 킬스위치 -->
+                  <div class="ji-risk-box" style="background: #fdf4ff; border-color: #f0abfc;">
+                    <div class="ji-risk-title" style="color: #86198f;">
+                      <i class="bi bi-eye-fill"></i> ⚠️ FLNC 핵심 모니터링 위험성 &amp; 승강제 킬스위치
+                    </div>
+                    <ul class="ji-risk-list" style="color: #701a75;">
+                      <li><strong>⚡ 대형 유틸리티 프로젝트 납기 및 매출 인식 지연</strong>: 대형 전력망 ESS 구축 프로젝트 특성상 인허가·그리드 연결 지연에 따른 분기 실적 변동성 존재.</li>
+                      <li><strong>🔋 테슬라(메가팩) 등과의 하드웨어 경쟁</strong>: 하드웨어 마진 방어와 더불어 지멘스-AES 기반 AI 전력 거래 SaaS(Fluence OS) 매출 비중 확대 지속성이 관건.</li>
+                      <li><strong>승강제 킬스위치</strong>: 수주 잔고(Backlog) 2개 분기 연속 역성장 또는 SaaS 총이익률 훼손 시 분기 평가에서 가차 없이 제외.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
           </div>
+        </section>
+      </div>
 
-          <div class="archive-card">
-            <div class="ac-top">
-              <span class="ac-tag" style="background: #ecfdf5; color: #059669;">자금 운용</span>
-              <span class="ac-date">2026.11.11</span>
-            </div>
-            <h4 class="ac-title">목적성 단기 자금과 정규 자산의 분리: 170만 원을 180만 원으로 회수하는 과매도 스프링 원칙</h4>
-            <p class="ac-snippet">
-              정규 자산은 바이앤홀드로 승강제를 타되, 단기 용처가 있는 170만 원은 RSI 22대 극단적 과매도 대형주(ADM)의 스프링 반등을 활용해 180만 원 목표 도달 시 깔끔하게 회수하는 목적 분리 운용법.
-            </p>
+      <!-- ========================================================
+           VIEW 3: 📚 투자 철학 & 바벨 퀀트 아카이브 (선택 탭 노출)
+           ======================================================== -->
+      <div id="viewSectionArchive" style="display: none;">
+        <!-- 서브 카테고리 2: 투자 철학 & 바벨 퀀트 아카이브 -->
+        <section class="subcat-group" style="margin-top: 10px; margin-bottom: 24px;">
+          <div class="subcat-header">
+            <h3>📚 투자 철학 &amp; 바벨 퀀트 아카이브 (Principles &amp; Guides)</h3>
+            <span class="subcat-count">3편</span>
           </div>
-
-          <div class="archive-card">
-            <div class="ac-top">
-              <span class="ac-tag" style="background: #f5f3ff; color: #7c3aed;">현금흐름</span>
-              <span class="ac-date">2026.11.08</span>
+          <div class="archive-list">
+            
+            <div class="archive-card">
+              <div class="ac-top">
+                <span class="ac-tag" style="background: #eff6ff; color: #2563eb;">코어 원칙</span>
+                <span class="ac-date">2026.11.11</span>
+              </div>
+              <h4 class="ac-title">바벨 포트폴리오의 규율: "그냥 들고 가면서 분기별 승강제로 간다"</h4>
+              <p class="ac-snippet">
+                1부 글로벌 과점 챔피언(70%)과 2부 텐배거 벤처(30%)의 이중 방벽. 매일의 시세 노이즈에 일희일비하지 않고 그냥 들고 가면서, 분기 실적과 킬스위치를 점검하여 기계적으로 교체하는 승강제 룰.
+              </p>
             </div>
-            <h4 class="ac-title">1초 1원의 투자 규율: 월 $1,000 적립과 변동성 장세의 현금 버퍼 사수</h4>
-            <p class="ac-snippet">
-              초당 1원을 아끼고 모아 만든 월 $1,000의 투자 탄약. 급락장에서도 흔들리지 않는 안전 USD 예수금(RP) 버퍼와 기계적 적립 시스템의 수학적 우위.
-            </p>
+
+            <div class="archive-card">
+              <div class="ac-top">
+                <span class="ac-tag" style="background: #ecfdf5; color: #059669;">자금 운용</span>
+                <span class="ac-date">2026.11.11</span>
+              </div>
+              <h4 class="ac-title">목적성 단기 자금과 정규 자산의 분리: 170만 원을 180만 원으로 회수하는 과매도 스프링 원칙</h4>
+              <p class="ac-snippet">
+                정규 자산은 바이앤홀드로 승강제를 타되, 단기 용처가 있는 170만 원은 RSI 22대 극단적 과매도 대형주(ADM)의 스프링 반등을 활용해 180만 원 목표 도달 시 깔끔하게 회수하는 목적 분리 운용법.
+              </p>
+            </div>
+
+            <div class="archive-card">
+              <div class="ac-top">
+                <span class="ac-tag" style="background: #f5f3ff; color: #7c3aed;">현금흐름</span>
+                <span class="ac-date">2026.11.08</span>
+              </div>
+              <h4 class="ac-title">1초 1원의 투자 규율: 월 $1,000 적립과 변동성 장세의 현금 버퍼 사수</h4>
+              <p class="ac-snippet">
+                초당 1원을 아끼고 모아 만든 월 $1,000의 투자 탄약. 급락장에서도 흔들리지 않는 안전 USD 예수금(RP) 버퍼와 기계적 적립 시스템의 수학적 우위.
+              </p>
+            </div>
+
           </div>
-
-        </div>
-      </section>
-
-      <!-- 🎯 서브 카테고리 3: 퀀트 레이더 대시보드 런처 배너 -->
-      <section class="radar-launcher-card">
-        <div class="rlc-left">
-          <h3>ThePathLab 듀얼 레이더 3.0 (PLM100 &amp; PLV100)</h3>
-          <p>글로벌 200개 종목 11월 1,000pt 기준 지수, 실시간 52주 레인지, RSI 과매도 및 킬스위치 점검</p>
-        </div>
-        <a href="radar/index.html" class="rlc-btn">
-          풀스크린 레이더 열기 <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-      </section>
-
-      <!-- 종목 리스트 섹션 -->
-      <section class="invest-box">
+        </section>
+      </div>
         <div class="invest-box-head">
           <h3>🎯 퀀트 레이더 종목 리스트</h3>
           <div style="display: flex; gap: 8px;">
@@ -506,7 +607,7 @@
           </div>
         </div>
 
-        <a href="#tradingJournal" class="holding-link-btn" style="margin-bottom: 6px; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe;">
+        <a href="#tradingJournal" onclick="switchInvestView('journal')" class="holding-link-btn" style="margin-bottom: 6px; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe;">
           📜 본문 실전 매매일지 바로가기 ↑
         </a>
         <a href="radar/index.html" class="holding-link-btn">
@@ -732,7 +833,34 @@
       }).join('');
     }
 
-    document.addEventListener('DOMContentLoaded', loadInvestRadar);
+    /* 상단 3대 뷰 세그먼트 전환 함수 (기존 레이더 / 매매일지 / 투자철학) */
+    function switchInvestView(view) {
+      const vRadar = document.getElementById('viewSectionRadar');
+      const vJournal = document.getElementById('viewSectionJournal');
+      const vArchive = document.getElementById('viewSectionArchive');
+
+      const tRadar = document.getElementById('viewTabRadar');
+      const tJournal = document.getElementById('viewTabJournal');
+      const tArchive = document.getElementById('viewTabArchive');
+
+      if (vRadar) vRadar.style.display = (view === 'radar') ? 'block' : 'none';
+      if (vJournal) vJournal.style.display = (view === 'journal') ? 'block' : 'none';
+      if (vArchive) vArchive.style.display = (view === 'archive') ? 'block' : 'none';
+
+      if (tRadar) tRadar.classList.toggle('active', view === 'radar');
+      if (tJournal) tJournal.classList.toggle('active', view === 'journal');
+      if (tArchive) tArchive.classList.toggle('active', view === 'archive');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadInvestRadar();
+      // 해시 체크 (URL에 #tradingJournal이 있으면 매매일지 탭으로 자동 전환)
+      if (window.location.hash === '#tradingJournal') {
+        switchInvestView('journal');
+        const journalEl = document.getElementById('tradingJournal');
+        if (journalEl) journalEl.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   </script>
 </body>
 </html>
