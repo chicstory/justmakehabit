@@ -1782,6 +1782,41 @@ body {
   flex-wrap: wrap;
 }
 
+/* ADM 위험성 경고 박스 */
+.ji-risk-box {
+  margin-top: 10px;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.ji-risk-title {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #e11d48;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ji-risk-list {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 11.5px;
+  color: #9f1239;
+  line-height: 1.45;
+}
+
+.ji-risk-list li {
+  margin-bottom: 3px;
+}
+
+.ji-risk-list li strong {
+  color: #881337;
+}
+
 .ji-plan-pill {
   font-size: 11px;
   font-weight: 600;

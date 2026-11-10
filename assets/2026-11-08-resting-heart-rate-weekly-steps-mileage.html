@@ -264,8 +264,53 @@
         </div>
         
         
-        <!-- 종목 1: ROOT (1부 리그 PLM100 - 매도 완료) -->
-        <div class="holding-stock-box" style="margin-bottom: 7px; background: #f8fafc; border-color: #cbd5e1;">
+        
+        <!-- 종목 1: ADM (1부 리그 PLM100 - 단기 과매도 스윙) -->
+        <div class="holding-stock-box" style="margin-bottom: 7px;">
+          <div class="h-stock-top">
+            <span class="h-ticker">ADM (아처대니얼스)</span>
+            <span class="h-qty" style="color: #2563eb; background: #eff6ff; border-color: #bfdbfe; font-weight: 700;">18주 보유</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$69.70</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="admCurPrice">$69.84</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-up" id="admRetPct">+0.2%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 종목 2: FLNC (2부 리그 PLV100 - 바벨 벤처 승강제 동행) -->
+        <div class="holding-stock-box" style="margin-bottom: 7px;">
+          <div class="h-stock-top">
+            <span class="h-ticker">FLNC (플루언스)</span>
+            <span class="h-qty" style="color: #7c3aed; background: #f5f3ff; border-color: #ddd6fe; font-weight: 700;">120주 보유</span>
+          </div>
+          <div class="h-price-row">
+            <div class="hp-col">
+              <span class="hp-lbl">매입가</span>
+              <span class="hp-val">$5.95</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">현재가</span>
+              <span class="hp-val cur" id="flncCurPrice">$5.11</span>
+            </div>
+            <div class="hp-col">
+              <span class="hp-lbl">손익률</span>
+              <span class="hp-val ret-down" id="flncRetPct">-14.1%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 종목 3: ROOT (1부 리그 PLM100 - 매도 완료) -->
+        <div class="holding-stock-box" style="margin-bottom: 7px; background: #f8fafc; border-color: #cbd5e1; opacity: 0.9;">
           <div class="h-stock-top">
             <span class="h-ticker" style="color: #475569;">ROOT (루트)</span>
             <span class="h-qty" style="color: #059669; background: #ecfdf5; border-color: #a7f3d0; font-weight: 700;">매도완료 (30주)</span>
@@ -286,55 +331,33 @@
           </div>
         </div>
 
-        <!-- 종목 2: FLNC (2부 리그 PLV100) -->
-        <div class="holding-stock-box">
-          <div class="h-stock-top">
-            <span class="h-ticker">FLNC (플루언스)</span>
-            <span class="h-qty">120주</span>
-          </div>
-          <div class="h-price-row">
-            <div class="hp-col">
-              <span class="hp-lbl">매입가</span>
-              <span class="hp-val">$5.95</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">현재가</span>
-              <span class="hp-val cur" id="flncCurPrice">$5.11</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">손익률</span>
-              <span class="hp-val ret-down" id="flncRetPct">-14.1%</span>
-            </div>
-          </div>
-        </div>
-
         <!-- 포트폴리오 비중 그래프 -->
         <div class="portfolio-graph-wrap" style="margin-top: 4px;">
           <div class="pg-head">
             <span>실전 자산 배분 비중</span>
-            <strong id="holdingWeightText">USD현금 68% · FLNC 32%</strong>
+            <strong id="holdingWeightText">ADM 65% · FLNC 32% · 현금 3%</strong>
           </div>
           <div class="pg-bar-track">
-            <div class="pg-bar-fill cash" id="rootBarFill" style="width: 68%;"></div>
+            <div class="pg-bar-fill plm" id="admBarFill" style="width: 65%;"></div>
             <div class="pg-bar-fill plv" id="flncBarFill" style="width: 32%;"></div>
+            <div class="pg-bar-fill cash" id="cashBarFill" style="width: 3%;"></div>
           </div>
           <div class="pg-legend">
-            <span><i class="dot cash"></i> USD현금 68% (매도익절)</span>
-            <span><i class="dot plv"></i> FLNC 32% (2부)</span>
+            <span><i class="dot plm"></i> ADM 65%</span>
+            <span><i class="dot plv"></i> FLNC 32%</span>
+            <span><i class="dot cash"></i> 현금 3%</span>
           </div>
         </div>
 
-
-
-        <!-- 리밸런싱 주기 -->
+        <!-- 운용 원칙 -->
         <div class="rebalance-info">
           <div class="rb-step">
-            <span class="rb-badge">매월</span>
-            <span class="rb-txt">1차 평가 · 1개월 관찰 후 리밸런싱</span>
+            <span class="rb-badge">정규</span>
+            <span class="rb-txt">Buy &amp; Hold · 분기 승강제 리밸런싱</span>
           </div>
           <div class="rb-step">
-            <span class="rb-badge qtr">매분기</span>
-            <span class="rb-txt">2차 평가 · 승강제 리밸런싱</span>
+            <span class="rb-badge qtr">단기</span>
+            <span class="rb-txt">ADM 170만 원 ➔ 180만 원 목표 회수</span>
           </div>
         </div>
 
