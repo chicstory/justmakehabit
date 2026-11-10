@@ -220,9 +220,10 @@
       <!-- 실전 자산 매매 현황 카드 -->
       <div class="holding-card">
         <div class="holding-header">
-          <span class="holding-title">💼 실전 자산 매매 현황</span>
+          <span class="holding-title">💼 실전 보유 자산 현황</span>
           <span class="holding-badge">실시간 연동</span>
         </div>
+        
         
         
         
@@ -270,43 +271,19 @@
           </div>
         </div>
 
-        <!-- 종목 3: ROOT (1부 리그 PLM100 - 매도 완료) -->
-        <div class="holding-stock-box" style="margin-bottom: 7px; background: #f8fafc; border-color: #cbd5e1; opacity: 0.9;">
-          <div class="h-stock-top">
-            <span class="h-ticker" style="color: #475569;">ROOT (루트)</span>
-            <span class="h-qty" style="color: #059669; background: #ecfdf5; border-color: #a7f3d0; font-weight: 700;">매도완료 (30주)</span>
-          </div>
-          <div class="h-price-row">
-            <div class="hp-col">
-              <span class="hp-lbl">매입가</span>
-              <span class="hp-val">$43.30</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">매도가</span>
-              <span class="hp-val cur" id="rootCurPrice" style="color: #0f172a; font-weight: 700;">$43.80</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">확정손익</span>
-              <span class="hp-val ret-up" id="rootRetPct">+1.2%</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 포트폴리오 비중 그래프 -->
+        <!-- 보유 자산 배분 비중 그래프 -->
         <div class="portfolio-graph-wrap" style="margin-top: 4px;">
           <div class="pg-head">
-            <span>실전 자산 배분 비중</span>
-            <strong id="holdingWeightText">ADM 65% · FLNC 32% · 현금 3%</strong>
+            <span>보유 자산 배분 비중</span>
+            <strong id="holdingWeightText">ADM 67% · FLNC 33%</strong>
           </div>
           <div class="pg-bar-track">
-            <div class="pg-bar-fill plm" id="admBarFill" style="width: 65%;"></div>
-            <div class="pg-bar-fill plv" id="flncBarFill" style="width: 32%;"></div>
-            <div class="pg-bar-fill cash" id="cashBarFill" style="width: 3%;"></div>
+            <div class="pg-bar-fill plm" id="admBarFill" style="width: 67%;"></div>
+            <div class="pg-bar-fill plv" id="flncBarFill" style="width: 33%;"></div>
           </div>
           <div class="pg-legend">
-            <span><i class="dot plm"></i> ADM 65%</span>
-            <span><i class="dot plv"></i> FLNC 32%</span>
-            <span><i class="dot cash"></i> 현금 3%</span>
+            <span><i class="dot plm"></i> ADM 67% (단기)</span>
+            <span><i class="dot plv"></i> FLNC 33% (정규)</span>
           </div>
         </div>
 
