@@ -61,7 +61,7 @@ function fetchMacroData() {
 
 
 /* ===================================================
-   0-1. 실전 자산 매매 현황 동기화 (ROOT & FLNC 바벨 포트폴리오)
+   0-1. 실전 자산 매매 현황 동기화 (ROOT 매도완료 + FLNC 보유 + USD 현금)
    =================================================== */
 function fetchHoldingData() {
   const rootPriceElem = document.getElementById('rootCurPrice');
@@ -72,23 +72,19 @@ function fetchHoldingData() {
   const rootBar = document.getElementById('rootBarFill');
   const flncBar = document.getElementById('flncBarFill');
 
-  // 실전 포트폴리오 매입 원장 (2026.11 실측)
+  // 실전 포트폴리오 매입/매도 원장 (2026.11 실측)
+  // ROOT: 30주 @ $43.30 매입 -> $43.80 전량 매도 완료 (+$15.00, +1.15% 확정 익절)
+  // 매도 대금 $1,314.00은 안전 USD 예수금(현금/RP)으로 보관
   const portfolio = {
-    ROOT: { buyPrice: 43.30, qty: 30, curPrice: 43.34 },
-    FLNC: { buyPrice: 5.9476, qty: 120, curPrice: 5.11 }
+    ROOT: { buyPrice: 43.30, sellPrice: 43.80, qty: 30, isSold: true },
+    FLNC: { buyPrice: 5.9476, qty: 120, curPrice: 5.11 },
+    CASH: 1314.00 // ROOT 매도 대금 ($43.80 * 30주)
   };
 
   fetch('radar/radar_data.json?v=' + Date.now())
     .then(res => res.json())
     .then(data => {
       if (data) {
-        // ROOT (1부 리그 PLM100)
-        if (data.plm100_items) {
-          const rootItem = data.plm100_items.find(i => i.ticker === 'ROOT');
-          if (rootItem && rootItem.price) {
-            portfolio.ROOT.curPrice = rootItem.price;
-          }
-        }
         // FLNC (2부 리그 PLV100)
         if (data.plv100_items) {
           const flncItem = data.plv100_items.find(i => i.ticker === 'FLNC');
@@ -97,14 +93,12 @@ function fetchHoldingData() {
           }
         }
 
-        // ROOT 렌더링
+        // ROOT 렌더링 (매도 완료 고정)
         if (rootPriceElem && rootRetElem) {
-          const rCur = portfolio.ROOT.curPrice;
-          const rBuy = portfolio.ROOT.buyPrice;
-          const rRet = ((rCur - rBuy) / rBuy) * 100;
-          rootPriceElem.textContent = '$' + rCur.toFixed(2);
+          rootPriceElem.textContent = '$' + portfolio.ROOT.sellPrice.toFixed(2);
+          const rRet = ((portfolio.ROOT.sellPrice - portfolio.ROOT.buyPrice) / portfolio.ROOT.buyPrice) * 100;
           rootRetElem.textContent = (rRet >= 0 ? '+' : '') + rRet.toFixed(1) + '%';
-          rootRetElem.className = 'hp-val ' + (rRet >= 0 ? 'ret-up' : 'ret-down');
+          rootRetElem.className = 'hp-val ret-up';
         }
 
         // FLNC 렌더링
@@ -117,20 +111,24 @@ function fetchHoldingData() {
           flncRetElem.className = 'hp-val ' + (fRet >= 0 ? 'ret-up' : 'ret-down');
         }
 
-        // 포트폴리오 평가금액 및 배분 비중 자동 계산
-        const rootEval = portfolio.ROOT.curPrice * portfolio.ROOT.qty;
+        // 포트폴리오 평가금액 및 배분 비중 자동 계산 (USD 현금 + FLNC)
         const flncEval = portfolio.FLNC.curPrice * portfolio.FLNC.qty;
-        const totalEval = rootEval + flncEval;
+        const totalEval = portfolio.CASH + flncEval;
 
         if (totalEval > 0) {
-          const rootWeight = Math.round((rootEval / totalEval) * 100);
-          const flncWeight = 100 - rootWeight;
+          const cashWeight = Math.round((portfolio.CASH / totalEval) * 100);
+          const flncWeight = 100 - cashWeight;
 
           if (weightText) {
-            weightText.textContent = `ROOT ${rootWeight}% · FLNC ${flncWeight}%`;
+            weightText.textContent = `USD현금 ${cashWeight}% · FLNC ${flncWeight}%`;
           }
-          if (rootBar) rootBar.style.width = rootWeight + '%';
-          if (flncBar) flncBar.style.width = flncWeight + '%';
+          if (rootBar) {
+            rootBar.style.width = cashWeight + '%';
+            rootBar.className = 'pg-bar-fill cash';
+          }
+          if (flncBar) {
+            flncBar.style.width = flncWeight + '%';
+          }
         }
       }
     })

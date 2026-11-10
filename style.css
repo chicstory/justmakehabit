@@ -1393,6 +1393,7 @@ body {
 
 .pg-legend .dot.plm { background: #3b82f6; }
 .pg-legend .dot.plv { background: #8b5cf6; }
+.pg-legend .dot.cash { background: #10b981; }
 
 /* 리밸런싱 주기 안내 */
 .rebalance-info {
