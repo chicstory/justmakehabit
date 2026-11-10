@@ -1495,6 +1495,345 @@ body {
   margin-bottom: 24px;
 }
 
+/* ==========================================================================
+   실전 자산 매매일지 (Real Trading Journal) 스타일링
+   ========================================================================== */
+.journal-section {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.journal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 12px;
+}
+
+.journal-badge-pill {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-bottom: 4px;
+}
+
+.journal-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.journal-desc {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.journal-meta-tag {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* KPI 요약 3대 카드 */
+.journal-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.jkpi-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.jkpi-label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.jkpi-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.jkpi-val.profit {
+  color: #059669;
+}
+
+.jkpi-val.rule {
+  font-size: 15px;
+  font-family: 'Pretendard', sans-serif;
+  color: #2563eb;
+}
+
+.jkpi-pct {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.jkpi-sub {
+  font-size: 11px;
+  color: #94a3b8;
+  margin-top: 4px;
+  line-height: 1.35;
+}
+
+/* 매매일지 카드 목록 */
+.journal-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.journal-item {
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  background: #ffffff;
+  transition: all 0.15s ease;
+}
+
+.journal-item.status-active {
+  border-color: #cbd5e1;
+  background: #fafcff;
+}
+
+.journal-item.status-completed {
+  border-color: #e2e8f0;
+  background: #f8fafc;
+}
+
+.ji-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e2e8f0;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ji-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ji-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.ji-badge.badge-buy {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.ji-badge.badge-sell {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+}
+
+.ji-date {
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.ji-ticker {
+  font-size: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.ji-name {
+  font-size: 12.5px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.ji-status-tag {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.ji-status-tag.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.ji-status-tag.completed {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* 바디 2열 그리드 */
+.ji-body-grid {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 16px;
+}
+
+.ji-stat-box {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ji-stat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.ji-lbl {
+  color: #64748b;
+}
+
+.ji-val {
+  color: #0f172a;
+}
+
+.ji-val.mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.ji-val.font-bold {
+  font-weight: 700;
+}
+
+.ji-val.profit {
+  color: #059669;
+}
+
+.ji-content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ji-reason-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.ji-reason-text {
+  font-size: 12.5px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 10px 0;
+}
+
+.ji-plan-box {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ji-plan-pill {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.ji-plan-pill.target {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+}
+
+.ji-plan-pill.stop {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+}
+
+.ji-plan-pill.result {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.ji-plan-pill.result-profit {
+  background: #ecfdf5;
+  color: #059669;
+  font-weight: 700;
+  border: 1px solid #a7f3d0;
+}
+
+.ji-plan-pill.neutral {
+  background: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ede9fe;
+}
+
+/* 모바일 뷰포트 대응 */
+@media (max-width: 640px) {
+  .journal-kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .ji-body-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .journal-header {
+    flex-direction: column;
+  }
+}
+
 .invest-box {
   background: #ffffff;
   border: 1px solid var(--border-color);
