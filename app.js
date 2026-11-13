@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   calculateSalary(); // 초기 로드 시 10월 12일 입사 기준 계산 실행
   loadComments();
   fetchMacroData();  // 실시간 거시 경제 지표 자동 연동
-  fetchHoldingData(); // 실전 자산 매매 현황 연동
 });
 
 /* ===================================================
@@ -60,94 +59,7 @@ function fetchMacroData() {
 }
 
 
-/* ===================================================
-   0-1. 실전 보유 자산 현황 동기화 (현재 보유: ADM 18주 + FLNC 120주)
-   =================================================== */
-function fetchHoldingData() {
-  const admPriceElem = document.getElementById('admCurPrice');
-  const admRetElem = document.getElementById('admRetPct');
-  const flncPriceElem = document.getElementById('flncCurPrice');
-  const flncRetElem = document.getElementById('flncRetPct');
-  const weightText = document.getElementById('holdingWeightText');
-  const admBar = document.getElementById('admBarFill') || document.getElementById('rootBarFill');
-  const flncBar = document.getElementById('flncBarFill');
 
-  // 현재 실전 보유 원장 (2026.11 실측)
-  // - ADM: 18주 @ $69.70 (170만 원 단기 용처 자금, 180만 원 목표 회수)
-  // - FLNC: 120주 @ $5.95 (정규 실전 운용 바벨 30% 벤처 축, 분기 승강제 동행)
-  // ※ 매도 완료 종목(ROOT 등)은 투자 카테고리 본문의 '실전 매매일지'에서 관리
-  const portfolio = {
-    ADM: { buyPrice: 69.70, qty: 18, curPrice: 69.84 },
-    FLNC: { buyPrice: 5.9476, qty: 120, curPrice: 5.11 }
-  };
-
-  fetch('radar/radar_data.json?v=' + Date.now())
-    .then(res => res.json())
-    .then(data => {
-      if (data) {
-        // ADM (1부 리그 PLM100)
-        if (data.plm100_items) {
-          const admItem = data.plm100_items.find(i => i.ticker === 'ADM');
-          if (admItem && admItem.price) {
-            portfolio.ADM.curPrice = admItem.price;
-          }
-        }
-
-        // FLNC (2부 리그 PLV100)
-        if (data.plv100_items) {
-          const flncItem = data.plv100_items.find(i => i.ticker === 'FLNC');
-          if (flncItem && flncItem.price) {
-            portfolio.FLNC.curPrice = flncItem.price;
-          }
-        }
-
-        // 1. ADM 렌더링
-        if (admPriceElem && admRetElem) {
-          const aCur = portfolio.ADM.curPrice;
-          const aBuy = portfolio.ADM.buyPrice;
-          const aRet = ((aCur - aBuy) / aBuy) * 100;
-          admPriceElem.textContent = '$' + aCur.toFixed(2);
-          admRetElem.textContent = (aRet >= 0 ? '+' : '') + aRet.toFixed(1) + '%';
-          admRetElem.className = 'hp-val ' + (aRet >= 0 ? 'ret-up' : 'ret-down');
-        }
-
-        // 2. FLNC 렌더링
-        if (flncPriceElem && flncRetElem) {
-          const fCur = portfolio.FLNC.curPrice;
-          const fBuy = portfolio.FLNC.buyPrice;
-          const fRet = ((fCur - fBuy) / fBuy) * 100;
-          flncPriceElem.textContent = '$' + fCur.toFixed(2);
-          flncRetElem.textContent = (fRet >= 0 ? '+' : '') + fRet.toFixed(1) + '%';
-          flncRetElem.className = 'hp-val ' + (fRet >= 0 ? 'ret-up' : 'ret-down');
-        }
-
-        // 현재 보유 자산 기반 배분 비중 자동 계산 (ADM vs FLNC)
-        const admEval = portfolio.ADM.curPrice * portfolio.ADM.qty;
-        const flncEval = portfolio.FLNC.curPrice * portfolio.FLNC.qty;
-        const totalEval = admEval + flncEval;
-
-        if (totalEval > 0) {
-          const admWeight = Math.round((admEval / totalEval) * 100);
-          const flncWeight = 100 - admWeight;
-
-          if (weightText) {
-            weightText.textContent = `ADM ${admWeight}% · FLNC ${flncWeight}%`;
-          }
-          if (admBar) {
-            admBar.style.width = admWeight + '%';
-            admBar.className = 'pg-bar-fill plm';
-          }
-          if (flncBar) {
-            flncBar.style.width = flncWeight + '%';
-            flncBar.className = 'pg-bar-fill plv';
-          }
-        }
-      }
-    })
-    .catch(err => {
-      console.log('radar_data.json 로드 대기 중 (정적 기본값 유지):', err);
-    });
-}
 
 /* ===================================================
    1. 뷰 전환 및 내비게이션

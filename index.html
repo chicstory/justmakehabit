@@ -149,7 +149,7 @@
 
     </main>
 
-    <!-- 우측: 실시간 거시 경제 배너 & 실전 자산 매매 현황 -->
+    <!-- 우측: 실시간 거시 경제 배너 & 듀얼 레이더 요약 -->
     <aside class="sidebar-right">
       <div class="macro-card">
         <div class="macro-header">
@@ -175,90 +175,40 @@
         </div>
       </div>
 
-      <!-- 실전 자산 매매 현황 카드 (거시 경제 지표 하단 배치) -->
+      <!-- 듀얼 레이더 요약 위젯 (PLM100 & PLV100) -->
       <div class="holding-card">
         <div class="holding-header">
-          <span class="holding-title">💼 실전 보유 자산 현황</span>
-          <span class="holding-badge">실시간 연동</span>
+          <span class="holding-title">🎯 ThePathLab 듀얼 레이더</span>
+          <span class="holding-badge" style="background: #eff6ff; color: #2563eb;">3.0 정규</span>
         </div>
         
-        
-        
-        
-        <!-- 종목 1: ADM (1부 리그 PLM100 - 단기 과매도 스윙) -->
-        <div class="holding-stock-box" style="margin-bottom: 7px;">
+        <!-- 리그 1: PLM100 -->
+        <div class="holding-stock-box" style="margin-bottom: 8px;">
           <div class="h-stock-top">
-            <span class="h-ticker">ADM (아처대니얼스)</span>
-            <span class="h-qty" style="color: #2563eb; background: #eff6ff; border-color: #bfdbfe; font-weight: 700;">18주 보유</span>
+            <span class="h-ticker" style="color: #1e40af; font-weight: 700;">🏛️ 1부 리그 (PLM100)</span>
+            <span class="h-qty" style="color: #2563eb; background: #eff6ff; border-color: #bfdbfe; font-weight: 700;">100종목</span>
           </div>
-          <div class="h-price-row">
-            <div class="hp-col">
-              <span class="hp-lbl">매입가</span>
-              <span class="hp-val">$69.70</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">현재가</span>
-              <span class="hp-val cur" id="admCurPrice">$69.84</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">손익률</span>
-              <span class="hp-val ret-up" id="admRetPct">+0.2%</span>
-            </div>
+          <div style="font-size: 11.5px; color: #64748b; margin-top: 4px; line-height: 1.4;">
+            글로벌 과점·해자 챔피언 유니버스 (자산 70% 배분 타깃)
           </div>
         </div>
 
-        <!-- 종목 2: FLNC (2부 리그 PLV100 - 바벨 벤처 승강제 동행) -->
-        <div class="holding-stock-box" style="margin-bottom: 7px;">
+        <!-- 리그 2: PLV100 -->
+        <div class="holding-stock-box" style="margin-bottom: 12px;">
           <div class="h-stock-top">
-            <span class="h-ticker">FLNC (플루언스)</span>
-            <span class="h-qty" style="color: #7c3aed; background: #f5f3ff; border-color: #ddd6fe; font-weight: 700;">120주 보유</span>
+            <span class="h-ticker" style="color: #6b21a8; font-weight: 700;">🚀 2부 리그 (PLV100)</span>
+            <span class="h-qty" style="color: #7c3aed; background: #f5f3ff; border-color: #ddd6fe; font-weight: 700;">100종목</span>
           </div>
-          <div class="h-price-row">
-            <div class="hp-col">
-              <span class="hp-lbl">매입가</span>
-              <span class="hp-val">$5.95</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">현재가</span>
-              <span class="hp-val cur" id="flncCurPrice">$5.11</span>
-            </div>
-            <div class="hp-col">
-              <span class="hp-lbl">손익률</span>
-              <span class="hp-val ret-down" id="flncRetPct">-14.1%</span>
-            </div>
+          <div style="font-size: 11.5px; color: #64748b; margin-top: 4px; line-height: 1.4;">
+            텐배거 유망 성장·혁신 벤처 육성 (자산 30% 배분 타깃)
           </div>
         </div>
 
-        <!-- 보유 자산 배분 비중 그래프 -->
-        <div class="portfolio-graph-wrap" style="margin-top: 4px;">
-          <div class="pg-head">
-            <span>보유 자산 배분 비중</span>
-            <strong id="holdingWeightText">ADM 67% · FLNC 33%</strong>
-          </div>
-          <div class="pg-bar-track">
-            <div class="pg-bar-fill plm" id="admBarFill" style="width: 67%;"></div>
-            <div class="pg-bar-fill plv" id="flncBarFill" style="width: 33%;"></div>
-          </div>
-          <div class="pg-legend">
-            <span><i class="dot plm"></i> ADM 67% (단기)</span>
-            <span><i class="dot plv"></i> FLNC 33% (정규)</span>
-          </div>
-        </div>
-
-        <!-- 운용 원칙 -->
-        <div class="rebalance-info">
-          <div class="rb-step">
-            <span class="rb-badge">정규</span>
-            <span class="rb-txt">Buy &amp; Hold · 분기 승강제 리밸런싱</span>
-          </div>
-          <div class="rb-step">
-            <span class="rb-badge qtr">단기</span>
-            <span class="rb-txt">ADM 170만 원 ➔ 180만 원 목표 회수</span>
-          </div>
-        </div>
-
-        <a href="invest.html#tradingJournal" class="holding-link-btn">
-          실전 매매일지 & 퀀트 레이더 보기 →
+        <a href="invest.html" class="holding-link-btn" style="margin-bottom: 6px; background: #2563eb; color: #ffffff; border: 1px solid #1d4ed8;">
+          📊 PLM &amp; PLV 종목 리스트 보기 →
+        </a>
+        <a href="radar/index.html" class="holding-link-btn" target="_blank" rel="noopener">
+          풀스크린 퀀트 레이더 대시보드 <i class="bi bi-box-arrow-up-right"></i>
         </a>
       </div>
     </aside>
