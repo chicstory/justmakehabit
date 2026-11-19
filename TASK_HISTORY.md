@@ -4,6 +4,13 @@
 
 ---
 
+## [2026-11-20] 🎨 `radar/index.html` 클린 라이트 에디토리얼 리스타일링 & `justmakehabit` 브랜딩 통일
+- **요청사항**: `thepathlab.com` 해체 작업의 일환으로 `justmakehabit/radar/index.html`의 구 다크 테크 UI(`#070a12`)를 `justmakehabit` 표준 클린 라이트 스타일로 통일.
+- **수정한 내용**: `justmakehabit/radar/index.html`에 `../style.css`·`../favicon.svg`·표준 `.site-header`(`JMH` 로고) 연결, `#F8FAFC`/`#FFFFFF`/`#2563EB` 라이트 토큰 및 Chart.js 라이트 팔레트 적용, `canonical`·타이틀·면책조항을 `justmakehabit.com/radar/` 기준으로 교체.
+- **앞으로 지킬 규칙**: `radar_data.json` 스키마 및 `PLM100`/`PLV100` 필터·정렬·차트 로직은 `invest.html`과 독립적으로 무손실 유지.
+
+---
+
 ## [2026-11-13] 🎯 주식 매매일지 전면 삭제 & 순수 듀얼 레이더(PLM100 & PLV100) 전면 배치
 - **1. 요청사항**: 
   - *"justmakehabit에서 주식 매매일지 관련부분은 전부 삭제하자. 그냥 PLV, PLM만 띄우고"*
