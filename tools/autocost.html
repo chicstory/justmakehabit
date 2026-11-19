@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K3PFHN6VW7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-K3PFHN6VW7');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자동차 순수 유지비 &amp; 보험료 계산기 (AutoCost) - justmakehabit 실전 도구</title>
+  <meta name="description" content="할부·리스비 제외! 국산·수입 13대 차종 순수 월간/연간 유지비, 오피넷 전국 평균 유가, 자차기준가액 &amp; 다이렉트 보험료, 자동차세, 소모품 버퍼를 1초 만에 산출합니다.">
+  <link rel="canonical" href="https://justmakehabit.com/tools/autocost.html">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    .ac-opinet-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-blue);
+      background: var(--accent-blue-bg);
+      border: 1px solid #BFDBFE;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-top: 10px;
+    }
+
+    .ac-section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      margin-bottom: 16px;
+    }
+
+    .ac-card-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .ac-card-head h2 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+    }
+
+    .ac-card-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .preset-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .p-tab-btn {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 7px 12px;
+      min-height: 38px;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .p-tab-btn.active {
+      background: var(--text-primary);
+      border-color: var(--text-primary);
+      color: #FFFFFF;
+    }
+
+    .preset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .preset-btn {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 10px 12px;
+      cursor: pointer;
+      transition: all 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .preset-btn:hover {
+      border-color: #CBD5E1;
+      background: #FFFFFF;
+    }
+
+    .preset-btn.active {
+      background: var(--accent-blue-bg);
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 1px var(--accent-blue);
+    }
+
+    .preset-name {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .preset-tag {
+      font-size: 10.5px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .preset-tag.import-tag {
+      background: #F5F3FF;
+      color: #7C3AED;
+    }
+
+    .preset-models {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .preset-desc {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .field-group {
+      margin-bottom: 14px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .fine-tune-box {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 12px;
+    }
+
+    .fine-tune-title {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+    }
+
+    .fine-tune-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .fine-tune-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .control-input, .control-select {
+      width: 100%;
+      min-height: 40px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-family: var(--font-sans);
+      font-size: 13.5px;
+      color: var(--text-primary);
+      outline: none;
+    }
+
+    .control-input:focus, .control-select:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+    .chips-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .chip-btn {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 7px 11px;
+      min-height: 36px;
+      border-radius: 999px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .chip-btn:hover {
+      border-color: #CBD5E1;
+      color: var(--text-primary);
+    }
+
+    .chip-btn.active {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+      color: #FFFFFF;
+    }
+
+    .ac-fuel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .ac-fuel-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .ac-tax-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
+
+    /* 결과 요약 카드 */
+    .summary-card {
+      background: #FFFFFF;
+      border: 2px solid var(--accent-blue);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+    }
+
+    .view-switcher {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .view-btn {
+      min-height: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .view-btn.active {
+      background: var(--text-primary);
+      border-color: var(--text-primary);
+      color: #FFFFFF;
+    }
+
+    .car-val-badge {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 12px;
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 12.5px;
+      margin-bottom: 14px;
+    }
+
+    .car-val-label {
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .car-val-number {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .total-display {
+      text-align: center;
+      padding: 16px 12px;
+      background: var(--accent-blue-bg);
+      border: 1px solid #BFDBFE;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+
+    .total-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-blue);
+      margin-bottom: 4px;
+    }
+
+    .total-number {
+      font-family: var(--font-mono);
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.5px;
+    }
+
+    .total-subtext {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      margin-top: 6px;
+    }
+
+    .breakdown-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px;
+      background: var(--bg-canvas);
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .b-label {
+      color: var(--text-secondary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .b-val {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .ins-detail-box {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .tip-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    @media (max-width: 640px) {
+      .tip-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tip-item {
+      background: var(--bg-canvas);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 12px;
+    }
+
+    .tip-head {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tip-body {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 글로벌 헤더 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="../index.html" class="logo-wrap">
+        <span class="logo-badge">JMH</span>
+        <span class="logo-text">justmakehabit</span>
+      </a>
+      <nav class="header-nav">
+        <a href="../index.html" class="h-nav-link">홈</a>
+        <a href="../assets.html" class="h-nav-link">자산</a>
+        <a href="../fitness.html" class="h-nav-link">체력</a>
+        <a href="../thoughts.html" class="h-nav-link">사색</a>
+        <a href="../invest.html" class="h-nav-link">투자</a>
+        <a href="mid-hire-calculator.html" class="h-nav-link active">도구</a>
+        <a href="../about.html" class="h-nav-link">소개</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 실전 도구 3단 레이아웃 -->
+  <div class="tools-layout-3col">
+    
+    <!-- 좌측: 실전 도구 내비게이션 LNB 배너 -->
+    <aside class="sidebar-left">
+      <div class="tool-nav-card">
+        <div class="tool-nav-header">
+          <span class="tn-title">🛠️ 실전 도구 모음</span>
+          <span class="tn-badge">4종 가동</span>
+        </div>
+        <ul class="tool-nav-list">
+          <li>
+            <a href="mid-hire-calculator.html" class="tool-nav-item">
+              <span class="tni-icon">🧮</span>
+              <div class="tni-text">
+                <span class="tni-name">급여 / 세후 실수령액</span>
+                <span class="tni-desc">지속근무 &amp; 중도입사 일할</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="rp-calculator.html" class="tool-nav-item">
+              <span class="tni-icon">📈</span>
+              <div class="tni-text">
+                <span class="tni-name">원화 RP 일일 복리 이자</span>
+                <span class="tni-desc">연 2.80% 세후 수익률</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="gold-vs-fiat.html" class="tool-nav-item">
+              <span class="tni-icon">🪙</span>
+              <div class="tni-text">
+                <span class="tni-name">금 vs 실용화폐 시뮬레이터</span>
+                <span class="tni-desc">23년 실물 가치 변동 대조</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="autocost.html" class="tool-nav-item active">
+              <span class="tni-icon">🚗</span>
+              <div class="tni-text">
+                <span class="tni-name">자동차 순수 유지비 (AutoCost)</span>
+                <span class="tni-desc">유류비 · 보험 · 세금 1초 견적</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="tool-nav-footer">
+          * 1원=1초의 규율로 구축된 현실적 자산 시뮬레이터
+        </div>
+      </div>
+    </aside>
+
+    <!-- 중앙 계산기 영역 -->
+    <main class="main-content-area type-tools">
+      <div class="calculator-box">
+        <header class="art-header" style="margin-bottom: 20px;">
+          <div class="art-category">
+            <span class="art-badge">실전 도구 (Tools)</span>
+            <span class="art-sub">/ 자동차 순수 유지비 &amp; 보험료 계산기</span>
+          </div>
+          <h1 class="art-title" style="font-size: 22px; margin-bottom: 8px;">🚗 자동차 순수 유지비 &amp; 보험료 계산기 (AutoCost)</h1>
+          <p style="font-size: 13px; color: var(--text-muted); margin: 0; line-height: 1.6;">
+            할부·리스비를 제외하고 <strong>차량을 소유·운행할 때 숨만 쉬어도 나가는 순수 운용 원가</strong>(자차기준가액 · 다이렉트 보험료 · 오피넷 유류비 · 자동차세 · 정비 버퍼)를 1초 만에 산출합니다.
+          </p>
+          <div class="ac-opinet-badge" id="opinetStatusBadge">
+            <i class="bi-fuel-pump"></i> <span id="opinetBadgeText">오피넷(Opinet) 전국 평균 유가 연동 중...</span>
+          </div>
+        </header>
+
+        <!-- Section 1: 차종 & 연식 -->
+        <section class="ac-section-card">
+          <div class="ac-card-head">
+            <h2><i class="bi-car-front-fill" style="color: var(--accent-blue);"></i> 1. 차종 / 파워트레인 &amp; 연식 선택</h2>
+            <span class="ac-card-sub">국산 · 수입 13대 세부 프리셋</span>
+          </div>
+
+          <div class="preset-tabs">
+            <button type="button" class="p-tab-btn active" onclick="filterPresets('all', this)">전체 보기 (13종)</button>
+            <button type="button" class="p-tab-btn" onclick="filterPresets('domestic', this)">🇰🇷 국산 (8종)</button>
+            <button type="button" class="p-tab-btn" onclick="filterPresets('import', this)">🇩🇪 수입 / EV (5종)</button>
+          </div>
+
+          <div class="preset-grid" id="presetGrid"></div>
+
+          <div class="field-group">
+            <label class="field-label">차량 연식 (출고 후 경과 연차): <span id="yearValLabel" style="color: var(--accent-blue);">3년 차 (2023년식)</span></label>
+            <input type="range" id="carAgeRange" min="0" max="10" value="3" step="1" style="width: 100%; accent-color: var(--accent-green);" oninput="onCarAgeChange(this.value)">
+            <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted); margin-top: 4px;">
+              <span>신차 (0년)</span>
+              <span>3년</span>
+              <span>5년</span>
+              <span>7년</span>
+              <span>10년+</span>
+            </div>
+          </div>
+
+          <div class="fine-tune-box">
+            <div class="fine-tune-title">
+              <span>⚙️ 차량 상세 스펙 미세조정</span>
+              <span style="font-size:11px; color:var(--text-muted); font-weight: 500;">직접 수정 가능</span>
+            </div>
+            <div class="fine-tune-grid">
+              <div>
+                <label style="font-size: 11.5px; color: var(--text-secondary); display: block; margin-bottom: 4px;">신차 출고가 (만원)</label>
+                <input type="number" id="customPrice" class="control-input" oninput="onCustomParamChange()">
+              </div>
+              <div>
+                <label style="font-size: 11.5px; color: var(--text-secondary); display: block; margin-bottom: 4px;">배기량 (cc, EV는 0)</label>
+                <input type="number" id="customCc" class="control-input" oninput="onCustomParamChange()">
+              </div>
+              <div>
+                <label style="font-size: 11.5px; color: var(--text-secondary); display: block; margin-bottom: 4px;" id="econInputLabel">복합연비 (km/L)</label>
+                <input type="number" step="0.1" id="customEcon" class="control-input" oninput="onCustomParamChange()">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: 주행거리 & 유가 -->
+        <section class="ac-section-card">
+          <div class="ac-card-head">
+            <h2><i class="bi-fuel-pump-fill" style="color: var(--accent-gold);"></i> 2. 주행거리 &amp; 실시간 유가</h2>
+            <span class="ac-card-sub" id="opinetSubtext">오피넷 전국 평균 연동</span>
+          </div>
+
+          <div class="field-group" style="margin-bottom: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <label class="field-label" style="margin-bottom: 0;">
+                월 평균 주행거리: <span id="mileageLabel" style="color: var(--accent-blue); font-weight: 800;">1,000 km</span>
+              </label>
+              <span style="font-size: 12px; color: var(--text-muted);">
+                연간 약 <strong id="annualMileageLabel" style="color: var(--text-primary);">12,000</strong> km
+              </span>
+            </div>
+            <input type="range" id="mileageRange" min="300" max="4000" step="100" value="1000" style="width: 100%; accent-color: var(--accent-blue);" oninput="onMileageSliderChange(this.value)">
+            <div class="chips-row" id="mileageChips">
+              <button type="button" class="chip-btn" onclick="setMileage(500)">500km (주말)</button>
+              <button type="button" class="chip-btn active" onclick="setMileage(1000)">1,000km (표준)</button>
+              <button type="button" class="chip-btn" onclick="setMileage(1500)">1,500km</button>
+              <button type="button" class="chip-btn" onclick="setMileage(2000)">2,000km</button>
+              <button type="button" class="chip-btn" onclick="setMileage(3000)">3,000km+</button>
+            </div>
+          </div>
+
+          <div class="ac-fuel-grid">
+            <div>
+              <label class="field-label" style="font-size: 12px;">적용 유종</label>
+              <select id="fuelTypeSelect" class="control-select" onchange="onFuelTypeChange(true)">
+                <option value="gasoline">휘발유 (보통 가솔린)</option>
+                <option value="premium">고급 휘발유 (수입/고성능)</option>
+                <option value="diesel">경유 (디젤)</option>
+                <option value="lpg">LPG (자동차부탄)</option>
+                <option value="electricity">전기 (완속/급속 평균)</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" style="font-size: 12px;">
+                단위당 유가 (원) <span style="font-size: 11px; color: var(--accent-blue);" id="fuelSourceTag">[오피넷 연동]</span>
+              </label>
+              <input type="number" id="unitFuelPrice" class="control-input" value="1859" oninput="calculateAll()">
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: 다이렉트 보험 조건 -->
+        <section class="ac-section-card">
+          <div class="ac-card-head">
+            <h2><i class="bi-shield-check" style="color: var(--accent-blue);"></i> 3. 다이렉트 자동차 보험 조건</h2>
+            <span class="ac-card-sub">표준형 담보 기준</span>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">운전자 연령 한정</label>
+            <div class="chips-row" id="ageChips">
+              <button type="button" class="chip-btn" onclick="setAgeFactor('u21', this)">만 21세 이하</button>
+              <button type="button" class="chip-btn" onclick="setAgeFactor('u24', this)">만 24세</button>
+              <button type="button" class="chip-btn" onclick="setAgeFactor('u26', this)">만 26세</button>
+              <button type="button" class="chip-btn active" onclick="setAgeFactor('o30', this)">만 30세 이상</button>
+              <button type="button" class="chip-btn" onclick="setAgeFactor('o35', this)">만 35세 이상</button>
+              <button type="button" class="chip-btn" onclick="setAgeFactor('o43', this)">만 43세 이상</button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label">운전자 범위</label>
+            <div class="chips-row" id="rangeChips">
+              <button type="button" class="chip-btn active" onclick="setRangeFactor('single', this)">1인 한정</button>
+              <button type="button" class="chip-btn" onclick="setRangeFactor('couple', this)">부부 한정</button>
+              <button type="button" class="chip-btn" onclick="setRangeFactor('family', this)">가족 한정</button>
+              <button type="button" class="chip-btn" onclick="setRangeFactor('any', this)">누구나</button>
+            </div>
+          </div>
+
+          <div class="field-group" style="margin-bottom: 0;">
+            <label class="field-label">무사고 경력 / 할인할증</label>
+            <div class="chips-row" id="recordChips">
+              <button type="button" class="chip-btn" onclick="setRecordFactor('first', this)">첫 차/초보</button>
+              <button type="button" class="chip-btn active" onclick="setRecordFactor('3yr', this)">3년 연속 무사고</button>
+              <button type="button" class="chip-btn" onclick="setRecordFactor('7yr', this)">7년+ 우량</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: 자동차세 & 정비 버퍼 -->
+        <section class="ac-section-card">
+          <div class="ac-card-head">
+            <h2><i class="bi-bank2" style="color: #7C3AED;"></i> 4. 자동차세 &amp; 정비 예비비 버퍼</h2>
+            <span class="ac-card-sub">차령 감면 &amp; 소모품 적립</span>
+          </div>
+
+          <div class="ac-tax-toggle">
+            <div>
+              <span style="font-size: 13px; font-weight: 700; color: var(--text-primary);">1월 자동차세 연납 할인 (약 4.57%) 적용</span>
+              <div style="font-size: 11.5px; color: var(--text-muted);">미체크 시 6월·12월 정기분 고지서 기준</div>
+            </div>
+            <input type="checkbox" id="taxDiscountCheck" style="width: 20px; height: 20px; accent-color: var(--accent-green); flex-shrink: 0;" onchange="calculateAll()">
+          </div>
+
+          <div>
+            <label class="field-label">월 소모품·정비 예비비 버퍼: <span id="maintBufferLabel" style="color: var(--accent-green);">월 40,000원</span></label>
+            <div class="chips-row" id="maintChips">
+              <button type="button" class="chip-btn" onclick="setMaintBuffer(20000, this)">알뜰 (2만원)</button>
+              <button type="button" class="chip-btn active" onclick="setMaintBuffer(40000, this)">표준 (4만원)</button>
+              <button type="button" class="chip-btn" onclick="setMaintBuffer(70000, this)">안심 (7만원)</button>
+              <button type="button" class="chip-btn" onclick="setMaintBuffer(120000, this)">프리미엄 (12만원)</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 산출 결과 카드 -->
+        <section class="summary-card">
+          <div class="view-switcher">
+            <button type="button" class="view-btn active" id="viewBtnMonth" onclick="switchView('month')">💳 한 달 유지비 (월간)</button>
+            <button type="button" class="view-btn" id="viewBtnYear" onclick="switchView('year')">📅 1년 총 지출 (연간)</button>
+          </div>
+
+          <div class="car-val-badge">
+            <span class="car-val-label">🛡️ 올해 내 차 자차기준가액</span>
+            <span class="car-val-number" id="resCarInsValue">1,334 만 원</span>
+          </div>
+
+          <div class="total-display">
+            <div class="total-label" id="totalTitleLabel">한 달 숨만 쉬어도 나가는 순수 유지비</div>
+            <div class="total-number" id="resGrandTotal">382,400 원</div>
+            <div class="total-subtext">
+              🛣️ 주행 1km당 순수 원가: <strong id="resPerKmCost" style="color: var(--accent-blue);">382 원/km</strong>
+            </div>
+          </div>
+
+          <div class="breakdown-list">
+            <div class="breakdown-row">
+              <div class="b-label"><i class="bi-shield-fill" style="color: var(--accent-blue);"></i> 자동차 다이렉트 보험료</div>
+              <div class="b-val" id="resInsuranceVal">58,200 원</div>
+            </div>
+            <div class="breakdown-row">
+              <div class="b-label"><i class="bi-fuel-pump-fill" style="color: var(--accent-gold);"></i> 주유비 (연료비)</div>
+              <div class="b-val" id="resFuelVal">110,000 원</div>
+            </div>
+            <div class="breakdown-row">
+              <div class="b-label"><i class="bi-bank2" style="color: #7C3AED;"></i> 자동차세 (연식 감면)</div>
+              <div class="b-val" id="resTaxVal">19,800 원</div>
+            </div>
+            <div class="breakdown-row">
+              <div class="b-label"><i class="bi-wrench-adjustable-circle-fill" style="color: var(--accent-green);"></i> 소모품 &amp; 정비 예비 버퍼</div>
+              <div class="b-val" id="resMaintVal">40,000 원</div>
+            </div>
+          </div>
+
+          <div class="ins-detail-box">
+            <div style="font-weight: 700; color: var(--text-primary); margin-bottom: 4px; display:flex; flex-wrap: wrap; justify-content:space-between; gap: 4px;">
+              <span>🔍 자동차보험 담보별 표준 분해 (연간)</span>
+              <span id="importUnderwriteTag" style="color: var(--accent-blue);"></span>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span>• 의무배상(대인I + 대물):</span>
+              <strong id="subInsLiab">22.0만 원</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span>• 종합배상(대인II무한 + 대물5억 + 자상):</span>
+              <strong id="subInsComp">25.5만 원</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+              <span>• 자기차량손해(자차):</span>
+              <strong id="subInsOwn" style="color: var(--accent-blue);">22.3만 원</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- 실무 상식 가이드 -->
+        <section class="ac-section-card" style="margin-bottom: 0;">
+          <div class="ac-card-head">
+            <h2><i class="bi-lightbulb-fill" style="color: var(--accent-gold);"></i> 자동차 보험금 산정 메커니즘 &amp; 실무 가이드</h2>
+            <span class="ac-card-sub">참고용 표준 모델</span>
+          </div>
+          <div class="tip-grid">
+            <div class="tip-item">
+              <div class="tip-head">1. 자차 자기부담금 (20만~50만 원)</div>
+              <div class="tip-body">자차 수리 시 총 수리비의 <strong>20%</strong>를 부담하며 최저 20만 원, 최고 50만 원 상한이 적용됩니다.</div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-head">2. 물적사고 할증기준 (200만 원)</div>
+              <div class="tip-body">사고 1건당 대물+자차 합계가 <strong>200만 원 초과 시 등급 1점 할증</strong>, 이하라도 3년간 할인이 유예됩니다.</div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-head">3. 전손 vs 분손 보상 한도</div>
+              <div class="tip-body">수리비가 위 계산기의 <strong>[자차기준가액]</strong>을 넘거나 침수 전손 시 기준가액 100% 현금 보상 후 차량을 인수합니다.</div>
+            </div>
+            <div class="tip-item">
+              <div class="tip-head">4. 수입차 자차 보험료가 높은 이유</div>
+              <div class="tip-body">부품가·정식센터 공임 및 렌트비 손해율이 높아 <strong>자차 손해율 할증 계수(약 1.5배)</strong>가 반영됩니다.</div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- 우측 거시경제 & 레이더 배너 -->
+    <aside class="sidebar-right">
+      <div class="macro-card">
+        <div class="macro-header">
+          <span class="macro-title">📊 거시 경제 지표</span>
+          <span class="macro-badge" id="macroDate">11월 기준</span>
+        </div>
+        <div class="macro-list">
+          <div class="macro-item">
+            <span class="m-label">원/달러 환율</span>
+            <span class="m-val" id="macroUsdKrw">1,388.5원</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">한국 기준금리</span>
+            <span class="m-val">3.25%</span>
+          </div>
+          <div class="macro-item">
+            <span class="m-label">증권사 수시 RP</span>
+            <span class="m-val highlight">2.80%</span>
+          </div>
+        </div>
+        <div class="macro-footer">
+          * 1초=1원의 규율로 자본과 신체를 축적합니다.
+        </div>
+      </div>
+
+      <div class="holding-card">
+        <div class="holding-header">
+          <span class="holding-title">🎯 justmakehabit 듀얼 레이더</span>
+          <span class="holding-badge" style="background: #eff6ff; color: #2563eb;">3.0 정규</span>
+        </div>
+        <div class="holding-stock-box" style="margin-bottom: 8px;">
+          <div class="h-stock-top">
+            <span class="h-ticker" style="color: #1e40af; font-weight: 700;">🏛️ 1부 리그 (PLM100)</span>
+            <span class="h-qty" style="color: #2563eb; background: #eff6ff; border-color: #bfdbfe; font-weight: 700;">100종목</span>
+          </div>
+          <div style="font-size: 11.5px; color: #64748b; margin-top: 4px; line-height: 1.4;">
+            글로벌 과점·해자 챔피언 유니버스 (자산 70% 배분 타깃)
+          </div>
+        </div>
+        <div class="holding-stock-box" style="margin-bottom: 12px;">
+          <div class="h-stock-top">
+            <span class="h-ticker" style="color: #6b21a8; font-weight: 700;">🚀 2부 리그 (PLV100)</span>
+            <span class="h-qty" style="color: #7c3aed; background: #f5f3ff; border-color: #ddd6fe; font-weight: 700;">100종목</span>
+          </div>
+          <div style="font-size: 11.5px; color: #64748b; margin-top: 4px; line-height: 1.4;">
+            텐배거 유망 성장·혁신 벤처 육성 (자산 30% 배분 타깃)
+          </div>
+        </div>
+        <a href="../invest.html" class="holding-link-btn" style="margin-bottom: 6px; background: #2563eb; color: #ffffff; border: 1px solid #1d4ed8;">
+          📊 PLM &amp; PLV 종목 리스트 보기 →
+        </a>
+        <a href="../radar/index.html" class="holding-link-btn" target="_blank" rel="noopener">
+          풀스크린 퀀트 레이더 대시보드 <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="f-copyright">© 2026 justmakehabit. All rights reserved.</p>
+      <p class="f-desc">본 시뮬레이터의 유지비·보험료는 표준 모델 기반 참고용 추정치입니다.</p>
+    </div>
+  </footer>
+
+  <script src="../app.js"></script>
+  <script>
+    const PRESETS = [
+      { id: "compact", category: "domestic", name: "🚗 경차", models: "모닝 · 레이 · 캐스퍼 (1.0)", tag: "국산", price: 1600, cc: 998, econ: 14.5, fuel: "gasoline", isImport: false, isEv: false },
+      { id: "c_sedan", category: "domestic", name: "🚙 준중형 세단", models: "아반떼 · K3 (1.6 가솔린)", tag: "국산 베스트", price: 2300, cc: 1598, econ: 15.0, fuel: "gasoline", isImport: false, isEv: false },
+      { id: "hev", category: "domestic", name: "🔋 하이브리드", models: "아반떼 · 니로 · 쏘나타 HEV", tag: "국산 HEV", price: 3100, cc: 1598, econ: 20.0, fuel: "gasoline", isImport: false, isEv: false },
+      { id: "m_sedan", category: "domestic", name: "🚘 중형 세단", models: "쏘나타 · K5 (2.0 가솔린)", tag: "국산 중형", price: 3200, cc: 1999, econ: 12.5, fuel: "gasoline", isImport: false, isEv: false },
+      { id: "m_lpg", category: "domestic", name: "💨 중형 LPG", models: "쏘나타 · K5 · 그랜저 LPi", tag: "국산 LPG", price: 2900, cc: 1999, econ: 10.0, fuel: "lpg", isImport: false, isEv: false },
+      { id: "f_suv", category: "domestic", name: "🚙 패밀리 SUV", models: "싼타페 · 쏘렌토 (2.5T / 1.6T)", tag: "국산 SUV", price: 4100, cc: 2497, econ: 10.8, fuel: "gasoline", isImport: false, isEv: false },
+      { id: "l_sedan", category: "domestic", name: "👑 준대형 세단", models: "그랜저 2.5/3.5 · 제네시스 G80", tag: "국산 대형", price: 5400, cc: 2497, econ: 11.2, fuel: "gasoline", isImport: false, isEv: false },
+      { id: "ev_kor", category: "domestic", name: "⚡ 국산 전용 전기차", models: "아이오닉5 · EV6 (롱레인지)", tag: "국산 EV", price: 5200, cc: 0, econ: 5.2, fuel: "electricity", isImport: false, isEv: true },
+      { id: "imp_entry", category: "import", name: "🇩🇪 수입 컴팩트", models: "BMW 320i · 벤츠 C200 / C300", tag: "수입 엔트리", price: 6200, cc: 1998, econ: 11.8, fuel: "premium", isImport: true, isEv: false },
+      { id: "imp_mid", category: "import", name: "🇩🇪 수입 베스트 중형", models: "BMW 520i/530i · 벤츠 E200/E300", tag: "수입 베스트", price: 7600, cc: 1998, econ: 12.0, fuel: "premium", isImport: true, isEv: false },
+      { id: "imp_flagship", category: "import", name: "👑 수입 플래그십", models: "벤츠 S클래스 · BMW 7 · 파나메라", tag: "수입 최고급", price: 16500, cc: 2999, econ: 9.2, fuel: "premium", isImport: true, isEv: false },
+      { id: "imp_suv", category: "import", name: "🚙 수입 럭셔리 SUV", models: "BMW X5 · 벤츠 GLE · 카이엔", tag: "수입 SUV", price: 12000, cc: 2998, econ: 8.8, fuel: "premium", isImport: true, isEv: false },
+      { id: "imp_ev", category: "import", name: "⚡ 테슬라 · 수입 EV", models: "Model Y · Model 3 · 포르쉐 타이칸", tag: "수입 EV", price: 6400, cc: 0, econ: 5.1, fuel: "electricity", isImport: true, isEv: true }
+    ];
+
+    const DEPRECIATION_RATES = [1.00, 0.78, 0.68, 0.58, 0.49, 0.42, 0.36, 0.30, 0.25, 0.21, 0.18];
+
+    let OPINET_PRICES = {
+      gasoline: 1859,
+      diesel: 1844,
+      lpg: 1098,
+      premium: 2069,
+      electricity: 340
+    };
+
+    let currentCategory = "all";
+    let currentPreset = PRESETS[1];
+    let currentAgeYears = 3;
+    let currentMileageMonth = 1000;
+    let currentViewMode = "month";
+    let currentAgeFactor = 1.0;
+    let currentRangeFactor = 1.0;
+    let currentRecordFactor = 0.85;
+    let currentMaintBufferMonth = 40000;
+
+    let customPriceVal = 2300;
+    let customCcVal = 1598;
+    let customEconVal = 15.0;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderPresetButtons();
+      selectPreset('c_sedan');
+      loadOpinetLivePrices();
+    });
+
+    async function loadOpinetLivePrices() {
+      try {
+        const res = await fetch('./data/fuel_price.json?t=' + Date.now());
+        if (res.ok) {
+          const data = await res.json();
+          if (data && data.prices) {
+            OPINET_PRICES = Object.assign({}, OPINET_PRICES, data.prices);
+            const updatedDate = data.updated_at || "실시간";
+            document.getElementById('opinetStatusBadge').innerHTML = `<i class="bi-check-circle-fill"></i> 오피넷 전국 평균 실시간 연동 (${updatedDate})`;
+            document.getElementById('opinetSubtext').innerText = `오피넷 전국 평균 (${updatedDate} 고시)`;
+            document.getElementById('fuelSourceTag').innerText = `[오피넷 ${updatedDate}]`;
+            onFuelTypeChange(false);
+          }
+        }
+      } catch (err) {
+        document.getElementById('opinetStatusBadge').innerHTML = `<i class="bi-fuel-pump"></i> 한국석유공사 오피넷 전국 유가 벤치마크`;
+      }
+    }
+
+    function filterPresets(cat, btnElem) {
+      currentCategory = cat;
+      document.querySelectorAll('.preset-tabs .p-tab-btn').forEach(b => b.classList.remove('active'));
+      if (btnElem) btnElem.classList.add('active');
+      renderPresetButtons();
+    }
+
+    function renderPresetButtons() {
+      const grid = document.getElementById('presetGrid');
+      grid.innerHTML = '';
+      const filtered = PRESETS.filter(p => currentCategory === "all" || p.category === currentCategory);
+      filtered.forEach(p => {
+        const btn = document.createElement('div');
+        btn.className = `preset-btn ${p.isImport ? 'is-import' : ''} ${p.id === currentPreset.id ? 'active' : ''}`;
+        btn.id = `preset-btn-${p.id}`;
+        btn.onclick = () => selectPreset(p.id);
+        btn.innerHTML = `
+          <div class="preset-name">
+            <span>${p.name}</span>
+            <span class="preset-tag ${p.isImport ? 'import-tag' : ''}">${p.tag}</span>
+          </div>
+          <div class="preset-models">${p.models}</div>
+          <div class="preset-desc">
+            <span>신차 ${p.price.toLocaleString()}만원</span>
+            <span>${p.econ} ${p.isEv ? 'km/kWh' : 'km/L'}</span>
+          </div>
+        `;
+        grid.appendChild(btn);
+      });
+    }
+
+    function selectPreset(presetId) {
+      currentPreset = PRESETS.find(p => p.id === presetId) || PRESETS[0];
+      document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+      const activeBtn = document.getElementById(`preset-btn-${presetId}`);
+      if (activeBtn) activeBtn.classList.add('active');
+
+      customPriceVal = currentPreset.price;
+      customCcVal = currentPreset.cc;
+      customEconVal = currentPreset.econ;
+
+      document.getElementById('customPrice').value = customPriceVal;
+      document.getElementById('customCc').value = customCcVal;
+      document.getElementById('customEcon').value = customEconVal;
+      document.getElementById('econInputLabel').innerText = currentPreset.isEv ? "전비 (km/kWh)" : "복합연비 (km/L)";
+
+      document.getElementById('fuelTypeSelect').value = currentPreset.fuel;
+      onFuelTypeChange(false);
+
+      if (currentPreset.isImport && currentMaintBufferMonth < 70000) {
+        setMaintBuffer(70000, document.querySelectorAll('#maintChips .chip-btn')[2]);
+      } else if (!currentPreset.isImport && currentMaintBufferMonth > 70000) {
+        setMaintBuffer(40000, document.querySelectorAll('#maintChips .chip-btn')[1]);
+      }
+      calculateAll();
+    }
+
+    function onCarAgeChange(val) {
+      currentAgeYears = parseInt(val);
+      const modelYear = 2026 - currentAgeYears;
+      document.getElementById('yearValLabel').innerText = currentAgeYears === 0 ? "신차 출고 (2026년식)" : `${currentAgeYears}년 차 (${modelYear}년식)`;
+      calculateAll();
+    }
+
+    function onCustomParamChange() {
+      customPriceVal = parseFloat(document.getElementById('customPrice').value) || 2000;
+      customCcVal = parseInt(document.getElementById('customCc').value) || 0;
+      customEconVal = parseFloat(document.getElementById('customEcon').value) || 12.0;
+      calculateAll();
+    }
+
+    function setMileage(km) {
+      currentMileageMonth = km;
+      document.getElementById('mileageRange').value = km;
+      updateMileageLabels(km);
+      updateMileageChipsUI(km);
+      calculateAll();
+    }
+
+    function onMileageSliderChange(val) {
+      const km = parseInt(val);
+      currentMileageMonth = km;
+      updateMileageLabels(km);
+      updateMileageChipsUI(km);
+      calculateAll();
+    }
+
+    function updateMileageLabels(km) {
+      document.getElementById('mileageLabel').innerText = `${km.toLocaleString()} km`;
+      document.getElementById('annualMileageLabel').innerText = `${(km * 12).toLocaleString()}`;
+    }
+
+    function updateMileageChipsUI(km) {
+      document.querySelectorAll('#mileageChips .chip-btn').forEach(btn => {
+        const match = btn.innerText.match(/([0-9,]+)km/);
+        if (match) btn.classList.toggle('active', parseInt(match[1].replace(',', '')) === km);
+      });
+    }
+
+    function onFuelTypeChange() {
+      const ftype = document.getElementById('fuelTypeSelect').value;
+      document.getElementById('unitFuelPrice').value = OPINET_PRICES[ftype] || 1859;
+      calculateAll();
+    }
+
+    function setAgeFactor(code, elem) {
+      const factors = { u21: 2.2, u24: 1.6, u26: 1.3, o30: 1.0, o35: 0.92, o43: 0.88 };
+      currentAgeFactor = factors[code] || 1.0;
+      updateChipsUI('ageChips', elem);
+      calculateAll();
+    }
+
+    function setRangeFactor(code, elem) {
+      const factors = { single: 1.0, couple: 1.12, family: 1.25, any: 1.6 };
+      currentRangeFactor = factors[code] || 1.0;
+      updateChipsUI('rangeChips', elem);
+      calculateAll();
+    }
+
+    function setRecordFactor(code, elem) {
+      const factors = { first: 1.15, '3yr': 0.85, '7yr': 0.65 };
+      currentRecordFactor = factors[code] || 0.85;
+      updateChipsUI('recordChips', elem);
+      calculateAll();
+    }
+
+    function setMaintBuffer(val, elem) {
+      currentMaintBufferMonth = val;
+      document.getElementById('maintBufferLabel').innerText = `월 ${val.toLocaleString()}원`;
+      if (elem) updateChipsUI('maintChips', elem);
+      calculateAll();
+    }
+
+    function updateChipsUI(containerId, activeElement) {
+      const container = document.getElementById(containerId);
+      if (container) container.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('active'));
+      if (activeElement) activeElement.classList.add('active');
+    }
+
+    function switchView(mode) {
+      currentViewMode = mode;
+      document.getElementById('viewBtnMonth').classList.toggle('active', mode === 'month');
+      document.getElementById('viewBtnYear').classList.toggle('active', mode === 'year');
+      document.getElementById('totalTitleLabel').innerText = mode === 'month' ? "한 달 숨만 쉬어도 나가는 순수 유지비" : "1년간 차량 순수 유지비 총 지출액";
+      calculateAll();
+    }
+
+    function calculateAll() {
+      const depRate = DEPRECIATION_RATES[Math.min(currentAgeYears, DEPRECIATION_RATES.length - 1)];
+      const carInsuredValueWon = Math.round(customPriceVal * 10000 * depRate);
+      const carInsuredValueManWon = Math.round(carInsuredValueWon / 10000);
+      document.getElementById('resCarInsValue').innerText = `${carInsuredValueManWon.toLocaleString()} 만 원 (${Math.round(depRate * 100)}%)`;
+
+      let baseLiabWon = customCcVal > 2000 ? 240000 : 200000;
+      if (currentPreset.isImport) baseLiabWon += 50000;
+      const baseCompWon = 280000 * currentAgeFactor * currentRangeFactor * currentRecordFactor;
+      const importRateMultiplier = currentPreset.isImport ? 1.50 : 1.0;
+      const ownDamageRate = 0.0165 * importRateMultiplier;
+      const ownDamageWon = (carInsuredValueWon * ownDamageRate) * (currentRecordFactor * 0.7 + 0.3) * (currentAgeFactor > 1.2 ? 1.3 : 1.0);
+
+      const annualInsuranceWon = Math.round(baseLiabWon + baseCompWon + ownDamageWon);
+      const monthlyInsuranceWon = Math.round(annualInsuranceWon / 12);
+
+      document.getElementById('subInsLiab').innerText = `${(baseLiabWon / 10000).toFixed(1)}만 원`;
+      document.getElementById('subInsComp').innerText = `${(baseCompWon / 10000).toFixed(1)}만 원`;
+      document.getElementById('subInsOwn').innerText = `${(ownDamageWon / 10000).toFixed(1)}만 원`;
+      document.getElementById('importUnderwriteTag').innerText = currentPreset.isImport ? "[외제차 부품/공임 1.5x 할증]" : "[국산 표준]";
+
+      const unitPrice = parseFloat(document.getElementById('unitFuelPrice').value) || 1859;
+      const monthlyFuelWon = Math.round((currentMileageMonth / (customEconVal > 0 ? customEconVal : 10)) * unitPrice);
+      const annualFuelWon = monthlyFuelWon * 12;
+
+      let annualTaxWon = 0;
+      if (customCcVal === 0) {
+        annualTaxWon = 130000;
+      } else {
+        let ccRate = 200;
+        if (customCcVal <= 1000) ccRate = 80;
+        else if (customCcVal <= 1600) ccRate = 140;
+        let rawTax = customCcVal * ccRate * 1.30;
+        if (currentAgeYears >= 3) {
+          const discountPct = Math.min((currentAgeYears - 2) * 0.05, 0.50);
+          rawTax = rawTax * (1 - discountPct);
+        }
+        annualTaxWon = Math.round(rawTax);
+      }
+      if (document.getElementById('taxDiscountCheck').checked) {
+        annualTaxWon = Math.round(annualTaxWon * (1 - 0.0457));
+      }
+      const monthlyTaxWon = Math.round(annualTaxWon / 12);
+
+      const monthlyMaintWon = currentMaintBufferMonth;
+      const annualMaintWon = monthlyMaintWon * 12;
+
+      const monthlyTotalWon = monthlyInsuranceWon + monthlyFuelWon + monthlyTaxWon + monthlyMaintWon;
+      const annualTotalWon = annualInsuranceWon + annualFuelWon + annualTaxWon + annualMaintWon;
+
+      const isMonthly = currentViewMode === "month";
+      document.getElementById('resGrandTotal').innerText = `${(isMonthly ? monthlyTotalWon : annualTotalWon).toLocaleString()} 원`;
+      document.getElementById('resInsuranceVal').innerText = `${(isMonthly ? monthlyInsuranceWon : annualInsuranceWon).toLocaleString()} 원`;
+      document.getElementById('resFuelVal').innerText = `${(isMonthly ? monthlyFuelWon : annualFuelWon).toLocaleString()} 원`;
+      document.getElementById('resTaxVal').innerText = `${(isMonthly ? monthlyTaxWon : annualTaxWon).toLocaleString()} 원`;
+      document.getElementById('resMaintVal').innerText = `${(isMonthly ? monthlyMaintWon : annualMaintWon).toLocaleString()} 원`;
+
+      const perKmCost = Math.round(monthlyTotalWon / (currentMileageMonth > 0 ? currentMileageMonth : 1));
+      document.getElementById('resPerKmCost').innerText = `${perKmCost.toLocaleString()} 원/km`;
+    }
+  </script>
+</body>
+</html>

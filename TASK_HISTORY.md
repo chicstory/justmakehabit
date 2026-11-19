@@ -4,6 +4,13 @@
 
 ---
 
+## [2026-11-20] 🚗 `AutoCost` 자동차 순수 유지비 계산기 `justmakehabit/tools/` 이관 & 라이트 테마 통일
+- **요청사항**: `chicstory.github.io/autocost`를 원본 유지 상태로 `justmakehabit/tools/`에 이관하고 클린 라이트 스타일 적용.
+- **수정한 내용**: `tools/autocost.html` 및 `tools/data/fuel_price.json` 신규 배치(13대 차종 프리셋·오피넷 유가·자차기준가액·다이렉트 보험료·자동차세·정비 버퍼 계산 100% 이식 + 클린 라이트 3단 레이아웃 적용), 기존 도구 3종 LNB(`4종 가동`) 및 `index.html` 도구 보드에 등록.
+- **앞으로 지킬 규칙**: `tools/` 내 모든 계산기는 `.tools-layout-3col` 좌측 LNB와 클린 라이트 토큰을 공유.
+
+---
+
 ## [2026-11-20] 🏃 습관 & 체력(#2) 발행: 주간 17.2만 보 실측 및 독감 전조 심박수 분석
 - **요청사항**: 11/9~11/15 주간 리포트(172.02K 스텝, 14.19km, 271분)와 독감으로 인한 안정시 심박수 급등 기록 추가.
 - **수정한 내용**: `assets/2026-11-20-fitness-nov-w2-steps-rhr-flu.html` 신규 작성, `fitness.html` 및 `index.html` 상단 등록.
