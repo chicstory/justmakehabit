@@ -4,6 +4,13 @@
 
 ---
 
+## [2026-11-20] 🌐 검색엔진·사이트 등록 기반(`robots.txt`, `sitemap.xml`, `ads.txt`, `privacy.html`) 일괄 구축
+- **요청사항**: `justmakehabit.com`의 Google Search Console / 네이버 서치어드바이저 등록 및 추후 애드센스 연동 대비 기본 파일 세팅.
+- **수정한 내용**: `robots.txt`, `sitemap.xml`(전체 21개 페이지 등록), `ads.txt`(`pub-1876940323402065`), `privacy.html`(개인정보처리방침) 신규 생성 및 `index.html` 푸터 링크 연결.
+- **앞으로 지킬 규칙**: 신규 아티클이나 도구 추가 시 `sitemap.xml`에 URL을 함께 반영.
+
+---
+
 ## [2026-11-20] 🚗 `AutoCost` 자동차 순수 유지비 계산기 `justmakehabit/tools/` 이관 & 라이트 테마 통일
 - **요청사항**: `chicstory.github.io/autocost`를 원본 유지 상태로 `justmakehabit/tools/`에 이관하고 클린 라이트 스타일 적용.
 - **수정한 내용**: `tools/autocost.html` 및 `tools/data/fuel_price.json` 신규 배치(13대 차종 프리셋·오피넷 유가·자차기준가액·다이렉트 보험료·자동차세·정비 버퍼 계산 100% 이식 + 클린 라이트 3단 레이아웃 적용), 기존 도구 3종 LNB(`4종 가동`) 및 `index.html` 도구 보드에 등록.
