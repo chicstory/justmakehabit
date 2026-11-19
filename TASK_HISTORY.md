@@ -4,6 +4,13 @@
 
 ---
 
+## [2026-11-20] 🔧 `radar_builder.py` 거래일 기준(SPY) 단일화 & KST 타임스탬프 보정
+- **요청사항**: `radar` 지수에서 `PLV100`과 `SPY`가 `1000.00 (+0.00%)`으로 튀고 `PLM100`이 왜곡되던 수치 이상 원인 파악 및 수정.
+- **수정한 내용**: `radar/radar_builder.py`의 거래일 추출 로직을 아시아/한국 미완성 캔들 합집합에서 **미국 `SPY` 공식 마감 거래일 기준**으로 고정하고, GitHub Actions(UTC)에서도 정확한 한국 시간이 찍히도록 `KST(UTC+9)` 타임스탬프를 명시 적용한 뒤 `radar_data.json` 즉시 재생성(`PLM100 951.77 / PLV100 955.71 / SPY 958.36`).
+- **앞으로 지킬 규칙**: `radar_builder.py` 거래일은 항상 `SPY` 마감 거래일을 단일 진실로 유지.
+
+---
+
 ## [2026-11-20] 🎨 `radar/index.html` 클린 라이트 에디토리얼 리스타일링 & `justmakehabit` 브랜딩 통일
 - **요청사항**: `thepathlab.com` 해체 작업의 일환으로 `justmakehabit/radar/index.html`의 구 다크 테크 UI(`#070a12`)를 `justmakehabit` 표준 클린 라이트 스타일로 통일.
 - **수정한 내용**: `justmakehabit/radar/index.html`에 `../style.css`·`../favicon.svg`·표준 `.site-header`(`JMH` 로고) 연결, `#F8FAFC`/`#FFFFFF`/`#2563EB` 라이트 토큰 및 Chart.js 라이트 팔레트 적용, `canonical`·타이틀·면책조항을 `justmakehabit.com/radar/` 기준으로 교체.

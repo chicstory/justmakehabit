@@ -134,15 +134,18 @@ def main():
     print("Fetching Benchmark SPY (S&P 500)...")
     spy_data = fetch_ticker_data("SPY")
     
-    # 2. 거래일 리스트 추출 (11월 2일 이후)
-    all_dates = set(spy_data.get("daily_history", {}).keys())
-    for d in plm_data.values():
-        all_dates.update(d.get("daily_history", {}).keys())
-    for d in plv_data.values():
-        all_dates.update(d.get("daily_history", {}).keys())
-        
-    trading_dates = sorted([d for d in all_dates if d >= BASE_DATE])
-    print(f"Trading dates since {BASE_DATE}: {trading_dates}")
+    # 2. 거래일 리스트 추출 (11월 2일 이후, 미국 S&P 500 정규장 마감일자 기준 단일 진실)
+    spy_dates = sorted([d for d in spy_data.get("daily_history", {}).keys() if d >= BASE_DATE])
+    if spy_dates:
+        trading_dates = spy_dates
+    else:
+        # SPY 수집 일시 오류 시 fallback
+        all_dates = set()
+        for d in plm_data.values():
+            all_dates.update(d.get("daily_history", {}).keys())
+        trading_dates = sorted([d for d in all_dates if d >= BASE_DATE])
+
+    print(f"Trading dates since {BASE_DATE} (SPY 기준): {trading_dates}")
     
     # 3. 일별 지수 포인트(1,000pt 베이스) 계산
     history = []
@@ -222,8 +225,9 @@ def main():
     plm_items.sort(key=lambda x: x["from_high_pct"])
     plv_items.sort(key=lambda x: x["from_high_pct"])
     
-    # 5. 최종 데이터셋 생성
-    now_str = datetime.datetime.now().strftime("%Y년 %m월 %d일 %H:%M")
+    # 5. 최종 데이터셋 생성 (KST 기준 타임스탬프 고정)
+    kst = datetime.timezone(datetime.timedelta(hours=9))
+    now_str = datetime.datetime.now(kst).strftime("%Y년 %m월 %d일 %H:%M")
     payload = {
         "updated": now_str,
         "base_date": BASE_DATE,
