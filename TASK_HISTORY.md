@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-11-24] 💳 11월 3주차 주간 지출결산(#3) 발행 & 지출결산 표/폰트(`Pretendard`, `.article-table`, `.math-box`) 복구
+- **요청사항**: 지난주(11/15~11/21) 지출내역 업데이트 및 지출결산 아티클 폰트/표 깨짐 수정.
+- **수정한 내용**:
+  - `style.css`: `jsdelivr` Pretendard CDN `@import` 추가, `.article-table`을 `.art-table`과 통합 스타일링, `.math-box`/`pre`/`.art-bullets` 스타일 보강.
+  - `assets/2026-11-24-weekly-expense-nov-w3.html` 신규 발행(3주차 총 189,156원, 11/1~23 누적 938,582원) 및 `assets.html`, `index.html`, `sitemap.xml` 등록.
+- **앞으로 지킬 규칙**: 아티클 HTML은 `../style.css`의 Pretendard/표 스타일을 공통 사용하며 `fonts.googleapis.com`에서 `Pretendard`를 호출하지 말 것.
+
+---
+
 ## [2026-11-24] ⏰ Radar 일일 스케줄러 비피크 2중 크론 전환 & 11/23 종가 동기화
 - **요청사항**: GitHub Actions `23:29 UTC` 크론이 약 4~5시간씩 지연되어 오전 중 전일 종가가 반영되지 않는 현상 해결.
 - **수정한 내용**:

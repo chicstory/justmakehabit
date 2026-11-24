@@ -77,6 +77,12 @@
 
   <!-- 아티클 -->
   <url>
+    <loc>https://justmakehabit.com/assets/2026-11-24-weekly-expense-nov-w3.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://justmakehabit.com/assets/2026-11-20-weekly-expense-nov-w2.html</loc>
     <lastmod>2026-11-20</lastmod>
     <changefreq>monthly</changefreq>
