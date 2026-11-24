@@ -4,6 +4,15 @@
 
 ---
 
+## [2026-11-24] ⏰ Radar 일일 스케줄러 비피크 2중 크론 전환 & 11/23 종가 동기화
+- **요청사항**: GitHub Actions `23:29 UTC` 크론이 약 4~5시간씩 지연되어 오전 중 전일 종가가 반영되지 않는 현상 해결.
+- **수정한 내용**:
+  - `.github/workflows/daily_radar.yml`: 글로벌 피크 시간대를 피해 1차 `43 22 * * 1-5`(KST 07:43) + 2차 백업 `17 0 * * 2-6`(KST 09:17) 2중 스케줄로 변경.
+  - `radar/radar_data.json`: `radar_builder.py` 즉시 실행으로 2026-11-23 미국 정규장 종가 반영.
+- **앞으로 지킬 규칙**: GitHub Actions 크론은 `:00` / `:30` / `23:xx UTC` 정각대 피크를 피해 비정시 분(`:17`, `:43`)과 2중 백업으로 유지.
+
+---
+
 ## [2026-11-20] 🌐 검색엔진·사이트 등록 기반(`robots.txt`, `sitemap.xml`, `ads.txt`, `privacy.html`) 일괄 구축
 - **요청사항**: `justmakehabit.com`의 Google Search Console / 네이버 서치어드바이저 등록 및 추후 애드센스 연동 대비 기본 파일 세팅.
 - **수정한 내용**: `robots.txt`, `sitemap.xml`(전체 21개 페이지 등록), `ads.txt`(`pub-1876940323402065`), `privacy.html`(개인정보처리방침) 신규 생성 및 `index.html` 푸터 링크 연결.
