@@ -7,6 +7,8 @@
    4. 오버플로우 0% 보장 (box-sizing, keep-all, anywhere)
    =================================================== */
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
 :root {
   --bg-canvas: #F8FAFC;
   --bg-card: #FFFFFF;
@@ -582,12 +584,14 @@ body {
   border-radius: var(--radius-md);
 }
 
-.art-table {
+.art-table,
+.article-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.art-table th {
+.art-table th,
+.article-table th {
   background: var(--bg-canvas);
   padding: 10px 14px;
   font-size: 12px;
@@ -595,18 +599,63 @@ body {
   color: var(--text-muted);
   text-align: left;
   border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
 }
 
-.art-table td {
+.art-table td,
+.article-table td {
   padding: 14px;
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--text-secondary);
   border-bottom: 1px solid var(--bg-subtle);
   vertical-align: middle;
 }
 
-.art-table tr:last-child td {
+.art-table tr:last-child td,
+.article-table tr:last-child td {
   border-bottom: none;
+}
+
+/* 수식·결산 요약 박스 & 리스트 */
+.math-box {
+  background: var(--bg-canvas);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  margin: 18px 0 24px;
+}
+
+.math-box .mb-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.math-box pre {
+  margin: 0;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  white-space: pre;
+}
+
+.math-box code {
+  font-family: inherit;
+}
+
+.art-bullets {
+  padding-left: 20px;
+  margin: 12px 0 22px;
+}
+
+.art-bullets li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
 }
 
 .pill-tag {
